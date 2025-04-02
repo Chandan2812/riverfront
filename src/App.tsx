@@ -1,13 +1,11 @@
 import './App.css'
-import Footer from './components/footer'
-import StatsSection from './components/stats'
+import { Landing } from './pages/Landing'
 
 function App() {
 
   return (
     <>
-    <StatsSection/>
-      <Footer/>
+      <Landing/>
     </>
   )
 }
