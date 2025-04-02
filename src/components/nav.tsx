@@ -1,31 +1,37 @@
 import { useState } from "react";
-import { X, Menu } from "lucide-react";
+import { X, Menu, Search } from "lucide-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="relative">
-      {/* Top Navbar */}
-      <div className="fixed top-0 left-0 w-full p-4 bg-transparent z-40 flex justify-between items-center">
+    <div className="relative md:block hidden">
+      {/* Top Navbar - Centered & 80% Width */}
+      <div className="fixed top-0 left-1/2 transform -translate-x-1/2 w-[80%] p-4 bg-transparent z-40 flex justify-between items-center">
         <button onClick={() => setIsOpen(true)} className="text-white text-xl z-50">
           <Menu size={30} />
         </button>
-        <div className="absolute top-6 flex justify-center w-full">
-          <h1 className="text-3xl font-bold text-white">UNIQUE PROPERTIES</h1>
+
+        {/* Centered Title */}
+        <div className="absolute top-4 left-1/2 transform -translate-x-1/2">
+          <h1 className="text-3xl font-bold text-white">RIVERFRONT</h1>
         </div>
 
-        <div className="absolute top-6 right-6 flex gap-4">
-          <button className="border border-white px-4 py-2 rounded-full">Careers</button>
-          <button className="flex items-center gap-2">
-            🔍 Find a Property
+        {/* Right Section: Careers & Search */}
+        <div className="absolute top-4 right-6 flex gap-4 items-center">
+          <button className="border border-white text-white px-4 py-1 rounded-full">Careers</button>
+          <button className="flex items-center gap-2 text-white">
+            <Search size={24} strokeWidth={2} className="text-white" /> Find a Property
           </button>
         </div>
-              </div>
+      </div>
+
+      {/* Horizontal Line Below Navbar */}
+      <div className="fixed top-[60px] left-1/2 transform -translate-x-1/2 w-[80%] border-t border-gray-100 z-30"></div>
 
       {/* Sidebar Menu */}
       <div
-        className={`fixed top-0 left-0 h-full w-64 bg-[#0D1B2A] text-white transform ${
+        className={`fixed top-0 left-0 h-full w-[30%] bg-[#0D1B2A] text-white transform ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         } transition-transform duration-300 ease-in-out z-50`}
       >
@@ -37,8 +43,14 @@ export default function Navbar() {
           <X size={24} />
         </button>
 
+        {/* Sidebar Header */}
+        <div className="mt-8">
+          <h1 className="text-2xl font-bold px-4">RIVERFRONT</h1>
+          <div className="w-full border-t border-gray-500 my-4"></div> {/* Horizontal Line */}
+        </div>
+
         {/* Menu Items */}
-        <div className="mt-16 p-6 space-y-4 text-lg">
+        <div className="p-6 space-y-4 text-lg">
           <a href="#" className="block">Home</a>
           <a href="#" className="block">Off Plan</a>
           <a href="#" className="block">Resale</a>

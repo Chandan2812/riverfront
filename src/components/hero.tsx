@@ -37,7 +37,7 @@ const HeroSection = () => {
         </div> */}
 
         <div className="absolute bottom-12 flex flex-col items-center">
-          <h2 className="text-2xl font-bold">UNIQUE PROPERTIES</h2>
+          <h2 className="text-2xl font-bold">RIVERFRONT</h2>
           <p>In Partnership With <strong>Forbes</strong></p>
         </div>
       </div>

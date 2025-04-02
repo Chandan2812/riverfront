@@ -64,7 +64,7 @@ const StatsSection: React.FC = () => {
   }, []);
 
   return (
-    <div ref={sectionRef} className="w-full py-10 bg-white dark:bg-gray-900">
+    <div ref={sectionRef} className="w-full md:py-10 bg-white dark:bg-gray-900">
       {/* Desktop View */}
       <div className="hidden md:flex max-w-6xl mx-auto px-4 justify-center text-center">
         {stats.map((stat, index) => (
