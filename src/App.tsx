@@ -1,12 +1,13 @@
 import './App.css'
+import Footer from './components/footer'
+import StatsSection from './components/stats'
 
 function App() {
 
   return (
     <>
-       <h1 className="text-3xl font-bold underline text-blue-900">
-      Hello world!
-    </h1>
+    <StatsSection/>
+      <Footer/>
     </>
   )
 }
