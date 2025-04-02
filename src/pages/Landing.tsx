@@ -4,6 +4,7 @@ import Footer from '../components/footer'
 import HeroSection from '../components/hero'
 import AwardsSection from '../components/awards'
 import OurStory from '../components/ourStory'
+import TestimonialSlider from '../components/testimonials'
 
 export const Landing = () => {
   return (
@@ -13,6 +14,7 @@ export const Landing = () => {
     <StatsSection/>
     <AwardsSection/>
     <OurStory/>
+    <TestimonialSlider/>
       <Footer/>
     </>
     </div>
