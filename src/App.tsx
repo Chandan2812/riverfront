@@ -2,7 +2,8 @@ import './App.css'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Landing } from './pages/Landing';
 import { AwardsPage } from './pages/AwardsPage';
-import { AboutUs } from './pages/AboutUs';
+import { AboutUs } from './pages/aboutUs';
+
 
 function App() {
   return (

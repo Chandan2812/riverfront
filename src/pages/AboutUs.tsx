@@ -1,5 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import Navbar from "../components/nav";
+import { FaLinkedinIn } from "react-icons/fa";
+import AwardsSection from "../components/awards";
 
 export const AboutUs = () => {
   const [expanded, setExpanded] = useState(false);
@@ -25,12 +27,18 @@ export const AboutUs = () => {
     return () => clearInterval(interval);
   }, []);
 
+  const teamMembers = [
+    { name: "John Doe", designation: "CEO", image: "https://uniqueproperties.ae/en/uploads/frontend/agents/613529/sumeet-raina.jpg" },
+    { name: "Jane Smith", designation: "CTO", image: "https://uniqueproperties.ae/en/uploads/frontend/agents/613530/johnny-hammond.jpg" },
+    { name: "Mike Johnson", designation: "COO", image: "https://uniqueproperties.ae/en/uploads/frontend/agents/613531/roma-jivani.jpg" },
+  ];
+
   return (
     <div>
       <div className="bg-[var(--primary-color)]">
         <Navbar />
       </div>
-      <div className="flex flex-col md:flex-row items-start gap-10 w-[90%] mx-auto py-8">
+      <div className="flex flex-col-reverse md:flex-row items-start gap-10 w-[90%] mx-auto py-8">
         {/* Left Section - Text Content */}
         <div className="md:w-1/2">
           <h2 className="text-3xl text-[var(--primary-color)] mb-4">
@@ -49,6 +57,8 @@ export const AboutUs = () => {
           {expanded && (
             <p className="text-gray-700 leading-relaxed mt-4">
               We've got a bunch of services to cover all your real estate needs, whether you're buying, selling, or renting.
+              <br /><br />
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat, ratione. Tenetur necessitatibus voluptas reprehenderit consequuntur voluptatem blanditiis aliquam aliquid accusamus?
             </p>
           )}
           {/* Toggle Button */}
@@ -116,8 +126,8 @@ export const AboutUs = () => {
         
       </div>
 
-      {/* CEO Message Section */}
-      <div className="flex flex-col md:flex-row items-center gap-10 w-[90%] mx-auto py-8">
+      {/* Partner Message Section */}
+      <div className="flex flex-col-reverse md:flex-row items-center gap-10 w-[90%] mx-auto py-8">
         
 
         {/* Left Side - CEO Message */}
@@ -145,6 +155,64 @@ export const AboutUs = () => {
 
         
       </div>
+
+
+      <section className="py-12 text-center">
+  <h2 className="text-3xl font-bold text-gray-800 mb-6">Our Team</h2>
+  <p className="text-gray-600 max-w-2xl mx-auto mb-8">
+    Our team comprises dedicated professionals who bring diverse perspectives, exceptional expertise, and an unwavering drive to every project.
+  </p>
+
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-4 md:px-0 md:w-4/5 w-full mx-auto">
+    {teamMembers.map((member, index) => (
+      <div key={index} className="relative group overflow-hidden rounded-lg shadow-lg">
+        {/* Team Member Image */}
+        <img
+          src={member.image}
+          alt={member.name || "Team Member"}
+          className="w-full h-auto max-h-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
+          loading="lazy"
+        />
+
+        {/* Desktop Hover Effect */}
+        <div className="absolute bottom-0 left-0 w-full bg-white p-3 text-black text-center transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 hidden md:block">
+          <div className="flex items-center justify-between">
+            <div className="text-left">
+              <h3 className="text-lg font-bold">{member.name}</h3>
+              <p className="text-sm">{member.designation}</p>
+            </div>
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white bg-[var(--primary-color)] p-1 rounded-sm"
+            >
+              <FaLinkedinIn className="cursor-pointer" /> {/* You can replace this with a LinkedIn icon */}
+            </a>
+          </div>
+        </div>
+
+        {/* Mobile View - Always Visible */}
+        <div className="flex items-center justify-between bg-gray-100 p-3 md:hidden">
+          <div className="text-left">
+            <h3 className="text-lg font-bold text-gray-800">{member.name}</h3>
+            <p className="text-sm text-gray-600">{member.designation}</p>
+          </div>
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white bg-[var(--primary-color)] p-1 rounded-sm"
+          >
+            <FaLinkedinIn className="cursor-pointer" /> 
+          </a>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
+<AwardsSection/>
     </div>
   );
 };
