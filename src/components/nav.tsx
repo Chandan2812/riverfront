@@ -1,24 +1,28 @@
 import { useState } from "react";
 import { X, Menu, Search } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
   return (
-    <div className="relative md:block hidden">
-      {/* Top Navbar - Centered & 80% Width */}
-      <div className="fixed top-0 left-1/2 transform -translate-x-1/2 w-[80%] p-4 bg-transparent z-40 flex justify-between items-center">
-        <button onClick={() => setIsOpen(true)} className="text-white text-xl z-50">
+    <div className="relative w-full">
+      {/* Navbar Container */}
+      <div className="w-[90%] mx-auto p-4 bg-transparent flex justify-between items-center">
+        
+        {/* Left: Menu Button (Visible on Desktop, Hidden on Mobile) */}
+        <button onClick={() => setIsOpen(true)} className="text-white text-xl md:block hidden">
           <Menu size={30} />
         </button>
 
-        {/* Centered Title */}
-        <div className="absolute top-4 left-1/2 transform -translate-x-1/2">
-          <h1 className="text-3xl font-bold text-white">RIVERFRONT</h1>
-        </div>
+        {/* Center: Only "RIVERFRONT" is visible on Mobile */}
+        <h1 className="text-3xl md:ml-48 font-bold text-white cursor-pointer mx-auto md:mx-0" onClick={() => navigate('/')}>
+          RIVERFRONT
+        </h1>
 
-        {/* Right Section: Careers & Search */}
-        <div className="absolute top-4 right-6 flex gap-4 items-center">
+        {/* Right Section (Hidden on Mobile) */}
+        <div className="hidden md:flex gap-4 items-center">
           <button className="border border-white text-white px-4 py-1 rounded-full">Careers</button>
           <button className="flex items-center gap-2 text-white">
             <Search size={24} strokeWidth={2} className="text-white" /> Find a Property
@@ -26,14 +30,14 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Horizontal Line Below Navbar */}
-      <div className="fixed top-[60px] left-1/2 transform -translate-x-1/2 w-[80%] border-t border-gray-100 z-30"></div>
+      {/* Horizontal Line (Only on Desktop) */}
+      <div className="w-[90%] mx-auto border-t border-gray-100 my-2 hidden md:block"></div>
 
       {/* Sidebar Menu */}
       <div
-        className={`fixed top-0 left-0 h-full w-[30%] bg-[#0D1B2A] text-white transform ${
+        className={`fixed top-0 left-0 h-screen w-[70%] md:w-[30%] bg-[#0D1B2A] text-white transform ${
           isOpen ? "translate-x-0" : "-translate-x-full"
-        } transition-transform duration-300 ease-in-out z-50`}
+        } transition-transform duration-300 ease-in-out`}
       >
         {/* Close Button */}
         <button
@@ -44,32 +48,35 @@ export default function Navbar() {
         </button>
 
         {/* Sidebar Header */}
-        <div className="mt-8">
-          <h1 className="text-2xl font-bold px-4">RIVERFRONT</h1>
-          <div className="w-full border-t border-gray-500 my-4"></div> {/* Horizontal Line */}
+        <div className="mt-8 px-4">
+          <h1 className="text-2xl font-bold">RIVERFRONT</h1>
+          <div className="w-full border-t border-gray-500 my-4"></div>
         </div>
 
         {/* Menu Items */}
         <div className="p-6 space-y-4 text-lg">
-          <a href="#" className="block">Home</a>
-          <a href="#" className="block">Off Plan</a>
-          <a href="#" className="block">Resale</a>
-          <a href="#" className="block">Rental</a>
-          <a href="#" className="block">Services</a>
-          <a href="#" className="block">Communities</a>
-          <a href="#" className="block">Developers</a>
-          <a href="#" className="block">Contact Us</a>
-          <a href="#" className="block">Book a Meeting</a>
-          <a href="#" className="block">Find a Property</a>
+          {[
+            "Home",
+            "Off Plan",
+            "Resale",
+            "Rental",
+            "Services",
+            "Communities",
+            "Developers",
+            "Contact Us",
+            "Book a Meeting",
+            "Find a Property",
+          ].map((item) => (
+            <a key={item} href="#" className="block">
+              {item}
+            </a>
+          ))}
         </div>
       </div>
 
       {/* Background Overlay */}
       {isOpen && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-40"
-          onClick={() => setIsOpen(false)}
-        ></div>
+        <div className="fixed inset-0 bg-black bg-opacity-50" onClick={() => setIsOpen(false)}></div>
       )}
     </div>
   );
