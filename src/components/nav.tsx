@@ -7,12 +7,12 @@ export default function Navbar() {
   return (
     <div className="relative">
       {/* Top Navbar */}
-      <div className="fixed top-0 left-0 w-full p-4 bg-transparent z-50 flex justify-between items-center text-white text-center">
-        <button onClick={() => setIsOpen(true)} className="text-white text-xl">
-          <Menu size={30} /> Menu
+      <div className="fixed top-0 left-0 w-full p-4 bg-transparent z-40 flex justify-between items-center">
+        <button onClick={() => setIsOpen(true)} className="text-white text-xl z-50">
+          <Menu size={30} />
         </button>
         <div className="absolute top-6 flex justify-center w-full">
-          <h1 className="text-3xl font-bold">UNIQUE PROPERTIES</h1>
+          <h1 className="text-3xl font-bold text-white">UNIQUE PROPERTIES</h1>
         </div>
 
         <div className="absolute top-6 right-6 flex gap-4">
@@ -20,8 +20,8 @@ export default function Navbar() {
           <button className="flex items-center gap-2">
             🔍 Find a Property
           </button>
-        </div>    
-  </div>
+        </div>
+              </div>
 
       {/* Sidebar Menu */}
       <div
