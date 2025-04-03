@@ -108,11 +108,11 @@ export default function Navbar() {
         <div className="p-6 space-y-4 text-lg">
         {[
             { name: "Home", path: "/" },
-            { name: "Off Plan", path: "/off-plan" },
+            { name: "Off Plan", path: "/OffPlanProperties" },
             { name: "Resale", path: "/resale" },
             { name: "Rental", path: "/rental" },
             { name: "Services", path: "/services" },
-            { name: "Area Guide", path: "/area-guide" },
+            { name: "Top Properties", path: "#property" },
             { name: "Developers", path: "/developers" },
             { name: "Contact Us", path: "/contact" },
             { name: "Book a Meeting", path: "/book-meeting" },

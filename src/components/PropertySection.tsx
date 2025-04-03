@@ -6,7 +6,7 @@ const PropertySection = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="container mx-auto py-10">
+    <div id="property" className="container mx-auto py-10">
       <h2 className="text-2xl md:text-4xl text-gray-800 mb-6 text-center">
         Dubai Top Properties
       </h2>

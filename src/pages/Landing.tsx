@@ -7,6 +7,7 @@ import OurStory from '../components/ourStory'
 import TestimonialSlider from '../components/testimonials'
 import WhatsAppButton from '../components/floatingBtn'
 import PropertySection from '../components/PropertySection'
+import PropertySlider from '../components/offPlan'
 
 export const Landing = () => {
   return (
@@ -16,6 +17,7 @@ export const Landing = () => {
     <StatsSection/>
     <AwardsSection/>
     <PropertySection/>
+    <PropertySlider/>
     <OurStory/>
     <TestimonialSlider/>
       <Footer/>
