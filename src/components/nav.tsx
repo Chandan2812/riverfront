@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 export default function Navbar() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isFindPropertyOpen, setIsFindPropertyOpen] = useState(false);
+  const [selectedType, setSelectedType] = useState("OFF-PLAN");
   const navigate = useNavigate();
   const [isSticky, setIsSticky] = useState(false);
 
@@ -117,7 +118,6 @@ export default function Navbar() {
             { name: "Book a Meeting", path: "/book-meeting" },
             { name: "Find a Property", path: "#", action: () => {
               setIsFindPropertyOpen(true); // Open the Find a Property modal
-              setIsSidebarOpen(false); // Close the sidebar
             } },
           ].map(({ name, path,action }) => (
             <button
@@ -128,6 +128,7 @@ export default function Navbar() {
         } else {
           navigate(path);
         }
+        setIsSidebarOpen(false);
       }}
       className="block w-full text-left"
     >
@@ -157,15 +158,18 @@ export default function Navbar() {
 
       {/* Property Type Buttons */}
       <div className="flex justify-center gap-2 mb-4">
-        {["OFF-PLAN", "RESALE", "EXCLUSIVE", "RENTALS"].map((type) => (
-          <button
-            key={type}
-            className="border border-white text-white px-4 py-2 rounded-full text-sm"
-          >
-            {type}
-          </button>
-        ))}
-      </div>
+              {["OFF-PLAN", "RESALE", "EXCLUSIVE", "RENTALS"].map((type) => (
+                <button
+                  key={type}
+                  onClick={() => setSelectedType(type)}
+                  className={`border border-white px-4 py-2 rounded-full text-sm transition-all ${
+                    selectedType === type ? "bg-white text-black" : "text-white"
+                  }`}
+                >
+                  {type}
+                </button>
+              ))}
+            </div>
 
       {/* Search Input */}
       <input
