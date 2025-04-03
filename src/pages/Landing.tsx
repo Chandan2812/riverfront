@@ -6,6 +6,7 @@ import AwardsSection from '../components/awards'
 import OurStory from '../components/ourStory'
 import TestimonialSlider from '../components/testimonials'
 import WhatsAppButton from '../components/floatingBtn'
+import PropertySection from '../components/PropertySection'
 
 export const Landing = () => {
   return (
@@ -14,6 +15,7 @@ export const Landing = () => {
         <HeroSection/>
     <StatsSection/>
     <AwardsSection/>
+    <PropertySection/>
     <OurStory/>
     <TestimonialSlider/>
       <Footer/>
