@@ -4,6 +4,7 @@ import { Landing } from './pages/Landing';
 import { AwardsPage } from './pages/AwardsPage';
 import { AboutUs } from './pages/AboutUs';
 import PropertyDetails from './pages/PropertyDetails';
+import Contact from './pages/Contact';
 
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
         <Route path="/awards" element={<AwardsPage/>} /> 
         <Route path="/about" element={<AboutUs/>} /> 
         <Route path="/property/:slug" element={<PropertyDetails />} />
-
+        <Route path="/contact" element={<Contact/>} />
       </Routes>
     </Router>
   );
