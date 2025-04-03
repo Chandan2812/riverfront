@@ -24,13 +24,7 @@ const PropertyDetails = () => {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      {/* Back Button */}
-      <button
-        className="mb-6 px-4 py-2 bg-gray-700 text-white rounded-md"
-        onClick={() => navigate(-1)}
-      >
-        ← Back
-      </button>
+
 
       {/* Property Name */}
       <h1 className="text-4xl font-bold text-gray-800 mb-4">{property.name}</h1>
