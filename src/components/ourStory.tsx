@@ -6,7 +6,7 @@ export default function OurStory() {
   return (
     <div className="w-full bg-gray-100 py-16 px-6 md:px-16">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-4xl font-bold text-gray-800  text-center">Our Story</h2>
+        <h2 className="text-2xl md:text-4xl text-gray-800 mb-6 text-center">Our Story</h2>
         <p className="mt-4 text-md text-gray-700 ">
           Since our formation in 2008, Unique Properties has embarked on a transformative
           journey fueled by our unwavering commitment to customer-centricity and a passion

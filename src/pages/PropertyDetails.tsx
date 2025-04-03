@@ -1,5 +1,7 @@
 import { useParams, useNavigate } from "react-router-dom";
 import propertiesData from "../data/propertiesData.json";
+import Navbar from "../components/nav";
+import Footer from "../components/footer";
 
 const PropertyDetails = () => {
   const { slug } = useParams<{ slug: string }>(); // Get slug from URL
@@ -23,37 +25,51 @@ const PropertyDetails = () => {
   }
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div>
+        <div className="bg-[var(--primary-color)]">
+                <Navbar />
+              </div>
+    <div className="container w-[90%] mx-auto px-4 py-8">
 
 
       {/* Property Name */}
-      <h1 className="text-4xl font-bold text-gray-800 mb-4">{property.name}</h1>
+      <h1 className="text-4xl  text-gray-800 mb-4">{property.name}</h1>
 
       {/* First Description */}
       <p className="text-gray-600 mb-6">{property.shortDescription}</p>
 
       {/* Main Image */}
-      <img
-        src={property.mainImage}
-        alt={property.name}
-        className="w-full h-[400px] object-cover rounded-lg mb-6"
-      />
+      {/* Main Image Full Width with Fixed Height */}
+<div className="w-full h-[500px] ">
+  <img
+    src={property.mainImage}
+    alt={property.name}
+    className="w-full h-full object-cover rounded-xl"
+  />
+</div>
+
 
       {/* Second Description */}
-      <p className="text-gray-600 mb-6">{property.longDescription}</p>
+      <div className="text-gray-600 my-6 space-y-3">
+  {property.longDescription.split("\n").map((line, index) => (
+    <p key={index}>{line}</p>
+  ))}
+</div>
 
       {/* Image Gallery */}
-      <h2 className="text-2xl font-semibold text-gray-800 mb-4">Gallery</h2>
+      <h2 className="text-2xl font-semibold text-gray-800 mb-4">Image Gallery</h2>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {property.gallery.map((image:any, index) => (
           <img
             key={index}
-            src={image}
+            src={image.image}
             alt={`${property.name} ${index + 1}`}
             className="w-full h-[200px] object-cover rounded-lg"
           />
         ))}
       </div>
+    </div>
+    <Footer/>
     </div>
   );
 };
