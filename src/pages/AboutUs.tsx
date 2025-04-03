@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import Navbar from "../components/nav";
 import { FaLinkedinIn } from "react-icons/fa";
 import AwardsSection from "../components/awards";
+import Footer from "../components/footer";
 
 export const AboutUs = () => {
   const [expanded, setExpanded] = useState(false);
@@ -213,6 +214,60 @@ export const AboutUs = () => {
 </section>
 
 <AwardsSection/>
+
+<section className="py-12 bg-gray-100 flex justify-center">
+  <div className="w-4/5"> {/* Whole Section is 75% of screen width */}
+    <div className="grid grid-cols-1 md:grid-cols-10 gap-6">
+      
+      {/* Left Section - Contact Details (30%) */}
+      <div className="md:col-span-3">
+        <h2 className="text-2xl text-gray-800 mb-4">Contact Us</h2>
+
+        {/* Head Office */}
+        <h3 className="text-lg text-gray-700 border-b border-gray-300 mb-2">Head Office</h3>
+        <p className="text-gray-600 mb-4">
+          The Bay Gate Tower, 31st Floor, Business Bay,<br />
+          Dubai, United Arab Emirates
+        </p>
+
+        {/* Operating Hours */}
+        <h3 className="text-lg text-gray-700 border-b border-gray-300 mb-2">Operating Hours</h3>
+        <p className="text-gray-600 mb-4">
+          Monday to Friday: 9am - 6pm<br />
+          Saturdays: 10am - 4pm
+        </p>
+
+        {/* Contact Details */}
+        <h3 className="text-lg text-gray-700 border-b border-gray-300 mb-2">Reach Us Now</h3>
+        <p className="text-gray-600 mb-2">
+          UAE FREE PHONE: 800 18881
+        </p>
+        <p className="text-gray-600 mb-2">
+          TEL:(+971) 44 55 8888
+        </p>
+        <p className="text-gray-600 mb-2">
+          EMAIL: <a href="mailto:info@uniqueproperties.ae" className=" hover:underline">info@uniqueproperties.ae</a>
+        </p>
+      </div>
+
+      {/* Right Section - Google Map (70%) */}
+      <div className="md:col-span-7">
+        <h3 className="text-lg font-semibold text-gray-700 mb-2">Location</h3>
+        <div className="w-full h-64 md:h-96 rounded-lg overflow-hidden shadow-lg">
+          <iframe
+            title="Google Map"
+            className="w-full h-full"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.401429518472!2d55.262100815144835!3d25.188736283893865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f69c8a91a4f4b%3A0x71cb11c55f5b5df1!2sThe%20Bay%20Gate%20Tower%2C%20Business%20Bay%2C%20Dubai!5e0!3m2!1sen!2sae!4v1634557890123!5m2!1sen!2sae"
+            allowFullScreen
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<Footer/>
     </div>
   );
 };
