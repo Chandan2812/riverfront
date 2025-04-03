@@ -69,7 +69,7 @@ export const AwardsPage = () => {
       {/* Sidebar and Main Content */}
       <div className="relative flex justify-center my-10">
         {/* Sidebar (Sticky Year Navigation) */}
-        <div ref={sidebarRef} className="sticky top-20 left-0 h-fit w-28 py-4 bg-[#0D1B2A] text-white space-y-2">
+        <div ref={sidebarRef} className="sticky top-20 left-0 h-fit w-20 md:w-28 py-4 bg-[#0D1B2A] text-white space-y-2">
           {awardsData.map(({ year }) => (
             <button
               key={year}
@@ -86,23 +86,24 @@ export const AwardsPage = () => {
         </div>
 
         {/* Main Content */}
-        <div className="w-2/3 space-y-10 ml-32">
+        <div className="w-2/3 space-y-10 ml-4 md:ml-32">
           {awardsData.map(({ givenBy, awardName, year, awardImage, image }) => (
             <div key={year} id={`year-${year}`} >
-              <div className="grid grid-cols-2 gap-2 items-center border border-gray-200 px-8 py-4 rounded-lg">
-                {/* Left Side: Award Details */}
-                <div>
-                  <p className="text-2xl font-bold text-[var(--primary-color)]">{givenBy}</p>
-                  <h2 className="text-xl font-semibold text-gray-700">{awardName}</h2>
-                  <p className="text-lg text-gray-600">{year}</p>
-                  <img src={awardImage} alt={`Award for ${year}`} className="mt-4 rounded-lg w-32 h-32 bg-gray-100 p-2 border border-gray-200" />
-                </div>
-
-                {/* Right Side: Award Image */}
-                <div>
-                  <img src={image} alt={`Achievement ${year}`} className="rounded-lg w-full h-auto" />
-                </div>
+               {/* Responsive Layout: Column on mobile, Grid on desktop */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6 items-center border border-gray-200 px-2 py-2 md:px-8 md:py-4 rounded-xl">
+              {/* Award Image (Mobile: Above the main image) */}
+              <div className="flex flex-col items-center md:items-start">
+                <p className="text-lg md:text-2xl font-bold text-[var(--primary-color)]">{givenBy}</p>
+                <h2 className="text-md md:text-xl font-semibold text-gray-700">{awardName}</h2>
+                <p className="text-sm md:text-lg text-gray-600">{year}</p>
+                <img src={awardImage} alt={`Award for ${year}`} className="mt-2 md:mt-4 rounded-lg w-20 h-20 md:w-32 md:h-32 bg-gray-100 p-2 border border-gray-200" />
               </div>
+
+              {/* Achievement Image (Appears below the award image on mobile) */}
+              <div className="flex justify-center">
+                <img src={image} alt={`Achievement ${year}`} className="rounded-lg w-2/3 h-auto" />
+              </div>
+            </div>
             </div>
           ))}
         </div>

@@ -1,7 +1,7 @@
 import { useParams, useNavigate } from "react-router-dom";
 import propertiesData from "../data/propertiesData.json";
-import Navbar from "../components/nav";
 import Footer from "../components/footer";
+import HeroSection from "../components/hero";
 
 const PropertyDetails = () => {
   const { slug } = useParams<{ slug: string }>(); // Get slug from URL
@@ -27,7 +27,7 @@ const PropertyDetails = () => {
   return (
     <div>
         <div className="bg-[var(--primary-color)]">
-                <Navbar />
+                <HeroSection />
               </div>
     <div className="container w-[90%] mx-auto px-4 py-8">
 

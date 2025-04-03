@@ -1,8 +1,8 @@
 import { useState, useEffect, useRef } from "react";
-import Navbar from "../components/nav";
 import { FaLinkedinIn } from "react-icons/fa";
 import AwardsSection from "../components/awards";
 import Footer from "../components/footer";
+import HeroSection from "../components/hero";
 
 export const AboutUs = () => {
   const [expanded, setExpanded] = useState(false);
@@ -37,7 +37,7 @@ export const AboutUs = () => {
   return (
     <div>
       <div className="bg-[var(--primary-color)]">
-        <Navbar />
+        <HeroSection />
       </div>
       <div className="flex flex-col-reverse md:flex-row items-start gap-10 w-[90%] mx-auto py-8">
         {/* Left Section - Text Content */}

@@ -27,7 +27,7 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center">
 
-        <div className="absolute bottom-28 flex flex-col items-center">
+        <div className="absolute bottom-28 md:bottom-14 flex flex-col items-center">
           <h2 className="text-2xl font-bold">RIVERFRONT</h2>
           <p>In Partnership With <strong>Forbes</strong></p>
         </div>
