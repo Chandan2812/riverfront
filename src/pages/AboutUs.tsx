@@ -52,21 +52,16 @@ export const AboutUs = () => {
             We are proud to be one of Dubai's leading real estate agencies.
           </h2>
           <p className="text-gray-700 leading-relaxed">
-            Established in 2008, we've been in the business of helping people from all
-            corners of the globe find their dream homes and make smart real estate investments.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima inventore et vel dolor explicabo voluptatum pariatur, nobis officiis suscipit porro? Alias velit commodi quia aperiam quos quam beatae?
           </p>
           <br />
           <p className="text-gray-700 leading-relaxed">
-            Our main aim is to make sure our clients get the best deals out there. That means
-            not just finding them houses they love but also spotting properties with great rental potential
-            and future value hikes.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis unde dolorum libero illum, a amet ratione iusto, alias at voluptas deserunt architecto quisquam sint esse nulla dolor voluptates doloribus. Sit cum soluta quidem blanditiis delectus, tempore explicabo laboriosam nostrum repudiandae quas perspiciatis officiis distinctio praesentium suscipit dicta reiciendis.
           </p>
           {expanded && (
             <p className="text-gray-700 leading-relaxed mt-4">
-              We've got a bunch of services to cover all your real estate needs, whether you're buying, selling, or renting.
-              <br /><br />
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat, ratione. Tenetur necessitatibus voluptas reprehenderit consequuntur voluptatem blanditiis aliquam aliquid accusamus?
-            </p>
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, tempore. Mollitia dicta illum eius quo in corporis id placeat minima.              <br /><br />
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore repudiandae molestias porro harum eaque doloremque sit quo quibusdam magnam placeat maxime, perspiciatis, eius provident veniam quam fugiat odit numquam. Ullam, ea, rerum esse vel, totam sed ipsam voluptatem libero animi quod facilis quas fugit sint repellendus. Ipsum, pariatur repellat.            </p>
           )}
           {/* Toggle Button */}
           <button
@@ -108,18 +103,15 @@ export const AboutUs = () => {
 
         {/* Right Side - CEO Message */}
         <div className="md:w-2/3">
-          <h2 className="text-3xl text-[var(--primary-color)] mb-4">Message from our CEO, Arash Jalili</h2>
+          <h2 className="text-3xl text-[var(--primary-color)] mb-4">Message from our CEO,</h2>
           <p className="text-gray-700 leading-relaxed">
-            Since our formation in 2008, our core values have always remained at the heart of everything we do, and these include integrity, transparency, and respect, to name a few.
-          </p>
+Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae suscipit impedit aliquid pariatur assumenda doloribus? Illo, assumenda voluptate? Maiores, necessitatibus?          </p>
           <br />
           <p className="text-gray-700 leading-relaxed">
-            I formed Unique Properties with customer centricity and passion for real estate in mind, and this was our differentiating factor from other companies.
-          </p>
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde dolorem delectus ratione qui nostrum debitis aperiam et ea magnam atque obcaecati nulla, maiores iure necessitatibus voluptates ducimus. Alias?          </p>
           <br />
           <p className="text-gray-700 leading-relaxed">
-            Our success as one of Dubai’s top real estate agencies is credited to our inspiring business partner and a skilled team of experienced, multilingual professionals. We've earned numerous awards and assisted thousands of clients in growing their wealth and real estate portfolios through custom investment strategies, focusing on the city’s prime developments in ideal locations.
-          </p>
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam nobis iusto animi consequuntur eum optio doloribus quasi hic ea maxime unde vitae assumenda, a, cumque esse saepe similique. Harum, deleniti. Quia officiis, tempore aliquid, minus velit voluptatum, maxime labore consequuntur optio quas saepe hic eveniet sit impedit dolores possimus.          </p>
           <br />
           <p className="text-gray-700 leading-relaxed">
             Our aim is to be Dubai’s most trusted real estate partner, as we grow and introduce new divisions. We are committed to assisting both new and existing clients with their property needs in the future.
@@ -139,15 +131,15 @@ export const AboutUs = () => {
 
         {/* Left Side - CEO Message */}
         <div className="md:w-2/3">
-          <h2 className="text-3xl text-[var(--primary-color)] mb-4">Message from the Partner, Armin Jalili</h2>
+          <h2 className="text-3xl text-[var(--primary-color)] mb-4">Message from the Partner,</h2>
           <p className="text-gray-700 leading-relaxed">
-          As a partner at Unique Properties, one of the UAE’s most influential real estate agencies, I have had the privilege of being part of its journey from the early stages. Throughout my time here, I have consistently demonstrated strong leadership and a natural talent for salesmanship, contributing to the agency's growth and success.          </p>
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam obcaecati iusto odit. Itaque distinctio quam amet adipisci quos beatae laudantium ex maxime illo nesciunt! Consectetur deleniti officia odio aliquid architecto reprehenderit porro ad pariatur quaerat, iusto recusandae delectus quia inventore.                    </p>
           <br />
           <p className="text-gray-700 leading-relaxed">
-          I have always focused on driving innovation and excellence within the company. My strategic insights and forward-thinking approach have significantly contributed to our success and reputation as a leader in the real estate industry.          </p>
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad reiciendis, dicta corrupti totam reprehenderit id aperiam quae corporis voluptatem repellendus, harum, minima soluta! Autem a nobis, fugiat reprehenderit repudiandae iure.                   </p>
           <br />
           <p className="text-gray-700 leading-relaxed">
-          We are proud to consistently meet and exceed our local and international investors expectations who have bought Dubai property to enjoy high yields, excellent ROI and all the benefits which the city has to offer from a lifestyle perspective.          </p>
+Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus ab officia optio veritatis facilis culpa labore tempora magni dolor natus praesentium quae, excepturi porro voluptate maxime qui illo quam eaque?                  </p>
           <br />
         </div>
 

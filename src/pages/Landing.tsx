@@ -8,6 +8,7 @@ import TestimonialSlider from '../components/testimonials'
 import WhatsAppButton from '../components/floatingBtn'
 import PropertySection from '../components/PropertySection'
 import PropertySlider from '../components/offPlan'
+import Blog from '../components/blog'
 
 export const Landing = () => {
   return (
@@ -19,6 +20,7 @@ export const Landing = () => {
     <PropertySection/>
     <PropertySlider/>
     <OurStory/>
+    <Blog/>
     <TestimonialSlider/>
       <Footer/>
       <WhatsAppButton /> {/* Floating WhatsApp Button */}
