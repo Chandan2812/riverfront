@@ -1,15 +1,24 @@
 
 import { useNavigate } from "react-router-dom";
 import properties from "../data/propertiesData.json"; // Importing the JSON file
-import HeroSection from "../components/hero";
 import Footer from "../components/footer";
+import Navbar from "../components/nav";
 
 function TopProperties() {
   const navigate = useNavigate();
 
   return (
     <div>
-      <HeroSection />
+              <Navbar/>
+      
+      {/* Hero Section */}
+            <div
+              className="relative w-full h-[380px] bg-cover bg-center bg-black bg-opacity-40"
+              style={{ backgroundImage: "url('https://uniqueproperties.ae/en/frontend/assets/images/banner/homeBg.webp')" }}
+            >
+               {/* Black Transparent Overlay */}
+            <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+            </div>
       <div className="p-6 w-[80%] mx-auto">
         <div className="space-y-6">
           {properties.map((property) => (

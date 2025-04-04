@@ -1,7 +1,7 @@
 import { useParams, useNavigate } from "react-router-dom";
 import propertiesData from "../data/propertiesData.json";
 import Footer from "../components/footer";
-import HeroSection from "../components/hero";
+import Navbar from "../components/nav";
 
 const PropertyDetails = () => {
   const { slug } = useParams<{ slug: string }>(); // Get slug from URL
@@ -26,8 +26,15 @@ const PropertyDetails = () => {
 
   return (
     <div>
-        <div className="bg-[var(--primary-color)]">
-                <HeroSection />
+                <Navbar/>
+        
+        {/* Hero Section */}
+              <div
+                className="relative w-full h-[380px] bg-cover bg-center bg-black bg-opacity-40"
+                style={{ backgroundImage: "url('https://uniqueproperties.ae/en/frontend/assets/images/banner/homeBg.webp')" }}
+              >
+                 {/* Black Transparent Overlay */}
+              <div className="absolute inset-0 bg-black bg-opacity-50"></div>
               </div>
     <div className="container w-[90%] mx-auto px-4 py-8">
 

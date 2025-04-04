@@ -51,8 +51,8 @@ export default function Navbar() {
 
         {/* Right Section (Desktop) */}
         <div className="hidden md:flex gap-4 items-center">
-          <button className="border border-white text-white px-4 py-1 rounded-full">
-            Careers
+          <button className="border border-white text-white px-4 py-1 rounded-full" onClick={()=>navigate("/contact")}>
+            Contact Us
           </button>
           <button
             onClick={() => setIsFindPropertyOpen(true)}

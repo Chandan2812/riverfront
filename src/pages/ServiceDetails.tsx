@@ -20,6 +20,8 @@ function ServiceDetails() {
         className="relative w-full h-[380px] bg-cover bg-center bg-black bg-opacity-40"
         style={{ backgroundImage: "url('https://uniqueproperties.ae/en/frontend/assets/images/banner/homeBg.webp')" }}
       >
+         {/* Black Transparent Overlay */}
+      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
       </div>
     <div className="max-w-6xl mx-auto px-4 py-10">
     <h1 className="text-3xl font-bold text-gray-800 mb-6 text-start">{service.title}</h1>
