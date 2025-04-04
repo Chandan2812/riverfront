@@ -3,12 +3,15 @@ import { X, Menu, Search, Video } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 export default function Navbar() {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const [isFindPropertyOpen, setIsFindPropertyOpen] = useState(false);
-  const [isBookMeetingOpen, setIsBookMeetingOpen] = useState(false);
-  const [selectedType, setSelectedType] = useState("OFF-PLAN");
-  const navigate = useNavigate();
-  const [isSticky, setIsSticky] = useState(false);
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+    const [isFindPropertyOpen, setIsFindPropertyOpen] = useState(false);
+    const [isBookMeetingOpen, setIsBookMeetingOpen] = useState(false);
+    const navigate = useNavigate();
+    const [isSticky, setIsSticky] = useState(false);
+    const [step, setStep] = useState(1);
+  const [selectedBHK, setSelectedBHK] = useState<string | null>(null);
+  const [selectedBudget, setSelectedBudget] = useState<string | null>(null);
+  const [selectedTimeframe, setSelectedTimeframe] = useState<string | null>(null);
 
    // Detect scroll position to change navbar background color
    useEffect(() => {
@@ -139,15 +142,14 @@ export default function Navbar() {
         </div>
       </div>
 
-{/* Find a Property Modal */}
-{isFindPropertyOpen && (
+      {isFindPropertyOpen && (
   <div className="fixed inset-0 bg-[var(--primary-color)] flex flex-col justify-center items-center z-50">
     {/* Fixed Top Section with Different Background */}
     <div className="w-full bg-gray-800 py-5 flex justify-center fixed top-0 left-0">
       {/* Close Button */}
       <button
         onClick={() => setIsFindPropertyOpen(false)}
-        className=" text-white border border-white rounded-full p-2 transition-all"
+        className="text-white border border-white rounded-full p-2 transition-all"
       >
         <X size={28} />
       </button>
@@ -156,35 +158,87 @@ export default function Navbar() {
     {/* Modal Content - Adjusted for Fixed Top Bar */}
     <div className="bg-[#0D1B2A] w-[90%] md:w-[50%] p-8 rounded-lg text-center mt-20">
       <h2 className="text-white text-3xl font-bold mb-6">FIND A PROPERTY</h2>
+      
+      {step === 1 && (
+        <>
+          <h3 className="text-white text-lg mb-4">Which type of property are you interested in?</h3>
+          <div className="flex justify-center gap-2 mb-4">
+            {["3BHK", "4BHK", "5BHK"].map((bhk) => (
+              <button
+                key={bhk}
+                onClick={() => {
+                    setStep(2);
+                    setSelectedBHK(bhk);
+                  }}
+                className={`border border-white px-4 py-2 rounded-full text-sm transition-all ${
+                  selectedBHK === bhk ? "bg-white text-black" : "text-white"
+                }`}
+              >
+                {bhk}
+              </button>
+            ))}
+          </div>
+        </>
+      )}
 
-      {/* Property Type Buttons */}
-      <div className="flex justify-center gap-2 mb-4">
-              {["OFF-PLAN", "RESALE", "EXCLUSIVE", "RENTALS"].map((type) => (
-                <button
-                  key={type}
-                  onClick={() => setSelectedType(type)}
-                  className={`border border-white px-4 py-2 rounded-full text-sm transition-all ${
-                    selectedType === type ? "bg-white text-black" : "text-white"
-                  }`}
-                >
-                  {type}
-                </button>
-              ))}
-            </div>
+      {step === 2 && (
+        <>
+          <h3 className="text-white text-lg mb-4">What is your preferred budget range?</h3>
+          <div className="flex justify-center gap-2 mb-4">
+            {["5-5.9 Million", "6 Million and above"].map((budget) => (
+              <button
+                key={budget}
+                onClick={() => {
+                    setStep(3);
+                    setSelectedBudget(budget);
+                  }}
+                className={`border border-white px-4 py-2 rounded-full text-sm transition-all ${
+                  selectedBudget === budget ? "bg-white text-black" : "text-white"
+                }`}
+              >
+                {budget}
+              </button>
+            ))}
+          </div>
+        </>
+      )}
 
-      {/* Search Input */}
-      <input
-        type="text"
-        placeholder="Put any Keyword..."
-        className="w-2/3 p-3 rounded-full bg-transparent text-black mb-4 border"
-      />
+      {step === 3 && (
+        <>
+          <h3 className="text-white text-lg mb-4">When are you looking to purchase?</h3>
+          <div className="flex justify-center gap-2 mb-4">
+            {["0-3 Months", "3-9 Months", "Over a year"].map((timeframe) => (
+              <button
+                key={timeframe}
+                onClick={() => {
+                    setStep(4);
+                    setSelectedTimeframe(timeframe);
+                  }}
+                className={`border border-white px-4 py-2 rounded-full text-sm transition-all ${
+                  selectedTimeframe === timeframe ? "bg-white text-black" : "text-white"
+                }`}
+              >
+                {timeframe}
+              </button>
+            ))}
+          </div>
+        </>
+      )}
 
-      {/* Search Button */}
-      <button className="w-2/3 bg-gray-500 text-white py-2 rounded-full text-lg">
-        SEARCH
-      </button>
+      {step === 4 && (
+        <>
+          <h3 className="text-white text-lg mb-4">Enter Your Contact Details</h3>
+          <input type="text" placeholder="First Name" className="w-full p-3 rounded bg-white mb-2" />
+          <input type="text" placeholder="Last Name" className="w-full p-3 rounded bg-white mb-2" />
+          <input type="text" placeholder="Phone" className="w-full p-3 rounded bg-white mb-2" />
+          <input type="email" placeholder="Email" className="w-full p-3 rounded bg-white mb-4" />
+          <button className="w-full bg-gray-500 text-white py-2 rounded-full text-lg">
+            SUBMIT
+          </button>
+        </>
+      )}
     </div>
-  </div>
+  </div>
 )}
 
 {isBookMeetingOpen && (
