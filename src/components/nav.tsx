@@ -113,6 +113,7 @@ export default function Navbar() {
             { name: "Top Properties", path: "/topProperties" },
             { name: "Contact Us", path: "/contact" },
             { name: "Book a Meeting", path: "/book-meeting" },
+            { name: "About Us", path: "/about" },
             { name: "Find a Property", path: "#", action: () => {
               setIsFindPropertyOpen(true); // Open the Find a Property modal
             } },

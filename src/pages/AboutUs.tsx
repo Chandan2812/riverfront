@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { FaLinkedinIn } from "react-icons/fa";
 import AwardsSection from "../components/awards";
 import Footer from "../components/footer";
-import HeroSection from "../components/hero";
+import Navbar from "../components/nav";
 
 export const AboutUs = () => {
   const [expanded, setExpanded] = useState(false);
@@ -36,8 +36,14 @@ export const AboutUs = () => {
 
   return (
     <div>
-      <div className="bg-[var(--primary-color)]">
-        <HeroSection />
+  <Navbar/>
+{/* Hero Section */}
+      <div
+        className="relative w-full h-[380px] bg-cover bg-center bg-black bg-opacity-40"
+        style={{ backgroundImage: "url('https://uniqueproperties.ae/en/frontend/assets/images/banner/homeBg.webp')" }}
+      >
+         {/* Black Transparent Overlay */}
+      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
       </div>
       <div className="flex flex-col-reverse md:flex-row items-start gap-10 w-[90%] mx-auto py-8">
         {/* Left Section - Text Content */}
