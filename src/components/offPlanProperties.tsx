@@ -96,7 +96,7 @@ export default function OffPlanProperties() {
       </div>
 
       {/* View Switch & Sorting */}
-      <div className="container mx-auto p-6 flex justify-between items-center">
+      <div className="container w-[90%] mx-auto p-6 flex justify-between items-center">
         <div className="flex gap-2">
           <button
             onClick={() => setView("grid")}
@@ -121,13 +121,13 @@ export default function OffPlanProperties() {
 
       {/* Properties Section */}
       <div
-        className={`container mx-auto p-6 grid ${
+        className={`w-[90%] container mx-auto p-6 grid ${
           view === "grid" ? "grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" : "grid-cols-1"
         }`}
       >
         {properties.map((property) => (
           <div key={property.id} className="bg-white shadow-lg rounded-md overflow-hidden">
-            <img src={property.image} alt={property.name} className="w-full h-60 md:h-40 object-cover" />
+            <img src={property.image} alt={property.name} className="w-full h-60 md:h-60 object-cover" />
             <div className="p-3">
               <h3 className="font-bold text-lg">{property.name}</h3>
               <button className="mt-2 bg-gray-200 p-2 rounded-md w-full">View Details</button>
@@ -136,14 +136,7 @@ export default function OffPlanProperties() {
         ))}
       </div>
 
-      {/* Pagination */}
-      <div className="flex justify-center space-x-2 my-6">
-        {[...Array(10)].map((_, i) => (
-          <button key={i} className="px-3 py-1 border rounded-md">
-            {i + 1}
-          </button>
-        ))}
-      </div>
+      
     </div>
   );
 }

@@ -6,6 +6,7 @@ import { AboutUs } from './pages/AboutUs';
 import PropertyDetails from './pages/PropertyDetails';
 import Contact from './pages/Contact';
 import OffPlanProperties from './components/offPlanProperties';
+import TopProperties from './pages/TopProperties';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path="/awards" element={<AwardsPage/>} /> 
         <Route path="/about" element={<AboutUs/>} /> 
         <Route path="/property/:slug" element={<PropertyDetails />} />
+        <Route path="/topProperties" element={<TopProperties />} />
         <Route path="/contact" element={<Contact/>} />
         <Route path="/OffPlanProperties" element={<OffPlanProperties/>} />
       </Routes>

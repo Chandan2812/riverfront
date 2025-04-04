@@ -145,8 +145,8 @@
     };
 
     return (
-        <div className="max-w-6xl mx-auto p-6">
-        <h2 className="text-center text-2xl font-bold mb-4">NEW PROPERTIES IN DUBAI</h2>
+        <div className="max-w-6xl mx-auto p-6 mt-10">
+        <h2 className="text-2xl md:text-4xl text-gray-800 mb-6 text-center">New Properties in Dubai</h2>
         
         {/* Category Tabs */}
         <div className="flex justify-center gap-4 mb-4">
@@ -158,7 +158,7 @@
                 setSelectedProperty(properties[category][0] || null);
                 }}
                 className={`px-4 py-2 border rounded-md ${
-                selectedCategory === category ? "bg-black text-white" : "bg-white text-black"
+                selectedCategory === category ? "bg-[var(--primary-color)] text-white" : "bg-white text-black"
                 }`}
             >
                 {category}
@@ -168,13 +168,13 @@
 
 {/* Property Selection for Selected Category */}
 {(selectedCategory === "OFF-PLAN" || selectedCategory === "RESALES & RENTALS"|| selectedCategory==="EXCLUSIVE") && (
-  <div className="flex justify-center gap-4 mb-4">
+  <div className="flex flex-col md:flex-row justify-center gap-4 mb-4">
     {properties[selectedCategory].map((property) => (
       <button
         key={property.name}
         onClick={() => setSelectedProperty(property)}
         className={`px-4 py-2 border rounded-md ${
-          selectedProperty.name === property.name ? "bg-black text-white" : "bg-white text-black"
+          selectedProperty.name === property.name ? "bg-[var(--primary-color)] text-white" : "bg-white text-black"
         }`}
       >
         {property.name}
@@ -184,19 +184,23 @@
 )}
 
 
-        {/* Property Display */}
-        {selectedProperty && (
-  <div className="bg-white shadow-lg rounded-lg p-4 flex gap-6">
-    <div className="w-2/3">
+       {/* Property Display */}
+{selectedProperty && (
+  <div className="bg-white shadow-lg rounded-lg p-4 flex flex-col md:flex-row gap-6">
+    <div className="w-full md:w-2/3">
       <Slider {...settings}>
         {selectedProperty.images.map((image, index) => (
           <div key={index}>
-          <img src={image} alt={selectedProperty.name} className="w-full h-[350px] rounded-lg object-cover" />
-        </div>
+            <img
+              src={image}
+              alt={selectedProperty.name}
+              className="w-full h-[250px] md:h-[350px] rounded-lg object-cover"
+            />
+          </div>
         ))}
       </Slider>
     </div>
-    <div className="w-1/3">
+    <div className="w-full md:w-1/3">
       <h3 className="text-lg font-semibold mb-2">Key Highlights</h3>
       <ul className="list-disc pl-5 text-sm text-gray-700">
         {selectedProperty.highlights.map((highlight, i) => (
@@ -206,6 +210,7 @@
     </div>
   </div>
 )}
+
         </div>
     );
     }

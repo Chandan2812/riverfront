@@ -112,7 +112,7 @@ export default function Navbar() {
             { name: "Resale", path: "/resale" },
             { name: "Rental", path: "/rental" },
             { name: "Services", path: "/services" },
-            { name: "Top Properties", path: "#property" },
+            { name: "Top Properties", path: "/topProperties" },
             { name: "Developers", path: "/developers" },
             { name: "Contact Us", path: "/contact" },
             { name: "Book a Meeting", path: "/book-meeting" },
