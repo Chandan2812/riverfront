@@ -1,0 +1,55 @@
+ [
+      {
+        "title": "Interior Design",
+        "slug": "interior_design",
+        "image": "https://uniqueproperties.ae/en/uploads/frontend/services/608874/conversions/interior-design-resize.webp",
+        "description": "Aviva Collective is an award-winning, multi-disciplinary creative agency specialized in architectural design and fit-out solutions for luxury residential, hospitality, commercial, retail, and FF&E sectors.",
+        "bullet_points": [
+          "Bespoke architectural design: Create unique, innovative spaces tailored to clients’ needs.",
+          "Luxury interior design: Blend form, function, and style for stunning spaces.",
+          "Optimize space utilization: Ensure efficient use while maintaining luxury.",
+          "Project management: Oversee projects from concept to completion, ensuring timely delivery.",
+          "End-to-end fit-out solutions: Include interior construction, joinery, FF&E procurement, and installation."
+        ]
+      },
+      {
+        "title": "Conveyancing Services",
+        "slug": "real_estate",
+        "image": "https://uniqueproperties.ae/en/uploads/frontend/services/18684/conversions/conveyancing-services-resize.webp",
+        "description": "Expert real estate consultation services offering market insights, investment strategies, and property acquisition guidance for individuals and businesses.",
+        "bullet_points": [
+          "Market analysis: In-depth research to identify investment opportunities.",
+          "Legal advisory: Assistance with property laws and regulations.",
+          "Financial planning: Strategies for mortgage, loans, and ROI optimization.",
+          "Property valuation: Professional assessment of property value.",
+          "Portfolio management: Helping investors diversify and maximize returns."
+        ]
+      },
+      {
+        "title": "Pro Services",
+        "slug": "pro_services",
+        "image": "https://uniqueproperties.ae/en/uploads/frontend/services/18675/conversions/pro-services-resize.webp",
+        "description": "Our architecture and planning services bring innovative and sustainable solutions to commercial, residential, and mixed-use developments.",
+        "bullet_points": [
+          "Concept design: Creating unique architectural visions.",
+          "Sustainable building solutions: Incorporating eco-friendly materials and designs.",
+          "Urban planning: Development strategies for efficient and aesthetic cityscapes.",
+          "3D visualization: High-quality renders for project previews.",
+          "Permit approvals: Assisting with regulatory compliance and documentation."
+        ]
+      },
+      {
+        "title": "Property Management",
+        "slug": "property_management",
+        "image": "https://uniqueproperties.ae/en/uploads/frontend/services/18675/conversions/pro-services-resize.webp",
+        "description": "Comprehensive property management solutions, ensuring hassle-free maintenance, leasing, and tenant satisfaction for landlords and investors.",
+        "bullet_points": [
+          "Tenant screening: Finding reliable and responsible tenants.",
+          "Rent collection: Ensuring timely payments and financial reporting.",
+          "Maintenance services: Handling repairs and upkeep efficiently.",
+          "Legal compliance: Ensuring adherence to rental laws and regulations.",
+          "Marketing services: Promoting properties for higher occupancy rates."
+        ]
+      }
+    ]
+  

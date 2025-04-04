@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { FaTh, FaList, FaPlus, FaMinus } from "react-icons/fa";
+import { FaPlus, FaMinus } from "react-icons/fa";
 import Navbar from "./nav";
 
 const properties = [
@@ -14,7 +14,6 @@ const properties = [
 ];
 
 export default function OffPlanProperties() {
-  const [view, setView] = useState("grid");
   const [isExpanded, setIsExpanded] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -28,7 +27,8 @@ export default function OffPlanProperties() {
 
   return (
     <div className="w-full">
-      <Navbar />
+        <Navbar />
+     
 
       {/* Hero Section */}
       <div
@@ -56,7 +56,7 @@ export default function OffPlanProperties() {
                 >
                   {isExpanded ? <FaMinus /> : <FaPlus />}
                 </button>
-                <button className="bg-black text-white px-4 py-2 rounded-r-md">
+                <button className="bg-black text-white px-2 py-2 rounded-r-md">
                   Find Now
                 </button>
               </div>
@@ -96,7 +96,7 @@ export default function OffPlanProperties() {
       </div>
 
       {/* View Switch & Sorting */}
-      <div className="container w-[90%] mx-auto p-6 flex justify-between items-center">
+      {/* <div className="container w-[90%] mx-auto p-6 flex justify-between items-center">
         <div className="flex gap-2">
           <button
             onClick={() => setView("grid")}
@@ -117,13 +117,11 @@ export default function OffPlanProperties() {
             <option>New Launches</option>
           </select>
         </div>
-      </div>
+      </div> */}
 
       {/* Properties Section */}
       <div
-        className={`w-[90%] container mx-auto p-6 grid ${
-          view === "grid" ? "grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" : "grid-cols-1"
-        }`}
+        className={`w-[90%] container mt-14 mx-auto p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4`}
       >
         {properties.map((property) => (
           <div key={property.id} className="bg-white shadow-lg rounded-md overflow-hidden">

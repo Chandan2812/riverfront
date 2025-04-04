@@ -67,7 +67,7 @@ export default function Navbar() {
       <div className="w-[90%] mx-auto border-t border-gray-100 my-2 hidden md:block"></div>
       </div>
       {/* Bottom Navigation (Mobile Only) */}
-      <div className="fixed bottom-0 left-0 w-full bg-[#0D1B2A] text-white flex justify-around py-3 md:hidden items-center">
+      <div className="fixed z-50 bottom-0 left-0 w-full bg-[#0D1B2A] text-white flex justify-around py-3 md:hidden items-center">
         <button onClick={() => setIsSidebarOpen(true)} className="flex flex-col items-center">
           <Menu size={24} />
           <span className="text-xs">Menu</span>
@@ -109,11 +109,8 @@ export default function Navbar() {
         {[
             { name: "Home", path: "/" },
             { name: "Off Plan", path: "/OffPlanProperties" },
-            { name: "Resale", path: "/resale" },
-            { name: "Rental", path: "/rental" },
-            { name: "Services", path: "/services" },
+            { name: "Services", path: "/ServicesSection" },
             { name: "Top Properties", path: "/topProperties" },
-            { name: "Developers", path: "/developers" },
             { name: "Contact Us", path: "/contact" },
             { name: "Book a Meeting", path: "/book-meeting" },
             { name: "Find a Property", path: "#", action: () => {

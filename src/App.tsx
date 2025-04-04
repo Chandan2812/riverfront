@@ -7,6 +7,8 @@ import PropertyDetails from './pages/PropertyDetails';
 import Contact from './pages/Contact';
 import OffPlanProperties from './components/offPlanProperties';
 import TopProperties from './pages/TopProperties';
+import ServicesSection from './pages/Services';
+import ServiceDetails from './pages/ServiceDetails';
 
 
 function App() {
@@ -20,6 +22,8 @@ function App() {
         <Route path="/topProperties" element={<TopProperties />} />
         <Route path="/contact" element={<Contact/>} />
         <Route path="/OffPlanProperties" element={<OffPlanProperties/>} />
+        <Route path="/ServicesSection" element={<ServicesSection/>} />
+        <Route path="/service/:slug" element={<ServiceDetails/>} />
       </Routes>
     </Router>
   );

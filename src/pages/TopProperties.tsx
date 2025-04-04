@@ -15,7 +15,7 @@ function TopProperties() {
           {properties.map((property) => (
             <div
               key={property.slug}
-              className="flex bg-white shadow-md p-6 rounded-lg hover:shadow-lg transition h-60"
+              className="flex bg-gray-100 shadow-md p-6 rounded-xl transition h-60"
             >
               {/* Property Image - 50% width, fixed height */}
               <div className="w-1/2 h-full">
