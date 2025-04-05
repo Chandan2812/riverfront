@@ -52,16 +52,14 @@ export const AboutUs = () => {
             We are proud to be one of Dubai's leading real estate agencies.
           </h2>
           <p className="text-gray-700 leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima inventore et vel dolor explicabo voluptatum pariatur, nobis officiis suscipit porro? Alias velit commodi quia aperiam quos quam beatae?
-          </p>
+          At Riverfront, we specialize in delivering exceptional real estate experiences in Dubai’s most sought-after neighborhoods. With a deep understanding of the local market and a passion for innovation, our team of experts combines unparalleled market knowledge with a commitment to providing personalized service.          </p>
           <br />
           <p className="text-gray-700 leading-relaxed">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis unde dolorum libero illum, a amet ratione iusto, alias at voluptas deserunt architecto quisquam sint esse nulla dolor voluptates doloribus. Sit cum soluta quidem blanditiis delectus, tempore explicabo laboriosam nostrum repudiandae quas perspiciatis officiis distinctio praesentium suscipit dicta reiciendis.
-          </p>
+          Our expertise spans the entire spectrum of Dubai’s real estate landscape, from luxury villas and apartments to commercial properties and investment opportunities. Whether you’re a seasoned investor, a first-time buyer, or simply looking for a new home, our team is dedicated to providing a seamless and stress-free experience.          </p>
           {expanded && (
             <p className="text-gray-700 leading-relaxed mt-4">
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, tempore. Mollitia dicta illum eius quo in corporis id placeat minima.              <br /><br />
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore repudiandae molestias porro harum eaque doloremque sit quo quibusdam magnam placeat maxime, perspiciatis, eius provident veniam quam fugiat odit numquam. Ullam, ea, rerum esse vel, totam sed ipsam voluptatem libero animi quod facilis quas fugit sint repellendus. Ipsum, pariatur repellat.            </p>
+We take pride in our ability to listen, understand, and deliver on our clients’ unique needs and goals. Our personalized approach ensures that every client receives tailored guidance, expert advice, and exceptional service.             <br /><br />
+By combining local expertise, market knowledge, and a passion for innovation, we create exceptional real estate experiences that exceed our clients’ expectations. At Riverfront, we’re dedicated to helping you achieve your real estate goals in Dubai.</p>
           )}
           {/* Toggle Button */}
           <button
