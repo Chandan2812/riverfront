@@ -8,11 +8,7 @@ export default function OurStory() {
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-2xl md:text-4xl text-gray-800 mb-6 text-center">Our Story</h2>
         <p className="mt-4 text-md text-gray-700 ">
-          Since our formation in 2008, Unique Properties has embarked on a transformative
-          journey fueled by our unwavering commitment to customer-centricity and a passion
-          for real estate. This distinctive approach set us apart from the competition and
-          propelled us to become one of Dubai's leading agencies, setting new standards for
-          quality and excellence.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam nam minus, adipisci, assumenda cupiditate excepturi ducimus suscipit reprehenderit hic eius, dolore sunt quod eligendi quidem quos molestiae aperiam officia. Praesentium, impedit harum. Et modi inventore hic? Sapiente, ratione magni molestias veritatis adipisci ipsa accusamus praesentium, corporis deserunt, officia assumenda.
         </p>
         <button 
           onClick={() => navigate('/about')} 
