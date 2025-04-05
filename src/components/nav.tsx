@@ -83,7 +83,7 @@ export default function Navbar() {
       <div
   className="fixed z-50 bottom-0 left-0 w-full bg-[#0D1B2A] text-white flex justify-around py-3 md:hidden items-center"
   style={{
-    paddingBottom: 'calc(env(safe-area-inset-bottom) + 0.75rem)', // 0.75rem = py-3
+    paddingBottom: 'calc(env(safe-area-inset-bottom, 0px) + 0.75rem)', // 0.75rem = py-3
     WebkitBackdropFilter: 'blur(10px)', // optional for Safari blur effect
     backdropFilter: 'blur(10px)',
   }}
