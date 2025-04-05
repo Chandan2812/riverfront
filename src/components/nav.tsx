@@ -80,9 +80,7 @@ export default function Navbar() {
       <div className="w-[90%] mx-auto border-t border-gray-100 my-2 hidden md:block"></div>
       </div>
       {/* Bottom Navigation (Mobile Only) */}
-      <div className="fixed z-30 bottom-0 left-0 w-full bg-[#0D1B2A] text-white flex justify-around py-3 md:hidden items-center backdrop-blur-sm pb-safe"
-      style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}
-      >
+      <div className="fixed z-30 bottom-10 left-0 w-full bg-[#0D1B2A] text-white flex justify-around py-3 md:hidden items-center backdrop-blur-sm" >
 
 
         <button onClick={() => setIsSidebarOpen(true)} className="flex flex-col items-center">
