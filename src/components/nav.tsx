@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { X, Menu, Search } from "lucide-react";
+import { X, Menu, Search, Video } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 export default function Navbar() {
@@ -80,22 +80,26 @@ export default function Navbar() {
       <div className="w-[90%] mx-auto border-t border-gray-100 my-2 hidden md:block"></div>
       </div>
       {/* Bottom Navigation (Mobile Only) */}
-      <div className="fixed z-50 top-0 left-0 w-full bg-[#0D1B2A] text-white flex justify-around py-3 md:hidden items-center backdrop-blur-sm">
-  <button onClick={() => setIsSidebarOpen(true)} className="flex flex-col items-center">
-    <Menu size={24} />
-    <span className="text-xs">Menu</span>
-  </button>
+      <div className="fixed z-30 bottom-0 left-0 w-full bg-[#0D1B2A] text-white flex justify-around py-3 md:hidden items-center backdrop-blur-sm pb-safe"
+      style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}
+      >
 
-  <button onClick={() => navigate("/")} className="flex flex-col items-center">
-    <span className="text-2xl font-semibold text-white cursor-pointer mx-auto">RIVERFRONT</span>
-  </button>
 
-  <button onClick={() => setIsFindPropertyOpen(true)} className="flex flex-col items-center">
-    <Search size={24} />
-    <span className="text-xs">Find a Property</span>
-  </button>
-</div>
+        <button onClick={() => setIsSidebarOpen(true)} className="flex flex-col items-center">
+          <Menu size={24} />
+          <span className="text-xs">Menu</span>
+        </button>
 
+        <button onClick={() => setIsFindPropertyOpen(true)} className="flex flex-col items-center">
+          <Search size={24} />
+          <span className="text-xs">Find a Property</span>
+        </button>
+
+        <button onClick={() => setIsBookMeetingOpen(true)} className="flex flex-col items-center">
+          <Video size={24} />
+          <span className="text-xs">Book a Meeting</span>
+        </button>
+      </div>
 
       {/* Sidebar Menu */}
       <div
