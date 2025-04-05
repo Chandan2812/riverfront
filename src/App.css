@@ -3,8 +3,10 @@
 }
 
 /* Fix for iOS Safari fixed positioning issue */
-body {
+/* Fix iOS Safari fixed positioning scroll bug */
+html, body {
     overscroll-behavior-y: none;
     -webkit-overflow-scrolling: touch;
+    height: 100%;
   }
   

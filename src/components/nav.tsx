@@ -71,8 +71,8 @@ export default function Navbar() {
       <div className="w-[90%] mx-auto border-t border-gray-100 my-2 hidden md:block"></div>
       </div>
       {/* Bottom Navigation (Mobile Only) */}
-      <div className="fixed z-50 bottom-0 left-0 w-full bg-[#0D1B2A] text-white flex justify-around py-3 md:hidden items-center backdrop-blur-sm pb-safe"
-  style={{ WebkitTransform: 'translate3d(0, 0, 0)' }}>
+      <div className="fixed z-50 bottom-0 left-0 w-full bg-[#0D1B2A] text-white flex justify-around py-3 md:hidden items-center backdrop-blur-sm pb-safe">
+
 
         <button onClick={() => setIsSidebarOpen(true)} className="flex flex-col items-center">
           <Menu size={24} />
