@@ -27,6 +27,15 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleCloseFindProperty = () => {
+    setIsFindPropertyOpen(false);
+    setStep(1);
+    setSelectedBHK(null);
+    setSelectedBudget(null);
+    setSelectedTimeframe(null);
+  };
+  
+
   return (
     <div className="relative w-full">
       {/* Navbar Container (Desktop Only) */}
@@ -71,8 +80,14 @@ export default function Navbar() {
       <div className="w-[90%] mx-auto border-t border-gray-100 my-2 hidden md:block"></div>
       </div>
       {/* Bottom Navigation (Mobile Only) */}
-      <div className="fixed z-50 bottom-0 left-0 w-full bg-[#0D1B2A] text-white flex justify-around py-3 md:hidden items-center backdrop-blur-sm pb-safe">
-
+      <div
+  className="fixed z-50 bottom-0 left-0 w-full bg-[#0D1B2A] text-white flex justify-around py-3 md:hidden items-center"
+  style={{
+    paddingBottom: 'calc(env(safe-area-inset-bottom) + 0.75rem)', // 0.75rem = py-3
+    WebkitBackdropFilter: 'blur(10px)', // optional for Safari blur effect
+    backdropFilter: 'blur(10px)',
+  }}
+>
 
         <button onClick={() => setIsSidebarOpen(true)} className="flex flex-col items-center">
           <Menu size={24} />
@@ -150,7 +165,7 @@ export default function Navbar() {
     <div className="w-full bg-gray-800 py-5 flex justify-center fixed top-0 left-0">
       {/* Close Button */}
       <button
-        onClick={() => setIsFindPropertyOpen(false)}
+        onClick={handleCloseFindProperty}
         className="text-white border border-white rounded-full p-2 transition-all"
       >
         <X size={28} />
