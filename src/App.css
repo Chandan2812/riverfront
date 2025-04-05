@@ -2,11 +2,3 @@
     --primary-color: #0e1c2c;
 }
 
-/* Fix for iOS Safari fixed positioning issue */
-/* Fix iOS Safari fixed positioning scroll bug */
-html, body {
-    overscroll-behavior-y: none;
-    -webkit-overflow-scrolling: touch;
-    height: 100%;
-  }
-  

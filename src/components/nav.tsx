@@ -71,31 +71,24 @@ export default function Navbar() {
       <div className="w-[90%] mx-auto border-t border-gray-100 my-2 hidden md:block"></div>
       </div>
       {/* Bottom Navigation (Mobile Only) */}
-      <div
-  className="fixed z-50 bottom-0 left-0 w-full bg-[#0D1B2A] text-white flex justify-around py-3 md:hidden items-center backdrop-blur-sm"
-  style={{
-    WebkitTransform: 'translate3d(0, 0, 0)',
-    WebkitBackfaceVisibility: 'hidden',
-    transform: 'translateZ(0)',
-    paddingBottom: 'env(safe-area-inset-bottom)',
-  }}
->
-  <button onClick={() => setIsSidebarOpen(true)} className="flex flex-col items-center">
-    <Menu size={24} />
-    <span className="text-xs">Menu</span>
-  </button>
+      <div className="fixed z-50 bottom-0 left-0 w-full bg-[#0D1B2A] text-white flex justify-around py-3 md:hidden items-center backdrop-blur-sm pb-safe">
 
-  <button onClick={() => setIsFindPropertyOpen(true)} className="flex flex-col items-center">
-    <Search size={24} />
-    <span className="text-xs">Find a Property</span>
-  </button>
 
-  <button onClick={() => setIsBookMeetingOpen(true)} className="flex flex-col items-center">
-    <Video size={24} />
-    <span className="text-xs">Book a Meeting</span>
-  </button>
-</div>
+        <button onClick={() => setIsSidebarOpen(true)} className="flex flex-col items-center">
+          <Menu size={24} />
+          <span className="text-xs">Menu</span>
+        </button>
 
+        <button onClick={() => setIsFindPropertyOpen(true)} className="flex flex-col items-center">
+          <Search size={24} />
+          <span className="text-xs">Find a Property</span>
+        </button>
+
+        <button onClick={() => setIsBookMeetingOpen(true)} className="flex flex-col items-center">
+          <Video size={24} />
+          <span className="text-xs">Book a Meeting</span>
+        </button>
+      </div>
 
       {/* Sidebar Menu */}
       <div

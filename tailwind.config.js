@@ -5,11 +5,7 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {
-      padding: {
-        'safe': 'env(safe-area-inset-bottom)', // this adds pb-safe
-      },
-    },
+    extend: {},
   },
   plugins: [],
 }
