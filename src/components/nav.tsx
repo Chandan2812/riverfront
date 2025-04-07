@@ -41,7 +41,7 @@ export default function Navbar() {
       {/* Navbar Container (Desktop Only) */}
 
       <div
-        className={`w-full fixed top-0 left-0 z-50 transition-all duration-300 ${
+        className={`w-full sticky top-0 left-0 z-50 transition-all duration-300 ${
           isSticky ? "bg-[var(--primary-color)] shadow-md" : "bg-transparent"
         }`}
       >
