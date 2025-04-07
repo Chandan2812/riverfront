@@ -13,7 +13,7 @@ export default function OurStory() {
 </p>
         <button 
           onClick={() => navigate('/about')} 
-          className="px-6 py-2 text-lg text-white font-semibold bg-[--primary-color] rounded-3xl hover:opacity-80 mt-6"
+          className="px-6 py-2 text-lg text-white bg-[--primary-color] rounded-3xl hover:opacity-80 mt-6"
         >
           Read More About Us
         </button>

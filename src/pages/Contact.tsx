@@ -2,7 +2,7 @@ import { useState } from "react";
 import Footer from "../components/footer";
 import PhoneInput from 'react-phone-number-input'
 import "react-phone-number-input/style.css";
-import HeroSection from "../components/hero";
+import Navbar from "../components/nav";
 
 export default function Contact() {
     const [formData, setFormData] = useState<{
@@ -38,9 +38,11 @@ export default function Contact() {
     return (
         <div>
 
-        <HeroSection/>
+<div className="mb-32">
+      <Navbar/>
+      </div>
 
-      <div className="w-full md:w-[90%] mx-auto px-6 py-12 text-center">
+      <div className="w-full md:w-[90%] mx-auto px-6 pb-12 text-center">
         {/* Header Section */}
         <h1 className="text-3xl text-[var(--primary-color)] font-bold mb-4">Join An Award-winning Team</h1>
         <p className="text-md font-semibold text-gray-700 mb-8">

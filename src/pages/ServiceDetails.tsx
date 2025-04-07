@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import servicesData from "../data/servicesData.json"
 import Footer from "../components/footer";
-import HeroSection from "../components/hero";
+import Navbar from "../components/nav";
 
 function ServiceDetails() {
     const { slug } = useParams();
@@ -13,8 +13,10 @@ function ServiceDetails() {
 
   return (
     <div>
-        <HeroSection/>
-    <div className="max-w-6xl mx-auto px-4 py-10">
+        <div className="mb-32">
+      <Navbar/>
+      </div>
+    <div className="max-w-6xl mx-auto px-4">
     <h1 className="text-3xl font-bold text-[var(--primary-color)] mb-6 text-start">{service.title}</h1>
 
     <div className="grid md:grid-cols-2 gap-6">

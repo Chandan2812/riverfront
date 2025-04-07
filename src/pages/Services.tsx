@@ -3,7 +3,7 @@ import { FaArrowRight } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import services from "../data/servicesData.json"
 import Footer from "../components/footer";
-import HeroSection from "../components/hero";
+import Navbar from "../components/nav";
 
 export default function ServicesSection() {
   const navigate = useNavigate();
@@ -11,7 +11,10 @@ export default function ServicesSection() {
 
   return (
     <div className="w-full">
-        <HeroSection/>
+      <div className="mb-32">
+      <Navbar/>
+      </div>
+        
 
       <div className="mx-auto w-[90%] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 my-10">
         {services.map((service) => (

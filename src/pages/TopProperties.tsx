@@ -2,15 +2,17 @@
 import { useNavigate } from "react-router-dom";
 import properties from "../data/propertiesData.json"; // Importing the JSON file
 import Footer from "../components/footer";
-import HeroSection from "../components/hero";
+import Navbar from "../components/nav";
 
 function TopProperties() {
   const navigate = useNavigate();
 
   return (
     <div>
-              <HeroSection/>
-              <div className="w-full px-4 sm:px-6 md:w-[80%] md:mx-auto mb-10">
+              <div className="mb-32">
+      <Navbar/>
+      </div>
+              <div className="w-full md:w-[90%] px-4 sm:px-6  md:mx-auto mb-10">
 
         <div className="space-y-6">
           {properties.map((property) => (
@@ -46,6 +48,23 @@ function TopProperties() {
           ))}
         </div>
       </div>
+      <div className="bg-gray-100 py-10 mt-10">
+  <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6">
+    {/* Text */}
+    <div className="text-center md:text-left">
+      <h2 className="text-2xl font-semibold text-gray-800 mb-2">Have a question?</h2>
+      <p className="text-gray-600">Our team is happy to assist you</p>
+    </div>
+
+    {/* Contact Actions */}
+    <div className="flex flex-col sm:flex-row items-center gap-4">
+      <button className="bg-[var(--primary-color)] text-white px-6 py-2 rounded-md transition">
+        Contact Us
+      </button>
+      <span className="text-lg font-medium text-gray-800">📞 +1 (800) 123-4567</span>
+    </div>
+  </div>
+</div>
       <Footer />
     </div>
   );

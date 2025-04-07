@@ -1,55 +1,75 @@
 // components/Navbar.tsx
-import React from "react";
+import React, { useState, useEffect } from "react";
 import logo from "../assets/logo.png";
 import { X } from "lucide-react";
 import { useLocation, useNavigate } from "react-router-dom";
+import FindPropertyModal from "./FindPropertyModal";
+import BookMeetingModal from "./BookMeetingModal";
 
 interface NavbarProps {
-  onOpenBookMeeting: () => void;
-  onOpenFindProperty: () => void;
+  transparent?: boolean;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ onOpenBookMeeting, onOpenFindProperty }) => {
-  const [menuOpen, setMenuOpen] = React.useState(false);
-  const [isScrolled, setIsScrolled] = React.useState(false);
+const Navbar: React.FC<NavbarProps> = ({ transparent = false }) => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isBookMeetingOpen, setIsBookMeetingOpen] = useState(false);
+  const [isFindPropertyOpen, setIsFindPropertyOpen] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
 
   const navItems = [
     { name: "Home", href: "/" },
     { name: "Services", href: "/ServicesSection" },
     { name: "Top Properties", href: "/topProperties" },
     { name: "Contact Us", href: "/contact" },
-    { name: "Book a Meeting", action: onOpenBookMeeting },
+    { name: "Book a Meeting", action: () => setIsBookMeetingOpen(true) },
     { name: "About Us", href: "/about" },
-    { name: "Find a Property", action: onOpenFindProperty },
+    { name: "Find a Property", action: () => setIsFindPropertyOpen(true) },
   ];
 
-  const location = useLocation();
-
-  React.useEffect(() => {
+  useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
-  
-    // Check once on load
+
     handleScroll();
-  
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [location]); // add location as dependency
-  
+  }, [location]);
+
+  const backgroundClass =
+    transparent && !isScrolled
+      ? "bg-transparent"
+      : "bg-white shadow-md";
 
   return (
     <>
-      <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? "bg-white shadow-md" : "bg-transparent"}`}>
+      <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${backgroundClass}`}>
         <div className="max-w-6xl mx-auto flex items-center justify-between px-4">
-          <img src={logo} onClick={() => navigate("/")} alt="Logo" className="h-14 md:h-20 cursor-pointer py-2" />
+          <img
+            src={logo}
+            onClick={() => navigate("/")}
+            alt="Logo"
+            className="h-14 md:h-20 cursor-pointer py-2"
+          />
           <ul className="hidden md:flex gap-6 text-[var(--secondary-color)] text-md">
             {navItems.map((item, index) =>
               item.href ? (
-                <li key={index}><a href={item.href} className="hover:text-[var(--primary-color)]">{item.name}</a></li>
+                <li key={index}>
+                  <a href={item.href} className="hover:text-[var(--primary-color)]">
+                    {item.name}
+                  </a>
+                </li>
               ) : (
-                <li key={index}><button onClick={item.action} className="hover:text-[var(--primary-color)]">{item.name}</button></li>
+                <li key={index}>
+                  <button
+                    onClick={item.action}
+                    className="hover:text-[var(--primary-color)]"
+                  >
+                    {item.name}
+                  </button>
+                </li>
               )
             )}
           </ul>
@@ -78,6 +98,9 @@ const Navbar: React.FC<NavbarProps> = ({ onOpenBookMeeting, onOpenFindProperty }
           </div>
         </div>
       )}
+
+      <FindPropertyModal isOpen={isFindPropertyOpen} onClose={() => setIsFindPropertyOpen(false)} />
+      <BookMeetingModal isOpen={isBookMeetingOpen} onClose={() => setIsBookMeetingOpen(false)} />
     </>
   );
 };

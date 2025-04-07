@@ -46,7 +46,7 @@ const PropertySection = () => {
       {/* View All Button */}
       <div className="flex items-center justify-center">
       <button 
-        className="px-8 py-2 text-lg text-white font-semibold bg-[--primary-color] rounded-3xl hover:opacity-80 mt-6"
+        className="px-8 py-2 text-lg text-white bg-[--primary-color] rounded-3xl hover:opacity-80 mt-6"
         onClick={(e) => {
           e.stopPropagation(); // Prevent section click
           navigate("/topProperties");

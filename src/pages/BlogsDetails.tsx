@@ -2,7 +2,7 @@
 import { useParams } from 'react-router-dom';
 import blogsData from '../data/blogsData.json';
 import Footer from '../components/footer';
-import HeroSection from '../components/hero';
+import Navbar from '../components/nav';
 
 const BlogDetails = () => {
   const { id } = useParams();
@@ -14,7 +14,9 @@ const BlogDetails = () => {
 
   return (
     <div>
-        <HeroSection/>
+        <div className="mb-32">
+      <Navbar/>
+      </div>
     <div className="w-full container mx-auto px-4 py-10">
       <img src={blog.image} alt={blog.title} className="w-full h-[400px] object-cover rounded-lg mb-6" />
       <p className="text-gray-500 text-sm mb-2">{blog.date}</p>

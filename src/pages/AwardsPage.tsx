@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import Footer from "../components/footer";
-import HeroSection from "../components/hero";
+import Navbar from "../components/nav";
 
 const awardsData = [
   {
@@ -63,7 +63,9 @@ export const AwardsPage = () => {
 
   return (
     <>      
-    <HeroSection/>
+    <div className="mb-32">
+      <Navbar/>
+      </div>
 
       {/* Sidebar and Main Content */}
       <div className="relative flex justify-center my-10">
@@ -89,7 +91,7 @@ export const AwardsPage = () => {
           {awardsData.map(({ givenBy, awardName, year, awardImage, image }) => (
             <div key={year} id={`year-${year}`} >
                {/* Responsive Layout: Column on mobile, Grid on desktop */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6 items-center border border-gray-200 px-2 py-2 md:px-8 md:py-4 rounded-xl">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6 items-center border border-[var(--primary-color)] px-2 py-2 md:px-8 md:py-4 rounded-xl">
               {/* Award Image (Mobile: Above the main image) */}
               <div className="flex flex-col items-center md:items-start">
                 <p className="text-lg md:text-2xl font-bold text-[var(--primary-color)]">{givenBy}</p>
