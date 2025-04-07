@@ -83,20 +83,20 @@ export default function Navbar() {
       <div className="fixed z-50 bottom-0 left-0 w-full bg-[#0D1B2A] text-white flex justify-around py-3 md:hidden items-center backdrop-blur-sm pb-safe">
 
 
-        <button onClick={() => setIsSidebarOpen(true)} className="flex flex-col items-center">
+        <h1 onClick={() => setIsSidebarOpen(true)} className="flex flex-col items-center">
           <Menu size={24} />
           <span className="text-xs">Menu</span>
-        </button>
+        </h1>
 
-        <button onClick={() => setIsFindPropertyOpen(true)} className="flex flex-col items-center">
+        <h1 onClick={() => setIsFindPropertyOpen(true)} className="flex flex-col items-center">
           <Search size={24} />
           <span className="text-xs">Find a Property</span>
-        </button>
+        </h1>
 
-        <button onClick={() => setIsBookMeetingOpen(true)} className="flex flex-col items-center">
+        <h1 onClick={() => setIsBookMeetingOpen(true)} className="flex flex-col items-center">
           <Video size={24} />
           <span className="text-xs">Book a Meeting</span>
-        </button>
+        </h1>
       </div>
 
       {/* Sidebar Menu */}
