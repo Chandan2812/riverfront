@@ -146,7 +146,7 @@
 
     return (
         <div className="max-w-6xl mx-auto p-6 mt-10">
-        <h2 className="text-2xl md:text-4xl text-gray-800 mb-6 text-center">New Properties in Dubai</h2>
+        <h2 className="text-2xl md:text-4xl text-gray-800 mb-6 text-center">Upcoming & Latest Properties</h2>
         
         {/* Category Tabs */}
         <div className="flex justify-center gap-4 mb-4">
