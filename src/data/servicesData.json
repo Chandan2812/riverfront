@@ -1,4 +1,30 @@
  [
+  {
+    "title": "Property Management",
+    "slug": "property_management",
+    "image": "https://uniqueproperties.ae/en/uploads/frontend/services/18675/conversions/pro-services-resize.webp",
+    "description": "Comprehensive property management solutions, ensuring hassle-free maintenance, leasing, and tenant satisfaction for landlords and investors.",
+    "bullet_points": [
+      "Tenant screening: Finding reliable and responsible tenants.",
+      "Rent collection: Ensuring timely payments and financial reporting.",
+      "Maintenance services: Handling repairs and upkeep efficiently.",
+      "Legal compliance: Ensuring adherence to rental laws and regulations.",
+      "Marketing services: Promoting properties for higher occupancy rates."
+    ]
+  },
+  {
+    "title": "Pro Services",
+    "slug": "pro_services",
+    "image": "https://uniqueproperties.ae/en/uploads/frontend/services/18675/conversions/pro-services-resize.webp",
+    "description": "Our architecture and planning services bring innovative and sustainable solutions to commercial, residential, and mixed-use developments.",
+    "bullet_points": [
+      "Concept design: Creating unique architectural visions.",
+      "Sustainable building solutions: Incorporating eco-friendly materials and designs.",
+      "Urban planning: Development strategies for efficient and aesthetic cityscapes.",
+      "3D visualization: High-quality renders for project previews.",
+      "Permit approvals: Assisting with regulatory compliance and documentation."
+    ]
+  },
       {
         "title": "Interior Design",
         "slug": "interior_design",
@@ -24,32 +50,8 @@
           "Property valuation: Professional assessment of property value.",
           "Portfolio management: Helping investors diversify and maximize returns."
         ]
-      },
-      {
-        "title": "Pro Services",
-        "slug": "pro_services",
-        "image": "https://uniqueproperties.ae/en/uploads/frontend/services/18675/conversions/pro-services-resize.webp",
-        "description": "Our architecture and planning services bring innovative and sustainable solutions to commercial, residential, and mixed-use developments.",
-        "bullet_points": [
-          "Concept design: Creating unique architectural visions.",
-          "Sustainable building solutions: Incorporating eco-friendly materials and designs.",
-          "Urban planning: Development strategies for efficient and aesthetic cityscapes.",
-          "3D visualization: High-quality renders for project previews.",
-          "Permit approvals: Assisting with regulatory compliance and documentation."
-        ]
-      },
-      {
-        "title": "Property Management",
-        "slug": "property_management",
-        "image": "https://uniqueproperties.ae/en/uploads/frontend/services/18675/conversions/pro-services-resize.webp",
-        "description": "Comprehensive property management solutions, ensuring hassle-free maintenance, leasing, and tenant satisfaction for landlords and investors.",
-        "bullet_points": [
-          "Tenant screening: Finding reliable and responsible tenants.",
-          "Rent collection: Ensuring timely payments and financial reporting.",
-          "Maintenance services: Handling repairs and upkeep efficiently.",
-          "Legal compliance: Ensuring adherence to rental laws and regulations.",
-          "Marketing services: Promoting properties for higher occupancy rates."
-        ]
       }
+      
+      
     ]
   
