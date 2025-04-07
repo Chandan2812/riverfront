@@ -27,7 +27,7 @@ const PropertyDetails = () => {
   return (
     <div>
                 <HeroSection/>
-    <div className="container w-[90%] mx-auto px-4 py-8">
+    <div className="container w-full mx-auto px-4 py-8">
 
 
       {/* Property Name */}
