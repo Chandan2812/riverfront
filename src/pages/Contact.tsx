@@ -3,18 +3,20 @@ import Footer from "../components/footer";
 import PhoneInput from 'react-phone-number-input'
 import "react-phone-number-input/style.css";
 import Navbar from "../components/nav";
+import { Mail, MessageSquareText } from 'lucide-react';
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function Contact() {
     const [formData, setFormData] = useState<{
         fullName: string;
         email: string;
         phone: string;
-        cvFile: File | null;
+        message: string;
       }>({
         fullName: "",
         email: "",
         phone: "",
-        cvFile: null,
+        message: "",
       });
     
       const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -24,12 +26,7 @@ export default function Contact() {
       const handlePhoneChange = (value: any) => {
         setFormData({ ...formData, phone: value });
       };
-    
-      const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const file = e.target.files?.[0]; // Optional chaining to prevent errors
-        if (!file) return; // Early return if no file is selected
-        setFormData((prev) => ({ ...prev, cvFile: file }));
-      };
+  
     
       const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
@@ -42,108 +39,134 @@ export default function Contact() {
       <Navbar/>
       </div>
 
-      <div className="w-full md:w-[90%] mx-auto px-6 pb-12 text-center">
-        {/* Header Section */}
-        <h1 className="text-3xl text-[var(--primary-color)] font-bold mb-4">Join An Award-winning Team</h1>
-        <p className="text-md font-semibold text-gray-700 mb-8">
-        RIVERFRONT, one of the top real estate firms in Dubai, has seen an upward trend in the buying of luxury properties within the UAE. Over the first half of the year, Dubai recorded an 18% increase in high-net-worth individuals (FINWIs).
+      <section className=" w-full md:w-[90%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-4 pb-8 bg-white text-gray-800">
+      {/* Head Office */}
+      <div>
+        <h2 className="text-xl mb-2">Head Office</h2>
+        <p className="mb-4">
+        1703, Damac XL tower, marasi drive, Business bay, Dubai, UAE.
         </p>
-  
-        {/* Contact Information - Two Column Layout */}
-        <h2 className="text-2xl text-[var(--primary-color)] font-semibold mb-3 text-center">Why Join Us?</h2>
-        <div className="w-full grid md:grid-cols-2 gap-4 text-left">
-            
-            <p className="text-gray-600 mb-4">
-            Established in 2008, we have helped thousands of people from all over the world find their dream home and benefit from some of the best real estate investments available in Dubai.
-            </p>
-            <p className="text-gray-600 mb-4">
-            Offering a wide range of professional services to buyers, sellers, landlords and tenants, we provide our clients with honest impartial advice and the highest levels of customer service.
-            </p >
-            <p className="text-gray-600 mb-4">
-            Over the years we have won a plethora of prestigious awards from leading developers across the UAE, Including Emaar, Dubai Holding, Meraas, Damac, Nakheel, Aldar and many more. Click here to find out more.            </p >
-            <p className="text-gray-600 mb-4">
-            With exciting expansion plans on the horizon, we are looking to fill a variety of newly created roles in the near future.            </p >
-        </div>
-  
-        <div className="mt-12 w-full md:w-2/3 text-center mx-auto flex flex-col">
-          <h2 className="text-2xl text-[var(--primary-color)] font-semibold">Current Vacancies</h2>
-          <p className="text-gray-600 mt-2">
-          We are currently hiring for the below mentioned roles. Please click on the role to view the full job description and apply with your CV and cover letter.
-          </p>
-          <i className="text-gray-800">Good Luck!</i>
-        </div>
+        <hr className="mb-4" />
+        <p className="text-gray-500">Our business operating hours are as follows:</p>
+        <p className="mt-2">Monday to Friday: 9am - 6pm</p>
+        <p>Saturdays: 10am - 4pm</p>
       </div>
 
-
-      <div className="flex justify-center items-center w-5/6 mx-auto px-6 py-8 text-center shadow-2xl rounded-lg mb-7">
-
-      <div className="w-full max-w-lg bg-white rounded-lg p-8 text-center">
-        <h1 className="text-3xl font-semibold mb-4">Share Your CV With Us</h1>
-        <p className="text-gray-600 mb-6">
-          If no suitable vacancy is available, share your CV for future opportunities.
+      {/* Get in Touch */}
+      <div>
+        <h2 className="text-2xl font-semibold mb-2">Get in Touch</h2>
+        <p className="mb-4 text-gray-500">
+          Please contact us via phone or email below or visit us at our Head Office in Business Bay during operating hours.
         </p>
 
-        <form onSubmit={handleSubmit} className="space-y-3">
-          {/* Name & Email */}
-            <input
-              type="text"
-              name="fullName"
-              placeholder="Your Full Name"
-              value={formData.fullName}
-              onChange={handleChange}
-              className="border border-gray-300 rounded-lg p-2 w-full focus:ring-2 focus:ring-black"
-              required
-            />
-
-          <input
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              value={formData.email}
-              onChange={handleChange}
-              className="border border-gray-300 p-2 rounded-lg w-full focus:ring-2 focus:ring-black"
-              required
-            />
-
-<div className="w-full">
-  <PhoneInput
-    placeholder="Enter phone number"
-    value={formData.phone}
-    onChange={handlePhoneChange}
-    defaultCountry="IN" // Sets default country to India (+91)
-    international // Enables international format
-    className="border border-gray-300 px-4 py-3 text-[16px] rounded-lg w-full focus:ring-2 focus:ring-black"
-  />
-</div>;
-
-
-
-          {/* File Upload (Choose File Button) */}
-          <div className="mb-4">
-            <label className="border border-gray-300 w-full p-2 rounded-lg cursor-pointer flex items-center justify-between bg-gray-100 hover:bg-gray-200">
-              <span className="text-gray-600">Choose File</span>
-              <input
-                type="file"
-                name="cvFile"
-                accept=".pdf,.doc,.docx"
-                onChange={handleFileChange}
-                className="hidden"
-                required
-              />
-            </label>
-            {formData.cvFile && <p className="text-sm text-gray-500 mt-2">Selected: {formData.cvFile.name}</p>}
-          </div>
-
-          {/* Submit Button */}
-          <button
-            type="submit"
-            className="bg-[var(--primary-color)] text-white py-3 px-6 rounded-lg w-full hover:bg-[#f2ae37] transition"
-          >
-            SUBMIT
+        {/* Contact Buttons */}
+        <div className="flex flex-wrap gap-4">
+          <button className="border rounded-md px-4 py-2 text-sm hover:bg-gray-100">
+            UAE FREE PHONE: 00971509863828
           </button>
-        </form>
+          <button className="bg-black text-white px-4 py-2 rounded-md text-sm">
+            TEL: (+971) 1234 5 789 
+          </button>
+
+          <a
+  href="https://wa.me/0097147702260"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex items-center border p-4 rounded-md flex-1 min-w-[220px] gap-4 hover:bg-gray-50 transition"
+>
+<FaWhatsapp className="w-7 h-7 text-green-600 flex-shrink-0" />
+  <span className="text-sm text-gray-700">0097147702260</span>
+</a>
+
+<a
+  href="mailto:info@riverfront.ae"
+  className="bg-black text-white p-4 rounded-md flex items-center gap-4 flex-1 min-w-[220px] hover:bg-gray-800 transition"
+>
+  <Mail className="w-6 h-6" />
+  <span className="text-sm">info@riverfront.ae</span>
+</a>
+
+<a
+  href="sms:+971502304888"
+  className="border p-4 rounded-md flex items-center gap-4 flex-1 min-w-[220px] hover:bg-gray-50 transition"
+>
+  <MessageSquareText className="w-6 h-6 text-gray-700" />
+  <span className="text-sm text-gray-700">+971502304888</span>
+</a>
+
+        </div>
       </div>
-    </div>
+    </section>
+      <h2 className="px-5 w-full md:w-[90%] mx-auto text-lg text-[var(--secondary-color)]">
+      Need some advice, have some concerns or Interested in our services or properties?
+      </h2>
+      <p className="px-5 w-full md:w-[90%] mx-auto text-md text-gray-400">Simply contact us through email, phone call or alternatively fill the form below and your query will be promptly directed to the necessary RiverFront employee for a response within 24hrs.
+
+</p>
+<div className="flex flex-col md:flex-row justify-center items-start w-full md:w-[90%] mx-auto px-6 py-8 gap-10 mb-7">
+  {/* FORM SECTION */}
+  <div className="w-full md:w-1/2 max-w-lg bg-white rounded-lg p-8 shadow text-center">
+    <form onSubmit={handleSubmit} className="space-y-4">
+      <input
+        type="text"
+        name="fullName"
+        placeholder="Your Full Name"
+        value={formData.fullName}
+        onChange={handleChange}
+        className="border border-gray-300 rounded-lg p-2 w-full focus:ring-2 focus:ring-black"
+        required
+      />
+      <input
+        type="email"
+        name="email"
+        placeholder="Your Email"
+        value={formData.email}
+        onChange={handleChange}
+        className="border border-gray-300 p-2 rounded-lg w-full focus:ring-2 focus:ring-black"
+        required
+      />
+      <div className="w-full">
+        <PhoneInput
+          placeholder="Enter phone number"
+          value={formData.phone}
+          onChange={handlePhoneChange}
+          defaultCountry="IN"
+          international
+          className="border border-gray-300 px-4 py-3 text-[16px] rounded-lg w-full focus:ring-2 focus:ring-black"
+        />
+      </div>
+      <textarea
+        rows={4}
+        name="message"
+        placeholder="Your Message"
+        value={formData.message}
+        onChange={handleChange}
+        className="border border-gray-300 p-2 rounded-lg w-full focus:ring-2 focus:ring-black"
+        required
+      />
+      <button
+        type="submit"
+        className="bg-[var(--primary-color)] text-white py-3 px-6 rounded-lg w-full hover:bg-[#f2ae37] transition"
+      >
+        SUBMIT
+      </button>
+    </form>
+  </div>
+
+  {/* MAP SECTION */}
+  <div className="w-full md:w-1/2 h-[450px] rounded-lg overflow-hidden shadow">
+    <iframe
+      src="https://www.google.com/maps?q=1703,+Damac+XL+Tower,+Marasi+Drive,+Business+Bay,+Dubai,+UAE&output=embed"
+      width="100%"
+      height="100%"
+      allowFullScreen
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+      className="w-full h-full"
+    ></iframe>
+  </div>
+</div>
+
       <Footer/>
       </div>
     );

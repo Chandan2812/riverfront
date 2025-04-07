@@ -53,7 +53,7 @@ const Navbar: React.FC<NavbarProps> = ({ transparent = false }) => {
             alt="Logo"
             className="h-14 md:h-20 cursor-pointer py-2"
           />
-          <ul className="hidden md:flex gap-6 text-[var(--secondary-color)] text-md">
+          <ul className="hidden md:flex gap-10 text-[var(--secondary-color)] text-md">
             {navItems.map((item, index) =>
               item.href ? (
                 <li key={index}>
