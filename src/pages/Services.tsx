@@ -13,7 +13,7 @@ export default function ServicesSection() {
     <div className="w-full">
         <HeroSection/>
 
-      <div className="mx-auto w-[80%] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 my-10">
+      <div className="mx-auto w-[90%] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 my-10">
         {services.map((service) => (
           <div
             key={service.slug}
