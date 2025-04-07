@@ -8,6 +8,24 @@ import { Star } from "lucide-react";
 export default function TestimonialSlider() {
   const testimonials = [
     {
+      name: "Amal Al Khaja",
+      review:
+        "I recently purchased a property through Riverfront .Their team provided expert guidance, and their knowledge of the Dubai market is unparalleled....",
+      rating: 5,
+    },
+    {
+      name: "Fatima Al Sayegh",
+      review:
+        "Riverfront helped me find my dream home in Dubai, and I couldn't be happier with the service I received. Their team listened to my needs, provided personalized guidance, and ensured a smooth transaction process. I highly recommend Riverfront to anyone looking for a reliable and customer-centric real estate company in Dubai.",
+      rating: 5,
+    },
+    {
+      name: "Khalid Al Mansoori",
+      review:
+        "I've invested in several properties in Dubai, but my experience with Riverfront has been exceptional. Their team is professional, responsive, and always available to address any concerns. Riverfront's expertise in the Dubai real estate market has helped me make informed investment decisions, and I appreciate their dedication to delivering exceptional results.",
+      rating: 5,
+    },
+    {
       name: "Prakul Rathnakar",
       review:
         "I would like to thank Vanessa Lenger from Unique Properties for helping me with a hassle-free experience in finding me the right place...",
@@ -94,7 +112,7 @@ export default function TestimonialSlider() {
               {testimonials.map((item, index) => (
                 <div key={index} className="p-4">
                   <div className="bg-white shadow-lg rounded-lg p-6 h-72">
-                    <p className="text-gray-700 mb-4">{item.review}</p>
+                    <p className="text-gray-700 mb-4 ">{item.review.slice(0,150)}...</p>
                     <div className="flex items-center">
                       <div className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center">
                         <span className="text-gray-600 text-xl">👤</span>
@@ -103,7 +121,7 @@ export default function TestimonialSlider() {
                         <p className="font-semibold">{item.name}</p>
                         <div className="flex text-yellow-500">
                           {Array.from({ length: item.rating }).map((_, i) => (
-                            <Star key={i} size={16} fill="yellow" stroke="none" />
+                            <Star key={i} size={16} fill="#d49325" stroke="none" />
                           ))}
                         </div>
                       </div>
