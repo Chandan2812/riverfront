@@ -67,7 +67,7 @@ const Footer = () => {
                     <p className="mt-4 text-sm md:block hidden">
                         <a href="#" className="hover:underline">Terms & Conditions</a> | <a href="#" className="hover:underline">Privacy & Cookies</a>
                     </p>
-                    <p className="text-sm mt-2 md:block hidden">Copyright © Unique Properties</p>
+                    <p className="text-sm mt-2 md:block hidden">Copyright © RIVERFRONT</p>
                 </div>
 
                 {/* Mobile View Accordion */}
@@ -154,11 +154,11 @@ const Footer = () => {
 
             {/* Bottom Text */}
             <div className="md:block hidden text-center text-sm px-12 mt-10 border-t border-gray-700 pt-4">
-                <p>Unique Properties Real Estate Broker is a company registered in Dubai, United Arab Emirates (License No. 605653), The Bay Gate Tower, 31st Floor, Business Bay, Dubai, PO Box 191630. We are regulated by the Real Estate Regulatory Agency under office number 1085.</p>
+                <p>RIVERFRONT Real Estate Broker is a company registered in Dubai. We are regulated by the Real Estate Regulatory Agency.</p>
             </div>
             <div className="md:hidden block text-center text-sm px-12 mt-4">
                 <a href="#" className="hover:underline">Terms & Conditions</a> | <a href="#" className="hover:underline">Privacy & Cookies</a>
-                <p className="text-sm mt-2">Copyright © Unique Properties</p>
+                <p className="text-sm mt-2">Copyright © RIVERFRONT</p>
             </div>
         </footer>
     );
