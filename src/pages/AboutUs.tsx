@@ -210,7 +210,7 @@ Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus ab officia o
       
       {/* Left Section - Contact Details (30%) */}
       <div className="md:col-span-3">
-        <h2 className="text-2xl text-gray-800 mb-4">Contact Us</h2>
+        <h2 className="text-2xl text-[var(--primary-color)] mb-4">Contact Us</h2>
 
         {/* Head Office */}
         <h3 className="text-lg text-gray-700 border-b border-gray-300 mb-2">Head Office</h3>
@@ -241,7 +241,7 @@ Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus ab officia o
 
       {/* Right Section - Google Map (70%) */}
       <div className="md:col-span-7">
-        <h3 className="text-lg font-semibold text-gray-700 mb-2">Location</h3>
+        <h3 className="text-lg font-semibold text-[var(--primary-color)] mb-2">Location</h3>
         <div className="w-full h-64 md:h-96 rounded-lg overflow-hidden shadow-lg">
           <iframe
             title="Google Map"

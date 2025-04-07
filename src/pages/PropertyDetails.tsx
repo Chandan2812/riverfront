@@ -31,7 +31,7 @@ const PropertyDetails = () => {
 
 
       {/* Property Name */}
-      <h1 className="text-4xl  text-gray-800 mb-4">{property.name}</h1>
+      <h1 className="text-4xl  text-[var(--primary-color)] mb-4">{property.name}</h1>
 
       {/* First Description */}
       <p className="text-gray-600 mb-6">{property.shortDescription}</p>
@@ -55,7 +55,7 @@ const PropertyDetails = () => {
 </div>
 
       {/* Image Gallery */}
-      <h2 className="text-2xl font-semibold text-gray-800 mb-4">Image Gallery</h2>
+      <h2 className="text-2xl font-semibold text-[var(--primary-color)] mb-4">Image Gallery</h2>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {property.gallery.map((image:any, index) => (
           <img

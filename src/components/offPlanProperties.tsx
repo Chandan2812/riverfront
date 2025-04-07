@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
-import Navbar from "./nav";
+import Footer from "./footer";
+import HeroSection from "./hero";
 
 const properties = [
   { id: 1, name: "Verdes by Haven 2", image: "https://uniqueproperties.ae/en/uploads/frontend/projects/615034/conversions/verdes-by-haven-2-resize.webp" },
@@ -27,7 +28,7 @@ export default function OffPlanProperties() {
 
   return (
     <div className="w-full">
-        <Navbar />
+        <HeroSection />
      
 
       {/* Hero Section */}
@@ -134,7 +135,7 @@ export default function OffPlanProperties() {
         ))}
       </div>
 
-      
+      <Footer/>
     </div>
   );
 }

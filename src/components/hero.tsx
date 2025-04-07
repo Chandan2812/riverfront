@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import logo from "../assets/logo.png";
 import bg from "../assets/hero.webp";
 import { X } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const HeroSection: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -12,10 +13,10 @@ const HeroSection: React.FC = () => {
   const [selectedBHK, setSelectedBHK] = useState<string | null>(null);
   const [selectedBudget, setSelectedBudget] = useState<string | null>(null);
   const [selectedTimeframe, setSelectedTimeframe] = useState<string | null>(null);
+  const navigate=useNavigate()
 
   const navItems: { name: string; href?: string; action?: () => void }[] = [
     { name: "Home", href: "/" },
-    { name: "Off Plan", href: "/OffPlanProperties" },
     { name: "Services", href: "/ServicesSection" },
     { name: "Top Properties", href: "/topProperties" },
     { name: "Contact Us", href: "/contact" },
@@ -51,10 +52,10 @@ const HeroSection: React.FC = () => {
           isScrolled ? "bg-white shadow-md" : "bg-transparent"
         }`}
       >
-        <div className="max-w-7xl mx-auto flex items-center justify-between px-4">
-          <img src={logo} alt="Logo" className="h-20 md:h-28" />
+        <div className="max-w-6xl mx-auto flex items-center justify-between px-4">
+          <img src={logo} onClick={()=>navigate("/")} alt="Logo" className="h-14 md:h-20 cursor-pointer py-2" />
 
-          <ul className="hidden md:flex gap-6 text-black text-md">
+          <ul className="hidden md:flex gap-6 text-[var(--secondary-color)] font-semibold text-md">
             {navItems.map((item, index) =>
               item.href ? (
                 <li key={index}>
@@ -66,7 +67,7 @@ const HeroSection: React.FC = () => {
                 <li key={index}>
                   <button
                     onClick={item.action}
-                    className="hover:text-blue-600"
+                    className="hover:text-[var(--primary-color)]"
                   >
                     {item.name}
                   </button>
@@ -100,7 +101,7 @@ const HeroSection: React.FC = () => {
       {menuOpen && (
         <div className="fixed inset-0 bg-white z-50 flex flex-col">
           <div className="flex items-center justify-between px-4 py-4 border-b">
-            <img src={logo} alt="Logo" className="h-20" />
+            <img src={logo} alt="Logo" className="h-14" />
             <button onClick={() => setMenuOpen(false)}>
               <X className="w-6 h-6" />
             </button>
@@ -141,7 +142,7 @@ const HeroSection: React.FC = () => {
       </div>
 
       {isFindPropertyOpen && (
-  <div className="fixed inset-0 bg-[var(--primary-color)] flex flex-col justify-center items-center z-50">
+  <div className="fixed inset-0 bg-[var(--secondary-color)] flex flex-col justify-center items-center z-50">
     {/* Fixed Top Section with Different Background */}
     <div className="w-full bg-gray-800 py-5 flex justify-center fixed top-0 left-0">
       {/* Close Button */}
@@ -230,7 +231,7 @@ const HeroSection: React.FC = () => {
           <input type="text" placeholder="Last Name" className="w-full p-3 rounded bg-white mb-2" />
           <input type="text" placeholder="Phone" className="w-full p-3 rounded bg-white mb-2" />
           <input type="email" placeholder="Email" className="w-full p-3 rounded bg-white mb-4" />
-          <button className="w-full bg-gray-500 text-white py-2 rounded-full text-lg">
+          <button className="w-full bg-[var(--primary-color)] hover:bg-[#e6a330] text-white py-2 rounded-full text-lg">
             SUBMIT
           </button>
         </>
@@ -240,7 +241,7 @@ const HeroSection: React.FC = () => {
 )}
 
 {isBookMeetingOpen && (
-  <div className="fixed inset-0 bg-[var(--primary-color)] flex flex-col justify-center items-center z-50">
+  <div className="fixed inset-0 bg-[var(--secondary-color)] flex flex-col justify-center items-center z-50">
     {/* Fixed Top Section */}
     <div className="w-full bg-gray-800 py-5 flex justify-center fixed top-0 left-0">
       <button
@@ -270,7 +271,7 @@ const HeroSection: React.FC = () => {
         className="w-2/3 p-3 rounded-full bg-transparent text-white mb-4 border border-white"
       />
 
-      <button className="w-2/3 bg-gray-500 text-white py-2 rounded-full text-lg">
+      <button className="w-2/3 bg-[var(--primary-color)] hover:bg-[#e6a330] text-white py-2 rounded-full text-lg">
         BOOK NOW
       </button>
     </div>

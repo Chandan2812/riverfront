@@ -42,13 +42,13 @@ export default function Contact() {
 
       <div className="w-full md:w-[90%] mx-auto px-6 py-12 text-center">
         {/* Header Section */}
-        <h1 className="text-3xl font-bold mb-4">Join An Award-winning Team</h1>
+        <h1 className="text-3xl text-[var(--primary-color)] font-bold mb-4">Join An Award-winning Team</h1>
         <p className="text-md font-semibold text-gray-700 mb-8">
         RIVERFRONT, one of the top real estate firms in Dubai, has seen an upward trend in the buying of luxury properties within the UAE. Over the first half of the year, Dubai recorded an 18% increase in high-net-worth individuals (FINWIs).
         </p>
   
         {/* Contact Information - Two Column Layout */}
-        <h2 className="text-2xl font-semibold mb-3 text-center">Why Join Us?</h2>
+        <h2 className="text-2xl text-[var(--primary-color)] font-semibold mb-3 text-center">Why Join Us?</h2>
         <div className="w-full grid md:grid-cols-2 gap-4 text-left">
             
             <p className="text-gray-600 mb-4">
@@ -64,7 +64,7 @@ export default function Contact() {
         </div>
   
         <div className="mt-12 w-full md:w-2/3 text-center mx-auto flex flex-col">
-          <h2 className="text-2xl font-semibold">Current Vacancies</h2>
+          <h2 className="text-2xl text-[var(--primary-color)] font-semibold">Current Vacancies</h2>
           <p className="text-gray-600 mt-2">
           We are currently hiring for the below mentioned roles. Please click on the role to view the full job description and apply with your CV and cover letter.
           </p>
@@ -135,7 +135,7 @@ export default function Contact() {
           {/* Submit Button */}
           <button
             type="submit"
-            className="bg-[var(--primary-color)] text-white py-3 px-6 rounded-lg w-full hover:bg-gray-800 transition"
+            className="bg-[var(--primary-color)] text-white py-3 px-6 rounded-lg w-full hover:bg-[#f2ae37] transition"
           >
             SUBMIT
           </button>

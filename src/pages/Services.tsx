@@ -12,12 +12,6 @@ export default function ServicesSection() {
   return (
     <div className="w-full">
         <HeroSection/>
-      <div className="relative w-full h-[380px] bg-cover bg-center" style={{ backgroundImage: "url('https://uniqueproperties.ae/en/frontend/assets/images/banner/homeBg.webp')" }}>
-        <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center p-4">
-          <h1 className="text-white text-3xl font-bold text-center">Our Services</h1>
-          <p className="text-white text-sm mt-2">Home &gt; Services</p>
-        </div>
-      </div>
 
       <div className="mx-auto w-[80%] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 my-10">
         {services.map((service) => (
