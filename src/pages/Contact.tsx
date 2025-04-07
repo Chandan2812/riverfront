@@ -2,7 +2,7 @@ import { useState } from "react";
 import Footer from "../components/footer";
 import PhoneInput from 'react-phone-number-input'
 import "react-phone-number-input/style.css";
-import Navbar from "../components/nav";
+import HeroSection from "../components/hero";
 
 export default function Contact() {
     const [formData, setFormData] = useState<{
@@ -38,16 +38,8 @@ export default function Contact() {
     return (
         <div>
 
-        <Navbar/>
+        <HeroSection/>
 
-{/* Hero Section */}
-      <div
-        className="relative w-full h-[380px] bg-cover bg-center bg-black bg-opacity-40"
-        style={{ backgroundImage: "url('https://uniqueproperties.ae/en/frontend/assets/images/banner/homeBg.webp')" }}
-      >
-         {/* Black Transparent Overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-      </div>
       <div className="w-full md:w-[90%] mx-auto px-6 py-12 text-center">
         {/* Header Section */}
         <h1 className="text-3xl font-bold mb-4">Join An Award-winning Team</h1>

@@ -50,7 +50,7 @@ const Footer = () => {
     ];
 
     return (
-        <footer className="bg-[var(--primary-color)] text-white py-10 px-6">
+        <footer className="bg-[var(--secondary-color)] text-white py-10 px-6">
             <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
                 {/* Logo and Social Icons */}
                 <div className="text-center md:text-left">

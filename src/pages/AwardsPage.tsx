@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import Footer from "../components/footer";
-import Navbar from "../components/nav";
+import HeroSection from "../components/hero";
 
 const awardsData = [
   {
@@ -63,15 +63,7 @@ export const AwardsPage = () => {
 
   return (
     <>      
-    <Navbar/>
-{/* Hero Section */}
-      <div
-        className="relative w-full h-[380px] bg-cover bg-center bg-black bg-opacity-40"
-        style={{ backgroundImage: "url('https://uniqueproperties.ae/en/frontend/assets/images/banner/homeBg.webp')" }}
-      >
-         {/* Black Transparent Overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-      </div>
+    <HeroSection/>
 
       {/* Sidebar and Main Content */}
       <div className="relative flex justify-center my-10">

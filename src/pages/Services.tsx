@@ -1,9 +1,9 @@
 
 import { FaArrowRight } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import Navbar from "../components/nav";
 import services from "../data/servicesData.json"
 import Footer from "../components/footer";
+import HeroSection from "../components/hero";
 
 export default function ServicesSection() {
   const navigate = useNavigate();
@@ -11,7 +11,7 @@ export default function ServicesSection() {
 
   return (
     <div className="w-full">
-        <Navbar/>
+        <HeroSection/>
       <div className="relative w-full h-[380px] bg-cover bg-center" style={{ backgroundImage: "url('https://uniqueproperties.ae/en/frontend/assets/images/banner/homeBg.webp')" }}>
         <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center p-4">
           <h1 className="text-white text-3xl font-bold text-center">Our Services</h1>
