@@ -54,8 +54,8 @@ const Footer = () => {
         <footer className="bg-[var(--secondary-color)] text-white py-10 px-6">
             <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
                 {/* Logo and Social Icons */}
-                <div className="text-center md:text-left">
-                    <img src={logo} alt=""  className="bg-white w-40 py-2 rounded-xl"/>
+                <div className="text-center md:text-left ">
+                    <img src={logo} alt=""  className="bg-white w-40 py-2 rounded-xl mx-auto"/>
                     <div className="flex justify-center md:justify-start gap-4 mt-4 text-lg">
                         <FaFacebookF className="cursor-pointer" />
                         <FaInstagram className="cursor-pointer" />
