@@ -49,7 +49,7 @@ const ForRent: React.FC = () => {
         <img
           src={forRentImage}
           alt=""
-          className="h-full w-full mb-8 object-cover"
+          className="h-[300px] md:h-full w-full mb-8 object-cover"
         />
         <div className="absolute inset-0 flex items-center justify-center">
           <h1 className="text-gray-400 text-3xl md:text-5xl drop-shadow-lg">
@@ -59,13 +59,13 @@ const ForRent: React.FC = () => {
       </div>
 
       {/* Filters */}
-      <div className="w-full md:w-[90%] mx-auto flex flex-wrap gap-4 justify-between px-4 py-6">
+      <div className="w-full md:w-[90%] mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 justify-between px-4 py-6">
         <input
           type="text"
           placeholder="Search by title or location..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="border border-[var(--primary-color)] px-4 py-2 rounded-md w-60"
+          className="border border-[var(--primary-color)] px-4 py-2 rounded-md"
         />
 
         <select
@@ -92,7 +92,7 @@ const ForRent: React.FC = () => {
           <option value="4">4+</option>
         </select>
 
-        <div className="flex flex-col items-start">
+        <div className="flex flex-col w-full">
           <input
             type="range"
             min={0}
@@ -100,7 +100,7 @@ const ForRent: React.FC = () => {
             step={1000}
             value={priceRange[1]}
             onChange={(e) => setPriceRange([0, Number(e.target.value)])}
-            className="w-60 accent-[var(--primary-color)]"
+            className=" accent-[var(--primary-color)]"
           />
           <span className="text-sm text-gray-600">
             Max Price: AED {priceRange[1].toLocaleString()}

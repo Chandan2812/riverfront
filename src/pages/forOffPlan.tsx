@@ -48,26 +48,26 @@ const OffplanPropertyCard: React.FC = () => {
 
   return (
     <div>
-      <div className="mb-28">
+      <div className="mb-24 md:mb-32">
         <Navbar />
       </div>
+      <h1 className="w-[90%] mx-auto text-2xl md:text-4xl text-center mb-3 md:mb-4">Off-Plan Properties in Dubai: Your Guide to Future Real Estate Investments</h1>
 
       {/* Filters */}
-      <div className="w-full md:w-[90%] mx-auto px-4 mb-6 flex flex-wrap gap-4 justify-between space-y-5">
-      <h1 className="text-2xl md:text-4xl text-center ">Off-Plan Properties in Dubai: Your Guide to Future Real Estate Investments</h1>
+      <div className="w-full md:w-[90%] mx-auto px-4 mb-6 grid grid-cols-1 md:grid-cols-3 gap-4 justify-between">
 
         <input
           type="text"
           placeholder="Search by project or location..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="border border-[var(--primary-color)]  px-4 py-2 rounded-md w-44 md:w-64"
+          className="border border-[var(--primary-color)] px-4 py-2 rounded-md"
         />
 
         <select
           value={developerFilter}
           onChange={(e) => setDeveloperFilter(e.target.value)}
-          className="border border-[var(--primary-color)] px-4 py-2 rounded-md"
+          className="border border-[var(--primary-color)] px-4 py-2 rounded-md w-full"
         >
           <option value="">All Developers</option>
           {allDevelopers.map((dev, idx) => (
@@ -77,7 +77,7 @@ const OffplanPropertyCard: React.FC = () => {
           ))}
         </select>
 
-        <div className="flex flex-col">
+        <div className="flex flex-col w-full">
           <input
             type="range"
             min={0}
@@ -85,7 +85,7 @@ const OffplanPropertyCard: React.FC = () => {
             step={100000}
             value={maxPrice}
             onChange={(e) => setMaxPrice(parseInt(e.target.value))}
-            className="w-64 accent-[var(--primary-color)]"
+            className="accent-[var(--primary-color)]"
           />
           <span className="text-sm text-gray-600">
             Max Price: AED {maxPrice.toLocaleString()}
