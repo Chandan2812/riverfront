@@ -106,8 +106,11 @@ const textColorClass =
         <img src={logo} alt="Logo" className="h-14" />
         <button onClick={() => setMenuOpen(false)}><X className="w-6 h-6" /></button>
       </div>
-      <div className="flex flex-col px-6 py-4 space-y-6 text-lg font-medium text-black">
+      <div className="flex flex-col px-6 py-4 space-y-2 text-lg font-medium text-black">
         <a href="/" onClick={() => setMenuOpen(false)} className="hover:text-[var(--primary-color)]">Home</a>
+        <a href="/forsale" onClick={() => setMenuOpen(false)} className="hover:text-[var(--primary-color)]">For Sale</a>
+        <a href="/forrent" onClick={() => setMenuOpen(false)} className="hover:text-[var(--primary-color)]">For Rent</a>
+        <a href="/offplan" onClick={() => setMenuOpen(false)} className="hover:text-[var(--primary-color)]">Off-Plan</a>
         <a href="/ServicesSection" onClick={() => setMenuOpen(false)} className="hover:text-[var(--primary-color)]">Services</a>
         <a href="/topProperties" onClick={() => setMenuOpen(false)} className="hover:text-[var(--primary-color)]">Top Properties</a>
         <a href="/contact" onClick={() => setMenuOpen(false)} className="hover:text-[var(--primary-color)]">Contact Us</a>
