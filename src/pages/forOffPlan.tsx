@@ -4,8 +4,14 @@ import { HiOutlineLocationMarker } from "react-icons/hi";
 import { GiHouse } from "react-icons/gi";
 import propertyData from "../data/offPlanData.json";
 import Navbar from "../components/nav";
+import Footer from "../components/footer";
+import { useNavigate } from "react-router-dom";
 
 const OffplanPropertyCard: React.FC = () => {
+  const navigate = useNavigate();
+  const handleCardClick = (projectName: string) => {
+    navigate(`/offplan/${encodeURIComponent(projectName)}`);
+  };
   return (
     <div>
       <div className="mb-32">
@@ -18,7 +24,8 @@ const OffplanPropertyCard: React.FC = () => {
           return (
             <div
               key={index}
-              className="bg-white rounded-2xl border shadow-md w-full overflow-hidden flex flex-col"
+              onClick={() => handleCardClick(property.projectName)}
+              className="bg-white rounded-2xl border shadow-md w-full overflow-hidden flex flex-col cursor-pointer"
             >
               {/* Top image */}
               <div className="h-52 w-full overflow-hidden">
@@ -70,6 +77,7 @@ const OffplanPropertyCard: React.FC = () => {
           );
         })}
       </div>
+      <Footer/>
     </div>
   );
 };

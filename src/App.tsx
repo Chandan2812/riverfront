@@ -14,6 +14,7 @@ import OffplanPropertyCard from './pages/forOffPlan';
 import ForRent from './pages/forRent';
 import ForSaleDetails from './pages/ForSaleDetails';
 import ForRentDetails from './pages/ForRentDetails';
+import OffPlanDetails from './pages/offPlanDetails';
 
 
 
@@ -35,6 +36,7 @@ function App() {
         <Route path="/forrent" element={<ForRent/>} />
         <Route path="/forrentDetails/:title" element={<ForRentDetails/>} />
         <Route path="/OffplanPropertyCard" element={<OffplanPropertyCard/>} />
+        <Route path="/offplan/:projectName" element={<OffPlanDetails/>} />
       </Routes>
     </Router>
   );
