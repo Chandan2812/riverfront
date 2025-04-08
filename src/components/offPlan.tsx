@@ -1,215 +1,64 @@
-    import { useState } from "react";
-    import Slider from "react-slick";
+
     import "slick-carousel/slick/slick.css";
     import "slick-carousel/slick/slick-theme.css";
+import { useNavigate } from "react-router-dom";
+import propertiesData from "../data/offPlanData.json"
+import { FaArrowRight } from "react-icons/fa";
 
-    const categories = ["OFF-PLAN", "RESALES & RENTALS", "EXCLUSIVE"];
 
-    const properties: Record<string, { name: string; images: string[]; highlights: string[] }[]> = {
-        "OFF-PLAN": [
-          {
-            name: "Nad Al Sheba Gardens Phase 7",
-            images: [
-              "https://uniqueproperties.ae/en/uploads/frontend/projects/613392/conversions/Nad-Al-Sheba-Gardens-Phase-7-Brochure-9-resize_images.webp",
-              "https://uniqueproperties.ae/en/uploads/frontend/projects/613393/conversions/Nad-Al-Sheba-Gardens-Phase-7-Brochure-15-resize_images.webp",
-              "https://uniqueproperties.ae/en/uploads/frontend/projects/613394/conversions/Nad-Al-Sheba-Gardens-Phase-7-Brochure-17-resize_images.webp",
-            ],
-            highlights: [
-              "Exquisite 3-bedroom townhouses and 4 to 7-bedroom villas.",
-              "Swimmable lagoon surrounded by lush greenery.",
-              "Architectural designs with bronze accents and large windows.",
-            ],
-          },
-          {
-            name: "Golf Dale at Emaar South",
-            images: [
-              "https://uniqueproperties.ae/en/uploads/frontend/projects/614161/conversions/GOLF_DALE_BROCHURE-(3)-29-resize_images.webp",
-              "https://uniqueproperties.ae/en/uploads/frontend/projects/614162/conversions/GOLF_DALE_BROCHURE-(3)-6-resize_images.webp","https://uniqueproperties.ae/en/uploads/frontend/projects/614163/conversions/GOLF_DALE_BROCHURE-(3)-8-resize_images.webp"
-            ],
-            highlights: [
-              "Modern villas with premium finishes.",
-              "Surrounded by a championship golf course.",
-              "Access to exclusive community clubhouses.",
-            ],
-          },
-          {
-            name: "Golf Acres at Emaar South",
-            images: [
-              "https://uniqueproperties.ae/en/uploads/frontend/projects/614172/conversions/GOLF_ACRES_ES_BROCHURE-34-resize_images.webp",
-              "https://uniqueproperties.ae/en/uploads/frontend/projects/614173/conversions/GOLF_ACRES_ES_BROCHURE-7-resize_images.webp",
-              "https://uniqueproperties.ae/en/uploads/frontend/projects/614174/conversions/GOLF_ACRES_ES_BROCHURE-9-resize_images.webp"
-            ],
-            highlights: [
-              "Modern villas with premium finishes.",
-              "Surrounded by a championship golf course.",
-              "Access to exclusive community clubhouses.",
-            ],
-          },
-        ],
-        "RESALES & RENTALS": [ 
-          {
-            name: "Great Location | Private Pool |Burj Khalifa View",
-            images: [
-              "https://salesforce-images-bucket.s3.me-central-1.amazonaws.com/Watermarked/whatsapp_image_2025_04_02_at_3_37_37_pm_a1mSp0000003cLhIAI.jpeg",
-              "https://salesforce-images-bucket.s3.me-central-1.amazonaws.com/Watermarked/whatsapp_image_2025_04_02_at_3_37_33_pm__1__a1mSp0000003cLhIAI.jpeg",
-              "https://salesforce-images-bucket.s3.me-central-1.amazonaws.com/Watermarked/whatsapp_image_2025_04_02_at_3_37_33_pm_a1mSp0000003cLhIAI.jpeg",
-            ],
-            highlights: [
-              "Exquisite 3-bedroom townhouses and 4 to 7-bedroom villas.",
-              "Swimmable lagoon surrounded by lush greenery.",
-              "Architectural designs with bronze accents and large windows.",
-            ],
-          },
-          {
-            name: " Area Expert | Large garden | prime location",
-            images: [
-              "https://salesforce-images-bucket.s3.me-central-1.amazonaws.com/Watermarked/pro_int_4_670x500_a1mSp0000003c2LIAQ.jpg",
-              "https://salesforce-images-bucket.s3.me-central-1.amazonaws.com/Watermarked/pro_int_3_670x500_a1mSp0000003c2LIAQ.jpg","https://salesforce-images-bucket.s3.me-central-1.amazonaws.com/Watermarked/pro_int_2_670x500_a1mSp0000003c2LIAQ.jpg"
-            ],
-            highlights: [
-              "Modern villas with premium finishes.",
-              "Surrounded by a championship golf course.",
-              "Access to exclusive community clubhouses.",
-            ],
-          },
-          {
-            name: "Luxury Furnishing | Chiller Free | Best Deal",
-            images: [
-              "https://salesforce-images-bucket.s3.me-central-1.amazonaws.com/Watermarked/pro_int_2_670x500_a1mSp0000003c2LIAQ.jpg",
-              "https://salesforce-images-bucket.s3.me-central-1.amazonaws.com/Watermarked/road_view_a1mSp0000003cTlIAI.jpg",
-              "https://salesforce-images-bucket.s3.me-central-1.amazonaws.com/Watermarked/street_view_a1mSp0000003cTlIAI.jpg"
-            ],
-            highlights: [
-              "Modern villas with premium finishes.",
-              "Surrounded by a championship golf course.",
-              "Access to exclusive community clubhouses.",
-            ],
-          },],
-        "EXCLUSIVE": [
-            {
-                name: "Exclusive | Waterfront Living | Huge Layout",
-                images: [
-                  "https://salesforce-images-bucket.s3.me-central-1.amazonaws.com/Watermarked/whatsapp_image_2025_04_02_at_3_37_37_pm_a1mSp0000003cLhIAI.jpeg",
-                  "https://salesforce-images-bucket.s3.me-central-1.amazonaws.com/Watermarked/whatsapp_image_2025_04_02_at_3_37_33_pm__1__a1mSp0000003cLhIAI.jpeg",
-                  "https://salesforce-images-bucket.s3.me-central-1.amazonaws.com/Watermarked/whatsapp_image_2025_04_02_at_3_37_33_pm_a1mSp0000003cLhIAI.jpeg",
-                ],
-                highlights: [
-                  "Exquisite 3-bedroom townhouses and 4 to 7-bedroom villas.",
-                  "Swimmable lagoon surrounded by lush greenery.",
-                  "Architectural designs with bronze accents and large windows.",
-                ],
-              },
-              {
-                name: " Contemporary 5BR | Type 2 | Burj View",
-                images: [
-                  "https://salesforce-images-bucket.s3.me-central-1.amazonaws.com/Watermarked/pro_int_4_670x500_a1mSp0000003c2LIAQ.jpg",
-                  "https://salesforce-images-bucket.s3.me-central-1.amazonaws.com/Watermarked/pro_int_3_670x500_a1mSp0000003c2LIAQ.jpg","https://salesforce-images-bucket.s3.me-central-1.amazonaws.com/Watermarked/pro_int_2_670x500_a1mSp0000003c2LIAQ.jpg"
-                ],
-                highlights: [
-                  "Modern villas with premium finishes.",
-                  "Surrounded by a championship golf course.",
-                  "Access to exclusive community clubhouses.",
-                ],
-              },
-              {
-                name: " Fully Fitted | Luxury Complex",
-                images: [
-                  "https://salesforce-images-bucket.s3.me-central-1.amazonaws.com/Watermarked/pro_int_2_670x500_a1mSp0000003c2LIAQ.jpg",
-                  "https://salesforce-images-bucket.s3.me-central-1.amazonaws.com/Watermarked/road_view_a1mSp0000003cTlIAI.jpg",
-                  "https://salesforce-images-bucket.s3.me-central-1.amazonaws.com/Watermarked/street_view_a1mSp0000003cTlIAI.jpg"
-                ],
-                highlights: [
-                  "Modern villas with premium finishes.",
-                  "Surrounded by a championship golf course.",
-                  "Access to exclusive community clubhouses.",
-                ],
-              },
-        ],
-      };
     
 
     export default function PropertySlider() {
-    const [selectedCategory, setSelectedCategory] = useState("OFF-PLAN");
-    const [selectedProperty, setSelectedProperty] = useState(properties["OFF-PLAN"][0]);
-
-    const settings = {
-        dots: false,            // Shows navigation dots
-        infinite: true,        // Allows continuous looping
-        speed: 500,           // Slide transition speed
-        slidesToShow: 1,       // Shows one image at a time
-        slidesToScroll: 1,     // Moves one slide at a time
-        autoplay: true,        // Enables automatic sliding
-        autoplaySpeed: 3000,   // Slide interval (3 seconds)
-        arrows: true,          // Shows navigation arrows
-        rtl: false,            // Ensures right-to-left is disabled
-    };
-
+      const navigate = useNavigate();
     return (
-        <div className="max-w-6xl mx-auto p-6 mt-10">
-        <h2 className="text-2xl md:text-4xl text-gray-800 mb-6 text-center">Upcoming & Latest Properties</h2>
-        
-        {/* Category Tabs */}
-        <div className="flex justify-center gap-4 mb-4">
-            {categories.map((category) => (
-            <button
-                key={category}
-                onClick={() => {
-                setSelectedCategory(category);
-                setSelectedProperty(properties[category][0] || null);
-                }}
-                className={`px-4 py-2 border rounded-md ${
-                selectedCategory === category ? "bg-[var(--primary-color)] text-white" : "bg-white text-black"
-                }`}
-            >
-                {category}
-            </button>
-            ))}
-        </div>
-
-{/* Property Selection for Selected Category */}
-{(selectedCategory === "OFF-PLAN" || selectedCategory === "RESALES & RENTALS"|| selectedCategory==="EXCLUSIVE") && (
-  <div className="flex flex-col md:flex-row justify-center gap-4 mb-4">
-    {properties[selectedCategory].map((property) => (
-      <button
-        key={property.name}
-        onClick={() => setSelectedProperty(property)}
-        className={`px-4 py-2 border rounded-md ${
-          selectedProperty.name === property.name ? "bg-[var(--primary-color)] text-white" : "bg-white text-black"
-        }`}
-      >
-        {property.name}
-      </button>
-    ))}
-  </div>
-)}
-
-
-       {/* Property Display */}
-{selectedProperty && (
-  <div className="bg-white shadow-lg rounded-lg p-4 flex flex-col md:flex-row gap-6">
-    <div className="w-full md:w-2/3">
-      <Slider {...settings}>
-        {selectedProperty.images.map((image, index) => (
-          <div key={index}>
+        <div className="max-w-6xl mx-auto p-2 mt-10">
+        <h2 className="text-2xl md:text-4xl text-gray-800 mb-6 text-center">Off-Plan Properties</h2>
+        <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        {propertiesData.slice(0, 4).map((property) => (
+          <div
+            key={property.projectName}
+            className="relative w-full h-[250px] sm:h-[300px] md:h-[250px] lg:h-[200px] overflow-hidden rounded-lg shadow-md"
+            
+          >
+            {/* Property Image */}
             <img
-              src={image}
-              alt={selectedProperty.name}
-              className="w-full h-[250px] md:h-[350px] rounded-lg object-cover"
+              src={property.images.primary}
+              alt={property.projectName}
+              className="w-full h-full object-cover"
             />
+            <div className="absolute inset-0 bg-black bg-opacity-40" /> {/* Transparent Black Overlay */}
+            
+
+            {/* Property Name (Top Left) */}
+            <div className="absolute top-2 left-2 text-white px-2 py-1 rounded-md text-sm sm:text-base">
+              {property.projectName}
+            </div>
+
+            {/* Arrow Button (Bottom Right) */}
+            <button
+  className="absolute bottom-2 right-2 border border-white rounded-lg text-white py-2 px-4 sm:px-5 sm:py-3 transition-transform"
+  onClick={() => navigate(`/offplan/${property.projectName}`)}
+>
+  <FaArrowRight size={16} />
+</button>
+
           </div>
         ))}
-      </Slider>
-    </div>
-    <div className="w-full md:w-1/3">
-      <h3 className="text-lg font-semibold mb-2">Key Highlights</h3>
-      <ul className="list-disc pl-5 text-sm text-gray-700">
-        {selectedProperty.highlights.map((highlight, i) => (
-          <li key={i}>{highlight}</li>
-        ))}
-      </ul>
-    </div>
-  </div>
-)}
+      </div>
+      {/* View All Button */}
+      <div className="flex items-center justify-center">
+      <button 
+        className="px-8 py-2 text-lg text-white bg-[--primary-color] rounded-3xl hover:opacity-80 mt-6"
+        onClick={(e) => {
+          e.stopPropagation(); // Prevent section click
+          navigate("/OffplanPropertyCard");
+        }}
+      >
+        View All Off-Plan Properties
+      </button>
+      </div>
+
+
 
         </div>
     );
