@@ -4,13 +4,16 @@
       "developer": "Binghatti",
       "location": "Jumeirah Village Circle (JVC)",
       "price": "AED 700000",
-      "contact": { "platform": "WhatsApp" },
+      "contact": {
+        "platform": "WhatsApp",
+        "number": "+971501234567"
+       },
       "description": "Dusk by Binghatti is a modern residential development offering elegant design, premium finishes, and a vibrant lifestyle in the heart of JVC.",
       "aboutDeveloper": "Binghatti is a leading real estate developer in the UAE known for bold architecture and delivering high-quality projects.",
       "images": {
-        "primary": "dusk_by_binghatti_primary.jpg",
-        "secondary": "dusk_by_binghatti_secondary.jpg",
-        "developerLogo": "binghatti_logo.png"
+        "primary": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQF0ROMMgD4Cvo7GBh6gvQJR_VN4WgjzXmnGw&s",
+        "secondary": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHGEiAGgs-KHZI9mufcKRYWfRlVvLX70r2TMpknsbPffMwJeHwH7ku35_3xbj3pdP-G9Q&usqp=CAU",
+        "developerLogo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8A6LVqROd8SnDpzWoFtUAaQVjrHa_F_VqL8OatH0lichuVI0KdcN0YG1WPRugPC-Rj_E&usqp=CAU"
       }
     },
     {
@@ -18,13 +21,15 @@
       "developer": "DAMAC Properties",
       "location": "Dubai Marina",
       "price": "AED 1,200,000",
-      "contact": { "platform": "WhatsApp" },
-      "description": "Ocean Heights offers sea-view apartments with luxury interiors and top-tier amenities in the iconic Dubai Marina.",
+"contact": {
+        "platform": "WhatsApp",
+        "number": "+971501234567"
+       },      "description": "Ocean Heights offers sea-view apartments with luxury interiors and top-tier amenities in the iconic Dubai Marina.",
       "aboutDeveloper": "DAMAC Properties is known for creating world-class residential and commercial properties across the Middle East.",
       "images": {
-        "primary": "ocean_heights_primary.jpg",
-        "secondary": "ocean_heights_secondary.jpg",
-        "developerLogo": "damac_logo.png"
+        "primary": "https://images.prismic.io/11prop-blog/ZvT4UbVsGrYSwBBq_2-Villas-EmaarProperties-copy.webp?auto=format,compress",
+        "secondary": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQF7_BEv4lA2B81vVte69i6aW80mW0rG9C1LEkIqGVqzkyIRjARkboYyhq9aKlKPWXdyrs&usqp=CAU",
+        "developerLogo": "dhttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT10AF_-PqCc8JNGUybJ2hDiAK0bd0VAcRM7H9Rz464hdyyh3kr-Z4H-ZNbR0pXoTrx_pE&usqp=CAU"
       }
     },
     {
@@ -32,13 +37,15 @@
       "developer": "Sobha Realty",
       "location": "Sobha Hartland",
       "price": "AED 950000",
-      "contact": { "platform": "WhatsApp" },
-      "description": "Creek Vista Reserve offers peaceful waterfront living with high-end finishing and lush green surroundings.",
+"contact": {
+        "platform": "WhatsApp",
+        "number": "+971501234567"
+       },      "description": "Creek Vista Reserve offers peaceful waterfront living with high-end finishing and lush green surroundings.",
       "aboutDeveloper": "Sobha Realty is a premium real estate developer known for quality craftsmanship and exceptional design.",
       "images": {
-        "primary": "creek_vista_primary.jpg",
-        "secondary": "creek_vista_secondary.jpg",
-        "developerLogo": "sobha_logo.png"
+        "primary": "https://emirates.estate/uploads/images/2021-01/7e68ef2b1a181db9d4f21aaae7aa487b_890x440.jpg",
+        "secondary": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhDyESk3XNi2yNb0qSYE0-mzv_U8WB4ZjijYQ5Kyl0nkNcW6RYEPe9ZNb4I7-wjfQeNkE&usqp=CAU",
+        "developerLogo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhDyESk3XNi2yNb0qSYE0-mzv_U8WB4ZjijYQ5Kyl0nkNcW6RYEPe9ZNb4I7-wjfQeNkE&usqp=CAU"
       }
     },
     {
@@ -46,13 +53,15 @@
       "developer": "Ellington Properties",
       "location": "Mohammed Bin Rashid City",
       "price": "AED 1,400,000",
-      "contact": { "platform": "WhatsApp" },
-      "description": "The Highbury redefines modern living with serene design and wellness-inspired amenities.",
+"contact": {
+        "platform": "WhatsApp",
+        "number": "+971501234567"
+       },      "description": "The Highbury redefines modern living with serene design and wellness-inspired amenities.",
       "aboutDeveloper": "Ellington is renowned for boutique properties that prioritize design and quality.",
       "images": {
-        "primary": "the_highbury_primary.jpg",
-        "secondary": "the_highbury_secondary.jpg",
-        "developerLogo": "ellington_logo.png"
+        "primary": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTy6AEp0UJqf1G8KKwaO-C_OIXj5ftAZFGxFUyspDwDY0KzU_kBoYegKL7cANZz6WE4Rp8&usqp=CAU",
+        "secondary": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8RFZIdKBbC5CYps87QQE17J9yS2wGOURZm61zCx6BQ6GjLF207902FaCsA0OjQh-oqzc&usqp=CAU",
+        "developerLogo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8RFZIdKBbC5CYps87QQE17J9yS2wGOURZm61zCx6BQ6GjLF207902FaCsA0OjQh-oqzc&usqp=CAU"
       }
     },
     {
@@ -60,13 +69,15 @@
       "developer": "TownX Development",
       "location": "Jumeirah Village Circle (JVC)",
       "price": "AED 600000",
-      "contact": { "platform": "WhatsApp" },
-      "description": "Luma21 is an urban lifestyle destination offering contemporary apartments and leisure-focused amenities.",
+"contact": {
+        "platform": "WhatsApp",
+        "number": "+971501234567"
+       },      "description": "Luma21 is an urban lifestyle destination offering contemporary apartments and leisure-focused amenities.",
       "aboutDeveloper": "TownX Development focuses on smart, sustainable residential communities across Dubai.",
       "images": {
-        "primary": "luma21_primary.jpg",
-        "secondary": "luma21_secondary.jpg",
-        "developerLogo": "townx_logo.png"
+        "primary": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf7Go1wT_I--mHDLXgaAizGroWqwm4bj8bWxkTaxqvHtCLKoh9A5UkpPc06ave2KJE0g4&usqp=CAU",
+        "secondary": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgsb3CwHDexBHWfsHeUdWQCc5yLeGpgYjNs3-1Ym_OJj9KdRrQhyRLeiDrXNL_1Jbs-9o&usqp=CAU",
+        "developerLogo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRt7MxCoHSkM6LqnZs2ILwMdr_sdbAkpkRQ0igDoAkhnGCo7eeqkHMCUYXtXDLTFWRFyqk&usqp=CAU"
       }
     },
     {
@@ -74,13 +85,15 @@
       "developer": "Danube Properties",
       "location": "Business Bay",
       "price": "AED 850000",
-      "contact": { "platform": "WhatsApp" },
-      "description": "Bayz 101 is a stylish tower with fully-furnished units and a wide range of modern facilities.",
+"contact": {
+        "platform": "WhatsApp",
+        "number": "+971501234567"
+       },      "description": "Bayz 101 is a stylish tower with fully-furnished units and a wide range of modern facilities.",
       "aboutDeveloper": "Danube Properties delivers value-for-money homes with modern finishes and strategic locations.",
       "images": {
-        "primary": "bayz_101_primary.jpg",
-        "secondary": "bayz_101_secondary.jpg",
-        "developerLogo": "danube_logo.png"
+        "primary": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdMoMNkMarbUtDEENWPByjRk5zc1mrLp5Fha5lfL5BZ5j2B5F64oyp4F5lsK5__HUXGCk&usqp=CAU",
+        "secondary": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP95246d18TWiyPVT-IgIt89WB9ZMBv7hwNznR7-O7jfK4dFgskYxT6_sedPwvnYooSQE&usqp=CAU",
+        "developerLogo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP95246d18TWiyPVT-IgIt89WB9ZMBv7hwNznR7-O7jfK4dFgskYxT6_sedPwvnYooSQE&usqp=CAU"
       }
     },
     {
@@ -88,13 +101,15 @@
       "developer": "DEYAAR",
       "location": "Dubai Silicon Oasis",
       "price": "AED 580000",
-      "contact": { "platform": "WhatsApp" },
-      "description": "Tria offers tech-integrated residences with sleek designs and sustainable features.",
+"contact": {
+        "platform": "WhatsApp",
+        "number": "+971501234567"
+       },      "description": "Tria offers tech-integrated residences with sleek designs and sustainable features.",
       "aboutDeveloper": "DEYAAR is a prominent name in the UAE real estate scene with a focus on urban innovation.",
       "images": {
-        "primary": "tria_primary.jpg",
-        "secondary": "tria_secondary.jpg",
-        "developerLogo": "deyaar_logo.png"
+        "primary": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhVJH32NMDonKeU_Hi8b7t2Un-DWZTubR4umvlsBujoqwdLKQc1A5W1i8aOLG31ptcwwE&usqp=CAU",
+        "secondary": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR14l-ZT6YHdXeLfNBLx3xXR12yU_n3Ba5OaxiMz5ox1kipVo432Ufcz1ChtiBLpbw0X84&usqp=CAU",
+        "developerLogo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR14l-ZT6YHdXeLfNBLx3xXR12yU_n3Ba5OaxiMz5ox1kipVo432Ufcz1ChtiBLpbw0X84&usqp=CAU"
       }
     },
     {
@@ -102,13 +117,15 @@
       "developer": "Reportage Properties",
       "location": "Dubai Investment Park",
       "price": "AED 490000",
-      "contact": { "platform": "WhatsApp" },
-      "description": "Verdana is a vibrant community project offering townhouses with ample space and modern comforts.",
+"contact": {
+        "platform": "WhatsApp",
+        "number": "+971501234567"
+       },      "description": "Verdana is a vibrant community project offering townhouses with ample space and modern comforts.",
       "aboutDeveloper": "Reportage Properties is one of the largest private developers in the UAE offering affordable luxury.",
       "images": {
-        "primary": "verdana_primary.jpg",
-        "secondary": "verdana_secondary.jpg",
-        "developerLogo": "reportage_logo.png"
+        "primary": "https://assets.bayut.com/content/Address_Villas_Hillcrest_Body_1_8_9_22_b13ed12e4e.jpg",
+        "secondary": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlMju1TSwf8EQD_KOat4Wv4kORkufu03s4ITXShR2WNvelj_aedtisCVwIVhttH_ckkiE&usqp=CAU",
+        "developerLogo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWa17J0xYGunt7MaH_3SKXOzwC3pzNAh6-CwGC_0h-TQGndNikS4aqkU8PjfGmrLcy6UA&usqp=CAU"
       }
     },
     {
@@ -116,13 +133,15 @@
       "developer": "Igo Real Estate",
       "location": "Business Bay",
       "price": "AED 920000",
-      "contact": { "platform": "WhatsApp" },
-      "description": "The Paragon offers modern apartments with smart technology and co-working spaces for urban professionals.",
+"contact": {
+        "platform": "WhatsApp",
+        "number": "+971501234567"
+       },      "description": "The Paragon offers modern apartments with smart technology and co-working spaces for urban professionals.",
       "aboutDeveloper": "IGO Real Estate creates future-forward communities with an emphasis on design and tech.",
       "images": {
-        "primary": "paragon_primary.jpg",
-        "secondary": "paragon_secondary.jpg",
-        "developerLogo": "igo_logo.png"
+        "primary": "https://metropolitan.realestate/wp-content/uploads/property/MS-23804/Villa-Sidra-Villas-III-1.jpg",
+        "secondary": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuVz1u1GumnVJQHq2Z9ZrEKWUgisjwPzqnzem3SQvsq4sM_uzd-ofNjUHCBPfGOIYFXCE&usqp=CAU",
+        "developerLogo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbTJX6SKQ3NhWaZVHHhf366bePTQyB8OK9S7_78G6i3v2bn1yaA0H5N-JyrbpvOGsxWm8&usqp=CAU"
       }
     },
     {
@@ -130,13 +149,15 @@
       "developer": "Azizi Developments",
       "location": "Meydan",
       "price": "AED 1100000",
-      "contact": { "platform": "WhatsApp" },
-      "description": "Riviera Rêve blends French Mediterranean architecture with modern interior finishes in a waterfront setting.",
+"contact": {
+        "platform": "WhatsApp",
+        "number": "+971501234567"
+       },      "description": "Riviera Rêve blends French Mediterranean architecture with modern interior finishes in a waterfront setting.",
       "aboutDeveloper": "Azizi Developments is a well-established UAE developer with an expansive portfolio in Dubai.",
       "images": {
-        "primary": "riviera_reve_primary.jpg",
-        "secondary": "riviera_reve_secondary.jpg",
-        "developerLogo": "azizi_logo.png"
+        "primary": "https://metropolitan.realestate/wp-content/uploads/property/MS-23804/Villa-Sidra-Villas-III-30.jpg",
+        "secondary": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuVz1u1GumnVJQHq2Z9ZrEKWUgisjwPzqnzem3SQvsq4sM_uzd-ofNjUHCBPfGOIYFXCE&usqp=CAU",
+        "developerLogo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuVz1u1GumnVJQHq2Z9ZrEKWUgisjwPzqnzem3SQvsq4sM_uzd-ofNjUHCBPfGOIYFXCE&usqp=CAU"
       }
     },  
     {
@@ -144,13 +165,15 @@
       "developer": "Tiger Group",
       "location": "JVT (Jumeirah Village Triangle)",
       "price": "AED 690000",
-      "contact": { "platform": "WhatsApp" },
-      "description": "Altai Tower is a high-rise residential building with sleek aesthetics and lifestyle amenities.",
+"contact": {
+        "platform": "WhatsApp",
+        "number": "+971501234567"
+       },      "description": "Altai Tower is a high-rise residential building with sleek aesthetics and lifestyle amenities.",
       "aboutDeveloper": "Tiger Group is a diversified UAE-based developer with several residential and commercial projects.",
       "images": {
-        "primary": "altai_tower_primary.jpg",
-        "secondary": "altai_tower_secondary.jpg",
-        "developerLogo": "tiger_logo.png"
+        "primary": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQA9txH3TtG6TRu2vQSzw-3oMVAkSfWM0gkDB2WDeWk7OvncFv1YMi4TSJ_HpMMnCF2Qc&usqp=CAU",
+        "secondary": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo3WjHN5mSMsSgXZPtZvctNCHjW1osJZhef5_xr8Nanrp3iAxx1IdQbp3xf1ok8FglRBE&usqp=CAU",
+        "developerLogo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo3WjHN5mSMsSgXZPtZvctNCHjW1osJZhef5_xr8Nanrp3iAxx1IdQbp3xf1ok8FglRBE&usqp=CAU"
       }
     },
     {
@@ -158,13 +181,15 @@
       "developer": "Binghatti",
       "location": "JVC",
       "price": "AED 720000",
-      "contact": { "platform": "WhatsApp" },
-      "description": "Luna by Binghatti features unique geometric designs and premium amenities for contemporary living.",
+"contact": {
+        "platform": "WhatsApp",
+        "number": "+971501234567"
+       },      "description": "Luna by Binghatti features unique geometric designs and premium amenities for contemporary living.",
       "aboutDeveloper": "Binghatti is known for innovative architecture and real estate excellence in Dubai.",
       "images": {
-        "primary": "luna_primary.jpg",
-        "secondary": "luna_secondary.jpg",
-        "developerLogo": "binghatti_logo.png"
+        "primary": "https://i.pinimg.com/474x/56/05/29/5605292764ef058d63f4c41851634d6c.jpg",
+        "secondary": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo3WjHN5mSMsSgXZPtZvctNCHjW1osJZhef5_xr8Nanrp3iAxx1IdQbp3xf1ok8FglRBE&usqp=CAU",
+        "developerLogo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo3WjHN5mSMsSgXZPtZvctNCHjW1osJZhef5_xr8Nanrp3iAxx1IdQbp3xf1ok8FglRBE&usqp=CAU"
       }
     },
     {
@@ -172,13 +197,15 @@
       "developer": "Sobha Realty",
       "location": "Mohammed Bin Rashid City",
       "price": "AED 980000",
-      "contact": { "platform": "WhatsApp" },
-      "description": "The Crest provides residents with access to a crystal lagoon, modern designs, and serene views.",
+"contact": {
+        "platform": "WhatsApp",
+        "number": "+971501234567"
+       },      "description": "The Crest provides residents with access to a crystal lagoon, modern designs, and serene views.",
       "aboutDeveloper": "Sobha Realty is recognized for delivering luxury homes with an emphasis on quality.",
       "images": {
-        "primary": "the_crest_primary.jpg",
-        "secondary": "the_crest_secondary.jpg",
-        "developerLogo": "sobha_logo.png"
+        "primary": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO5A_fxn9w5eeu6_6cKW7Kv9UpFQVAdIDshryDLUwo3MISXNn6bDONoedNdp4sGh88Mgg&usqp=CAU",
+        "secondary": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo3WjHN5mSMsSgXZPtZvctNCHjW1osJZhef5_xr8Nanrp3iAxx1IdQbp3xf1ok8FglRBE&usqp=CAU",
+        "developerLogo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo3WjHN5mSMsSgXZPtZvctNCHjW1osJZhef5_xr8Nanrp3iAxx1IdQbp3xf1ok8FglRBE&usqp=CAU"
       }
     },
     {
@@ -186,13 +213,15 @@
       "developer": "Samana Developers",
       "location": "JVC",
       "price": "AED 610000",
-      "contact": { "platform": "WhatsApp" },
-      "description": "Samana Waves features luxury apartments with private pools and state-of-the-art amenities.",
+"contact": {
+        "platform": "WhatsApp",
+        "number": "+971501234567"
+       },      "description": "Samana Waves features luxury apartments with private pools and state-of-the-art amenities.",
       "aboutDeveloper": "Samana Developers focuses on providing lifestyle-oriented properties with modern features.",
       "images": {
-        "primary": "samana_waves_primary.jpg",
-        "secondary": "samana_waves_secondary.jpg",
-        "developerLogo": "samana_logo.png"
+        "primary": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_Lzx4_Jf2hbO-1Y-cPbxv2azk80TYWGS6eMlcYDIzvNYdXfMXkKEIIkIY3F8HhQrINGQ&usqp=CAU",
+        "secondary": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSibFerEaYN90LJINXVGACKO8sVdA8sD8SMmOvdPcyFgh2oNNHGGzuAPajp_Z07HK7BwY&usqp=CAU",
+        "developerLogo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNrT3fNSBCvhtA9liJenX1kXtCKwGKaSxqfwOV9A4rbJmAE0wXtzl7hVlP3kpYYIYNvgE&usqp=CAU"
       }
     },
     {
@@ -200,13 +229,15 @@
       "developer": "DAMAC Properties",
       "location": "Sheikh Zayed Road",
       "price": "AED 1300000",
-      "contact": { "platform": "WhatsApp" },
-      "description": "Volta Tower is a high-rise offering ultra-luxurious residences overlooking Downtown Dubai.",
+"contact": {
+        "platform": "WhatsApp",
+        "number": "+971501234567"
+       },      "description": "Volta Tower is a high-rise offering ultra-luxurious residences overlooking Downtown Dubai.",
       "aboutDeveloper": "DAMAC Properties is one of Dubai's top luxury real estate developers.",
       "images": {
-        "primary": "volta_tower_primary.jpg",
-        "secondary": "volta_tower_secondary.jpg",
-        "developerLogo": "damac_logo.png"
+        "primary": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2PWRiJbTD0W0GLbN5wwzRgSAXdgWYVieMAe2Cy324Fm29ym9uquK7_YJw9KfYb5R5_jo&usqp=CAU",
+        "secondary": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3mds-fqELsazaaFfhWA0gyl2nITrRFvzrw-dHf3BS4vZQKI4NgtPtXzSD1pDJEMvOx3A&usqp=CAU",
+        "developerLogo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3mds-fqELsazaaFfhWA0gyl2nITrRFvzrw-dHf3BS4vZQKI4NgtPtXzSD1pDJEMvOx3A&usqp=CAU"
       }
     },
     {
@@ -214,13 +245,15 @@
       "developer": "Danube Properties",
       "location": "JVC",
       "price": "AED 680000",
-      "contact": { "platform": "WhatsApp" },
-      "description": "Elitz 3 offers compact modern apartments with rooftop pools and wellness zones.",
+"contact": {
+        "platform": "WhatsApp",
+        "number": "+971501234567"
+       },      "description": "Elitz 3 offers compact modern apartments with rooftop pools and wellness zones.",
       "aboutDeveloper": "Danube is known for practical and stylish developments suited for families and investors alike.",
       "images": {
-        "primary": "elitz_3_primary.jpg",
-        "secondary": "elitz_3_secondary.jpg",
-        "developerLogo": "danube_logo.png"
+        "primary": "https://images.prismic.io/11prop-blog/ZvT6mLVsGrYSwBC5_15-ReadytoExploreYourOptions-EmaarProperties-copy.webp?auto=format,compress",
+        "secondary": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTfw4YBnWLecsGMawdfq_Juq5y9nxW46_x8WBtwzZ3OjJpiflgNKMnCkMRNi1LqmedOm8&usqp=CAU",
+        "developerLogo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5UpeUcOxM333C5dL2BTfav4dqqa9pwM-3qGTloUJ7tZ8w_vb-8i4PJTHgeHc-RQNcrfI&usqp=CAU"
       }
     },
     {
@@ -228,13 +261,15 @@
       "developer": "Ellington Properties",
       "location": "Business Bay",
       "price": "AED 1050000",
-      "contact": { "platform": "WhatsApp" },
-      "description": "The Quayside delivers waterfront elegance with boutique-style residences in Business Bay.",
+"contact": {
+        "platform": "WhatsApp",
+        "number": "+971501234567"
+       },      "description": "The Quayside delivers waterfront elegance with boutique-style residences in Business Bay.",
       "aboutDeveloper": "Ellington is a design-first developer creating artistic, high-end living spaces in Dubai.",
       "images": {
-        "primary": "quayside_primary.jpg",
-        "secondary": "quayside_secondary.jpg",
-        "developerLogo": "ellington_logo.png"
+        "primary": "https://assets.isu.pub/document-structure/230216054914-6cacad64e007b45f8335ecd063efbe34/v1/6672b8862b60dece89e5b82263f099ee.jpeg",
+        "secondary": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6LTTElfwF0Y-b62VC2N5WcjCacsUpfIfOReUb-egOl3FZ-YJA1vl87qVEmLkrKB0Az1M&usqp=CAU",
+        "developerLogo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvU6mI_fouB21mJbtyOgSmfKBI6rdb0svjLBSHf3DI8YD2zGZx7F4BdizXFA8306PHRLE&usqp=CAU"
       }
     },
     {
@@ -242,13 +277,15 @@
       "developer": "Sobha Realty",
       "location": "Ras Al Khor",
       "price": "AED 1200000",
-      "contact": { "platform": "WhatsApp" },
-      "description": "Sobha One blends natural beauty with luxury living in one of Dubai’s greenest developments.",
+"contact": {
+        "platform": "WhatsApp",
+        "number": "+971501234567"
+       },      "description": "Sobha One blends natural beauty with luxury living in one of Dubai’s greenest developments.",
       "aboutDeveloper": "Sobha Realty is a globally recognized developer known for quality and eco-conscious projects.",
       "images": {
-        "primary": "sobha_one_primary.jpg",
-        "secondary": "sobha_one_secondary.jpg",
-        "developerLogo": "sobha_logo.png"
+        "primary": "https://new-projects-media.propertyfinder.com/project/ef028a00-b11e-4671-92b1-b390ff4ba030/gallery/image/w62pWMng16PqENe5FeNd4cYumuJ8mHOXRS0-1sKw_EU=/medium.webp",
+        "secondary": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4n70Jy6pqed0xvREwkh3jmSqQ0i8D1BgGjtldFPPEyTeQ33KX27hFZBF45HAkBngkXUY&usqp=CAU",
+        "developerLogo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgGOCUgeEThAtF7EIHy1smxNaNnApSvzoAfHkrkYI5DYPRc_EHgf9GzKCa79-IpDrWXN8&usqp=CAU"
       }
     },
     {
@@ -256,13 +293,15 @@
       "developer": "Danube Properties",
       "location": "JVC",
       "price": "AED 750000",
-      "contact": { "platform": "WhatsApp" },
-      "description": "Fashionz by Danube is a high-style branded residence with fashion-inspired amenities and decor.",
+"contact": {
+        "platform": "WhatsApp",
+        "number": "+971501234567"
+       },      "description": "Fashionz by Danube is a high-style branded residence with fashion-inspired amenities and decor.",
       "aboutDeveloper": "Danube offers themed residences with a strong focus on community and aesthetics.",
       "images": {
-        "primary": "fashionz_primary.jpg",
-        "secondary": "fashionz_secondary.jpg",
-        "developerLogo": "danube_logo.png"
+        "primary": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuhYPACfAWiIpcRBg3QQsTmrJ9PaU4NxFHWCOkWY1S4xiUgu0IsB-Shuqwq3otkuPGfCs&usqp=CAU",
+        "secondary": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSm5xgHg13OsON-dKu-3JWLGclb8kVG27XYBg0Jt8WIzUANKuuzc2KIywjLwndGZJ_S-bY&usqp=CAU",
+        "developerLogo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuhYPACfAWiIpcRBg3QQsTmrJ9PaU4NxFHWCOkWY1S4xiUgu0IsB-Shuqwq3otkuPGfCs&usqp=CAU"
       }
     }
   ]
