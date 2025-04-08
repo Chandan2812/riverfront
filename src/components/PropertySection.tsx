@@ -8,7 +8,7 @@ const PropertySection = () => {
   return (
     <div id="property" className="container mx-auto py-10 mt-10">
       <h2 className="text-2xl md:text-4xl text-gray-800 mb-6 text-center">
-        Best Selling Properties
+        <i>Best Selling Properties</i>
       </h2>
 
       <div className="mx-auto w-[90%] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">

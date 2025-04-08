@@ -20,9 +20,9 @@ export const Landing = () => {
     <StatsSection/>
     <AwardsSection/>
     
-    <PropertySlider/>
     <ForSaleComponent/>
     <ForRentComponent/>
+    <PropertySlider/>
     <PropertySection/>
     <OurStory/>
     <Blog/>

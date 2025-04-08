@@ -12,8 +12,8 @@ export default function ForRentComponent() {
   const navigate = useNavigate();
 return (
     <div className="max-w-6xl mx-auto p-2 mt-14">
-    <h2 className="text-2xl md:text-4xl text-gray-800 mb-6 text-center">For Rent Properties</h2>
-    <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    <h2 className="text-2xl md:text-4xl text-gray-800 mb-6 text-center"><i>Explore Properties for Rent</i></h2>
+    <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-3">
     {propertiesData.slice(0, 4).map((property) => (
       <div
         key={property.title}

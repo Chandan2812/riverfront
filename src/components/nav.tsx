@@ -1,9 +1,22 @@
 import React, { useState, useEffect } from "react";
 import logo from "../assets/logo.png";
-import { Search, X } from "lucide-react";
+import { X } from "lucide-react";
 import { useLocation, useNavigate } from "react-router-dom";
 import FindPropertyModal from "./FindPropertyModal";
 import BookMeetingModal from "./BookMeetingModal";
+import {
+  Home,
+  Building2,
+  Building,
+  Landmark,
+  Wrench,
+  Star,
+  Phone,
+  Calendar,
+  Info,
+  Search,
+} from "lucide-react";
+
 
 interface NavbarProps {
   transparent?: boolean;
@@ -18,11 +31,11 @@ const Navbar: React.FC<NavbarProps> = ({ transparent = false }) => {
   const location = useLocation();
 
   const backgroundClass =
-  transparent && !isScrolled ? "bg-transparent" : "bg-white shadow-md";
+  transparent && !isScrolled ? "bg-transparent" : "bg-[#31445c] shadow-md";
 const textColorClass =
-  transparent && !isScrolled ? "text-white border border-white" : "text-black border border-black";
+  transparent && !isScrolled ? "text-white border border-white" : "text-white border border-white";
   const textColorClass2 =
-  transparent && !isScrolled ? "text-white" : "text-black";
+  transparent && !isScrolled ? "text-white" : "text-white";
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
@@ -101,23 +114,56 @@ const textColorClass =
     <div className="absolute inset-0 bg-black bg-opacity-40 backdrop-blur-sm" onClick={() => setMenuOpen(false)} />
 
     {/* Slide-in Menu */}
-    <div className="relative bg-white w-full md:w-1/4 h-full flex flex-col">
+    <div className="relative w-full bg-[var(--secondary-color)] md:w-1/5 h-full flex flex-col">
       <div className="flex items-center justify-between px-4 py-4 border-b">
         <img src={logo} alt="Logo" className="h-14" />
-        <button onClick={() => setMenuOpen(false)}><X className="w-6 h-6" /></button>
+        <button onClick={() => setMenuOpen(false)}><X className="w-6 h-6 text-white" /></button>
       </div>
-      <div className="flex flex-col px-6 py-4 space-y-2 text-lg text-[var(--primary-color)]">
-        <a href="/" onClick={() => setMenuOpen(false)} className="hover:text-[var(--primary-color)]">Home</a>
-        <a href="/forsale" onClick={() => setMenuOpen(false)} className="hover:text-[var(--primary-color)]">For Sale</a>
-        <a href="/forrent" onClick={() => setMenuOpen(false)} className="hover:text-[var(--primary-color)]">For Rent</a>
-        <a href="/OffplanPropertyCard" onClick={() => setMenuOpen(false)} className="hover:text-[var(--primary-color)]">Off-Plan</a>
-        <a href="/ServicesSection" onClick={() => setMenuOpen(false)} className="hover:text-[var(--primary-color)]">Services</a>
-        <a href="/topProperties" onClick={() => setMenuOpen(false)} className="hover:text-[var(--primary-color)]">Top Properties</a>
-        <a href="/contact" onClick={() => setMenuOpen(false)} className="hover:text-[var(--primary-color)]">Contact Us</a>
-        <button onClick={() => { setIsBookMeetingOpen(true); setMenuOpen(false); }} className="text-left hover:text-[var(--primary-color)]">Book a Meeting</button>
-        <a href="/about" onClick={() => setMenuOpen(false)} className="hover:text-[var(--primary-color)]">About Us</a>
-        <button onClick={() => { setIsFindPropertyOpen(true); setMenuOpen(false); }} className="text-left hover:text-[var(--primary-color)]">Find a Property</button>
-      </div>
+      <div className="flex flex-col px-6 py-4 space-y-5 text-base text-[var(--primary-color)]">
+  <a href="/" onClick={() => setMenuOpen(false)} className="font-hanken flex items-center gap-2 hover:text-[var(--primary-color)]">
+    <Home size={20} /> Home
+  </a>
+  <a href="/forsale" onClick={() => setMenuOpen(false)} className="font-hanken flex items-center gap-2 hover:text-[var(--primary-color)]">
+    <Building2 size={20} /> For Sale
+  </a>
+  <a href="/forrent" onClick={() => setMenuOpen(false)} className="font-hanken flex items-center gap-2 hover:text-[var(--primary-color)]">
+    <Building size={20} /> For Rent
+  </a>
+  <a href="/OffplanPropertyCard" onClick={() => setMenuOpen(false)} className="font-hanken flex items-center gap-2 hover:text-[var(--primary-color)]">
+    <Landmark size={20} /> Off-Plan
+  </a>
+  <a href="/ServicesSection" onClick={() => setMenuOpen(false)} className="font-hanken flex items-center gap-2 hover:text-[var(--primary-color)]">
+    <Wrench size={20} /> Services
+  </a>
+  <a href="/topProperties" onClick={() => setMenuOpen(false)} className="font-hanken flex items-center gap-2 hover:text-[var(--primary-color)]">
+    <Star size={20} /> Top Properties
+  </a>
+  <a href="/contact" onClick={() => setMenuOpen(false)} className="font-hanken flex items-center gap-2 hover:text-[var(--primary-color)]">
+    <Phone size={20} /> Contact Us
+  </a>
+  <button
+    onClick={() => {
+      setIsBookMeetingOpen(true);
+      setMenuOpen(false);
+    }}
+    className="font-hanken flex items-center gap-2 text-left hover:text-[var(--primary-color)]"
+  >
+    <Calendar size={20} /> Book a Meeting
+  </button>
+  <a href="/about" onClick={() => setMenuOpen(false)} className="font-hanken flex items-center gap-2 hover:text-[var(--primary-color)]">
+    <Info size={20} /> About Us
+  </a>
+  <button
+    onClick={() => {
+      setIsFindPropertyOpen(true);
+      setMenuOpen(false);
+    }}
+    className="font-hanken flex items-center gap-2 text-left hover:text-[var(--primary-color)]"
+  >
+    <Search size={20} /> Find a Property
+  </button>
+</div>
+
     </div>
   </div>
 )}
