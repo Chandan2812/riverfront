@@ -1,0 +1,269 @@
+[
+    {
+      "projectName": "Dusk By Binghatti",
+      "developer": "Binghatti",
+      "location": "Jumeirah Village Circle (JVC)",
+      "price": "AED 700000",
+      "contact": { "platform": "WhatsApp" },
+      "description": "Dusk by Binghatti is a modern residential development offering elegant design, premium finishes, and a vibrant lifestyle in the heart of JVC.",
+      "aboutDeveloper": "Binghatti is a leading real estate developer in the UAE known for bold architecture and delivering high-quality projects.",
+      "images": {
+        "primary": "dusk_by_binghatti_primary.jpg",
+        "secondary": "dusk_by_binghatti_secondary.jpg",
+        "developerLogo": "binghatti_logo.png"
+      }
+    },
+    {
+      "projectName": "Ocean Heights",
+      "developer": "DAMAC Properties",
+      "location": "Dubai Marina",
+      "price": "AED 1,200,000",
+      "contact": { "platform": "WhatsApp" },
+      "description": "Ocean Heights offers sea-view apartments with luxury interiors and top-tier amenities in the iconic Dubai Marina.",
+      "aboutDeveloper": "DAMAC Properties is known for creating world-class residential and commercial properties across the Middle East.",
+      "images": {
+        "primary": "ocean_heights_primary.jpg",
+        "secondary": "ocean_heights_secondary.jpg",
+        "developerLogo": "damac_logo.png"
+      }
+    },
+    {
+      "projectName": "Creek Vista Reserve",
+      "developer": "Sobha Realty",
+      "location": "Sobha Hartland",
+      "price": "AED 950000",
+      "contact": { "platform": "WhatsApp" },
+      "description": "Creek Vista Reserve offers peaceful waterfront living with high-end finishing and lush green surroundings.",
+      "aboutDeveloper": "Sobha Realty is a premium real estate developer known for quality craftsmanship and exceptional design.",
+      "images": {
+        "primary": "creek_vista_primary.jpg",
+        "secondary": "creek_vista_secondary.jpg",
+        "developerLogo": "sobha_logo.png"
+      }
+    },
+    {
+      "projectName": "The Highbury",
+      "developer": "Ellington Properties",
+      "location": "Mohammed Bin Rashid City",
+      "price": "AED 1,400,000",
+      "contact": { "platform": "WhatsApp" },
+      "description": "The Highbury redefines modern living with serene design and wellness-inspired amenities.",
+      "aboutDeveloper": "Ellington is renowned for boutique properties that prioritize design and quality.",
+      "images": {
+        "primary": "the_highbury_primary.jpg",
+        "secondary": "the_highbury_secondary.jpg",
+        "developerLogo": "ellington_logo.png"
+      }
+    },
+    {
+      "projectName": "Luma21",
+      "developer": "TownX Development",
+      "location": "Jumeirah Village Circle (JVC)",
+      "price": "AED 600000",
+      "contact": { "platform": "WhatsApp" },
+      "description": "Luma21 is an urban lifestyle destination offering contemporary apartments and leisure-focused amenities.",
+      "aboutDeveloper": "TownX Development focuses on smart, sustainable residential communities across Dubai.",
+      "images": {
+        "primary": "luma21_primary.jpg",
+        "secondary": "luma21_secondary.jpg",
+        "developerLogo": "townx_logo.png"
+      }
+    },
+    {
+      "projectName": "Bayz 101",
+      "developer": "Danube Properties",
+      "location": "Business Bay",
+      "price": "AED 850000",
+      "contact": { "platform": "WhatsApp" },
+      "description": "Bayz 101 is a stylish tower with fully-furnished units and a wide range of modern facilities.",
+      "aboutDeveloper": "Danube Properties delivers value-for-money homes with modern finishes and strategic locations.",
+      "images": {
+        "primary": "bayz_101_primary.jpg",
+        "secondary": "bayz_101_secondary.jpg",
+        "developerLogo": "danube_logo.png"
+      }
+    },
+    {
+      "projectName": "Tria",
+      "developer": "DEYAAR",
+      "location": "Dubai Silicon Oasis",
+      "price": "AED 580000",
+      "contact": { "platform": "WhatsApp" },
+      "description": "Tria offers tech-integrated residences with sleek designs and sustainable features.",
+      "aboutDeveloper": "DEYAAR is a prominent name in the UAE real estate scene with a focus on urban innovation.",
+      "images": {
+        "primary": "tria_primary.jpg",
+        "secondary": "tria_secondary.jpg",
+        "developerLogo": "deyaar_logo.png"
+      }
+    },
+    {
+      "projectName": "Verdana Phase 2",
+      "developer": "Reportage Properties",
+      "location": "Dubai Investment Park",
+      "price": "AED 490000",
+      "contact": { "platform": "WhatsApp" },
+      "description": "Verdana is a vibrant community project offering townhouses with ample space and modern comforts.",
+      "aboutDeveloper": "Reportage Properties is one of the largest private developers in the UAE offering affordable luxury.",
+      "images": {
+        "primary": "verdana_primary.jpg",
+        "secondary": "verdana_secondary.jpg",
+        "developerLogo": "reportage_logo.png"
+      }
+    },
+    {
+      "projectName": "The Paragon",
+      "developer": "Igo Real Estate",
+      "location": "Business Bay",
+      "price": "AED 920000",
+      "contact": { "platform": "WhatsApp" },
+      "description": "The Paragon offers modern apartments with smart technology and co-working spaces for urban professionals.",
+      "aboutDeveloper": "IGO Real Estate creates future-forward communities with an emphasis on design and tech.",
+      "images": {
+        "primary": "paragon_primary.jpg",
+        "secondary": "paragon_secondary.jpg",
+        "developerLogo": "igo_logo.png"
+      }
+    },
+    {
+      "projectName": "Riviera Rêve",
+      "developer": "Azizi Developments",
+      "location": "Meydan",
+      "price": "AED 1100000",
+      "contact": { "platform": "WhatsApp" },
+      "description": "Riviera Rêve blends French Mediterranean architecture with modern interior finishes in a waterfront setting.",
+      "aboutDeveloper": "Azizi Developments is a well-established UAE developer with an expansive portfolio in Dubai.",
+      "images": {
+        "primary": "riviera_reve_primary.jpg",
+        "secondary": "riviera_reve_secondary.jpg",
+        "developerLogo": "azizi_logo.png"
+      }
+    },  
+    {
+      "projectName": "Altai Tower",
+      "developer": "Tiger Group",
+      "location": "JVT (Jumeirah Village Triangle)",
+      "price": "AED 690000",
+      "contact": { "platform": "WhatsApp" },
+      "description": "Altai Tower is a high-rise residential building with sleek aesthetics and lifestyle amenities.",
+      "aboutDeveloper": "Tiger Group is a diversified UAE-based developer with several residential and commercial projects.",
+      "images": {
+        "primary": "altai_tower_primary.jpg",
+        "secondary": "altai_tower_secondary.jpg",
+        "developerLogo": "tiger_logo.png"
+      }
+    },
+    {
+      "projectName": "Binghatti Luna",
+      "developer": "Binghatti",
+      "location": "JVC",
+      "price": "AED 720000",
+      "contact": { "platform": "WhatsApp" },
+      "description": "Luna by Binghatti features unique geometric designs and premium amenities for contemporary living.",
+      "aboutDeveloper": "Binghatti is known for innovative architecture and real estate excellence in Dubai.",
+      "images": {
+        "primary": "luna_primary.jpg",
+        "secondary": "luna_secondary.jpg",
+        "developerLogo": "binghatti_logo.png"
+      }
+    },
+    {
+      "projectName": "The Crest",
+      "developer": "Sobha Realty",
+      "location": "Mohammed Bin Rashid City",
+      "price": "AED 980000",
+      "contact": { "platform": "WhatsApp" },
+      "description": "The Crest provides residents with access to a crystal lagoon, modern designs, and serene views.",
+      "aboutDeveloper": "Sobha Realty is recognized for delivering luxury homes with an emphasis on quality.",
+      "images": {
+        "primary": "the_crest_primary.jpg",
+        "secondary": "the_crest_secondary.jpg",
+        "developerLogo": "sobha_logo.png"
+      }
+    },
+    {
+      "projectName": "Samana Waves",
+      "developer": "Samana Developers",
+      "location": "JVC",
+      "price": "AED 610000",
+      "contact": { "platform": "WhatsApp" },
+      "description": "Samana Waves features luxury apartments with private pools and state-of-the-art amenities.",
+      "aboutDeveloper": "Samana Developers focuses on providing lifestyle-oriented properties with modern features.",
+      "images": {
+        "primary": "samana_waves_primary.jpg",
+        "secondary": "samana_waves_secondary.jpg",
+        "developerLogo": "samana_logo.png"
+      }
+    },
+    {
+      "projectName": "Volta Tower",
+      "developer": "DAMAC Properties",
+      "location": "Sheikh Zayed Road",
+      "price": "AED 1300000",
+      "contact": { "platform": "WhatsApp" },
+      "description": "Volta Tower is a high-rise offering ultra-luxurious residences overlooking Downtown Dubai.",
+      "aboutDeveloper": "DAMAC Properties is one of Dubai's top luxury real estate developers.",
+      "images": {
+        "primary": "volta_tower_primary.jpg",
+        "secondary": "volta_tower_secondary.jpg",
+        "developerLogo": "damac_logo.png"
+      }
+    },
+    {
+      "projectName": "Elitz 3",
+      "developer": "Danube Properties",
+      "location": "JVC",
+      "price": "AED 680000",
+      "contact": { "platform": "WhatsApp" },
+      "description": "Elitz 3 offers compact modern apartments with rooftop pools and wellness zones.",
+      "aboutDeveloper": "Danube is known for practical and stylish developments suited for families and investors alike.",
+      "images": {
+        "primary": "elitz_3_primary.jpg",
+        "secondary": "elitz_3_secondary.jpg",
+        "developerLogo": "danube_logo.png"
+      }
+    },
+    {
+      "projectName": "The Quayside",
+      "developer": "Ellington Properties",
+      "location": "Business Bay",
+      "price": "AED 1050000",
+      "contact": { "platform": "WhatsApp" },
+      "description": "The Quayside delivers waterfront elegance with boutique-style residences in Business Bay.",
+      "aboutDeveloper": "Ellington is a design-first developer creating artistic, high-end living spaces in Dubai.",
+      "images": {
+        "primary": "quayside_primary.jpg",
+        "secondary": "quayside_secondary.jpg",
+        "developerLogo": "ellington_logo.png"
+      }
+    },
+    {
+      "projectName": "Sobha One",
+      "developer": "Sobha Realty",
+      "location": "Ras Al Khor",
+      "price": "AED 1200000",
+      "contact": { "platform": "WhatsApp" },
+      "description": "Sobha One blends natural beauty with luxury living in one of Dubai’s greenest developments.",
+      "aboutDeveloper": "Sobha Realty is a globally recognized developer known for quality and eco-conscious projects.",
+      "images": {
+        "primary": "sobha_one_primary.jpg",
+        "secondary": "sobha_one_secondary.jpg",
+        "developerLogo": "sobha_logo.png"
+      }
+    },
+    {
+      "projectName": "Fashionz",
+      "developer": "Danube Properties",
+      "location": "JVC",
+      "price": "AED 750000",
+      "contact": { "platform": "WhatsApp" },
+      "description": "Fashionz by Danube is a high-style branded residence with fashion-inspired amenities and decor.",
+      "aboutDeveloper": "Danube offers themed residences with a strong focus on community and aesthetics.",
+      "images": {
+        "primary": "fashionz_primary.jpg",
+        "secondary": "fashionz_secondary.jpg",
+        "developerLogo": "danube_logo.png"
+      }
+    }
+  ]
+  

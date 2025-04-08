@@ -1,0 +1,762 @@
+[
+  {
+    "title": "Luxury Living | High Floor | Marina Views",
+    "propertyType": "Loft",
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "areaSqft": 653,
+    "location": "Arjan",
+    "priceAED": 2602668,
+    "agency": "AZCO Real Estate",
+    "salesManager": "Ahmed Mustafa",
+    "contact": {
+      "method": "WhatsApp",
+      "icon": "\ud83d\udfe2",
+      "link": "https://wa.me/971xxxxxxxxx"
+    },
+    "images": [
+      "https://example.com/images/property0_1.jpg",
+      "https://example.com/images/property0_2.jpg",
+      "https://example.com/images/property0_3.jpg",
+      "https://example.com/images/property0_4.jpg",
+      "https://example.com/images/property0_5.jpg",
+      "https://example.com/images/property0_6.jpg",
+      "https://example.com/images/property0_7.jpg",
+      "https://example.com/images/property0_8.jpg",
+      "https://example.com/images/property0_9.jpg",
+      "https://example.com/images/property0_10.jpg"
+    ],
+    "description": {
+      "short": "Loft in Arjan with excellent amenities, perfect for investment or living.",
+      "features": [
+        "Nearby schools and supermarkets",
+        "Premium fittings and fixtures",
+        "Open-plan modern kitchen",
+        "Fitness center and swimming pool",
+        "Smart home system"
+      ]
+    }
+  },
+  {
+    "title": "Modern Design | Near Metro | Prime Location",
+    "propertyType": "Loft",
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "areaSqft": 1940,
+    "location": "Downtown Dubai",
+    "priceAED": 652350,
+    "agency": "AZCO Real Estate",
+    "salesManager": "Fatima Noor",
+    "contact": {
+      "method": "WhatsApp",
+      "icon": "\ud83d\udfe2",
+      "link": "https://wa.me/971xxxxxxxxx"
+    },
+    "images": [
+      "https://example.com/images/property1_1.jpg",
+      "https://example.com/images/property1_2.jpg",
+      "https://example.com/images/property1_3.jpg",
+      "https://example.com/images/property1_4.jpg",
+      "https://example.com/images/property1_5.jpg",
+      "https://example.com/images/property1_6.jpg",
+      "https://example.com/images/property1_7.jpg",
+      "https://example.com/images/property1_8.jpg",
+      "https://example.com/images/property1_9.jpg",
+      "https://example.com/images/property1_10.jpg"
+    ],
+    "description": {
+      "short": "Loft in Downtown Dubai with excellent amenities, perfect for investment or living.",
+      "features": [
+        "Floor-to-ceiling windows",
+        "Open-plan modern kitchen",
+        "Fitness center and swimming pool",
+        "Nearby schools and supermarkets",
+        "Smart home system"
+      ]
+    }
+  },
+  {
+    "title": "Cozy Studio | Investment Opportunity",
+    "propertyType": "Studio",
+    "bedrooms": 0,
+    "bathrooms": 1,
+    "areaSqft": 2332,
+    "location": "Business Bay",
+    "priceAED": 1204220,
+    "agency": "AZCO Real Estate",
+    "salesManager": "Ahmed Mustafa",
+    "contact": {
+      "method": "WhatsApp",
+      "icon": "\ud83d\udfe2",
+      "link": "https://wa.me/971xxxxxxxxx"
+    },
+    "images": [
+      "https://example.com/images/property2_1.jpg",
+      "https://example.com/images/property2_2.jpg",
+      "https://example.com/images/property2_3.jpg",
+      "https://example.com/images/property2_4.jpg",
+      "https://example.com/images/property2_5.jpg",
+      "https://example.com/images/property2_6.jpg",
+      "https://example.com/images/property2_7.jpg",
+      "https://example.com/images/property2_8.jpg",
+      "https://example.com/images/property2_9.jpg",
+      "https://example.com/images/property2_10.jpg"
+    ],
+    "description": {
+      "short": "Studio in Business Bay with excellent amenities, perfect for investment or living.",
+      "features": [
+        "Fitness center and swimming pool",
+        "Open-plan modern kitchen",
+        "Nearby schools and supermarkets",
+        "Pet-friendly community",
+        "Covered parking space"
+      ]
+    }
+  },
+  {
+    "title": "Spacious Unit | Pool View | Balcony",
+    "propertyType": "Studio",
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "areaSqft": 413,
+    "location": "Jumeirah Village Circle (JVC)",
+    "priceAED": 800433,
+    "agency": "AZCO Real Estate",
+    "salesManager": "Fatima Noor",
+    "contact": {
+      "method": "WhatsApp",
+      "icon": "\ud83d\udfe2",
+      "link": "https://wa.me/971xxxxxxxxx"
+    },
+    "images": [
+      "https://example.com/images/property3_1.jpg",
+      "https://example.com/images/property3_2.jpg",
+      "https://example.com/images/property3_3.jpg",
+      "https://example.com/images/property3_4.jpg",
+      "https://example.com/images/property3_5.jpg",
+      "https://example.com/images/property3_6.jpg",
+      "https://example.com/images/property3_7.jpg",
+      "https://example.com/images/property3_8.jpg",
+      "https://example.com/images/property3_9.jpg",
+      "https://example.com/images/property3_10.jpg"
+    ],
+    "description": {
+      "short": "Studio in Jumeirah Village Circle (JVC) with excellent amenities, perfect for investment or living.",
+      "features": [
+        "Floor-to-ceiling windows",
+        "Balcony with stunning views",
+        "Pet-friendly community",
+        "Premium fittings and fixtures",
+        "Nearby schools and supermarkets"
+      ]
+    }
+  },
+  {
+    "title": "High ROI | Brand New | Smart Home",
+    "propertyType": "Studio",
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "areaSqft": 1263,
+    "location": "Jumeirah Village Circle (JVC)",
+    "priceAED": 2572507,
+    "agency": "AZCO Real Estate",
+    "salesManager": "Rizwan Ali",
+    "contact": {
+      "method": "WhatsApp",
+      "icon": "\ud83d\udfe2",
+      "link": "https://wa.me/971xxxxxxxxx"
+    },
+    "images": [
+      "https://example.com/images/property4_1.jpg",
+      "https://example.com/images/property4_2.jpg",
+      "https://example.com/images/property4_3.jpg",
+      "https://example.com/images/property4_4.jpg",
+      "https://example.com/images/property4_5.jpg",
+      "https://example.com/images/property4_6.jpg",
+      "https://example.com/images/property4_7.jpg",
+      "https://example.com/images/property4_8.jpg",
+      "https://example.com/images/property4_9.jpg",
+      "https://example.com/images/property4_10.jpg"
+    ],
+    "description": {
+      "short": "Studio in Jumeirah Village Circle (JVC) with excellent amenities, perfect for investment or living.",
+      "features": [
+        "Floor-to-ceiling windows",
+        "Open-plan modern kitchen",
+        "Premium fittings and fixtures",
+        "Nearby schools and supermarkets",
+        "Pet-friendly community"
+      ]
+    }
+  },
+  {
+    "title": "Family Friendly | Near School | Secure",
+    "propertyType": "Loft",
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "areaSqft": 1246,
+    "location": "Palm Jumeirah",
+    "priceAED": 572304,
+    "agency": "AZCO Real Estate",
+    "salesManager": "Fatima Noor",
+    "contact": {
+      "method": "WhatsApp",
+      "icon": "\ud83d\udfe2",
+      "link": "https://wa.me/971xxxxxxxxx"
+    },
+    "images": [
+      "https://example.com/images/property5_1.jpg",
+      "https://example.com/images/property5_2.jpg",
+      "https://example.com/images/property5_3.jpg",
+      "https://example.com/images/property5_4.jpg",
+      "https://example.com/images/property5_5.jpg",
+      "https://example.com/images/property5_6.jpg",
+      "https://example.com/images/property5_7.jpg",
+      "https://example.com/images/property5_8.jpg",
+      "https://example.com/images/property5_9.jpg",
+      "https://example.com/images/property5_10.jpg"
+    ],
+    "description": {
+      "short": "Loft in Palm Jumeirah with excellent amenities, perfect for investment or living.",
+      "features": [
+        "Pet-friendly community",
+        "Open-plan modern kitchen",
+        "Nearby schools and supermarkets",
+        "Fitness center and swimming pool",
+        "Covered parking space"
+      ]
+    }
+  },
+  {
+    "title": "Beach Access | Fully Furnished",
+    "propertyType": "Loft",
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "areaSqft": 1698,
+    "location": "Downtown Dubai",
+    "priceAED": 763203,
+    "agency": "AZCO Real Estate",
+    "salesManager": "Fatima Noor",
+    "contact": {
+      "method": "WhatsApp",
+      "icon": "\ud83d\udfe2",
+      "link": "https://wa.me/971xxxxxxxxx"
+    },
+    "images": [
+      "https://example.com/images/property6_1.jpg",
+      "https://example.com/images/property6_2.jpg",
+      "https://example.com/images/property6_3.jpg",
+      "https://example.com/images/property6_4.jpg",
+      "https://example.com/images/property6_5.jpg",
+      "https://example.com/images/property6_6.jpg",
+      "https://example.com/images/property6_7.jpg",
+      "https://example.com/images/property6_8.jpg",
+      "https://example.com/images/property6_9.jpg",
+      "https://example.com/images/property6_10.jpg"
+    ],
+    "description": {
+      "short": "Loft in Downtown Dubai with excellent amenities, perfect for investment or living.",
+      "features": [
+        "Smart home system",
+        "Fitness center and swimming pool",
+        "24/7 security and concierge services",
+        "Open-plan modern kitchen",
+        "Balcony with stunning views"
+      ]
+    }
+  },
+  {
+    "title": "Golf Course Facing | Large Layout",
+    "propertyType": "Apartment",
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "areaSqft": 821,
+    "location": "Business Bay",
+    "priceAED": 1451168,
+    "agency": "AZCO Real Estate",
+    "salesManager": "Ahmed Mustafa",
+    "contact": {
+      "method": "WhatsApp",
+      "icon": "\ud83d\udfe2",
+      "link": "https://wa.me/971xxxxxxxxx"
+    },
+    "images": [
+      "https://example.com/images/property7_1.jpg",
+      "https://example.com/images/property7_2.jpg",
+      "https://example.com/images/property7_3.jpg",
+      "https://example.com/images/property7_4.jpg",
+      "https://example.com/images/property7_5.jpg",
+      "https://example.com/images/property7_6.jpg",
+      "https://example.com/images/property7_7.jpg",
+      "https://example.com/images/property7_8.jpg",
+      "https://example.com/images/property7_9.jpg",
+      "https://example.com/images/property7_10.jpg"
+    ],
+    "description": {
+      "short": "Apartment in Business Bay with excellent amenities, perfect for investment or living.",
+      "features": [
+        "Balcony with stunning views",
+        "Premium fittings and fixtures",
+        "Smart home system",
+        "Floor-to-ceiling windows",
+        "Nearby schools and supermarkets"
+      ]
+    }
+  },
+  {
+    "title": "Stylish Apartment | Ready to Move",
+    "propertyType": "Penthouse",
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "areaSqft": 1251,
+    "location": "Al Barsha",
+    "priceAED": 2665218,
+    "agency": "AZCO Real Estate",
+    "salesManager": "Fatima Noor",
+    "contact": {
+      "method": "WhatsApp",
+      "icon": "\ud83d\udfe2",
+      "link": "https://wa.me/971xxxxxxxxx"
+    },
+    "images": [
+      "https://example.com/images/property8_1.jpg",
+      "https://example.com/images/property8_2.jpg",
+      "https://example.com/images/property8_3.jpg",
+      "https://example.com/images/property8_4.jpg",
+      "https://example.com/images/property8_5.jpg",
+      "https://example.com/images/property8_6.jpg",
+      "https://example.com/images/property8_7.jpg",
+      "https://example.com/images/property8_8.jpg",
+      "https://example.com/images/property8_9.jpg",
+      "https://example.com/images/property8_10.jpg"
+    ],
+    "description": {
+      "short": "Penthouse in Al Barsha with excellent amenities, perfect for investment or living.",
+      "features": [
+        "Smart home system",
+        "Fitness center and swimming pool",
+        "Floor-to-ceiling windows",
+        "Nearby schools and supermarkets",
+        "Pet-friendly community"
+      ]
+    }
+  },
+  {
+    "title": "Elegant Interiors | Gated Community",
+    "propertyType": "Loft",
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "areaSqft": 2155,
+    "location": "Dubai Hills Estate",
+    "priceAED": 731453,
+    "agency": "AZCO Real Estate",
+    "salesManager": "Fatima Noor",
+    "contact": {
+      "method": "WhatsApp",
+      "icon": "\ud83d\udfe2",
+      "link": "https://wa.me/971xxxxxxxxx"
+    },
+    "images": [
+      "https://example.com/images/property9_1.jpg",
+      "https://example.com/images/property9_2.jpg",
+      "https://example.com/images/property9_3.jpg",
+      "https://example.com/images/property9_4.jpg",
+      "https://example.com/images/property9_5.jpg",
+      "https://example.com/images/property9_6.jpg",
+      "https://example.com/images/property9_7.jpg",
+      "https://example.com/images/property9_8.jpg",
+      "https://example.com/images/property9_9.jpg",
+      "https://example.com/images/property9_10.jpg"
+    ],
+    "description": {
+      "short": "Loft in Dubai Hills Estate with excellent amenities, perfect for investment or living.",
+      "features": [
+        "Open-plan modern kitchen",
+        "Covered parking space",
+        "Smart home system",
+        "Nearby schools and supermarkets",
+        "Pet-friendly community"
+      ]
+    }
+  },
+  {
+    "title": "Waterfront Living | Exclusive Tower",
+    "propertyType": "Townhouse",
+    "bedrooms": 0,
+    "bathrooms": 1,
+    "areaSqft": 608,
+    "location": "Dubai Creek Harbour",
+    "priceAED": 2645694,
+    "agency": "AZCO Real Estate",
+    "salesManager": "Imran Shaikh",
+    "contact": {
+      "method": "WhatsApp",
+      "icon": "\ud83d\udfe2",
+      "link": "https://wa.me/971xxxxxxxxx"
+    },
+    "images": [
+      "https://example.com/images/property10_1.jpg",
+      "https://example.com/images/property10_2.jpg",
+      "https://example.com/images/property10_3.jpg",
+      "https://example.com/images/property10_4.jpg",
+      "https://example.com/images/property10_5.jpg",
+      "https://example.com/images/property10_6.jpg",
+      "https://example.com/images/property10_7.jpg",
+      "https://example.com/images/property10_8.jpg",
+      "https://example.com/images/property10_9.jpg",
+      "https://example.com/images/property10_10.jpg"
+    ],
+    "description": {
+      "short": "Townhouse in Dubai Creek Harbour with excellent amenities, perfect for investment or living.",
+      "features": [
+        "Smart home system",
+        "Fitness center and swimming pool",
+        "Floor-to-ceiling windows",
+        "Covered parking space",
+        "Pet-friendly community"
+      ]
+    }
+  },
+  {
+    "title": "Bright & Airy | Park Facing",
+    "propertyType": "Penthouse",
+    "bedrooms": 0,
+    "bathrooms": 1,
+    "areaSqft": 474,
+    "location": "Dubai Creek Harbour",
+    "priceAED": 2108660,
+    "agency": "AZCO Real Estate",
+    "salesManager": "Imran Shaikh",
+    "contact": {
+      "method": "WhatsApp",
+      "icon": "\ud83d\udfe2",
+      "link": "https://wa.me/971xxxxxxxxx"
+    },
+    "images": [
+      "https://example.com/images/property11_1.jpg",
+      "https://example.com/images/property11_2.jpg",
+      "https://example.com/images/property11_3.jpg",
+      "https://example.com/images/property11_4.jpg",
+      "https://example.com/images/property11_5.jpg",
+      "https://example.com/images/property11_6.jpg",
+      "https://example.com/images/property11_7.jpg",
+      "https://example.com/images/property11_8.jpg",
+      "https://example.com/images/property11_9.jpg",
+      "https://example.com/images/property11_10.jpg"
+    ],
+    "description": {
+      "short": "Penthouse in Dubai Creek Harbour with excellent amenities, perfect for investment or living.",
+      "features": [
+        "Fitness center and swimming pool",
+        "24/7 security and concierge services",
+        "Covered parking space",
+        "Open-plan modern kitchen",
+        "Smart home system"
+      ]
+    }
+  },
+  {
+    "title": "Affordable Luxury | Gated Community",
+    "propertyType": "Loft",
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "areaSqft": 607,
+    "location": "Dubai Creek Harbour",
+    "priceAED": 2043878,
+    "agency": "AZCO Real Estate",
+    "salesManager": "Sara Khan",
+    "contact": {
+      "method": "WhatsApp",
+      "icon": "\ud83d\udfe2",
+      "link": "https://wa.me/971xxxxxxxxx"
+    },
+    "images": [
+      "https://example.com/images/property12_1.jpg",
+      "https://example.com/images/property12_2.jpg",
+      "https://example.com/images/property12_3.jpg",
+      "https://example.com/images/property12_4.jpg",
+      "https://example.com/images/property12_5.jpg",
+      "https://example.com/images/property12_6.jpg",
+      "https://example.com/images/property12_7.jpg",
+      "https://example.com/images/property12_8.jpg",
+      "https://example.com/images/property12_9.jpg",
+      "https://example.com/images/property12_10.jpg"
+    ],
+    "description": {
+      "short": "Loft in Dubai Creek Harbour with excellent amenities, perfect for investment or living.",
+      "features": [
+        "Fitness center and swimming pool",
+        "24/7 security and concierge services",
+        "Covered parking space",
+        "Floor-to-ceiling windows",
+        "Smart home system"
+      ]
+    }
+  },
+  {
+    "title": "Premium Location | High-End Amenities",
+    "propertyType": "Penthouse",
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "areaSqft": 758,
+    "location": "Al Barsha",
+    "priceAED": 1506651,
+    "agency": "AZCO Real Estate",
+    "salesManager": "Ahmed Mustafa",
+    "contact": {
+      "method": "WhatsApp",
+      "icon": "\ud83d\udfe2",
+      "link": "https://wa.me/971xxxxxxxxx"
+    },
+    "images": [
+      "https://example.com/images/property13_1.jpg",
+      "https://example.com/images/property13_2.jpg",
+      "https://example.com/images/property13_3.jpg",
+      "https://example.com/images/property13_4.jpg",
+      "https://example.com/images/property13_5.jpg",
+      "https://example.com/images/property13_6.jpg",
+      "https://example.com/images/property13_7.jpg",
+      "https://example.com/images/property13_8.jpg",
+      "https://example.com/images/property13_9.jpg",
+      "https://example.com/images/property13_10.jpg"
+    ],
+    "description": {
+      "short": "Penthouse in Al Barsha with excellent amenities, perfect for investment or living.",
+      "features": [
+        "Smart home system",
+        "Floor-to-ceiling windows",
+        "Premium fittings and fixtures",
+        "Fitness center and swimming pool",
+        "Covered parking space"
+      ]
+    }
+  },
+  {
+    "title": "Investor Deal | Modern Finishes",
+    "propertyType": "Penthouse",
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "areaSqft": 1408,
+    "location": "Dubai Hills Estate",
+    "priceAED": 708604,
+    "agency": "AZCO Real Estate",
+    "salesManager": "Sara Khan",
+    "contact": {
+      "method": "WhatsApp",
+      "icon": "\ud83d\udfe2",
+      "link": "https://wa.me/971xxxxxxxxx"
+    },
+    "images": [
+      "https://example.com/images/property14_1.jpg",
+      "https://example.com/images/property14_2.jpg",
+      "https://example.com/images/property14_3.jpg",
+      "https://example.com/images/property14_4.jpg",
+      "https://example.com/images/property14_5.jpg",
+      "https://example.com/images/property14_6.jpg",
+      "https://example.com/images/property14_7.jpg",
+      "https://example.com/images/property14_8.jpg",
+      "https://example.com/images/property14_9.jpg",
+      "https://example.com/images/property14_10.jpg"
+    ],
+    "description": {
+      "short": "Penthouse in Dubai Hills Estate with excellent amenities, perfect for investment or living.",
+      "features": [
+        "Nearby schools and supermarkets",
+        "Fitness center and swimming pool",
+        "Premium fittings and fixtures",
+        "Smart home system",
+        "24/7 security and concierge services"
+      ]
+    }
+  },
+  {
+    "title": "Urban Chic | Spacious Layout",
+    "propertyType": "Studio",
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "areaSqft": 1597,
+    "location": "Downtown Dubai",
+    "priceAED": 2819451,
+    "agency": "AZCO Real Estate",
+    "salesManager": "Rizwan Ali",
+    "contact": {
+      "method": "WhatsApp",
+      "icon": "\ud83d\udfe2",
+      "link": "https://wa.me/971xxxxxxxxx"
+    },
+    "images": [
+      "https://example.com/images/property15_1.jpg",
+      "https://example.com/images/property15_2.jpg",
+      "https://example.com/images/property15_3.jpg",
+      "https://example.com/images/property15_4.jpg",
+      "https://example.com/images/property15_5.jpg",
+      "https://example.com/images/property15_6.jpg",
+      "https://example.com/images/property15_7.jpg",
+      "https://example.com/images/property15_8.jpg",
+      "https://example.com/images/property15_9.jpg",
+      "https://example.com/images/property15_10.jpg"
+    ],
+    "description": {
+      "short": "Studio in Downtown Dubai with excellent amenities, perfect for investment or living.",
+      "features": [
+        "24/7 security and concierge services",
+        "Balcony with stunning views",
+        "Smart home system",
+        "Floor-to-ceiling windows",
+        "Premium fittings and fixtures"
+      ]
+    }
+  },
+  {
+    "title": "Peaceful Living | Nature Views",
+    "propertyType": "Loft",
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "areaSqft": 1376,
+    "location": "Dubai Hills Estate",
+    "priceAED": 1046750,
+    "agency": "AZCO Real Estate",
+    "salesManager": "Rizwan Ali",
+    "contact": {
+      "method": "WhatsApp",
+      "icon": "\ud83d\udfe2",
+      "link": "https://wa.me/971xxxxxxxxx"
+    },
+    "images": [
+      "https://example.com/images/property16_1.jpg",
+      "https://example.com/images/property16_2.jpg",
+      "https://example.com/images/property16_3.jpg",
+      "https://example.com/images/property16_4.jpg",
+      "https://example.com/images/property16_5.jpg",
+      "https://example.com/images/property16_6.jpg",
+      "https://example.com/images/property16_7.jpg",
+      "https://example.com/images/property16_8.jpg",
+      "https://example.com/images/property16_9.jpg",
+      "https://example.com/images/property16_10.jpg"
+    ],
+    "description": {
+      "short": "Loft in Dubai Hills Estate with excellent amenities, perfect for investment or living.",
+      "features": [
+        "Nearby schools and supermarkets",
+        "Floor-to-ceiling windows",
+        "Fitness center and swimming pool",
+        "Balcony with stunning views",
+        "Covered parking space"
+      ]
+    }
+  },
+  {
+    "title": "Affordable | Near Public Transport",
+    "propertyType": "Penthouse",
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "areaSqft": 1767,
+    "location": "Palm Jumeirah",
+    "priceAED": 2502589,
+    "agency": "AZCO Real Estate",
+    "salesManager": "Fatima Noor",
+    "contact": {
+      "method": "WhatsApp",
+      "icon": "\ud83d\udfe2",
+      "link": "https://wa.me/971xxxxxxxxx"
+    },
+    "images": [
+      "https://example.com/images/property17_1.jpg",
+      "https://example.com/images/property17_2.jpg",
+      "https://example.com/images/property17_3.jpg",
+      "https://example.com/images/property17_4.jpg",
+      "https://example.com/images/property17_5.jpg",
+      "https://example.com/images/property17_6.jpg",
+      "https://example.com/images/property17_7.jpg",
+      "https://example.com/images/property17_8.jpg",
+      "https://example.com/images/property17_9.jpg",
+      "https://example.com/images/property17_10.jpg"
+    ],
+    "description": {
+      "short": "Penthouse in Palm Jumeirah with excellent amenities, perfect for investment or living.",
+      "features": [
+        "Fitness center and swimming pool",
+        "Floor-to-ceiling windows",
+        "Balcony with stunning views",
+        "Open-plan modern kitchen",
+        "Pet-friendly community"
+      ]
+    }
+  },
+  {
+    "title": "Lake View | Pet Friendly",
+    "propertyType": "Loft",
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "areaSqft": 443,
+    "location": "Palm Jumeirah",
+    "priceAED": 854450,
+    "agency": "AZCO Real Estate",
+    "salesManager": "Imran Shaikh",
+    "contact": {
+      "method": "WhatsApp",
+      "icon": "\ud83d\udfe2",
+      "link": "https://wa.me/971xxxxxxxxx"
+    },
+    "images": [
+      "https://example.com/images/property18_1.jpg",
+      "https://example.com/images/property18_2.jpg",
+      "https://example.com/images/property18_3.jpg",
+      "https://example.com/images/property18_4.jpg",
+      "https://example.com/images/property18_5.jpg",
+      "https://example.com/images/property18_6.jpg",
+      "https://example.com/images/property18_7.jpg",
+      "https://example.com/images/property18_8.jpg",
+      "https://example.com/images/property18_9.jpg",
+      "https://example.com/images/property18_10.jpg"
+    ],
+    "description": {
+      "short": "Loft in Palm Jumeirah with excellent amenities, perfect for investment or living.",
+      "features": [
+        "24/7 security and concierge services",
+        "Fitness center and swimming pool",
+        "Smart home system",
+        "Premium fittings and fixtures",
+        "Balcony with stunning views"
+      ]
+    }
+  },
+  {
+    "title": "Luxury Studio | Tower View",
+    "propertyType": "Townhouse",
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "areaSqft": 1333,
+    "location": "Business Bay",
+    "priceAED": 503974,
+    "agency": "AZCO Real Estate",
+    "salesManager": "Sara Khan",
+    "contact": {
+      "method": "WhatsApp",
+      "icon": "\ud83d\udfe2",
+      "link": "https://wa.me/971xxxxxxxxx"
+    },
+    "images": [
+      "https://example.com/images/property19_1.jpg",
+      "https://example.com/images/property19_2.jpg",
+      "https://example.com/images/property19_3.jpg",
+      "https://example.com/images/property19_4.jpg",
+      "https://example.com/images/property19_5.jpg",
+      "https://example.com/images/property19_6.jpg",
+      "https://example.com/images/property19_7.jpg",
+      "https://example.com/images/property19_8.jpg",
+      "https://example.com/images/property19_9.jpg",
+      "https://example.com/images/property19_10.jpg"
+    ],
+    "description": {
+      "short": "Townhouse in Business Bay with excellent amenities, perfect for investment or living.",
+      "features": [
+        "Pet-friendly community",
+        "Covered parking space",
+        "Floor-to-ceiling windows",
+        "Smart home system",
+        "24/7 security and concierge services"
+      ]
+    }
+  }
+]
