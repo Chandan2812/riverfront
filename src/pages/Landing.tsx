@@ -9,6 +9,8 @@ import WhatsAppButton from '../components/floatingBtn'
 import PropertySection from '../components/PropertySection'
 import PropertySlider from '../components/offPlan'
 import Blog from '../components/blog'
+import ForSaleComponent from '../components/ForSale'
+import ForRentComponent from '../components/ForRent'
 
 export const Landing = () => {
   return (
@@ -17,8 +19,11 @@ export const Landing = () => {
         <HeroSection/>
     <StatsSection/>
     <AwardsSection/>
-    <PropertySection/>
+    
     <PropertySlider/>
+    <ForSaleComponent/>
+    <ForRentComponent/>
+    <PropertySection/>
     <OurStory/>
     <Blog/>
     <TestimonialSlider/>

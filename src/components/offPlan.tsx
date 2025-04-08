@@ -54,7 +54,7 @@ import { FaArrowRight } from "react-icons/fa";
           navigate("/OffplanPropertyCard");
         }}
       >
-        View All Off-Plan Properties
+        View All
       </button>
       </div>
 
