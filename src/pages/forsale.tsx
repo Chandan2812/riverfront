@@ -16,15 +16,16 @@ const ForSale: React.FC = () => {
 
   return (
     <div>
-        <div className="mb-24">
+        <div className="mb-16 md:mb-24">
       <Navbar/>
       </div>
       <div className="relative">
+        <div className="absolute inset-0 bg-black bg-opacity-50" />
   <img src={forsaleImage} alt="" className="h-full w-full mb-8 object-cover" />
 
   {/* Centered "For Sale" text */}
   <div className="absolute inset-0 flex items-center justify-center">
-    <h1 className="text-white text-4xl drop-shadow-lg">FOR SALE</h1>
+    <h1 className="text-gray-400 text-3xl md:text-5xl drop-shadow-lg">Properties for Sale</h1>
   </div>
 </div>
 

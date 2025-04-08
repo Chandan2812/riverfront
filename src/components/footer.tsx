@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTiktok, FaTwitter, FaYoutube } from "react-icons/fa";
 import { MdExpandMore, MdExpandLess } from "react-icons/md";
-import logo from "../assets/logo.png"
+import logo from "../assets/logo1.png"
 
 const Footer = () => {
     const [openSection, setOpenSection] = useState<string | null>(null);
@@ -55,7 +55,7 @@ const Footer = () => {
             <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
                 {/* Logo and Social Icons */}
                 <div className="text-center md:text-left ">
-                    <img src={logo} alt=""  className="bg-white w-40 py-2 rounded-xl mx-auto md:mx-0"/>
+                    <img src={logo} alt=""  className=" w-40 py-2 rounded-xl mx-auto md:mx-0"/>
                     <div className="flex justify-center md:justify-start gap-4 mt-4 text-lg">
                         <FaFacebookF className="cursor-pointer" />
                         <FaInstagram className="cursor-pointer" />

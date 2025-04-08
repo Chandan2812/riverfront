@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo1.png";
 import { X } from "lucide-react";
 import { useLocation, useNavigate } from "react-router-dom";
 import FindPropertyModal from "./FindPropertyModal";
@@ -31,7 +31,7 @@ const Navbar: React.FC<NavbarProps> = ({ transparent = false }) => {
   const location = useLocation();
 
   const backgroundClass =
-  transparent && !isScrolled ? "bg-transparent" : "bg-[#31445c] shadow-md";
+  transparent && !isScrolled ? "bg-transparent" : "bg-[var(--secondary-color)] shadow-md";
 const textColorClass =
   transparent && !isScrolled ? "text-white border border-white" : "text-white border border-white";
   const textColorClass2 =
@@ -98,7 +98,7 @@ const textColorClass =
             />
 
             {/* Right: Hamburger */}
-            <button onClick={() => setMenuOpen(true)} className="text-black">
+            <button onClick={() => setMenuOpen(true)} className="text-[var(--primary-color)]">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
               </svg>
