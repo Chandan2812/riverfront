@@ -3,11 +3,14 @@ import { FaWhatsapp } from "react-icons/fa";
 import salesData from "../data/salesData.json";
 import Navbar from "../components/nav";
 import forsaleImage from "../assets/image.png"
+import { useNavigate } from "react-router-dom";
 
 const ForSale: React.FC = () => {
+    const navigate=useNavigate()
   const handleCardClick = (property: any) => {
-    alert(`You clicked on: ${property.title}`);
     // or navigate using react-router-dom if needed
+    navigate(`/forsaleDetails/${encodeURIComponent(property.title)}`);
+
   };
 
   return (

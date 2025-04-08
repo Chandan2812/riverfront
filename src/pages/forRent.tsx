@@ -3,11 +3,12 @@ import { FaWhatsapp } from "react-icons/fa";
 import rentData from "../data/rentsData.json";
 import Navbar from "../components/nav";
 import forRentImage from "../assets/forrent.jpg"
+import { useNavigate } from "react-router-dom";
 
 const ForRent: React.FC = () => {
+    const navigate = useNavigate();
   const handleCardClick = (property: any) => {
-    alert(`You clicked on: ${property.title}`);
-    // or navigate using react-router-dom if needed
+    navigate(`/forrentDetails/${encodeURIComponent(property.title)}`);
   };
 
   return (

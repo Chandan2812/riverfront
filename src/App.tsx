@@ -12,6 +12,8 @@ import BlogDetails from './pages/BlogsDetails';
 import ForSale from './pages/forsale';
 import OffplanPropertyCard from './pages/forOffPlan';
 import ForRent from './pages/forRent';
+import ForSaleDetails from './pages/ForSaleDetails';
+import ForRentDetails from './pages/ForRentDetails';
 
 
 
@@ -29,7 +31,9 @@ function App() {
         <Route path="/ServicesSection" element={<ServicesSection/>} />
         <Route path="/blog/:id" element={<BlogDetails/>} />
         <Route path="/forsale" element={<ForSale/>} />
+        <Route path="/forsaleDetails/:title" element={<ForSaleDetails/>} />
         <Route path="/forrent" element={<ForRent/>} />
+        <Route path="/forrentDetails/:title" element={<ForRentDetails/>} />
         <Route path="/OffplanPropertyCard" element={<OffplanPropertyCard/>} />
       </Routes>
     </Router>
