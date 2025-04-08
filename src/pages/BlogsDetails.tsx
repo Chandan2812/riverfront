@@ -17,7 +17,7 @@ const BlogDetails = () => {
         <div className="mb-32">
       <Navbar/>
       </div>
-    <div className="w-full container mx-auto px-4 py-10">
+    <div className="w-full md:w-[90%] container mx-auto px-4 py-10">
       <img src={blog.image} alt={blog.title} className="w-full h-[400px] object-cover rounded-lg mb-6" />
       <p className="text-gray-500 text-sm mb-2">{blog.date}</p>
       <h1 className="text-3xl font-semibold mb-6">{blog.title}</h1>
