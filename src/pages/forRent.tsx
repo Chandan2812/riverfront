@@ -1,9 +1,10 @@
 import React from "react";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaBed, FaMapMarkerAlt, FaRulerCombined, FaWhatsapp } from "react-icons/fa";
 import rentData from "../data/rentsData.json";
 import Navbar from "../components/nav";
 import forRentImage from "../assets/forrent.jpg"
 import { useNavigate } from "react-router-dom";
+import Footer from "../components/footer";
 
 const ForRent: React.FC = () => {
     const navigate = useNavigate();
@@ -37,17 +38,27 @@ const ForRent: React.FC = () => {
             alt={property.title}
             className="w-full h-60 object-cover"
           />
-          <div className="py-4 px-10 space-y-4">
-            <h2 className="text-lg font-semibold">{property.title}</h2>
-            <div className="w-10 h-[2px] bg-black my-2" />
+          <div className="py-4 px-4 space-y-4">
+            <h2 className="text-lg">{property.title}</h2>
+            <div className="w-1/2 h-[1px] bg-black my-2" />
 
             <div className="flex justify-between text-sm text-gray-600 mb-2">
-              <span>BR {property.bedrooms}</span>
-              <span>{property.areaSqft} SqFt</span>
-              <span>{property.location}</span>
-            </div>
+  <span className="flex items-center gap-1">
+    <FaBed className="text-gray-500" />
+    BR {property.bedrooms}
+  </span>
+  <span className="flex items-center gap-1">
+    <FaRulerCombined className="text-gray-500" />
+    {property.areaSqft} SqFt
+  </span>
+  <span className="flex items-center gap-1">
+    <FaMapMarkerAlt className="text-gray-500" />
+    {property.location}
+  </span>
+</div>
 
-            <div className=" flex gap-10 text-black font-bold text-base mb-3">
+
+            <div className=" flex gap-10 text-black mb-3">
               AED {property.priceAED.toLocaleString()}
               <a
               href={property.contact.link}
@@ -66,6 +77,7 @@ const ForRent: React.FC = () => {
         </div>
       ))}
     </div>
+    <Footer/>
     </div>
   );
 };

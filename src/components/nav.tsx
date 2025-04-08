@@ -101,12 +101,12 @@ const textColorClass =
     <div className="absolute inset-0 bg-black bg-opacity-40 backdrop-blur-sm" onClick={() => setMenuOpen(false)} />
 
     {/* Slide-in Menu */}
-    <div className="relative bg-white w-full md:w-1/2 h-full flex flex-col">
+    <div className="relative bg-white w-full md:w-1/4 h-full flex flex-col">
       <div className="flex items-center justify-between px-4 py-4 border-b">
         <img src={logo} alt="Logo" className="h-14" />
         <button onClick={() => setMenuOpen(false)}><X className="w-6 h-6" /></button>
       </div>
-      <div className="flex flex-col px-6 py-4 space-y-2 text-lg font-medium text-black">
+      <div className="flex flex-col px-6 py-4 space-y-2 text-lg text-[var(--primary-color)]">
         <a href="/" onClick={() => setMenuOpen(false)} className="hover:text-[var(--primary-color)]">Home</a>
         <a href="/forsale" onClick={() => setMenuOpen(false)} className="hover:text-[var(--primary-color)]">For Sale</a>
         <a href="/forrent" onClick={() => setMenuOpen(false)} className="hover:text-[var(--primary-color)]">For Rent</a>
