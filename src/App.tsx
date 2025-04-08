@@ -10,6 +10,7 @@ import TopProperties from './pages/TopProperties';
 import ServicesSection from './pages/Services';
 import BlogDetails from './pages/BlogsDetails';
 import ForSale from './pages/forsale';
+import OffplanPropertyCard from './pages/forOffPlan';
 
 
 
@@ -27,6 +28,7 @@ function App() {
         <Route path="/ServicesSection" element={<ServicesSection/>} />
         <Route path="/blog/:id" element={<BlogDetails/>} />
         <Route path="/forsale" element={<ForSale/>} />
+        <Route path="/OffplanPropertyCard" element={<OffplanPropertyCard/>} />
       </Routes>
     </Router>
   );

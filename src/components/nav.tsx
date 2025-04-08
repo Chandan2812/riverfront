@@ -110,7 +110,7 @@ const textColorClass =
         <a href="/" onClick={() => setMenuOpen(false)} className="hover:text-[var(--primary-color)]">Home</a>
         <a href="/forsale" onClick={() => setMenuOpen(false)} className="hover:text-[var(--primary-color)]">For Sale</a>
         <a href="/forrent" onClick={() => setMenuOpen(false)} className="hover:text-[var(--primary-color)]">For Rent</a>
-        <a href="/offplan" onClick={() => setMenuOpen(false)} className="hover:text-[var(--primary-color)]">Off-Plan</a>
+        <a href="/OffplanPropertyCard" onClick={() => setMenuOpen(false)} className="hover:text-[var(--primary-color)]">Off-Plan</a>
         <a href="/ServicesSection" onClick={() => setMenuOpen(false)} className="hover:text-[var(--primary-color)]">Services</a>
         <a href="/topProperties" onClick={() => setMenuOpen(false)} className="hover:text-[var(--primary-color)]">Top Properties</a>
         <a href="/contact" onClick={() => setMenuOpen(false)} className="hover:text-[var(--primary-color)]">Contact Us</a>
