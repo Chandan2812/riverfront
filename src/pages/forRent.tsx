@@ -1,10 +1,10 @@
 import React from "react";
 import { FaWhatsapp } from "react-icons/fa";
-import salesData from "../data/salesData.json";
+import rentData from "../data/rentsData.json";
 import Navbar from "../components/nav";
-import forsaleImage from "../assets/image.png"
+import forRentImage from "../assets/forrent.jpg"
 
-const ForSale: React.FC = () => {
+const ForRent: React.FC = () => {
   const handleCardClick = (property: any) => {
     alert(`You clicked on: ${property.title}`);
     // or navigate using react-router-dom if needed
@@ -16,16 +16,16 @@ const ForSale: React.FC = () => {
       <Navbar/>
       </div>
       <div className="relative">
-  <img src={forsaleImage} alt="" className="h-full w-full mb-8 object-cover" />
+  <img src={forRentImage} alt="" className="h-full w-full mb-8 object-cover" />
 
   {/* Centered "For Sale" text */}
   <div className="absolute inset-0 flex items-center justify-center">
-    <h1 className="text-white text-4xl drop-shadow-lg">FOR SALE</h1>
+    <h1 className="text-white text-4xl drop-shadow-lg">FOR RENT</h1>
   </div>
 </div>
 
     <div className=" w-full md:w-[90%] mx-auto p-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 min-h-screen">
-      {salesData.map((property, index) => (
+      {rentData.map((property, index) => (
         <div
           key={index}
           className="bg-white rounded-xl shadow-md overflow-hidden cursor-pointer transition hover:scale-105"
@@ -69,4 +69,4 @@ const ForSale: React.FC = () => {
   );
 };
 
-export default ForSale;
+export default ForRent;

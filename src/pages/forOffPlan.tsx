@@ -11,7 +11,7 @@ const OffplanPropertyCard: React.FC = () => {
          <div className="mb-32">
       <Navbar/>
       </div>
-         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-10">
+         <div className="w-full md:w-[90%] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-3">
       {propertyData.map((property, index) => (
         <div
           key={index}
