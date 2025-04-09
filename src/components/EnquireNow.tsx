@@ -13,14 +13,23 @@ const SubmitDetailsModal: React.FC<Props> = ({ isOpen, onClose }) => {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState<string | undefined>("");
 
+  const [emailTouched, setEmailTouched] = useState(false);
+  const [phoneTouched, setPhoneTouched] = useState(false);
+
   if (!isOpen) return null;
+
+  const isEmailValid = (email: string) =>
+    /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+  const isFormValid =
+    fullName.trim() !== "" && isEmailValid(email) && phone?.trim() !== "";
 
   const handleSubmit = () => {
     console.log("User Details:");
     console.log("Full Name:", fullName);
     console.log("Email:", email);
     console.log("Phone:", phone);
-    // Optionally reset or close modal here
+    // Reset or close modal if needed
     // setFullName("");
     // setEmail("");
     // setPhone("");
@@ -45,6 +54,7 @@ const SubmitDetailsModal: React.FC<Props> = ({ isOpen, onClose }) => {
           SUBMIT YOUR DETAILS
         </h2>
 
+        {/* Full Name */}
         <input
           type="text"
           placeholder="Full Name"
@@ -52,27 +62,54 @@ const SubmitDetailsModal: React.FC<Props> = ({ isOpen, onClose }) => {
           onChange={(e) => setFullName(e.target.value)}
           className="w-2/3 p-3 rounded-full text-black mb-4 border border-white"
         />
+
+        {/* Email */}
         <input
           type="email"
           placeholder="Email"
           value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          className="w-2/3 p-3 rounded-full text-black mb-4 border border-white"
+          onChange={(e) => {
+            setEmail(e.target.value);
+            if (!emailTouched) setEmailTouched(true);
+          }}
+          className={`w-2/3 p-3 rounded-full mb-1 border ${
+            !emailTouched || isEmailValid(email)
+              ? "bg-white text-black border-white"
+              : " border-red-400"
+          }`}
         />
+        {emailTouched && !isEmailValid(email) && (
+          <p className="text-red-400 text-sm mb-3">Please enter a valid email address.</p>
+        )}
 
-        <div className="w-2/3 mb-4 mx-auto text-left bg-white p-3 border border-white rounded-full">
-        <PhoneInput
+        {/* Phone */}
+        <div className="w-2/3 mb-1 mx-auto text-left bg-white p-3 border rounded-full">
+          <PhoneInput
             placeholder="Enter phone number"
             value={phone}
             onChange={setPhone}
             defaultCountry="AE"
-            className=""
-        />
+            onBlur={() => setPhoneTouched(true)}
+            className={`${
+              !phoneTouched || phone
+                ? "text-black"
+                : "text-red-500"
+            }`}
+          />
         </div>
+        {phoneTouched && !phone && (
+          <p className="text-red-400 text-sm mb-3">Phone number is required.</p>
+        )}
 
+        {/* Submit Button */}
         <button
           onClick={handleSubmit}
-          className="w-2/3 bg-[var(--primary-color)] hover:bg-[#e6a330] text-white py-2 rounded-full text-lg"
+          disabled={!isFormValid}
+          className={`w-2/3 text-white py-2 rounded-full text-lg ${
+            isFormValid
+              ? "bg-[var(--primary-color)] hover:bg-[#e6a330]"
+              : "bg-gray-500 cursor-not-allowed"
+          }`}
         >
           SUBMIT DETAILS
         </button>
