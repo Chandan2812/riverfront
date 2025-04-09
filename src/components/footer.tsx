@@ -175,16 +175,6 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link to="/insights/area-guide" className="hover:underline">
-                Area Guide
-              </Link>
-            </li>
-            <li>
-              <Link to="/insights/floor-plans" className="hover:underline">
-                Floor Plans
-              </Link>
-            </li>
-            <li>
               <Link to="/insights/faq" className="hover:underline">
                 FAQ
               </Link>

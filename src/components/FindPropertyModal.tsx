@@ -20,7 +20,6 @@ const FindPropertyModal: React.FC<Props> = ({ isOpen, onClose }) => {
   const [lastName, setLastName] = React.useState('');
   const [phone, setPhone] = React.useState<string | undefined>();
   const [email, setEmail] = React.useState('');
-  const [message, setMessage] = React.useState('');
 
   const [errors, setErrors] = React.useState<any>({});
 
@@ -36,23 +35,16 @@ const FindPropertyModal: React.FC<Props> = ({ isOpen, onClose }) => {
     setLastName('');
     setPhone('');
     setEmail('');
-    setMessage('');
     setErrors({});
   };
 
-  const validateForm = () => {
-    const newErrors: any = {};
-    if (!firstName) newErrors.firstName = "First name is required";
-    if (!lastName) newErrors.lastName = "Last name is required";
-    if (!phone) newErrors.phone = "Phone number is required";
-    if (!email) newErrors.email = "Email is required";
-    if (!message) newErrors.message = "Message is required";
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
+  const isValidEmail = (email: string) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
   };
+  
 
   const handleSubmit = () => {
-    if (!validateForm()) return;
     const data = {
       purpose: selectedPurpose,
       propertyType: selectedPropertyType,
@@ -63,7 +55,6 @@ const FindPropertyModal: React.FC<Props> = ({ isOpen, onClose }) => {
       lastName,
       phone,
       email,
-      message,
     };
     console.log("Submitted Data:", data);
     handleClose();
@@ -71,7 +62,6 @@ const FindPropertyModal: React.FC<Props> = ({ isOpen, onClose }) => {
 
   if (!isOpen) return null;
 
-  const showBHK = selectedPurpose === 'Sell Property' && selectedPropertyType === 'Apartments';
   const showBudget = () => {
     if (selectedPropertyType === 'Apartments') {
       if (selectedBHK === 'Studio') {
@@ -230,28 +220,49 @@ const FindPropertyModal: React.FC<Props> = ({ isOpen, onClose }) => {
               international
               value={phone}
               onChange={setPhone}
-              className="w-full px-1 rounded bg-white mb-1"
-              inputComponent={({ className, ...props }) => (
-                <input
-                  {...props}
-                  className={`bg-white text-black px-4 py-3 text-[16px] rounded-lg w-full focus:ring-2 focus:ring-black ${className}`}
-                />
-              )}
+              className="w-full px-1 rounded bg-white mb-1 p-3"
             />
             {errors.phone && <p className="text-red-500 text-sm mb-2">{errors.phone}</p>}
             <input
-              type="email"
-              placeholder="Email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="w-full p-3 rounded bg-white mb-1"
-            />
-            {errors.email && <p className="text-red-500 text-sm mb-2">{errors.email}</p>}
+  type="email"
+  placeholder="Email"
+  value={email}
+  onChange={(e) => {
+    const value = e.target.value;
+    setEmail(value);
+    if (!isValidEmail(value)) {
+      setErrors((prev: any) => ({ ...prev, email: "Please enter a valid email address" }));
+    } else {
+      setErrors((prev: any) => {
+        const newErrors = { ...prev };
+        delete newErrors.email;
+        return newErrors;
+      });
+    }
+  }}
+  className="w-full p-3 rounded bg-white mb-1"
+/>
+{errors.email && <p className="text-red-500 text-sm mb-2">{errors.email}</p>}
+
             <button
               type="submit"
               onClick={handleSubmit}
-              className="w-full bg-[var(--primary-color)] hover:bg-[#e6a330] text-white py-2 rounded-full text-lg"
-            >
+              disabled={
+                !firstName ||
+                !lastName ||
+                !phone ||
+                !email ||
+                !!errors.email
+              }
+              className={`w-full py-2 rounded-full text-lg text-white ${
+                !firstName ||
+                !lastName ||
+                !phone ||
+                !email ||
+                !!errors.email
+                  ? "bg-gray-500 cursor-not-allowed"
+                  : "bg-[var(--primary-color)] hover:bg-[#e6a330]"
+              }`}            >
               SUBMIT
             </button>
           </>
