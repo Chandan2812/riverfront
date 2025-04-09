@@ -58,7 +58,7 @@ function TopProperties() {
 
     {/* Contact Actions */}
     <div className="flex flex-col sm:flex-row items-center gap-4">
-      <button className="bg-[var(--primary-color)] text-white px-6 py-2 rounded-md transition">
+      <button onClick={()=>navigate("/contact")} className="bg-[var(--primary-color)] hover:opacity-70 text-white px-6 py-2 rounded-md transition">
         Contact Us
       </button>
       <span className="text-lg font-medium text-gray-800">📞 +1 (800) 123-4567</span>
