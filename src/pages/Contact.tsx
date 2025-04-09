@@ -35,7 +35,7 @@ export default function Contact() {
     return (
         <div>
 
-<div className="mb-32">
+<div className="mb-32 md:mb-40">
       <Navbar/>
       </div>
 
@@ -44,7 +44,17 @@ export default function Contact() {
       <div>
         <h2 className="text-xl mb-2">Head Office</h2>
         <p className="mb-4">
-        1703, Damac XL tower, marasi drive, Business bay, Dubai, UAE.
+        1703, Damac XL tower, Marasi Drive, Business bay, Dubai, UAE.
+        </p>
+        <h2 className="text-xl mb-2">Branch Office</h2>
+        <p className="mb-4">
+        Plot # 2, Sanjay Nagar, Gulabi Bagh, Delhi 110007, India
+        </p>
+        <p className="mb-4">
+         CASA LOTUS House # 4/213 A, Porba Vaddo, Calangute 403516, Goa
+        </p>
+        <p className="mb-4">
+        KPD Developers 26 Jacranda Marg DLF Phase - , Gurugram, Haryana
         </p>
         <hr className="mb-4" />
         <p className="text-gray-500">Our business operating hours are as follows:</p>
@@ -62,20 +72,20 @@ export default function Contact() {
         {/* Contact Buttons */}
         <div className="flex flex-wrap gap-4">
           <button className="border rounded-md px-4 py-2 text-sm hover:bg-gray-100">
-            UAE FREE PHONE: 00971509863828
+            UAE FREE PHONE: +97147702260
           </button>
           <button className="bg-black text-white px-4 py-2 rounded-md text-sm">
-            TEL: (+971) 1234 5 789 
+            TEL: (+971) 4770 2 260 
           </button>
 
           <a
-  href="https://wa.me/0097147702260"
+  href="https://wa.me/+971509863828"
   target="_blank"
   rel="noopener noreferrer"
   className="flex items-center border p-4 rounded-md flex-1 min-w-[220px] gap-4 hover:bg-gray-50 transition"
 >
 <FaWhatsapp className="w-7 h-7 text-green-600 flex-shrink-0" />
-  <span className="text-sm text-gray-700">0097147702260</span>
+  <span className="text-sm text-gray-700">+971509863828</span>
 </a>
 
 <a
@@ -91,7 +101,7 @@ export default function Contact() {
   className="border p-4 rounded-md flex items-center gap-4 flex-1 min-w-[220px] hover:bg-gray-50 transition"
 >
   <MessageSquareText className="w-6 h-6 text-gray-700" />
-  <span className="text-sm text-gray-700">+971502304888</span>
+  <span className="text-sm text-gray-700">+971509863828</span>
 </a>
 
         </div>
