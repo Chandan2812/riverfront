@@ -10,7 +10,6 @@ import {
   Building,
   Landmark,
   Wrench,
-  Star,
   Phone,
   Calendar,
   Info,
@@ -134,9 +133,6 @@ const textColorClass =
   </a>
   <a href="/ServicesSection" onClick={() => setMenuOpen(false)} className="font-hanken flex items-center gap-2 hover:text-[var(--primary-color)]">
     <Wrench size={20} /> Services
-  </a>
-  <a href="/topProperties" onClick={() => setMenuOpen(false)} className="font-hanken flex items-center gap-2 hover:text-[var(--primary-color)]">
-    <Star size={20} /> Top Properties
   </a>
   <a href="/contact" onClick={() => setMenuOpen(false)} className="font-hanken flex items-center gap-2 hover:text-[var(--primary-color)]">
     <Phone size={20} /> Contact Us
