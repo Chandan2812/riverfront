@@ -56,7 +56,7 @@ const BookMeetingModal: React.FC<Props> = ({ isOpen, onClose }) => {
           placeholder="Your Name"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className="w-2/3 p-3 rounded-full bg-white text-black mb-2 border border-white"
+          className="w-full md:w-2/3 p-3 rounded-full bg-white text-black mb-2 border border-white"
         />
 
         {/* Email */}
@@ -68,7 +68,7 @@ const BookMeetingModal: React.FC<Props> = ({ isOpen, onClose }) => {
             setEmail(e.target.value);
             if (!emailTouched) setEmailTouched(true);
           }}
-          className={`w-2/3 p-3 rounded-full mb-2 border ${
+          className={`w-full md:w-2/3 p-3 rounded-full mb-2 border ${
             !emailTouched || isEmailValid(email)
               ? "bg-white text-black border-white"
               : " border-red-400"
@@ -79,7 +79,7 @@ const BookMeetingModal: React.FC<Props> = ({ isOpen, onClose }) => {
         )}
 
         {/* Phone */}
-        <div className="w-2/3 mx-auto mb-1">
+        <div className="w-full md:w-2/3 mx-auto mb-1">
           <PhoneInput
             placeholder="Enter phone number"
             value={phone}
@@ -102,14 +102,14 @@ const BookMeetingModal: React.FC<Props> = ({ isOpen, onClose }) => {
           type="datetime-local"
           value={dateTime}
           onChange={(e) => setDateTime(e.target.value)}
-          className="w-2/3 p-3 rounded-full bg-white text-black mb-4 border border-white"
+          className="w-full md:w-2/3 p-3 rounded-full bg-white text-black mb-4 border border-white"
         />
 
         {/* Submit Button */}
         <button
           onClick={handleSubmit}
           disabled={!isFormValid}
-          className={`w-2/3 text-white py-2 rounded-full text-lg ${
+          className={`w-full md:w-2/3 text-white py-2 rounded-full text-lg ${
             isFormValid
               ? "bg-[var(--primary-color)] hover:bg-[#e6a330]"
               : "bg-gray-500 cursor-not-allowed"

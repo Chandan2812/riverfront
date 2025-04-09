@@ -60,7 +60,7 @@ const SubmitDetailsModal: React.FC<Props> = ({ isOpen, onClose }) => {
           placeholder="Full Name"
           value={fullName}
           onChange={(e) => setFullName(e.target.value)}
-          className="w-2/3 p-3 rounded-full text-black mb-4 border border-white"
+          className="w-full md:w-2/3 p-3 rounded-full text-black mb-2 border border-white"
         />
 
         {/* Email */}
@@ -72,7 +72,7 @@ const SubmitDetailsModal: React.FC<Props> = ({ isOpen, onClose }) => {
             setEmail(e.target.value);
             if (!emailTouched) setEmailTouched(true);
           }}
-          className={`w-2/3 p-3 rounded-full mb-1 border ${
+          className={`w-full md:w-2/3 p-3 rounded-full mb-2 border ${
             !emailTouched || isEmailValid(email)
               ? "bg-white text-black border-white"
               : " border-red-400"
@@ -83,7 +83,7 @@ const SubmitDetailsModal: React.FC<Props> = ({ isOpen, onClose }) => {
         )}
 
         {/* Phone */}
-        <div className="w-2/3 mb-1 mx-auto text-left bg-white p-3 border rounded-full">
+        <div className="w-full md:w-2/3 mb-2 mx-auto text-left bg-white p-3 border rounded-full">
           <PhoneInput
             placeholder="Enter phone number"
             value={phone}
@@ -105,7 +105,7 @@ const SubmitDetailsModal: React.FC<Props> = ({ isOpen, onClose }) => {
         <button
           onClick={handleSubmit}
           disabled={!isFormValid}
-          className={`w-2/3 text-white py-2 rounded-full text-lg ${
+          className={`w-full md:w-2/3 text-white py-2 rounded-full text-lg ${
             isFormValid
               ? "bg-[var(--primary-color)] hover:bg-[#e6a330]"
               : "bg-gray-500 cursor-not-allowed"
