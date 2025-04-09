@@ -63,14 +63,14 @@ export const AwardsPage = () => {
 
   return (
     <>      
-    <div className="mb-32">
+    <div className="mb-32 md:mb-40">
       <Navbar/>
       </div>
 
       {/* Sidebar and Main Content */}
       <div className="relative flex justify-center my-10">
         {/* Sidebar (Sticky Year Navigation) */}
-        <div ref={sidebarRef} className="sticky top-20 left-0 h-fit w-20 md:w-28 py-4 bg-[#0D1B2A] text-white space-y-2">
+        <div ref={sidebarRef} className="sticky top-36 left-0 h-fit w-20 md:w-28 py-4 bg-[#0D1B2A] text-white space-y-2">
           {awardsData.map(({ year }) => (
             <button
               key={year}

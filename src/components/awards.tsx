@@ -24,7 +24,7 @@ const AwardsSection = () => {
     <div className="w-full py-16 bg-gray-50 dark:bg-gray-900 text-center cursor-pointer" onClick={goToAwardsPage}>
       {/* Title */}
       <h2 className="text-2xl md:text-4xl text-gray-800 dark:text-white mb-10">
-        Awards Received from Developers
+        Awards & Recognitions
       </h2>
 
       {/* Awards List - Scrollable */}

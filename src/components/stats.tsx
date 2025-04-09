@@ -2,11 +2,11 @@ import React, { useEffect, useRef, useState } from "react";
 import { FaGlobe, FaUserFriends, FaIndustry, FaExchangeAlt, FaBuilding } from "react-icons/fa";
 
 const stats = [
-  { value: 30, label: "NATIONALITIES IN THE SALES TEAM", icon: <FaGlobe size={30} /> },
-  { value: 100, label: "BUYER NATIONALITIES", icon: <FaUserFriends size={30} /> },
-  { value: 17, label: "YEARS OF INDUSTRY EXPERIENCE", icon: <FaIndustry size={30} /> },
+  { value: 50, label: "EXPERIENCE SALES EXECUTIVE", icon: <FaGlobe size={30} /> },
+  { value: 30, label: "BUYER NATIONALITIES", icon: <FaUserFriends size={30} /> },
+  { value: 25, label: "REAL ESTATE INDUSTRY EXPERIENCE", icon: <FaIndustry size={30} /> },
   { value: 800, label: "TRANSACTIONS EVERY YEAR", icon: <FaExchangeAlt size={30} /> },
-  { value: 20, label: "WORTH OF PROPERTY SOLD", icon: <FaBuilding size={30} />, suffix: "B+" },
+  { value: 20, label: "TURN OVER", icon: <FaBuilding size={30} />, suffix: "B+" },
 ];
 
 const StatsSection: React.FC = () => {
