@@ -43,27 +43,31 @@ export const AboutUs = () => {
       <div className="flex flex-col-reverse md:flex-row items-start gap-10 w-[90%] mx-auto py-8">
         {/* Left Section - Text Content */}
         <div className="md:w-1/2">
-          <h2 className="text-3xl text-[var(--primary-color)] mb-4">
-            We are proud to be one of Dubai's leading real estate agencies.
-          </h2>
-          <p className="text-gray-700 leading-relaxed">
-          At Riverfront, we specialize in delivering exceptional real estate experiences in Dubai’s most sought-after neighborhoods. With a deep understanding of the local market and a passion for innovation, our team of experts combines unparalleled market knowledge with a commitment to providing personalized service.          </p>
-          <br />
-          <p className="text-gray-700 leading-relaxed">
-          Our expertise spans the entire spectrum of Dubai’s real estate landscape, from luxury villas and apartments to commercial properties and investment opportunities. Whether you’re a seasoned investor, a first-time buyer, or simply looking for a new home, our team is dedicated to providing a seamless and stress-free experience.          </p>
-          {expanded && (
-            <p className="text-gray-700 leading-relaxed mt-4">
-We take pride in our ability to listen, understand, and deliver on our clients’ unique needs and goals. Our personalized approach ensures that every client receives tailored guidance, expert advice, and exceptional service.             <br /><br />
-By combining local expertise, market knowledge, and a passion for innovation, we create exceptional real estate experiences that exceed our clients’ expectations. At Riverfront, we’re dedicated to helping you achieve your real estate goals in Dubai.</p>
-          )}
-          {/* Toggle Button */}
-          <button
-            className="mt-4 text-[var(--primary-color)] underline font-semibold"
-            onClick={() => setExpanded(!expanded)}
-          >
-            {expanded ? "See Less" : "Read More"}
-          </button>
-        </div>
+  <h2 className="text-3xl text-[var(--primary-color)] mb-4">
+    Dubai’s Trusted Real Estate Partner for 25+ Years
+  </h2>
+  <p className="text-gray-700 leading-relaxed">
+    At Riverfront, we bring 25 years of expertise to Dubai’s dynamic real estate market. From luxury homes to investment properties, our seasoned team offers personalized guidance and unmatched local insight.
+  </p>
+  <br />
+  <p className="text-gray-700 leading-relaxed">
+    We believe in more than just transactions — we craft seamless, stress-free experiences tailored to your goals. Whether you're buying, selling, or investing, Riverfront is here to help you make confident, informed decisions.
+  </p>
+
+  {expanded && (
+    <p className="text-gray-700 leading-relaxed mt-4">
+      Our success lies in listening, understanding, and delivering beyond expectations. Backed by innovation and a deep market understanding, we’re proud to be one of Dubai’s leading real estate agencies — dedicated to helping you find your perfect property.
+    </p>
+  )}
+
+  <button
+    className="mt-4 text-[var(--primary-color)] underline font-semibold"
+    onClick={() => setExpanded(!expanded)}
+  >
+    {expanded ? "See Less" : "Read More"}
+  </button>
+</div>
+
 
         {/* Right Section - Auto Scrolling Image Gallery */}
         <div
@@ -74,7 +78,6 @@ By combining local expertise, market knowledge, and a passion for innovation, we
             {[...Array(2)].map((_, index) => (
               <div key={index} className="flex flex-col gap-4">
                 <img src="https://uniqueproperties.ae/en/uploads/frontend/contents/95448/conversions/_0000_DSC02775-resize_gallers.webp" alt="Office 1" className="w-full rounded-lg" />
-                <img src="https://uniqueproperties.ae/en/uploads/frontend/contents/95452/conversions/_0019_DSC03035-resize_gallers.webp" alt="Office 2" className="w-full rounded-lg" />
                 <img src="https://uniqueproperties.ae/en/uploads/frontend/contents/95457/conversions/_0022_DSC03119-resize_gallers.webp" alt="Office 3" className="w-full rounded-lg" />
                 <img src="https://uniqueproperties.ae/en/uploads/frontend/contents/95451/conversions/_0007_DSC02840-resize_gallers.webp" alt="Office 4" className="w-full rounded-lg" />
               </div>
@@ -217,8 +220,17 @@ Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus ab officia o
         {/* Head Office */}
         <h3 className="text-lg text-gray-700 border-b border-gray-300 mb-2">Head Office</h3>
         <p className="text-gray-600 mb-4">
-          The Bay Gate Tower, 31st Floor, Business Bay,<br />
-          Dubai, United Arab Emirates
+        1703, Damac XL tower, Marasi Drive, Business bay, Dubai, UAE.
+        </p>
+        <h3 className="text-lg text-gray-700 border-b border-gray-300 mb-2">Branch Office</h3>
+        <p className="text-gray-600 mb-4">
+        Plot # 2, Sanjay Nagar, Gulabi Bagh, Delhi 110007, India
+        </p>
+        <p className="text-gray-600 mb-4">
+         CASA LOTUS House # 4/213 A, Porba Vaddo, Calangute 403516, Goa
+        </p>
+        <p className="text-gray-600 mb-4">
+        KPD Developers 26 Jacranda Marg DLF Phase - , Gurugram, Haryana
         </p>
 
         {/* Operating Hours */}
@@ -231,27 +243,30 @@ Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus ab officia o
         {/* Contact Details */}
         <h3 className="text-lg text-gray-700 border-b border-gray-300 mb-2">Reach Us Now</h3>
         <p className="text-gray-600 mb-2">
-          UAE FREE PHONE: 800 18881
+          UAE FREE PHONE: +97147702260
         </p>
         <p className="text-gray-600 mb-2">
-          TEL:(+971) 44 55 8888
+          TEL:(+971) 4770 2 260
         </p>
         <p className="text-gray-600 mb-2">
-          EMAIL: <a href="mailto:info@uniqueproperties.ae" className=" hover:underline">info@uniqueproperties.ae</a>
+          EMAIL: <a href="mailto:info@uniqueproperties.ae" className=" hover:underline">info@riverfront.ae</a>
         </p>
       </div>
 
       {/* Right Section - Google Map (70%) */}
       <div className="md:col-span-7">
         <h3 className="text-lg font-semibold text-[var(--primary-color)] mb-2">Location</h3>
-        <div className="w-full h-64 md:h-96 rounded-lg overflow-hidden shadow-lg">
-          <iframe
-            title="Google Map"
-            className="w-full h-full"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.401429518472!2d55.262100815144835!3d25.188736283893865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f69c8a91a4f4b%3A0x71cb11c55f5b5df1!2sThe%20Bay%20Gate%20Tower%2C%20Business%20Bay%2C%20Dubai!5e0!3m2!1sen!2sae!4v1634557890123!5m2!1sen!2sae"
-            allowFullScreen
-            loading="lazy"
-          ></iframe>
+        <div className="w-full h-64 md:h-full rounded-lg overflow-hidden">
+        <iframe
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.668560792657!2d55.264871674024235!3d25.18066683237258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f69004a524faf%3A0x13d5b1575adb574a!2sBusiness%20Bay!5e0!3m2!1sen!2sin!4v1744201890505!5m2!1sen!2sin"
+  width="100%"
+  height="100%"
+  style={{ border: 0 }} // ✅ Use object here
+  allowFullScreen
+  loading="lazy"
+  referrerPolicy="no-referrer-when-downgrade"
+/>
+
         </div>
       </div>
 
