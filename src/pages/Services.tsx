@@ -1,44 +1,73 @@
-
-import services from "../data/servicesData.json"
+import services from "../data/servicesData.json";
 import Footer from "../components/footer";
 import Navbar from "../components/nav";
+import { Phone, MessageCircle } from "lucide-react"; // Optional: Icons
 
 export default function ServicesSection() {
-
-
   return (
     <div className="w-full">
-      <div className="mb-12 md:mb-24">
-      <Navbar/>
+      <div className="mb-20 md:mb-32">
+        <Navbar />
       </div>
-        
 
       <div className="px-4 md:px-20 py-10 space-y-16">
-      {services.map((service, index) => (
-        <div
-          key={service.slug}
-          className={`flex flex-col-reverse md:flex-row items-center md:items-start ${
-            index % 2 === 1 ? "md:flex-row-reverse" : ""
-          } gap-8`}
-        >
-          <img
-            src={service.image}
-            alt={service.title}
-            className="w-full md:w-1/2 rounded-xl shadow-lg"
-          />
-          <div className="w-full md:w-1/2 text-[var(--primary-color)] space-y-4">
-            <h2 className="text-2xl md:text-3xl font-bold">{service.title}</h2>
-            <p className="text-gray-600">{service.description}</p>
-            <ul className="list-disc list-inside space-y-1 text-gray-600">
-              {service.bullet_points.map((point, i) => (
-                <li key={i}>{point}</li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      ))}
+        {services.map((service, index) => (
+          <div
+            key={service.slug}
+            className={`flex flex-col-reverse md:flex-row items-center md:items-start ${
+              index % 2 === 1 ? "md:flex-row-reverse" : ""
+            } gap-8`}
+          >
+            <img
+              src={service.image}
+              alt={service.title}
+              className="w-full md:w-1/2 rounded-xl shadow-lg"
+            />
+            <div className="w-full md:w-1/2 text-[var(--primary-color)] space-y-4">
+              <h2 className="text-2xl md:text-3xl font-bold">{service.title}</h2>
+              <p className="text-gray-600">{service.description}</p>
+              <ul className="list-disc list-inside space-y-1 text-gray-600">
+                {service.bullet_points.map((point, i) => (
+                  <li key={i}>{point}</li>
+                ))}
+              </ul>
+
+              {/* Contact Section */}
+              {/* Contact Section - In Row */}
+{service.contact && (
+  <div className="mt-4 flex flex-wrap items-center gap-6 text-gray-700">
+    <div className="flex items-center gap-2">
+      <Phone className="w-4 h-4 text-green-600" />
+      <span>
+        Call:{" "}
+        <a href={`tel:${service.contact.call}`} className="text-blue-600 hover:underline">
+          {service.contact.call}
+        </a>
+      </span>
     </div>
-      <Footer/>
+    <div className="flex items-center gap-2">
+      <MessageCircle className="w-4 h-4 text-green-600" />
+      <span>
+        WhatsApp:{" "}
+        <a
+          href={`https://wa.me/${service.contact.whatsapp.replace(/\D/g, "")}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-600 hover:underline"
+        >
+          {service.contact.whatsapp}
+        </a>
+      </span>
+    </div>
+  </div>
+)}
+
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <Footer />
     </div>
   );
 }

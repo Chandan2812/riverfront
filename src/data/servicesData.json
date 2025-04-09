@@ -1,4 +1,4 @@
- [
+[
   {
     "title": "Property Management",
     "slug": "property_management",
@@ -10,7 +10,28 @@
       "Maintenance services: Handling repairs and upkeep efficiently.",
       "Legal compliance: Ensuring adherence to rental laws and regulations.",
       "Marketing services: Promoting properties for higher occupancy rates."
-    ]
+    ],
+    "contact": {
+      "call": "+97147702260",
+      "whatsapp": "+971509863828"
+    }
+  },
+  {
+    "title": "Holiday Homes",
+    "slug": "holiday_homes",
+    "image": "https://mybayutcdn.bayut.com/mybayut/wp-content/uploads/Holiday-Rental-Resized.jpg",
+    "description": "Premium holiday home management services that ensure seamless booking, guest satisfaction, and optimized rental income for property owners.",
+    "bullet_points": [
+      "Property listing management: Professional photography, descriptions, and platform setup.",
+      "Guest communication: 24/7 support from booking to checkout.",
+      "Cleaning and maintenance: Regular housekeeping and maintenance services.",
+      "Revenue optimization: Dynamic pricing to maximize rental income.",
+      "Legal and regulatory support: Ensuring short-term rental compliance in Dubai."
+    ],
+    "contact": {
+      "call": "+97147702260",
+      "whatsapp": "+971509863828"
+    }
   },
   {
     "title": "Pro Services",
@@ -23,35 +44,45 @@
       "Urban planning: Development strategies for efficient and aesthetic cityscapes.",
       "3D visualization: High-quality renders for project previews.",
       "Permit approvals: Assisting with regulatory compliance and documentation."
-    ]
+    ],
+    "contact": {
+      "call": "+97147702260",
+      "whatsapp": "+971509863828"
+    }
   },
-      {
-        "title": "Interior Design",
-        "slug": "interior_design",
-        "image": "https://uniqueproperties.ae/en/uploads/frontend/services/608874/conversions/interior-design-resize.webp",
-        "description": "Aviva Collective is an award-winning, multi-disciplinary creative agency specialized in architectural design and fit-out solutions for luxury residential, hospitality, commercial, retail, and FF&E sectors.",
-        "bullet_points": [
-          "Bespoke architectural design: Create unique, innovative spaces tailored to clients’ needs.",
-          "Luxury interior design: Blend form, function, and style for stunning spaces.",
-          "Optimize space utilization: Ensure efficient use while maintaining luxury.",
-          "Project management: Oversee projects from concept to completion, ensuring timely delivery.",
-          "End-to-end fit-out solutions: Include interior construction, joinery, FF&E procurement, and installation."
-        ]
-      },
-      {
-        "title": "Conveyancing Services",
-        "slug": "real_estate",
-        "image": "https://uniqueproperties.ae/en/uploads/frontend/services/18684/conversions/conveyancing-services-resize.webp",
-        "description": "Expert real estate consultation services offering market insights, investment strategies, and property acquisition guidance for individuals and businesses.",
-        "bullet_points": [
-          "Market analysis: In-depth research to identify investment opportunities.",
-          "Legal advisory: Assistance with property laws and regulations.",
-          "Financial planning: Strategies for mortgage, loans, and ROI optimization.",
-          "Property valuation: Professional assessment of property value.",
-          "Portfolio management: Helping investors diversify and maximize returns."
-        ]
-      }
-      
-      
-    ]
-  
+  {
+    "title": "Interior Design",
+    "slug": "interior_design",
+    "image": "https://chiedesign.in/wp-content/uploads/2022/05/Luxury-Interior-Design-Living-Room-1080x675.jpg",
+    "description": "Aviva Collective is an award-winning, multi-disciplinary creative agency specialized in architectural design and fit-out solutions for luxury residential, hospitality, commercial, retail, and FF&E sectors.",
+    "bullet_points": [
+      "Bespoke architectural design: Create unique, innovative spaces tailored to clients’ needs.",
+      "Luxury interior design: Blend form, function, and style for stunning spaces.",
+      "Optimize space utilization: Ensure efficient use while maintaining luxury.",
+      "Project management: Oversee projects from concept to completion, ensuring timely delivery.",
+      "End-to-end fit-out solutions: Include interior construction, joinery, FF&E procurement, and installation."
+    ],
+    "contact": {
+      "call": "+97147702260",
+      "whatsapp": "+971509863828"
+    }
+  },
+  {
+    "title": "Conveyancing Services",
+    "slug": "real_estate",
+    "image": "https://uniqueproperties.ae/en/uploads/frontend/services/18684/conversions/conveyancing-services-resize.webp",
+    "description": "Expert real estate consultation services offering market insights, investment strategies, and property acquisition guidance for individuals and businesses.",
+    "bullet_points": [
+      "Market analysis: In-depth research to identify investment opportunities.",
+      "Legal advisory: Assistance with property laws and regulations.",
+      "Financial planning: Strategies for mortgage, loans, and ROI optimization.",
+      "Property valuation: Professional assessment of property value.",
+      "Portfolio management: Helping investors diversify and maximize returns."
+    ],
+    "contact": {
+      "call": "+97147702260",
+      "whatsapp": "+971509863828"
+    }
+  }
+
+]
