@@ -6,6 +6,7 @@ import propertyData from "../data/offPlanData.json";
 import Navbar from "../components/nav";
 import Footer from "../components/footer";
 import { useNavigate } from "react-router-dom";
+import HeroImageSlider from "../components/ImageSlider";
 
 const OffplanPropertyCard: React.FC = () => {
   const navigate = useNavigate();
@@ -48,10 +49,11 @@ const OffplanPropertyCard: React.FC = () => {
 
   return (
     <div>
-      <div className="mb-24 md:mb-32">
+      <div className="mb-16 md:mb-24">
         <Navbar />
       </div>
-      <h1 className="w-[90%] mx-auto text-2xl md:text-4xl text-center mb-3 md:mb-4">Off-Plan Properties in Dubai: Your Guide to Future Real Estate Investments</h1>
+      <HeroImageSlider/>
+      <h1 className="w-[90%] mx-auto text-2xl md:text-4xl text-center mb-5 md:mb-8">Off-Plan Properties in Dubai: Your Guide to Future Real Estate Investments</h1>
 
       {/* Filters */}
       <div className="w-full md:w-[90%] mx-auto px-4 mb-6 grid grid-cols-1 md:grid-cols-3 gap-4 justify-between">
