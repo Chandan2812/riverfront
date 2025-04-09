@@ -75,7 +75,7 @@ const textColorClass =
               src={logo}
               onClick={() => navigate("/")}
               alt="Logo"
-              className="h-14 md:h-20 md:ml-44 cursor-pointer"
+              className="h-20 md:h-28 md:ml-44 cursor-pointer"
             />
 
             {/* Right: Contact Us + Find a Property */}
@@ -94,7 +94,7 @@ const textColorClass =
               src={logo}
               onClick={() => navigate("/")}
               alt="Logo"
-              className="h-14 cursor-pointer"
+              className="h-20 cursor-pointer"
             />
 
             {/* Right: Hamburger */}
@@ -116,10 +116,10 @@ const textColorClass =
     {/* Slide-in Menu */}
     <div className="relative w-full bg-[var(--secondary-color)] md:w-1/5 h-full flex flex-col">
       <div className="flex items-center justify-between px-4 py-4 border-b">
-        <img src={logo} alt="Logo" className="h-14" />
+        <img src={logo} alt="Logo" className="h-24" />
         <button onClick={() => setMenuOpen(false)}><X className="w-6 h-6 text-white" /></button>
       </div>
-      <div className="flex flex-col px-6 py-4 space-y-5 text-base text-[var(--primary-color)]">
+      <div className="flex flex-col px-6 py-4 space-y-3 text-base text-[var(--primary-color)]">
   <a href="/" onClick={() => setMenuOpen(false)} className="font-hanken flex items-center gap-2 hover:text-[var(--primary-color)]">
     <Home size={20} /> Home
   </a>
