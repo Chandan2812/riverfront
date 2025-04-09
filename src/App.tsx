@@ -15,6 +15,7 @@ import ForRent from './pages/forRent';
 import ForSaleDetails from './pages/ForSaleDetails';
 import ForRentDetails from './pages/ForRentDetails';
 import OffPlanDetails from './pages/offPlanDetails';
+import WhyInvest from './pages/Insights/WhyInvest';
 
 
 
@@ -37,6 +38,7 @@ function App() {
         <Route path="/forrentDetails/:title" element={<ForRentDetails/>} />
         <Route path="/OffplanPropertyCard" element={<OffplanPropertyCard/>} />
         <Route path="/offplan/:projectName" element={<OffPlanDetails/>} />
+        <Route path="insights/why-invest-in-dubai" element={<WhyInvest/>} />
       </Routes>
     </Router>
   );

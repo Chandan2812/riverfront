@@ -1,167 +1,333 @@
 import { useState } from "react";
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTiktok, FaTwitter, FaYoutube } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaTiktok,
+  FaTwitter,
+  FaYoutube,
+} from "react-icons/fa";
 import { MdExpandMore, MdExpandLess } from "react-icons/md";
-import logo from "../assets/logo1.png"
+import logo from "../assets/logo.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
-    const [openSection, setOpenSection] = useState<string | null>(null);
+  const [openSection, setOpenSection] = useState<string | null>(null);
 
-    const toggleSection = (section: string) => {
-        setOpenSection(openSection === section ? null : section);
-    };
+  const toggleSection = (section: string) => {
+    setOpenSection(openSection === section ? null : section);
+  };
 
-    const sections = [
-        {
-            title: "Insights",
-            links: [
-                "Why Invest in Dubai",
-                "About Dubai",
-                "Buyer’s Guide",
-                "Seller’s Guide",
-                "Relocating to Dubai",
-                "Area Guide",
-                "Floor Plans",
-                "FAQ"
-            ]
-        },
-        {
-            title: "Sell / Rent",
-            links: ["Sell Your Property", "Lease Your Property"]
-        },
-        {
-            title: "Services",
-            links: ["Interior Design", "Conveyancing Services", "PRO Services", "Property Management"]
-        },
-        {
-            title: "About Us",
-            links: ["Company Overview", "Message from CEO", "Message from Partner", "Awards"]
-        },
-        {
-            title: "Featured",
-            links: ["Off-Plan", "Resale", "Rental", "Communities", "Developers"]
-        },
-        {
-            title: "Media",
-            links: ["Blogs"]
-        },
-        {
-            title: "Contact Us",
-            links: ["Reach Out", "Careers"]
-        }
-    ];
+  const sections = [
+    {
+      title: "Insights",
+      links: [
+        { label: "Why Invest in Dubai", path: "/insights/why-invest-in-dubai" },
+        { label: "About Dubai", path: "/insights/about-dubai" },
+        { label: "Buyer’s Guide", path: "/insights/buyers-guide" },
+        { label: "Seller’s Guide", path: "/insights/sellers-guide" },
+        { label: "Relocating to Dubai", path: "/insights/relocating-to-dubai" },
+        { label: "FAQ", path: "/insights/faq" },
+      ],
+    },
+    {
+      title: "Sell / Rent",
+      links: [
+        { label: "Sell Your Property", path: "/sell/sell-property" },
+        { label: "Lease Your Property", path: "/sell/lease-property" },
+      ],
+    },
+    {
+      title: "Services",
+      links: [
+        { label: "Interior Design", path: "#" },
+        { label: "Conveyancing Services", path: "#" },
+        { label: "PRO Services", path: "#" },
+        { label: "Property Management", path: "#" },
+      ],
+    },
+    {
+      title: "About Us",
+      links: [
+        { label: "Company Overview", path: "#" },
+        { label: "Message from CEO", path: "#" },
+        { label: "Message from Partner", path: "#" },
+        { label: "Awards", path: "#" },
+      ],
+    },
+    {
+      title: "Featured",
+      links: [
+        { label: "Off-Plan", path: "#" },
+        { label: "Resale", path: "#" },
+        { label: "Rental", path: "#" },
+        { label: "Communities", path: "#" },
+        { label: "Developers", path: "#" },
+      ],
+    },
+    {
+      title: "Media",
+      links: [{ label: "Blogs", path: "#" }],
+    },
+    {
+      title: "Contact Us",
+      links: [
+        { label: "Reach Out", path: "#" },
+        { label: "Careers", path: "#" },
+      ],
+    },
+  ];
 
-    return (
-        <footer className="bg-[var(--secondary-color)] text-white py-10 px-6">
-            <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
-                {/* Logo and Social Icons */}
-                <div className="text-center md:text-left ">
-                    <img src={logo} alt=""  className=" w-40 py-2 rounded-xl mx-auto md:mx-0"/>
-                    <div className="flex justify-center md:justify-start gap-4 mt-4 text-lg">
-                        <FaFacebookF className="cursor-pointer" />
-                        <FaInstagram className="cursor-pointer" />
-                        <FaLinkedinIn className="cursor-pointer" />
-                        <FaTiktok className="cursor-pointer" />
-                        <FaYoutube className="cursor-pointer" />
-                        <FaTwitter className="cursor-pointer" />
-                    </div>
-                    <p className="mt-4 text-sm md:block hidden">
-                        <a href="#" className="hover:underline">Terms & Conditions</a> | <a href="#" className="hover:underline">Privacy & Cookies</a>
-                    </p>
-                    <p className="text-sm mt-2 md:block hidden">Copyright © RIVERFRONT</p>
-                </div>
+  return (
+    <footer className="bg-[var(--secondary-color)] text-white py-10 px-6">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+        {/* Logo and Social Icons */}
+        <div className="text-center md:text-left ">
+          <img
+            src={logo}
+            alt=""
+            className=" w-40 py-2 rounded-xl mx-auto md:mx-0"
+          />
+          <div className="flex justify-center md:justify-start gap-4 mt-4 text-lg">
+            <FaFacebookF className="cursor-pointer" />
+            <FaInstagram className="cursor-pointer" />
+            <FaLinkedinIn className="cursor-pointer" />
+            <FaTiktok className="cursor-pointer" />
+            <FaYoutube className="cursor-pointer" />
+            <FaTwitter className="cursor-pointer" />
+          </div>
+          <p className="mt-4 text-sm md:block hidden">
+            <a href="#" className="hover:underline">
+              Terms & Conditions
+            </a>{" "}
+            |{" "}
+            <a href="#" className="hover:underline">
+              Privacy & Cookies
+            </a>
+          </p>
+          <p className="text-sm mt-2 md:block hidden">Copyright © RIVERFRONT</p>
+        </div>
 
-                {/* Mobile View Accordion */}
-                <div className="md:hidden mt-6">
-                    {sections.map((section) => (
-                        <div key={section.title} className="border-b border-gray-700 py-2">
-                            <button className="flex justify-between w-full text-left text-sm font-semibold" onClick={() => toggleSection(section.title)}>
-                                {section.title}
-                                {openSection === section.title ? <MdExpandLess /> : <MdExpandMore />}
-                            </button>
-                            {openSection === section.title && (
-                                <ul className="mt-2 text-sm space-y-2">
-                                    {section.links.map((link, index) => (
-                                        <li key={index}><a href="#" className="hover:underline">{link}</a></li>
-                                    ))}
-                                </ul>
-                            )}
-                        </div>
-                    ))}
-                </div>
+        {/* Mobile View Accordion */}
+        <div className="md:hidden mt-6">
+          {sections.map((section) => (
+            <div key={section.title} className="border-b border-gray-700 py-2">
+              <button
+                className="flex justify-between w-full text-left text-sm font-semibold"
+                onClick={() => toggleSection(section.title)}
+              >
+                {section.title}
+                {openSection === section.title ? (
+                  <MdExpandLess />
+                ) : (
+                  <MdExpandMore />
+                )}
+              </button>
+              {openSection === section.title && (
+                <ul className="mt-2 text-sm space-y-2">
+                  {section.links.map((link, index) => (
+                    <li key={index}>
+                      <Link to={link.path} className="hover:underline">
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          ))}
+        </div>
 
-                {/* Desktop View Sections */}
-                 {/* Insights */}
+        {/* Desktop View Sections */}
+        {/* Insights */}
         <div className="md:block hidden">
           <h3 className="font-semibold text-xl mb-3">Insights</h3>
           <ul className="space-y-2 text-sm mb-4">
-            <li><a href="#" className="hover:underline">Why Invest in Dubai</a></li>
-            <li><a href="#" className="hover:underline">About Dubai</a></li>
-            <li><a href="#" className="hover:underline">Buyer’s Guide</a></li>
-            <li><a href="#" className="hover:underline">Seller’s Guide</a></li>
-            <li><a href="#" className="hover:underline">Relocating to Dubai</a></li>
-            <li><a href="#" className="hover:underline">Area Guide</a></li>
-            <li><a href="#" className="hover:underline">Floor Plans</a></li>
-            <li><a href="#" className="hover:underline">FAQ</a></li>
+            <li>
+              <Link
+                to="/insights/why-invest-in-dubai"
+                className="hover:underline"
+              >
+                Why Invest in Dubai
+              </Link>
+            </li>
+            <li>
+              <Link to="/insights/about-dubai" className="hover:underline">
+                About Dubai
+              </Link>
+            </li>
+            <li>
+              <Link to="/insights/buyers-guide" className="hover:underline">
+                Buyer’s Guide
+              </Link>
+            </li>
+            <li>
+              <Link to="/insights/sellers-guide" className="hover:underline">
+                Seller’s Guide
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/insights/relocating-to-dubai"
+                className="hover:underline"
+              >
+                Relocating to Dubai
+              </Link>
+            </li>
+            <li>
+              <Link to="/insights/area-guide" className="hover:underline">
+                Area Guide
+              </Link>
+            </li>
+            <li>
+              <Link to="/insights/floor-plans" className="hover:underline">
+                Floor Plans
+              </Link>
+            </li>
+            <li>
+              <Link to="/insights/faq" className="hover:underline">
+                FAQ
+              </Link>
+            </li>
           </ul>
           <h3 className="font-semibold text-xl mb-3">Sell / Rent</h3>
           <ul className="space-y-2 text-sm">
-            <li><a href="#" className="hover:underline">Sell Your Property</a></li>
-            <li><a href="#" className="hover:underline">Lease Your Property</a></li>
+            <li>
+              <Link to="/sell/sell-property" className="hover:underline">
+                Sell Your Property
+              </Link>
+            </li>
+            <li>
+              <Link to="/sell/lease-property" className="hover:underline">
+                Lease Your Property
+              </Link>
+            </li>
           </ul>
         </div>
 
-        
         {/* Services & About Us */}
         <div className="md:block hidden">
           <h3 className="font-semibold text-xl mb-3">Services</h3>
           <ul className="space-y-2 text-sm mb-4">
-            <li><a href="#" className="hover:underline">Interior Design</a></li>
-            <li><a href="#" className="hover:underline">Conveyancing Services</a></li>
-            <li><a href="#" className="hover:underline">PRO Services</a></li>
-            <li><a href="#" className="hover:underline">Property Management</a></li>
+            <li>
+              <a href="#" className="hover:underline">
+                Interior Design
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:underline">
+                Conveyancing Services
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:underline">
+                PRO Services
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:underline">
+                Property Management
+              </a>
+            </li>
           </ul>
           <h3 className="font-semibold text-xl mt-4 mb-3">About Us</h3>
           <ul className="space-y-2 text-sm">
-            <li><a href="#" className="hover:underline">Company Overview</a></li>
-            <li><a href="#" className="hover:underline">Message from CEO</a></li>
-            <li><a href="#" className="hover:underline">Message from Partner</a></li>
-            <li><a href="#" className="hover:underline">Awards</a></li>
+            <li>
+              <a href="#" className="hover:underline">
+                Company Overview
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:underline">
+                Message from CEO
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:underline">
+                Message from Partner
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:underline">
+                Awards
+              </a>
+            </li>
           </ul>
         </div>
-        
+
         {/* Featured & Contact */}
         <div className="md:block hidden">
           <h3 className="font-semibold text-xl mb-3">Featured</h3>
           <ul className="space-y-2 text-sm mb-4">
-            <li><a href="#" className="hover:underline">Off-Plan</a></li>
-            <li><a href="#" className="hover:underline">Resale</a></li>
-            <li><a href="#" className="hover:underline">Rental</a></li>
-            <li><a href="#" className="hover:underline">Communities</a></li>
-            <li><a href="#" className="hover:underline">Developers</a></li>
+            <li>
+              <a href="#" className="hover:underline">
+                Off-Plan
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:underline">
+                Resale
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:underline">
+                Rental
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:underline">
+                Communities
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:underline">
+                Developers
+              </a>
+            </li>
           </ul>
           <h3 className="font-semibold text-xl mt-4 mb-3">Media</h3>
           <ul className="space-y-2 text-sm mb-4">
-            <li><a href="#" className="hover:underline">Blogs</a></li>
+            <li>
+              <a href="#" className="hover:underline">
+                Blogs
+              </a>
+            </li>
           </ul>
           <h3 className="font-semibold text-xl mt-4 mb-3">Contact Us</h3>
           <ul className="space-y-2 text-sm">
-            <li><a href="#" className="hover:underline">Reach Out</a></li>
-            <li><a href="#" className="hover:underline">Careers</a></li>
+            <li>
+              <a href="#" className="hover:underline">
+                Reach Out
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:underline">
+                Careers
+              </a>
+            </li>
           </ul>
         </div>
-      
-            </div>
+      </div>
 
-            {/* Bottom Text */}
-            <div className="md:block hidden text-center text-sm px-12 mt-10 border-t border-gray-700 pt-4">
-                <p>RIVERFRONT Real Estate Broker is a company registered in Dubai. We are regulated by the Real Estate Regulatory Agency.</p>
-            </div>
-            <div className="md:hidden block text-center text-sm px-12 mt-4">
-                <a href="#" className="hover:underline">Terms & Conditions</a> | <a href="#" className="hover:underline">Privacy & Cookies</a>
-                <p className="text-sm mt-2">Copyright © RIVERFRONT</p>
-            </div>
-        </footer>
-    );
+      {/* Bottom Text */}
+      <div className="md:block hidden text-center text-sm px-12 mt-10 border-t border-gray-700 pt-4">
+        <p>
+          RIVERFRONT Real Estate Broker is a company registered in Dubai. We are
+          regulated by the Real Estate Regulatory Agency.
+        </p>
+      </div>
+      <div className="md:hidden block text-center text-sm px-12 mt-4">
+        <a href="#" className="hover:underline">
+          Terms & Conditions
+        </a>{" "}
+        |{" "}
+        <a href="#" className="hover:underline">
+          Privacy & Cookies
+        </a>
+        <p className="text-sm mt-2">Copyright © RIVERFRONT</p>
+      </div>
+    </footer>
+  );
 };
 
 export default Footer;
