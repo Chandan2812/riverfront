@@ -102,7 +102,7 @@ const Footer = () => {
               Privacy & Cookies
             </a>
           </p>
-          <p className="text-sm mt-2 md:block hidden">Copyright © RIVERFRONT</p>
+          <p className="text-sm mt-2 md:block hidden">Copyright © RIVERFront</p>
         </div>
 
         {/* Mobile View Accordion */}
@@ -274,7 +274,7 @@ const Footer = () => {
       {/* Bottom Text */}
       <div className="md:block hidden text-center text-sm px-12 mt-10 border-t border-gray-700 pt-4">
         <p>
-          RIVERFRONT Real Estate Broker is a company registered in Dubai. We are
+          RIVERFront Real Estate Broker is a company registered in Dubai. We are
           regulated by the Real Estate Regulatory Agency.
         </p>
       </div>
@@ -286,7 +286,7 @@ const Footer = () => {
         <a href="#" className="hover:underline">
           Privacy & Cookies
         </a>
-        <p className="text-sm mt-2">Copyright © RIVERFRONT</p>
+        <p className="text-sm mt-2">Copyright © RIVERFront</p>
       </div>
     </footer>
   );
