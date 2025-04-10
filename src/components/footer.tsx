@@ -42,9 +42,15 @@ const Footer = () => {
       links: [
         { label: "Interior Design", path: "/ServicesSection#interior_design" },
         { label: "Holiday Homes", path: "/ServicesSection#holiday_homes" },
-        { label: "Conveyancing Services", path: "/ServicesSection#real_estate" },
+        {
+          label: "Conveyancing Services",
+          path: "/ServicesSection#real_estate",
+        },
         { label: "PRO Services", path: "/ServicesSection#pro_services" },
-        { label: "Property Management", path: "/ServicesSection#property_management" },
+        {
+          label: "Property Management",
+          path: "/ServicesSection#property_management",
+        },
       ],
     },
     {
@@ -196,21 +202,46 @@ const Footer = () => {
         <div className="md:block hidden">
           <h3 className="font-semibold text-xl mb-3">Services</h3>
           <ul className="space-y-2 text-sm mb-4">
-          <li>
-    <a href="/ServicesSection#interior_design" className="hover:underline">Interior Design</a>
-  </li>
-  <li>
-    <a href="/ServicesSection#holiday_homes" className="hover:underline">Holiday Homes</a>
-  </li>
-  <li>
-    <a href="/ServicesSection#real_estate" className="hover:underline">Conveyancing Services</a>
-  </li>
-  <li>
-    <a href="/ServicesSection#pro_services" className="hover:underline">PRO Services</a>
-  </li>
-  <li>
-    <a href="/ServicesSection#property_management" className="hover:underline">Property Management</a>
-  </li>
+            <li>
+              <a
+                href="/ServicesSection#interior_design"
+                className="hover:underline"
+              >
+                Interior Design
+              </a>
+            </li>
+            <li>
+              <a
+                href="/ServicesSection#holiday_homes"
+                className="hover:underline"
+              >
+                Holiday Homes
+              </a>
+            </li>
+            <li>
+              <a
+                href="/ServicesSection#real_estate"
+                className="hover:underline"
+              >
+                Conveyancing Services
+              </a>
+            </li>
+            <li>
+              <a
+                href="/ServicesSection#pro_services"
+                className="hover:underline"
+              >
+                PRO Services
+              </a>
+            </li>
+            <li>
+              <a
+                href="/ServicesSection#property_management"
+                className="hover:underline"
+              >
+                Property Management
+              </a>
+            </li>
           </ul>
           <h3 className="font-semibold text-xl mt-4 mb-3">About Us</h3>
           <ul className="space-y-2 text-sm">
@@ -243,7 +274,7 @@ const Footer = () => {
             </li>
             <li>
               <a href="/OffplanPropertyCard" className="hover:underline">
-              Off-Plan
+                Off-Plan
               </a>
             </li>
           </ul>

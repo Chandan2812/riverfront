@@ -42,7 +42,10 @@ const BookMeetingModal: React.FC<Props> = ({ isOpen, onClose }) => {
   return (
     <div className="fixed inset-0 bg-[var(--secondary-color)] flex flex-col justify-center items-center z-50">
       <div className="w-full bg-gray-800 py-5 flex justify-center fixed top-0 left-0">
-        <button onClick={onClose} className="text-white border border-white rounded-full p-2">
+        <button
+          onClick={onClose}
+          className="text-white border border-white rounded-full p-2"
+        >
           <X size={28} />
         </button>
       </div>
@@ -75,7 +78,9 @@ const BookMeetingModal: React.FC<Props> = ({ isOpen, onClose }) => {
           }`}
         />
         {emailTouched && !isEmailValid(email) && (
-          <p className="text-red-400 text-sm mb-3">Please enter a valid email address.</p>
+          <p className="text-red-400 text-sm mb-3">
+            Please enter a valid email address.
+          </p>
         )}
 
         {/* Phone */}

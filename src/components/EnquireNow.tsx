@@ -79,7 +79,9 @@ const SubmitDetailsModal: React.FC<Props> = ({ isOpen, onClose }) => {
           }`}
         />
         {emailTouched && !isEmailValid(email) && (
-          <p className="text-red-400 text-sm mb-3">Please enter a valid email address.</p>
+          <p className="text-red-400 text-sm mb-3">
+            Please enter a valid email address.
+          </p>
         )}
 
         {/* Phone */}
@@ -91,9 +93,7 @@ const SubmitDetailsModal: React.FC<Props> = ({ isOpen, onClose }) => {
             defaultCountry="AE"
             onBlur={() => setPhoneTouched(true)}
             className={`${
-              !phoneTouched || phone
-                ? "text-black"
-                : "text-red-500"
+              !phoneTouched || phone ? "text-black" : "text-red-500"
             }`}
           />
         </div>

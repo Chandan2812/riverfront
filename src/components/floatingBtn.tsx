@@ -39,7 +39,11 @@ export default function WhatsAppButton() {
         className="w-14 h-14 bg-green-500 rounded-full flex items-center justify-center shadow-lg cursor-pointer mb-11 "
         onClick={() => setIsOpen(!isOpen)}
       >
-        {isOpen ? <X className="text-white" size={24} /> : <MessageCircle className="text-white" size={24} />}
+        {isOpen ? (
+          <X className="text-white" size={24} />
+        ) : (
+          <MessageCircle className="text-white" size={24} />
+        )}
       </div>
     </div>
   );
