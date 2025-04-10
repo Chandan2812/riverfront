@@ -1,5 +1,4 @@
 import { useRef } from "react";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
 
 const awards = [
   { id: 1, name: "NASHAMA PROPERTIES", image: "https://uniqueproperties.ae/en/uploads/frontend/awards/106043/conversions/nshama-top-agent_trophy-resize_trophies.webp" },
@@ -13,15 +12,10 @@ const awards = [
 
 const AwardsSection = () => {
   const scrollRef = useRef<HTMLDivElement | null>(null);
-  const navigate = useNavigate(); // Initialize navigation
 
-  // Function to navigate to the awards page
-  const goToAwardsPage = () => {
-    navigate("/awards");
-  };
 
   return (
-    <div className="w-full py-16 bg-gray-50 dark:bg-gray-900 text-center cursor-pointer" onClick={goToAwardsPage}>
+    <div className="w-full py-16 bg-gray-50 dark:bg-gray-900 text-center cursor-pointer">
       {/* Title */}
       <h2 className="text-2xl md:text-4xl text-gray-800 dark:text-white mb-10">
         Awards & Recognitions
@@ -54,15 +48,13 @@ const AwardsSection = () => {
       </div>
 
       {/* View All Button */}
-      <button 
-        className="px-8 py-2 text-lg text-white bg-[--primary-color] rounded-3xl hover:opacity-80 mt-6"
-        onClick={(e) => {
-          e.stopPropagation(); // Prevent section click
-          goToAwardsPage();
-        }}
-      >
-        View All Awards
-      </button>
+      <a
+  href="/awards"
+  className="inline-block px-8 py-2 text-lg text-white bg-[--primary-color] rounded-3xl hover:opacity-80 mt-6"
+>
+  View All Awards
+</a>
+
     </div>
   );
 };

@@ -1,10 +1,15 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Footer from "../components/footer";
 import PhoneInput from 'react-phone-number-input'
 import "react-phone-number-input/style.css";
 import Navbar from "../components/nav";
 
 export default function Career() {
+
+    useEffect(() => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }, []);
+          
     const [formData, setFormData] = useState<{
         fullName: string;
         email: string;
@@ -38,7 +43,7 @@ export default function Career() {
     return (
         <div>
 
-<div className="mb-24 md:mb-36">
+<div className="mb-28 md:mb-40">
       <Navbar/>
       </div>
 

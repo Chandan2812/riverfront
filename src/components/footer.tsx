@@ -64,7 +64,7 @@ const Footer = () => {
     },
     {
       title: "Media",
-      links: [{ label: "Blogs", path: "#" }],
+      links: [{ label: "Blogs", path: "viewblogs" }],
     },
     {
       title: "Contact Us",
@@ -124,9 +124,9 @@ const Footer = () => {
                 <ul className="mt-2 text-sm space-y-2">
                   {section.links.map((link, index) => (
                     <li key={index}>
-                      <Link to={link.path} className="hover:underline">
+                      <a href={link.path} className="hover:underline">
                         {link.label}
-                      </Link>
+                      </a>
                     </li>
                   ))}
                 </ul>
@@ -250,7 +250,7 @@ const Footer = () => {
           <h3 className="font-semibold text-xl mt-4 mb-3">Media</h3>
           <ul className="space-y-2 text-sm mb-4">
             <li>
-              <a href="#" className="hover:underline">
+              <a href="/viewblogs" className="hover:underline">
                 Blogs
               </a>
             </li>
