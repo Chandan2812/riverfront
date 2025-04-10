@@ -17,6 +17,10 @@ import ForRentDetails from './pages/ForRentDetails';
 import OffPlanDetails from './pages/offPlanDetails';
 import WhyInvest from './pages/Insights/WhyInvest';
 import AboutDubai from './pages/Insights/AboutDubai';
+import BuyerGuide from './pages/Insights/BuyersGuide';
+import SellerGuide from './pages/Insights/SellersGuide';
+import Relocating from './pages/Insights/Relocating';
+import FAQSection from './pages/Insights/Faq';
 
 
 
@@ -41,6 +45,10 @@ function App() {
         <Route path="/offplan/:projectName" element={<OffPlanDetails/>} />
         <Route path="insights/why-invest-in-dubai" element={<WhyInvest/>} />
         <Route path="insights/About-Dubai" element={<AboutDubai/>} />
+        <Route path="insights/buyers-guide" element={<BuyerGuide/>} />
+        <Route path="insights/sellers-guide" element={<SellerGuide/>} />
+        <Route path="insights/relocating-to-dubai" element={<Relocating/>} />
+        <Route path="insights/faq" element={<FAQSection/>} />
       </Routes>
     </Router>
   );

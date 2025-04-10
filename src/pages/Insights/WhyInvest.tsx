@@ -1,9 +1,14 @@
 import Footer from '../../components/footer'
 import Navbar from '../../components/nav'
 import SubmitDetailsModal from '../../components/EnquireNow';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function WhyInvest() {
+
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }, []);
+      
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const openModal = () => setIsModalOpen(true);

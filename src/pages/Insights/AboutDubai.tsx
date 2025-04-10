@@ -1,14 +1,27 @@
+import { useEffect, useState } from "react";
+import SubmitDetailsModal from "../../components/EnquireNow";
 import Footer from "../../components/footer";
 import Navbar from "../../components/nav";
 
 const AboutDubai = () => {
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+  
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  
+      const openModal = () => setIsModalOpen(true);
+      const closeModal = () => setIsModalOpen(false);
+      
   return (
     <div>
       <div className="mb-24 md:mb-32">
         <Navbar />
       </div>
       <section className="px-4 py-10 md:px-20 bg-white text-[#1e1e1e]">
-        <h2 className="text-3xl md:text-4xl font-semibold mb-6">About Dubai</h2>
+        <h2 className="text-3xl md:text-4xl mb-6">About Dubai</h2>
 
         <div className="flex flex-col md:flex-row gap-6 mb-2">
           {/* Image */}
@@ -42,7 +55,7 @@ const AboutDubai = () => {
             </p>
           </div>
         </div>
-        <div className="space-y-3">
+        <div className="space-y-4 text-justify">
         <p>
           If you’re willing to get a new house in the UAE, then the first thing
           to decide is which emirate suits your needs, plan, and budget. In
@@ -80,7 +93,22 @@ const AboutDubai = () => {
         </p>
         </div>
       </section>
+
+      <section className="mx-auto w-full md:w-[90%] my-12 flex flex-col md:flex-row items-center justify-between gap-4 text-black px-6 py-8">
+  <h2 className="text-xl md:text-2xl text-center md:text-left font-semibold">
+  Have a question?
+    <br/>
+    <span className="text-xl md:text-2xl text-center md:text-left font-semibold"> Our team is happy to assist you</span>
+  </h2>
+  <div>
+  <button onClick={openModal} className="bg-[var(--primary-color)] hover:opacity-80 text-white px-6 py-2 rounded-full font-medium">
+    Enquire Now
+  </button>
+  <span>  or Call: +97147702260</span>
+  </div>
+</section>
       <Footer />
+      <SubmitDetailsModal isOpen={isModalOpen} onClose={closeModal} />
     </div>
   );
 };
