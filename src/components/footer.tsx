@@ -40,10 +40,11 @@ const Footer = () => {
     {
       title: "Services",
       links: [
-        { label: "Interior Design", path: "#" },
-        { label: "Conveyancing Services", path: "#" },
-        { label: "PRO Services", path: "#" },
-        { label: "Property Management", path: "#" },
+        { label: "Interior Design", path: "/ServicesSection#interior_design" },
+        { label: "Holiday Homes", path: "/ServicesSection#holiday_homes" },
+        { label: "Conveyancing Services", path: "/ServicesSection#real_estate" },
+        { label: "PRO Services", path: "/ServicesSection#pro_services" },
+        { label: "Property Management", path: "/ServicesSection#property_management" },
       ],
     },
     {
@@ -52,17 +53,15 @@ const Footer = () => {
         { label: "Company Overview", path: "#" },
         { label: "Message from CEO", path: "#" },
         { label: "Message from Partner", path: "#" },
-        { label: "Awards", path: "#" },
+        { label: "Awards", path: "/awards" },
       ],
     },
     {
       title: "Featured",
       links: [
-        { label: "Off-Plan", path: "#" },
-        { label: "Resale", path: "#" },
-        { label: "Rental", path: "#" },
-        { label: "Communities", path: "#" },
-        { label: "Developers", path: "#" },
+        { label: "Properties For Sale", path: "/forsale" },
+        { label: "Properites For Rent", path: "/forrent" },
+        { label: "Off-Plan", path: "/OffplanPropertyCard" },
       ],
     },
     {
@@ -72,8 +71,8 @@ const Footer = () => {
     {
       title: "Contact Us",
       links: [
-        { label: "Reach Out", path: "#" },
-        { label: "Careers", path: "#" },
+        { label: "Reach Out", path: "/contact" },
+        { label: "Careers", path: "/career" },
       ],
     },
   ];
@@ -199,26 +198,21 @@ const Footer = () => {
         <div className="md:block hidden">
           <h3 className="font-semibold text-xl mb-3">Services</h3>
           <ul className="space-y-2 text-sm mb-4">
-            <li>
-              <a href="#" className="hover:underline">
-                Interior Design
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">
-                Conveyancing Services
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">
-                PRO Services
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">
-                Property Management
-              </a>
-            </li>
+          <li>
+    <a href="/ServicesSection#interior_design" className="hover:underline">Interior Design</a>
+  </li>
+  <li>
+    <a href="/ServicesSection#holiday_homes" className="hover:underline">Holiday Homes</a>
+  </li>
+  <li>
+    <a href="/ServicesSection#real_estate" className="hover:underline">Conveyancing Services</a>
+  </li>
+  <li>
+    <a href="/ServicesSection#pro_services" className="hover:underline">PRO Services</a>
+  </li>
+  <li>
+    <a href="/ServicesSection#property_management" className="hover:underline">Property Management</a>
+  </li>
           </ul>
           <h3 className="font-semibold text-xl mt-4 mb-3">About Us</h3>
           <ul className="space-y-2 text-sm">
@@ -238,7 +232,7 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a href="#" className="hover:underline">
+              <a href="awards" className="hover:underline">
                 Awards
               </a>
             </li>
@@ -250,28 +244,18 @@ const Footer = () => {
           <h3 className="font-semibold text-xl mb-3">Featured</h3>
           <ul className="space-y-2 text-sm mb-4">
             <li>
-              <a href="#" className="hover:underline">
-                Off-Plan
+              <a href="/forsale" className="hover:underline">
+                Properties For Sale
               </a>
             </li>
             <li>
-              <a href="#" className="hover:underline">
-                Resale
+              <a href="/forrent" className="hover:underline">
+                Properties For Rent
               </a>
             </li>
             <li>
-              <a href="#" className="hover:underline">
-                Rental
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">
-                Communities
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">
-                Developers
+              <a href="/OffplanPropertyCard" className="hover:underline">
+              Off-Plan
               </a>
             </li>
           </ul>
@@ -286,12 +270,12 @@ const Footer = () => {
           <h3 className="font-semibold text-xl mt-4 mb-3">Contact Us</h3>
           <ul className="space-y-2 text-sm">
             <li>
-              <a href="#" className="hover:underline">
+              <a href="/contact" className="hover:underline">
                 Reach Out
               </a>
             </li>
             <li>
-              <a href="#" className="hover:underline">
+              <a href="/career" className="hover:underline">
                 Careers
               </a>
             </li>

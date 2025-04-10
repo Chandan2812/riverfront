@@ -21,6 +21,8 @@ import BuyerGuide from './pages/Insights/BuyersGuide';
 import SellerGuide from './pages/Insights/SellersGuide';
 import Relocating from './pages/Insights/Relocating';
 import FAQSection from './pages/Insights/Faq';
+import SellProperty from './pages/buy/sell/SellProperty';
+import BuyProperty from './pages/buy/sell/BuyProperty';
 
 
 
@@ -43,12 +45,14 @@ function App() {
         <Route path="/forrentDetails/:title" element={<ForRentDetails/>} />
         <Route path="/OffplanPropertyCard" element={<OffplanPropertyCard/>} />
         <Route path="/offplan/:projectName" element={<OffPlanDetails/>} />
-        <Route path="insights/why-invest-in-dubai" element={<WhyInvest/>} />
-        <Route path="insights/About-Dubai" element={<AboutDubai/>} />
-        <Route path="insights/buyers-guide" element={<BuyerGuide/>} />
-        <Route path="insights/sellers-guide" element={<SellerGuide/>} />
-        <Route path="insights/relocating-to-dubai" element={<Relocating/>} />
-        <Route path="insights/faq" element={<FAQSection/>} />
+        <Route path="/insights/why-invest-in-dubai" element={<WhyInvest/>} />
+        <Route path="/insights/About-Dubai" element={<AboutDubai/>} />
+        <Route path="/insights/buyers-guide" element={<BuyerGuide/>} />
+        <Route path="/insights/sellers-guide" element={<SellerGuide/>} />
+        <Route path="/insights/relocating-to-dubai" element={<Relocating/>} />
+        <Route path="/insights/faq" element={<FAQSection/>} />
+        <Route path="/sell/sell-property" element={<SellProperty/>} />
+        <Route path="/sell/lease-property" element={<BuyProperty/>} />
       </Routes>
     </Router>
   );
