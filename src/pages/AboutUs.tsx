@@ -300,13 +300,13 @@ export const AboutUs = () => {
 
               {/* Head Office */}
               <h3 className="text-lg text-gray-700 border-b border-gray-300 mb-2 font-semibold">
-                Head Offices
+                Head Office
               </h3>
               <p className="text-gray-600 mb-4">
                 1703, Damac XL tower, Marasi Drive, Business bay, Dubai, UAE.
               </p>
               <h3 className="text-lg text-gray-700 border-b border-gray-300 mb-2 font-semibold">
-                Branch Office
+                Branch Offices
               </h3>
               <p className="text-gray-600 mb-4">
                 KPD Developers, Plot # 2, Sanjay Nagar, Gulabi Bagh, Delhi
