@@ -23,6 +23,8 @@ import Relocating from './pages/Insights/Relocating';
 import FAQSection from './pages/Insights/Faq';
 import SellProperty from './pages/buy/sell/SellProperty';
 import BuyProperty from './pages/buy/sell/BuyProperty';
+import Career from './pages/Career';
+import AllBlogs from './pages/AllBlogs';
 
 
 
@@ -39,6 +41,7 @@ function App() {
         <Route path="/OffPlanProperties" element={<OffPlanProperties/>} />
         <Route path="/ServicesSection" element={<ServicesSection/>} />
         <Route path="/blog/:id" element={<BlogDetails/>} />
+        <Route path="/viewblogs" element={<AllBlogs/>} />
         <Route path="/forsale" element={<ForSale/>} />
         <Route path="/forsaleDetails/:title" element={<ForSaleDetails/>} />
         <Route path="/forrent" element={<ForRent/>} />
@@ -53,6 +56,8 @@ function App() {
         <Route path="/insights/faq" element={<FAQSection/>} />
         <Route path="/sell/sell-property" element={<SellProperty/>} />
         <Route path="/sell/lease-property" element={<BuyProperty/>} />
+        <Route path="/career" element={<Career/>} />
+
       </Routes>
     </Router>
   );

@@ -50,9 +50,7 @@ const Footer = () => {
     {
       title: "About Us",
       links: [
-        { label: "Company Overview", path: "#" },
-        { label: "Message from CEO", path: "#" },
-        { label: "Message from Partner", path: "#" },
+        { label: "Company Overview", path: "/about" },
         { label: "Awards", path: "/awards" },
       ],
     },
@@ -217,22 +215,12 @@ const Footer = () => {
           <h3 className="font-semibold text-xl mt-4 mb-3">About Us</h3>
           <ul className="space-y-2 text-sm">
             <li>
-              <a href="#" className="hover:underline">
+              <a href="/about" className="hover:underline">
                 Company Overview
               </a>
             </li>
             <li>
-              <a href="#" className="hover:underline">
-                Message from CEO
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">
-                Message from Partner
-              </a>
-            </li>
-            <li>
-              <a href="awards" className="hover:underline">
+              <a href="/awards" className="hover:underline">
                 Awards
               </a>
             </li>
