@@ -308,7 +308,9 @@ const Footer = () => {
           RIVERFront Real Estate Broker is a company registered in Dubai. We are
           regulated by the Real Estate Regulatory Agency.
         </p>
+        <p className="italic mt-2">Designed and marketed by Bigwig Digital</p>
       </div>
+
       <div className="md:hidden block text-center text-sm px-12 mt-4">
         <a href="#" className="hover:underline">
           Terms & Conditions
@@ -318,6 +320,12 @@ const Footer = () => {
           Privacy & Cookies
         </a>
         <p className="text-sm mt-2">Copyright © RIVERFront</p>
+        <a
+          href="https://bigwig-digital-one.vercel.app/"
+          className="italic mt-3 cursor-pointer"
+        >
+          Designed and marketed by Bigwig Digital
+        </a>
       </div>
     </footer>
   );
