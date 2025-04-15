@@ -36,7 +36,9 @@ const HeroSection: React.FC = () => {
         <h1 className="text-4xl md:text-6xl font-bold">
           Find Your Dream Property in Dubai
         </h1>
-        <i className="text-xl md:text-3xl mt-12 md:mt-14">Buy | Sell | Rent</i>
+        <i className="text-xl md:text-3xl mt-12 md:mt-14">
+          Buy | Sell | Rent | Collaborate
+        </i>
       </div>
     </div>
   );
