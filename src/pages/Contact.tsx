@@ -85,38 +85,36 @@ export default function Contact() {
             {/* Phone Button */}
             <div className="bg-white rounded-md p-4 flex items-center gap-4 shadow-sm hover:bg-gray-200 transition font-sans">
               <Phone className="w-6 h-6 text-gray-700" />
-              <span className="text-sm text-gray-700">‪+91 83685 73451‬</span>
+              <span className="text-sm text-gray-700">‪+97147702260‬</span>
             </div>
 
             {/* WhatsApp Button */}
             <a
-              href="https://wa.me/+918368573451"
+              href="https://wa.me/+971509863828"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white rounded-md p-4 flex items-center gap-4 shadow-sm hover:bg-gray-200 transition font-sans"
             >
               <FaWhatsapp className="w-6 h-6 text-green-600" />
-              <span className="text-sm text-gray-700">‪+91 83685 73451‬</span>
+              <span className="text-sm text-gray-700">‪+97147702260‬</span>
             </a>
 
             {/* Email Button */}
             <a
-              href="mailto:vipul@bigwigmedia.in"
+              href="mailto:info@riverfront.ae"
               className="bg-white rounded-md p-4 flex items-center gap-4 shadow-sm hover:bg-gray-200 transition font-sans"
             >
               <Mail className="w-6 h-6 text-gray-700" />
-              <span className="text-sm text-gray-700">
-                vipul@bigwigmedia.in
-              </span>
+              <span className="text-sm text-gray-700">info@riverfront.ae</span>
             </a>
 
             {/* SMS Button */}
             <a
-              href="sms:‪+918368573451‬"
+              href="sms:‪+971502304888‬"
               className="bg-white rounded-md p-4 flex items-center gap-4 shadow-sm hover:bg-gray-200 transition font-sans"
             >
               <MessageSquareText className="w-6 h-6 text-gray-700" />
-              <span className="text-sm text-gray-700">‪+91 83685 73451‬</span>
+              <span className="text-sm text-gray-700">‪+971502304888‬</span>
             </a>
           </div>
                   
