@@ -8,7 +8,7 @@ const HeroSection: React.FC = () => {
 
   useEffect(() => {
     if (videoRef.current) {
-      videoRef.current.playbackRate = 0.6; // 0.5x speed (slower)
+      videoRef.current.playbackRate = 0.5; // 0.5x speed (slower)
     }
   }, []);
 
