@@ -1,12 +1,5 @@
 import { useState } from "react";
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaLinkedinIn,
-  FaTiktok,
-  FaTwitter,
-  FaYoutube,
-} from "react-icons/fa";
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { MdExpandMore, MdExpandLess } from "react-icons/md";
 import logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
@@ -92,13 +85,22 @@ const Footer = () => {
             className=" w-40 py-2 rounded-xl mx-auto md:mx-0"
           />
           <div className="flex justify-center md:justify-start gap-4 mt-4 text-lg">
-            <FaFacebookF className="cursor-pointer" />
-            <FaInstagram className="cursor-pointer" />
-            <FaLinkedinIn className="cursor-pointer" />
-            <FaTiktok className="cursor-pointer" />
-            <FaYoutube className="cursor-pointer" />
-            <FaTwitter className="cursor-pointer" />
+            <a
+              href="https://www.facebook.com/profile.php?id=61557679590505"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaFacebookF className="cursor-pointer" />
+            </a>
+            <a
+              href="https://www.instagram.com/rfredubai?igsh=cm5xcXpjdXRpMW1y"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaInstagram className="cursor-pointer" />
+            </a>
           </div>
+
           <p className="mt-4 text-sm md:block hidden">
             <a href="#" className="hover:underline">
               Terms & Conditions
