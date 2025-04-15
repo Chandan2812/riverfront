@@ -8,7 +8,7 @@ const HeroSection: React.FC = () => {
 
   useEffect(() => {
     if (videoRef.current) {
-      videoRef.current.playbackRate = 0.5; // 0.5x speed (slower)
+      videoRef.current.playbackRate = 0.6; // 0.5x speed (slower)
     }
   }, []);
 
@@ -36,9 +36,7 @@ const HeroSection: React.FC = () => {
         <h1 className="text-4xl md:text-6xl font-bold">
           Find Your Dream Property in Dubai
         </h1>
-        <h2 className="text-xl md:text-3xl mt-12 md:mt-14">
-          Buy | Sell | Rent
-        </h2>
+        <i className="text-xl md:text-3xl mt-12 md:mt-14">Buy | Sell | Rent</i>
       </div>
     </div>
   );

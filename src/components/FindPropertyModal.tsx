@@ -29,8 +29,6 @@ const FindPropertyModal: React.FC<Props> = ({ isOpen, onClose }) => {
   const [phone, setPhone] = React.useState<string | undefined>();
   const [email, setEmail] = React.useState("");
 
-  const [errors, setErrors] = React.useState<any>({});
-
   const handleClose = () => {
     onClose();
     setStep(1);
@@ -43,13 +41,10 @@ const FindPropertyModal: React.FC<Props> = ({ isOpen, onClose }) => {
     setLastName("");
     setPhone("");
     setEmail("");
-    setErrors({});
   };
 
-  const isValidEmail = (email: string) => {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-  };
+  // const isValidEmail = (email: string) =>
+  //   /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
   const handleSubmit = () => {
     const data = {
@@ -67,32 +62,41 @@ const FindPropertyModal: React.FC<Props> = ({ isOpen, onClose }) => {
     handleClose();
   };
 
-  if (!isOpen) return null;
-
   const showBudget = () => {
-    if (selectedPropertyType === "Apartments") {
-      if (selectedBHK === "Studio") {
-        return ["50K - 100K", "100K - 150K", "150K - 250K", "250K and above"];
-      } else if (selectedBHK) {
+    if (selectedPurpose === "Buy Property") {
+      if (selectedPropertyType === "Apartments") {
+        if (selectedBHK === "Studio")
+          return ["50K - 100K", "100K - 150K", "150K - 250K", "250K and above"];
+        else if (selectedBHK)
+          return ["1 - 3 Million", "3 - 6 Million", "6 Million and above"];
+      } else if (["Villas", "Penthouse"].includes(selectedPropertyType || "")) {
         return ["1 - 3 Million", "3 - 6 Million", "6 Million and above"];
       }
-    } else if (
-      selectedPropertyType === "Villas" ||
-      selectedPropertyType === "Penthouse"
-    ) {
-      return ["1 - 3 Million", "3 - 6 Million", "6 Million and above"];
+    } else if (selectedPurpose === "Rent Property") {
+      return ["5K - 10K", "10K - 20K", "20K - 40K", "40K and above"];
+    } else if (selectedPurpose === "Sell Property") {
+      return [
+        "Below 500K",
+        "500K - 1 Million",
+        "1 - 3 Million",
+        "Above 3 Million",
+      ];
     }
     return [];
   };
 
   const renderBackButton = (targetStep: number) => (
     <button
-      onClick={() => setStep(targetStep)}
+      onClick={() => {
+        setStep(targetStep);
+      }}
       className="text-white flex justify-center items-center mb-4 w-full"
     >
       <ArrowLeft className="mr-2" />
     </button>
   );
+
+  if (!isOpen) return null;
 
   return (
     <div className="fixed inset-0 bg-[var(--secondary-color)] flex flex-col justify-center items-center z-50">
@@ -106,53 +110,55 @@ const FindPropertyModal: React.FC<Props> = ({ isOpen, onClose }) => {
       </div>
 
       <div className="bg-[#0D1B2A] w-[90%] md:w-[50%] p-8 rounded-lg text-center mt-20">
+        {/* Step 1 - Purpose */}
         {step === 1 && (
           <>
-            <h2 className="text-white text-3xl font-bold mb-6">Purpose</h2>
-            <h3 className="text-white text-lg mb-4">
-              Are you looking to buy or sell property?
-            </h3>
-            <div className="flex justify-center gap-2 mb-4 flex-wrap">
-              {["Buy Property", "Sell Property"].map((purpose) => (
-                <button
-                  key={purpose}
-                  onClick={() => {
-                    setStep(2);
-                    setSelectedPurpose(purpose);
-                  }}
-                  className={`border border-white px-4 py-2 rounded-full text-sm ${
-                    selectedPurpose === purpose
-                      ? "bg-white text-black"
-                      : "text-white"
-                  }`}
-                >
-                  {purpose}
-                </button>
-              ))}
+            <h2 className="text-white text-3xl font-bold mb-6">
+              Select Purpose
+            </h2>
+            <div className="flex justify-center gap-4 flex-wrap">
+              {["Buy Property", "Sell Property", "Rent Property"].map(
+                (purpose) => (
+                  <button
+                    key={purpose}
+                    onClick={() => {
+                      setSelectedPurpose(purpose);
+                      setStep(2);
+                    }}
+                    className={`border border-white px-4 py-2 rounded-full text-sm ${
+                      selectedPurpose === purpose
+                        ? "bg-white text-black"
+                        : "text-white"
+                    }`}
+                  >
+                    {purpose}
+                  </button>
+                )
+              )}
             </div>
           </>
         )}
 
+        {/* Step 2 - Property Type */}
         {step === 2 && selectedPurpose && (
           <>
             {renderBackButton(1)}
             <h2 className="text-white text-3xl font-bold mb-6">
-              Property Type
+              Select Property Type
             </h2>
-            <h3 className="text-white text-lg mb-4">
-              Which type of property are you interested in?
-            </h3>
-            <div className="flex justify-center gap-2 mb-4 flex-wrap">
+            <div className="flex justify-center gap-4 flex-wrap">
               {["Apartments", "Villas", "Penthouse"].map((type) => (
                 <button
                   key={type}
                   onClick={() => {
                     setSelectedPropertyType(type);
-                    if (type === "Apartments") {
-                      setStep(3);
+                    if (
+                      selectedPurpose === "Sell Property" ||
+                      type !== "Apartments"
+                    ) {
+                      setStep(4); // Skip BHK step
                     } else {
-                      setSelectedBHK(null);
-                      setStep(4);
+                      setStep(3);
                     }
                   }}
                   className={`border border-white px-4 py-2 rounded-full text-sm ${
@@ -168,50 +174,53 @@ const FindPropertyModal: React.FC<Props> = ({ isOpen, onClose }) => {
           </>
         )}
 
-        {step === 3 && selectedPropertyType === "Apartments" && (
-          <>
-            {renderBackButton(2)}
-            <h2 className="text-white text-3xl font-bold mb-6">
-              Select Bedroom Type
-            </h2>
-            <h3 className="text-white text-lg mb-4">
-              Which size are you looking for?
-            </h3>
-            <div className="flex justify-center gap-2 mb-4 flex-wrap">
-              {["Studio", "1BHK", "2BHK", "3BHK", "4BHK", "More"].map((bhk) => (
-                <button
-                  key={bhk}
-                  onClick={() => {
-                    setStep(4);
-                    setSelectedBHK(bhk);
-                  }}
-                  className={`border border-white px-4 py-2 rounded-full text-sm ${
-                    selectedBHK === bhk ? "bg-white text-black" : "text-white"
-                  }`}
-                >
-                  {bhk}
-                </button>
-              ))}
-            </div>
-          </>
-        )}
+        {/* Step 3 - BHK (only for Apartments in Buy/Rent flow) */}
+        {step === 3 &&
+          selectedPropertyType === "Apartments" &&
+          selectedPurpose !== "Sell Property" && (
+            <>
+              {renderBackButton(2)}
+              <h2 className="text-white text-3xl font-bold mb-6">Select BHK</h2>
+              <div className="flex justify-center gap-4 flex-wrap">
+                {["Studio", "1 BHK", "2 BHK", "3 BHK", "4+ BHK"].map((bhk) => (
+                  <button
+                    key={bhk}
+                    onClick={() => {
+                      setSelectedBHK(bhk);
+                      setStep(4);
+                    }}
+                    className={`border border-white px-4 py-2 rounded-full text-sm ${
+                      selectedBHK === bhk ? "bg-white text-black" : "text-white"
+                    }`}
+                  >
+                    {bhk}
+                  </button>
+                ))}
+              </div>
+            </>
+          )}
 
-        {step === 4 && (
+        {/* Step 4 - Budget */}
+        {step === 4 && showBudget().length > 0 && (
           <>
-            {renderBackButton(selectedPropertyType === "Apartments" ? 3 : 2)}
+            {renderBackButton(
+              selectedPropertyType === "Apartments" &&
+                selectedPurpose !== "Sell Property"
+                ? 3
+                : 2
+            )}
             <h2 className="text-white text-3xl font-bold mb-6">
-              Set Your Budget
+              {selectedPurpose === "Rent Property"
+                ? "Set Rent Price"
+                : "Set Your Budget"}
             </h2>
-            <h3 className="text-white text-lg mb-4">
-              What is your preferred budget range?
-            </h3>
             <div className="flex justify-center gap-2 mb-4 flex-wrap">
               {showBudget().map((budget) => (
                 <button
                   key={budget}
                   onClick={() => {
-                    setStep(5);
                     setSelectedBudget(budget);
+                    setStep(5);
                   }}
                   className={`border border-white px-4 py-2 rounded-full text-sm ${
                     selectedBudget === budget
@@ -226,116 +235,73 @@ const FindPropertyModal: React.FC<Props> = ({ isOpen, onClose }) => {
           </>
         )}
 
+        {/* Step 5 - Timeframe */}
         {step === 5 && (
           <>
             {renderBackButton(4)}
             <h2 className="text-white text-3xl font-bold mb-6">
-              Buying Timeline
+              When are you planning?
             </h2>
-            <h3 className="text-white text-lg mb-4">
-              When are you looking to purchase?
-            </h3>
-            <div className="flex justify-center gap-2 mb-4 flex-wrap">
-              {["0-3 Months", "3-9 Months", "Over a year"].map((timeframe) => (
+            <div className="flex justify-center gap-4 flex-wrap">
+              {["Immediately", "One month", "Above a month"].map((t) => (
                 <button
-                  key={timeframe}
+                  key={t}
                   onClick={() => {
+                    setSelectedTimeframe(t);
                     setStep(6);
-                    setSelectedTimeframe(timeframe);
                   }}
                   className={`border border-white px-4 py-2 rounded-full text-sm ${
-                    selectedTimeframe === timeframe
+                    selectedTimeframe === t
                       ? "bg-white text-black"
                       : "text-white"
                   }`}
                 >
-                  {timeframe}
+                  {t}
                 </button>
               ))}
             </div>
           </>
         )}
 
+        {/* Step 6 - Contact Info */}
         {step === 6 && (
           <>
             {renderBackButton(5)}
             <h2 className="text-white text-3xl font-bold mb-6">
-              Contact Information
+              Enter Your Details
             </h2>
-            <h3 className="text-white text-lg mb-4">
-              Enter Your Contact Details
-            </h3>
-            <input
-              type="text"
-              placeholder="First Name"
-              value={firstName}
-              onChange={(e) => setFirstName(e.target.value)}
-              className="w-full p-3 rounded bg-white mb-1"
-            />
-            {errors.firstName && (
-              <p className="text-red-500 text-sm mb-2">{errors.firstName}</p>
-            )}
-            <input
-              type="text"
-              placeholder="Last Name"
-              value={lastName}
-              onChange={(e) => setLastName(e.target.value)}
-              className="w-full p-3 rounded bg-white mb-1"
-            />
-            {errors.lastName && (
-              <p className="text-red-500 text-sm mb-2">{errors.lastName}</p>
-            )}
-            <PhoneInput
-              placeholder="Enter phone number"
-              defaultCountry="IN"
-              international
-              value={phone}
-              onChange={setPhone}
-              className="w-full px-1 rounded bg-white mb-1 p-3"
-            />
-            {errors.phone && (
-              <p className="text-red-500 text-sm mb-2">{errors.phone}</p>
-            )}
-            <input
-              type="email"
-              placeholder="Email"
-              value={email}
-              onChange={(e) => {
-                const value = e.target.value;
-                setEmail(value);
-                if (!isValidEmail(value)) {
-                  setErrors((prev: any) => ({
-                    ...prev,
-                    email: "Please enter a valid email address",
-                  }));
-                } else {
-                  setErrors((prev: any) => {
-                    const newErrors = { ...prev };
-                    delete newErrors.email;
-                    return newErrors;
-                  });
-                }
-              }}
-              className="w-full p-3 rounded bg-white mb-1"
-            />
-            {errors.email && (
-              <p className="text-red-500 text-sm mb-2">{errors.email}</p>
-            )}
-
-            <button
-              type="submit"
-              onClick={handleSubmit}
-              disabled={
-                !firstName || !lastName || !phone || !email || !!errors.email
-              }
-              className={`w-full py-2 rounded-full text-lg text-white ${
-                !firstName || !lastName || !phone || !email || !!errors.email
-                  ? "bg-gray-500 cursor-not-allowed"
-                  : "bg-[var(--primary-color)] hover:bg-[#e6a330]"
-              }`}
-            >
-              SUBMIT
-            </button>
+            <div className="flex flex-col gap-4 text-left">
+              <input
+                placeholder="First Name"
+                className="p-2 rounded bg-white text-black"
+                value={firstName}
+                onChange={(e) => setFirstName(e.target.value)}
+              />
+              <input
+                placeholder="Last Name"
+                className="p-2 rounded bg-white text-black"
+                value={lastName}
+                onChange={(e) => setLastName(e.target.value)}
+              />
+              <PhoneInput
+                defaultCountry="AE"
+                value={phone}
+                onChange={setPhone}
+                className="bg-white text-black p-2 rounded"
+              />
+              <input
+                placeholder="Email"
+                className="p-2 rounded bg-white text-black"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              <button
+                onClick={handleSubmit}
+                className="bg-white text-black px-4 py-2 rounded-full mt-4"
+              >
+                Submit
+              </button>
+            </div>
           </>
         )}
       </div>

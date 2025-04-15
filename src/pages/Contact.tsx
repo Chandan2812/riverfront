@@ -3,7 +3,7 @@ import Footer from "../components/footer";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import Navbar from "../components/nav";
-import { Mail, MessageSquareText } from "lucide-react";
+import { Mail, MessageSquareText, Phone } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 
 export default function Contact() {
@@ -76,47 +76,50 @@ export default function Contact() {
 
         {/* Get in Touch */}
         <div>
-          <h2 className="text-2xl font-semibold mb-2">Get in Touch</h2>
-          <p className="mb-4 text-gray-500">
+          <h2 className="text-xl font-semibold mb-2 font-sans">Get in Touch</h2>
+          <p className="mb-4 text-gray-600 font-sans">
             Please contact us via phone or email below or visit us at our Head
             Office in Business Bay during operating hours.
           </p>
-
-          {/* Contact Buttons */}
           <div className="flex flex-col gap-4">
-            <button className="border rounded-md px-4 py-2 text-sm hover:bg-gray-100">
-              UAE FREE PHONE: +97147702260
-            </button>
-            <button className="border rounded-md px-4 py-2 text-sm hover:bg-gray-100">
-              TEL: (+971) 4770 2 260
-            </button>
+            {/* Phone Button */}
+            <div className="bg-white rounded-md p-4 flex items-center gap-4 shadow-sm hover:bg-gray-200 transition font-sans">
+              <Phone className="w-6 h-6 text-gray-700" />
+              <span className="text-sm text-gray-700">‪+91 83685 73451‬</span>
+            </div>
 
+            {/* WhatsApp Button */}
             <a
-              href="https://wa.me/+971509863828"
+              href="https://wa.me/+918368573451"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center border p-4 rounded-md flex-1 min-w-[220px] gap-4 hover:bg-gray-50 transition"
+              className="bg-white rounded-md p-4 flex items-center gap-4 shadow-sm hover:bg-gray-200 transition font-sans"
             >
-              <FaWhatsapp className="w-7 h-7 text-green-600 flex-shrink-0" />
-              <span className="text-sm text-gray-700">+971509863828</span>
+              <FaWhatsapp className="w-6 h-6 text-green-600" />
+              <span className="text-sm text-gray-700">‪+91 83685 73451‬</span>
             </a>
 
+            {/* Email Button */}
             <a
-              href="mailto:info@riverfront.ae"
-              className="border  px-4 py-2 text-sm hover:bg-gray-100 p-4 rounded-md flex items-center gap-4 flex-1 min-w-[220px] transition"
+              href="mailto:vipul@bigwigmedia.in"
+              className="bg-white rounded-md p-4 flex items-center gap-4 shadow-sm hover:bg-gray-200 transition font-sans"
             >
-              <Mail className="w-6 h-6" />
-              <span className="text-sm">info@riverfront.ae</span>
+              <Mail className="w-6 h-6 text-gray-700" />
+              <span className="text-sm text-gray-700">
+                vipul@bigwigmedia.in
+              </span>
             </a>
 
+            {/* SMS Button */}
             <a
-              href="sms:+971502304888"
-              className="border p-4 rounded-md flex items-center gap-4 flex-1 min-w-[220px] hover:bg-gray-50 transition"
+              href="sms:‪+918368573451‬"
+              className="bg-white rounded-md p-4 flex items-center gap-4 shadow-sm hover:bg-gray-200 transition font-sans"
             >
               <MessageSquareText className="w-6 h-6 text-gray-700" />
-              <span className="text-sm text-gray-700">+971509863828</span>
+              <span className="text-sm text-gray-700">‪+91 83685 73451‬</span>
             </a>
           </div>
+                  
         </div>
       </section>
       <h2 className="px-5 w-full md:w-[90%] mx-auto text-lg text-[var(--secondary-color)]">
