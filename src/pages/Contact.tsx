@@ -42,19 +42,26 @@ export default function Contact() {
       <section className=" w-full md:w-[90%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-4 pb-8 bg-white text-gray-800">
         {/* Head Office */}
         <div>
-          <h2 className="text-xl mb-2 font-semibold">Head Office</h2>
+          <h2 className="text-xl mb-2 font-semibold">Dubai Office's</h2>
+          <h2 className="text-sm mb-2 font-semibold">Head Office:</h2>
           <p className="mb-4">
             1703, Damac XL tower, Marasi Drive, Business bay, Dubai, UAE.
           </p>
-          <h2 className="text-xl mb-2 font-semibold">Branch Offices</h2>
+          <h2 className="text-sm mb-2 font-semibold">Branch Office:</h2>
+          <p className="mb-4">1002, Tower A, Prime business center, JVC </p>
+
+          <h2 className="text-xl mb-2 font-semibold">India Office's</h2>
+          <h2 className="text-sm mb-2 font-semibold">Head Office:</h2>
           <p>KPD Developers,</p>
           <p className="mb-4">
             Plot # 2, Sanjay Nagar, Gulabi Bagh, Delhi 110007, India
           </p>
+          <h2 className="text-sm mb-2 font-semibold">Branch Office:</h2>
           <p>KPD Developers,</p>
           <p className="mb-4">
             CASA LOTUS House # 4/213 A, Porba Vaddo, Calangute 403516, Goa
           </p>
+          <h2 className="text-sm mb-2 font-semibold">Branch Office:</h2>
           <p>KPD Developers,</p>
           <p className="mb-4">
             26 Jacranda Marg DLF Phase - , Gurugram, Haryana
@@ -76,11 +83,11 @@ export default function Contact() {
           </p>
 
           {/* Contact Buttons */}
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-col gap-4">
             <button className="border rounded-md px-4 py-2 text-sm hover:bg-gray-100">
               UAE FREE PHONE: +97147702260
             </button>
-            <button className="bg-black text-white px-4 py-2 rounded-md text-sm">
+            <button className="border rounded-md px-4 py-2 text-sm hover:bg-gray-100">
               TEL: (+971) 4770 2 260
             </button>
 
@@ -96,7 +103,7 @@ export default function Contact() {
 
             <a
               href="mailto:info@riverfront.ae"
-              className="bg-black text-white p-4 rounded-md flex items-center gap-4 flex-1 min-w-[220px] hover:bg-gray-800 transition"
+              className="border  px-4 py-2 text-sm hover:bg-gray-100 p-4 rounded-md flex items-center gap-4 flex-1 min-w-[220px] transition"
             >
               <Mail className="w-6 h-6" />
               <span className="text-sm">info@riverfront.ae</span>

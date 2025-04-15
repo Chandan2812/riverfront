@@ -29,12 +29,19 @@ const ForRent: React.FC = () => {
         property.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         property.location.toLowerCase().includes(searchTerm.toLowerCase());
 
-      const matchesBedrooms = bedrooms ? property.bedrooms == Number(bedrooms) : true;
-      const matchesBathrooms = bathrooms ? property.bathrooms == Number(bathrooms) : true;
+      const matchesBedrooms = bedrooms
+        ? property.bedrooms == Number(bedrooms)
+        : true;
+      const matchesBathrooms = bathrooms
+        ? property.bathrooms == Number(bathrooms)
+        : true;
       const matchesPrice =
-        property.priceAED >= priceRange[0] && property.priceAED <= priceRange[1];
+        property.priceAED >= priceRange[0] &&
+        property.priceAED <= priceRange[1];
 
-      return matchesSearch && matchesBedrooms && matchesBathrooms && matchesPrice;
+      return (
+        matchesSearch && matchesBedrooms && matchesBathrooms && matchesPrice
+      );
     });
   }, [searchTerm, bedrooms, bathrooms, priceRange]);
 
@@ -159,22 +166,26 @@ const ForRent: React.FC = () => {
       </div>
 
       <div className="bg-gray-100 py-10 mt-10">
-  <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6">
-    {/* Text */}
-    <div className="text-center md:text-left">
-      <h2 className="text-2xl font-semibold text-gray-800 mb-2">Have a question?</h2>
-      <p className="text-gray-600">Our team is happy to assist you</p>
-    </div>
+        <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6">
+          {/* Text */}
+          <div className="text-center md:text-left">
+            <h2 className="text-2xl font-semibold text-gray-800 mb-2">
+              Have a question?
+            </h2>
+            <p className="text-gray-600">Our team is happy to assist you</p>
+          </div>
 
-    {/* Contact Actions */}
-    <div className="flex flex-col sm:flex-row items-center gap-4">
-      <button onClick={()=>navigate("/contact")} className="bg-[var(--primary-color)] hover:opacity-70 text-white px-6 py-2 rounded-md transition">
-        Contact Us
-      </button>
-      <span className="text-lg font-medium text-gray-800">📞 +1 (800) 123-4567</span>
-    </div>
-  </div>
-</div>
+          {/* Contact Actions */}
+          <div className="flex flex-col sm:flex-row items-center gap-4">
+            <button className="bg-[var(--primary-color)] hover:opacity-70 text-white px-6 py-2 rounded-md transition">
+              <a href="/contact">Contact Us</a>
+            </button>
+            <span className="text-lg font-medium text-gray-800">
+              📞 +1 (800) 123-4567
+            </span>
+          </div>
+        </div>
+      </div>
 
       <Footer />
     </div>

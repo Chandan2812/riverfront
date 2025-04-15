@@ -1,12 +1,11 @@
 import { useState, useEffect, useRef } from "react";
-import { FaLinkedinIn } from "react-icons/fa";
 import AwardsSection from "../components/awards";
 import Footer from "../components/footer";
 import Navbar from "../components/nav";
-import one from "../assets/aboutus/3.jpg"
-import two from "../assets/aboutus/4.jpg"
-import three from "../assets/aboutus/5.jpg"
-import four from "../assets/aboutus/7.jpg"
+import one from "../assets/aboutus/3.jpg";
+import two from "../assets/aboutus/4.jpg";
+import three from "../assets/aboutus/5.jpg";
+import four from "../assets/aboutus/7.jpg";
 
 export const AboutUs = () => {
   const [expanded, setExpanded] = useState(false);
@@ -32,26 +31,26 @@ export const AboutUs = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const teamMembers = [
-    {
-      name: "John Doe",
-      designation: "CEO",
-      image:
-        "https://uniqueproperties.ae/en/uploads/frontend/agents/613529/sumeet-raina.jpg",
-    },
-    {
-      name: "Jane Smith",
-      designation: "CTO",
-      image:
-        "https://uniqueproperties.ae/en/uploads/frontend/agents/613530/johnny-hammond.jpg",
-    },
-    {
-      name: "Mike Johnson",
-      designation: "COO",
-      image:
-        "https://uniqueproperties.ae/en/uploads/frontend/agents/613531/roma-jivani.jpg",
-    },
-  ];
+  // const teamMembers = [
+  //   {
+  //     name: "John Doe",
+  //     designation: "CEO",
+  //     image:
+  //       "https://uniqueproperties.ae/en/uploads/frontend/agents/613529/sumeet-raina.jpg",
+  //   },
+  //   {
+  //     name: "Jane Smith",
+  //     designation: "CTO",
+  //     image:
+  //       "https://uniqueproperties.ae/en/uploads/frontend/agents/613530/johnny-hammond.jpg",
+  //   },
+  //   {
+  //     name: "Mike Johnson",
+  //     designation: "COO",
+  //     image:
+  //       "https://uniqueproperties.ae/en/uploads/frontend/agents/613531/roma-jivani.jpg",
+  //   },
+  // ];
 
   return (
     <div>
@@ -63,7 +62,8 @@ export const AboutUs = () => {
         {/* Left Section - Text Content */}
         <div className="md:w-1/2">
           <h2 className="text-3xl text-[var(--primary-color)] mb-4">
-            Dubai’s Trusted Real Estate Partner for 25+ Years
+            Dubai’s Trusted Real Estate Partner for <br />
+            25+ Years
           </h2>
           <p className="text-gray-700 leading-relaxed">
             At Riverfront, we bring 25 years of expertise to Dubai’s dynamic
@@ -105,26 +105,10 @@ export const AboutUs = () => {
           <div className="flex flex-col gap-4">
             {[...Array(2)].map((_, index) => (
               <div key={index} className="flex flex-col gap-4">
-                <img
-                  src={one}
-                  alt="Office 1"
-                  className="w-full rounded-lg"
-                />
-                <img
-                  src={two}
-                  alt="Office 2"
-                  className="w-full rounded-lg"
-                />
-                <img
-                  src={three}
-                  alt="Office 3"
-                  className="w-full rounded-lg"
-                />
-                <img
-                  src={four}
-                  alt="Office 4"
-                  className="w-full rounded-lg"
-                />
+                <img src={one} alt="Office 1" className="w-full rounded-lg" />
+                <img src={two} alt="Office 2" className="w-full rounded-lg" />
+                <img src={three} alt="Office 3" className="w-full rounded-lg" />
+                <img src={four} alt="Office 4" className="w-full rounded-lg" />
               </div>
             ))}
           </div>
@@ -222,69 +206,6 @@ export const AboutUs = () => {
         </div>
       </div>
 
-      <section className="py-12 text-center">
-        <h2 className="text-3xl font-bold text-gray-800 mb-6">Our Team</h2>
-        <p className="text-gray-600 max-w-2xl mx-auto mb-8">
-          Our team comprises dedicated professionals who bring diverse
-          perspectives, exceptional expertise, and an unwavering drive to every
-          project.
-        </p>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-4 md:px-0 md:w-4/5 w-full mx-auto">
-          {teamMembers.map((member, index) => (
-            <div
-              key={index}
-              className="relative group overflow-hidden rounded-lg shadow-lg"
-            >
-              {/* Team Member Image */}
-              <img
-                src={member.image}
-                alt={member.name || "Team Member"}
-                className="w-full h-auto max-h-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
-                loading="lazy"
-              />
-
-              {/* Desktop Hover Effect */}
-              <div className="absolute bottom-0 left-0 w-full bg-white p-3 text-black text-center transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 hidden md:block">
-                <div className="flex items-center justify-between">
-                  <div className="text-left">
-                    <h3 className="text-lg font-bold">{member.name}</h3>
-                    <p className="text-sm">{member.designation}</p>
-                  </div>
-                  <a
-                    href="#"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-white bg-[var(--primary-color)] p-1 rounded-sm"
-                  >
-                    <FaLinkedinIn className="cursor-pointer" />{" "}
-                    {/* You can replace this with a LinkedIn icon */}
-                  </a>
-                </div>
-              </div>
-
-              {/* Mobile View - Always Visible */}
-              <div className="flex items-center justify-between bg-gray-100 p-3 md:hidden">
-                <div className="text-left">
-                  <h3 className="text-lg font-bold text-gray-800">
-                    {member.name}
-                  </h3>
-                  <p className="text-sm text-gray-600">{member.designation}</p>
-                </div>
-                <a
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white bg-[var(--primary-color)] p-1 rounded-sm"
-                >
-                  <FaLinkedinIn className="cursor-pointer" />
-                </a>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
       <AwardsSection />
 
       <section className="py-12 bg-gray-100 flex justify-center">
@@ -299,25 +220,45 @@ export const AboutUs = () => {
               </h2>
 
               {/* Head Office */}
-              <h3 className="text-lg text-gray-700 border-b border-gray-300 mb-2 font-semibold">
-                Head Office
-              </h3>
-              <p className="text-gray-600 mb-4">
+              <h2 className="text-xl mb-2 font-semibold text-gray-700">
+                Dubai Office's
+              </h2>
+              <h2 className="text-sm mb-2 font-semibold text-gray-700">
+                Head Office:
+              </h2>
+              <p className="mb-4 text-gray-700">
                 1703, Damac XL tower, Marasi Drive, Business bay, Dubai, UAE.
               </p>
-              <h3 className="text-lg text-gray-700 border-b border-gray-300 mb-2 font-semibold">
-                Branch Offices
-              </h3>
-              <p className="text-gray-600 mb-4">
-                KPD Developers, Plot # 2, Sanjay Nagar, Gulabi Bagh, Delhi
-                110007, India
+              <h2 className="text-sm mb-2 font-semibold text-gray-700">
+                Branch Office:
+              </h2>
+              <p className="mb-4 text-gray-700">
+                1002, Tower A, Prime business center, JVC{" "}
               </p>
-              <p className="text-gray-600 mb-4">
-                KPD Developers, CASA LOTUS House # 4/213 A, Porba Vaddo,
-                Calangute 403516, Goa
+
+              <h2 className="text-xl mb-2 font-semibold text-gray-700">
+                India Office's
+              </h2>
+              <h2 className="text-sm mb-2 font-semibold text-gray-700">
+                Head Office:
+              </h2>
+              <p className="text-gray-700">KPD Developers,</p>
+              <p className="mb-4 text-gray-700">
+                Plot # 2, Sanjay Nagar, Gulabi Bagh, Delhi 110007, India
               </p>
-              <p className="text-gray-600 mb-4">
-                KPD Developers, 26 Jacranda Marg DLF Phase - , Gurugram, Haryana
+              <h2 className="text-sm mb-2 font-semibold text-gray-700">
+                Branch Office:
+              </h2>
+              <p className="text-gray-700">KPD Developers,</p>
+              <p className="mb-4 text-gray-700">
+                CASA LOTUS House # 4/213 A, Porba Vaddo, Calangute 403516, Goa
+              </p>
+              <h2 className="text-sm mb-2 font-semibold text-gray-700">
+                Branch Office:
+              </h2>
+              <p className="text-gray-700">KPD Developers,</p>
+              <p className="mb-4 text-gray-700">
+                26 Jacranda Marg DLF Phase - , Gurugram, Haryana
               </p>
 
               {/* Operating Hours */}

@@ -1,13 +1,14 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import propertyData from "../data/offPlanData.json";
 import Navbar from "../components/nav";
 import Footer from "../components/footer";
 
 function OffPlanDetails() {
-  const navigate = useNavigate();
   const { projectName } = useParams();
   const decodedTitle = projectName?.replace(":", "").replace(/%20/g, " ");
-  const property = propertyData.find((item) => item.projectName === decodedTitle);
+  const property = propertyData.find(
+    (item) => item.projectName === decodedTitle
+  );
 
   if (!property) {
     return <div className="p-10 text-center text-xl">Property not found</div>;
@@ -27,21 +28,21 @@ function OffPlanDetails() {
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
-          <h1 className="text-white text-3xl font-bold">{property.projectName}</h1>
+          <h1 className="text-white text-3xl font-bold">
+            {property.projectName}
+          </h1>
         </div>
       </div>
 
       {/* Project Details Section */}
       <div className="max-w-6xl mx-auto px-4 py-10">
-        
-
         {/* Description + Price + Image */}
         <div className="flex flex-col md:flex-row items-start gap-6">
           <div className="flex-1 space-y-4">
-          <h2 className="text-2xl font-bold mb-2">
-          Project Details - {property.projectName}
-        </h2>
-        <hr className="border-t-2 border-black w-32 mb-6" />
+            <h2 className="text-2xl font-bold mb-2">
+              Project Details - {property.projectName}
+            </h2>
+            <hr className="border-t-2 border-black w-32 mb-6" />
             <p className="text-lg text-gray-700">{property.description}</p>
             <p className="text-xl font-semibold text-black">
               Price: {property.price}
@@ -58,7 +59,7 @@ function OffPlanDetails() {
 
         {/* About Developer */}
         <div className="mt-16 flex flex-col md:flex-row items-start gap-10">
-        <div className="w-full md:w-1/3">
+          <div className="w-full md:w-1/3">
             <img
               src={property.images.developerLogo}
               alt="Developer Logo"
@@ -71,27 +72,30 @@ function OffPlanDetails() {
             <hr className="border-gray-400 w-24 mb-4" />
             <p className="text-gray-700">{property.aboutDeveloper}</p>
           </div>
-         
         </div>
       </div>
 
       <div className="bg-gray-100 py-10 mt-10">
-  <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6">
-    {/* Text */}
-    <div className="text-center md:text-left">
-      <h2 className="text-2xl font-semibold text-gray-800 mb-2">Have a question?</h2>
-      <p className="text-gray-600">Our team is happy to assist you</p>
-    </div>
+        <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6">
+          {/* Text */}
+          <div className="text-center md:text-left">
+            <h2 className="text-2xl font-semibold text-gray-800 mb-2">
+              Have a question?
+            </h2>
+            <p className="text-gray-600">Our team is happy to assist you</p>
+          </div>
 
-    {/* Contact Actions */}
-    <div className="flex flex-col sm:flex-row items-center gap-4">
-      <button onClick={()=>navigate("/contact")} className="bg-[var(--primary-color)] hover:opacity-70 text-white px-6 py-2 rounded-md transition">
-        Contact Us
-      </button>
-      <span className="text-lg font-medium text-gray-800">📞 +1 (800) 123-4567</span>
-    </div>
-  </div>
-</div>
+          {/* Contact Actions */}
+          <div className="flex flex-col sm:flex-row items-center gap-4">
+            <button className="bg-[var(--primary-color)] hover:opacity-70 text-white px-6 py-2 rounded-md transition">
+              <a href="/contact">Contact Us</a>
+            </button>
+            <span className="text-lg font-medium text-gray-800">
+              📞 +1 (800) 123-4567
+            </span>
+          </div>
+        </div>
+      </div>
 
       <Footer />
     </div>

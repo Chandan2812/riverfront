@@ -1,4 +1,4 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Navbar from "../components/nav";
 import forsaleImage from "../assets/image.png";
 import rentData from "../data/rentsData.json";
@@ -6,7 +6,6 @@ import { FaBed, FaBath, FaThLarge, FaRulerCombined } from "react-icons/fa";
 import Footer from "../components/footer";
 
 function ForRentDetails() {
-  const navigate = useNavigate();
   const { title } = useParams();
   const decodedTitle = title?.replace(":", "").replace(/%20/g, " ");
   const property = rentData.find((item) => item.title === decodedTitle);
@@ -137,11 +136,8 @@ function ForRentDetails() {
 
           {/* Contact Actions */}
           <div className="flex flex-col sm:flex-row items-center gap-4">
-            <button
-              onClick={() => navigate("/contact")}
-              className="bg-[var(--primary-color)] hover:opacity-70 text-white px-6 py-2 rounded-md transition"
-            >
-              Contact Us
+            <button className="bg-[var(--primary-color)] hover:opacity-70 text-white px-6 py-2 rounded-md transition">
+              <a href="/contact">Contact Us</a>
             </button>
             <span className="text-lg font-medium text-gray-800">
               📞 +1 (800) 123-4567
