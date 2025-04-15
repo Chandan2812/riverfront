@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaFacebookF, FaInstagram } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 import { MdExpandMore, MdExpandLess } from "react-icons/md";
 import logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
@@ -98,6 +98,9 @@ const Footer = () => {
               rel="noopener noreferrer"
             >
               <FaInstagram className="cursor-pointer" />
+            </a>
+            <a href="" target="_blank" rel="noopener noreferrer">
+              <FaYoutube className="cursor-pointer" />
             </a>
           </div>
 
