@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo-riverfront.png";
 import { X } from "lucide-react";
 import { useLocation, useNavigate } from "react-router-dom";
 import FindPropertyModal from "./FindPropertyModal";

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 import { MdExpandMore, MdExpandLess } from "react-icons/md";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo-riverfront.png";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
