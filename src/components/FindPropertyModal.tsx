@@ -60,18 +60,37 @@ const FindPropertyModal: React.FC<Props> = ({ isOpen, onClose }) => {
     handleClose();
   };
 
+  // All imports and component setup remain the same...
   const showBudget = () => {
     if (selectedPurpose === "Buy Property") {
       if (selectedPropertyType === "Apartments") {
-        if (selectedBHK === "Studio")
-          return ["50K - 100K", "100K - 150K", "150K - 250K", "250K and above"];
-        else if (selectedBHK)
+        if (selectedBHK === "Studio") {
+          return ["300K - 500K", "500K - 1 Million", "1 Million and above"];
+        } else {
           return ["1 - 3 Million", "3 - 6 Million", "6 Million and above"];
-      } else if (["Villas", "Penthouse"].includes(selectedPropertyType || "")) {
+        }
+      } else if (selectedPropertyType === "Villas") {
+        return ["2 - 4 Million", "4 - 7 Million", "7 Million and above"];
+      } else if (selectedPropertyType === "Penthouse") {
         return ["1 - 3 Million", "3 - 6 Million", "6 Million and above"];
       }
     } else if (selectedPurpose === "Rent Property") {
-      return ["5K - 10K", "10K - 20K", "20K - 40K", "40K and above"];
+      if (selectedPropertyType === "Apartments") {
+        if (selectedBHK === "Studio") {
+          return ["30K - 50K", "50K - 100K", "100K and above"];
+        } else if (selectedBHK === "1 BHK") {
+          return ["50K - 100K", "100K - 150K", "150K and above"];
+        } else if (
+          ["2 BHK", "3 BHK", "4BHK", "More"].includes(selectedBHK || "")
+        ) {
+          return ["70K - 150K", "150K - 250K", "250K - 500K", "500K and above"];
+        }
+      } else if (
+        selectedPropertyType === "Villas" ||
+        selectedPropertyType === "Penthouse"
+      ) {
+        return ["150K - 250K", "250K - 500K", "500K and above"];
+      }
     }
     return [];
   };
@@ -237,7 +256,7 @@ const FindPropertyModal: React.FC<Props> = ({ isOpen, onClose }) => {
               When are you planning?
             </h2>
             <div className="flex justify-center gap-4 flex-wrap">
-              {["Immediately", "One month", "Above a month"].map((t) => (
+              {["Immediately", "One month", "One month & Above"].map((t) => (
                 <button
                   key={t}
                   onClick={() => {
