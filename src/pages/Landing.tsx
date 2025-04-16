@@ -32,14 +32,14 @@ export const Landing = () => {
         <div className="fixed bottom-0 left-0 w-full z-50 flex md:hidden">
           <a
             href="tel:+97147702260"
-            className="w-1/2 bg-[#D10B0B] text-white text-center py-4 font-semibold hover:bg-red-700 transition-all flex items-center justify-center gap-2"
+            className="w-1/2 bg-[var(--secondary-color)] text-[var(--primary-color)] text-center py-4 font-semibold transition-all flex items-center justify-center gap-2"
           >
             <Phone size={20} />
             Call Me
           </a>
           <a
             href="https://wa.me/+971509863828"
-            className="w-1/2 bg-[#1752B4] text-white text-center py-4 font-semibold hover:bg-blue-700 transition-all flex items-center justify-center gap-2"
+            className="w-1/2 bg-[#2b2b2b] text-[var(--primary-color)] text-center py-4 font-semibold transition-all flex items-center justify-center gap-2"
           >
             <MessageCircle size={20} />
             Contact Me

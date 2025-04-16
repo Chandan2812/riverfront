@@ -3,7 +3,7 @@ import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 import { MdExpandMore, MdExpandLess } from "react-icons/md";
 import logo from "../assets/logo-riverfront.png";
 import { Link } from "react-router-dom";
-import bigwigLogo from "../assets/bigiwgLogo.png";
+import bigwigLogo from "../assets/Bigwig_White.png";
 import skyline from "../assets/skyline_footer.svg";
 
 const Footer = () => {
@@ -77,9 +77,9 @@ const Footer = () => {
   ];
 
   return (
-    <div className="relative">
+    <div className="relative mb-14 md:mb-0">
       <img src={skyline} alt="" className="-mb-1" />
-      <footer className="bg-[#2b2b2b] text-white py-3 px-6">
+      <footer className="bg-[#2b2b2b] text-white py-3  px-6">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo and Social Icons */}
           <div className="text-center md:text-left ">
@@ -334,6 +334,10 @@ const Footer = () => {
               className="mx-auto w-44 "
             />
           </a>{" "}
+          <p className="mx-auto">
+            {" "}
+            <i>Designed and marketed by Bigwig Digital</i>{" "}
+          </p>
         </div>
 
         <div className="md:hidden block text-center text-sm px-12 mt-4">
@@ -357,6 +361,10 @@ const Footer = () => {
               className="mx-auto w-36 "
             />
           </a>
+          <p className="mx-auto">
+            {" "}
+            <i>Designed and marketed by Bigwig Digital</i>{" "}
+          </p>
         </div>
       </footer>
     </div>
