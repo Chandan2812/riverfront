@@ -3,6 +3,7 @@ import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 import { MdExpandMore, MdExpandLess } from "react-icons/md";
 import logo from "../assets/logo-riverfront.png";
 import { Link } from "react-router-dom";
+import bigwigLogo from "../assets/bigiwgLogo.png";
 
 const Footer = () => {
   const [openSection, setOpenSection] = useState<string | null>(null);
@@ -75,7 +76,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-[var(--secondary-color)] text-white py-10 px-6">
+    <footer className="bg-[var(--secondary-color)] text-white py-3 px-6">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Logo and Social Icons */}
         <div className="text-center md:text-left ">
@@ -313,7 +314,18 @@ const Footer = () => {
           RIVERFront Real Estate Broker is a company registered in Dubai. We are
           regulated by the Real Estate Regulatory Agency.
         </p>
-        <p className="italic mt-2">Designed and marketed by Bigwig Digital</p>
+        <a
+          href="https://bigwigmedia.in"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block mt-2"
+        >
+          <img
+            src={bigwigLogo}
+            alt="Designed and marketed by Bigwig Digital"
+            className="mx-auto w-44 "
+          />
+        </a>{" "}
       </div>
 
       <div className="md:hidden block text-center text-sm px-12 mt-4">
@@ -326,10 +338,16 @@ const Footer = () => {
         </a>
         <p className="text-sm mt-2">Copyright © RIVERFront</p>
         <a
-          href="https://bigwig-digital-one.vercel.app/"
-          className="italic mt-3 cursor-pointer"
+          href="https://bigwigmedia.in"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block mt-2"
         >
-          Designed and marketed by Bigwig Digital
+          <img
+            src={bigwigLogo}
+            alt="Designed and marketed by Bigwig Digital"
+            className="mx-auto w-36 "
+          />
         </a>
       </div>
     </footer>

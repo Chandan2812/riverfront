@@ -166,49 +166,49 @@ const Navbar: React.FC<NavbarProps> = ({ transparent = false }) => {
               <a
                 href="/"
                 onClick={() => setMenuOpen(false)}
-                className="font-hanken flex items-center gap-2 hover:text-[var(--primary-color)]"
+                className="font-hanken flex items-center gap-2 hover:text-gray-200"
               >
                 <Home size={20} /> Home
               </a>
               <a
                 href="/forsale"
                 onClick={() => setMenuOpen(false)}
-                className="font-hanken flex items-center gap-2 hover:text-[var(--primary-color)]"
+                className="font-hanken flex items-center gap-2 hover:text-gray-200"
               >
                 <Building2 size={20} /> For Sale
               </a>
               <a
                 href="/forrent"
                 onClick={() => setMenuOpen(false)}
-                className="font-hanken flex items-center gap-2 hover:text-[var(--primary-color)]"
+                className="font-hanken flex items-center gap-2 hover:text-gray-200"
               >
                 <Building size={20} /> For Rent
               </a>
               <a
                 href="/OffplanPropertyCard"
                 onClick={() => setMenuOpen(false)}
-                className="font-hanken flex items-center gap-2 hover:text-[var(--primary-color)]"
+                className="font-hanken flex items-center gap-2 hover:text-gray-200"
               >
                 <Landmark size={20} /> Off-Plan
               </a>
               <a
                 href="/ServicesSection"
                 onClick={() => setMenuOpen(false)}
-                className="font-hanken flex items-center gap-2 hover:text-[var(--primary-color)]"
+                className="font-hanken flex items-center gap-2 hover:text-gray-200"
               >
                 <Wrench size={20} /> Services
               </a>
               <a
                 href="/viewblogs"
                 onClick={() => setMenuOpen(false)}
-                className="font-hanken flex items-center gap-2 hover:text-[var(--primary-color)]"
+                className="font-hanken flex items-center gap-2 hover:text-gray-200"
               >
                 <Newspaper size={20} /> Blog's
               </a>
               <a
                 href="/contact"
                 onClick={() => setMenuOpen(false)}
-                className="font-hanken flex items-center gap-2 hover:text-[var(--primary-color)]"
+                className="font-hanken flex items-center gap-2 hover:text-gray-200"
               >
                 <Phone size={20} /> Contact Us
               </a>
@@ -217,14 +217,14 @@ const Navbar: React.FC<NavbarProps> = ({ transparent = false }) => {
                   setIsBookMeetingOpen(true);
                   setMenuOpen(false);
                 }}
-                className="font-hanken flex items-center gap-2 text-left hover:text-[var(--primary-color)]"
+                className="font-hanken flex items-center gap-2 text-left hover:text-gray-200"
               >
                 <Calendar size={20} /> Book a Meeting
               </button>
               <a
                 href="/about"
                 onClick={() => setMenuOpen(false)}
-                className="font-hanken flex items-center gap-2 hover:text-[var(--primary-color)]"
+                className="font-hanken flex items-center gap-2 hover:text-gray-200"
               >
                 <Info size={20} /> About Us
               </a>
@@ -233,7 +233,7 @@ const Navbar: React.FC<NavbarProps> = ({ transparent = false }) => {
                   setIsFindPropertyOpen(true);
                   setMenuOpen(false);
                 }}
-                className="font-hanken flex items-center gap-2 text-left hover:text-[var(--primary-color)]"
+                className="font-hanken flex items-center gap-2 text-left hover:text-gray-200"
               >
                 <Search size={20} /> Find a Property
               </button>
