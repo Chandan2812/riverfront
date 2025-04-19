@@ -9,8 +9,8 @@ export default function PropertySlider() {
       <h2 className="text-2xl md:text-4xl text-gray-800 mb-6 text-center">
         <i>Off-Plan Properties</i>
       </h2>
-      <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-3">
-        {propertiesData.slice(0, 4).map((property) => (
+      <div className=" grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-3">
+        {propertiesData.slice(0, 8).map((property) => (
           <div
             key={property.projectName}
             className="relative w-full h-[250px] sm:h-[300px] md:h-[250px] lg:h-[200px] overflow-hidden rounded-lg shadow-md"
