@@ -6,7 +6,6 @@ import propertyData from "../data/offPlanData.json";
 import Navbar from "../components/nav";
 import Footer from "../components/footer";
 import { useNavigate } from "react-router-dom";
-import HeroImageSlider from "../components/ImageSlider";
 
 const OffplanPropertyCard: React.FC = () => {
   const navigate = useNavigate();
@@ -48,12 +47,11 @@ const OffplanPropertyCard: React.FC = () => {
   }, [searchTerm, developerFilter, maxPrice]);
 
   return (
-    <div>
-      <div className="mb-16 md:mb-24">
+    <div className="bg-black">
+      <div className="mb-16 md:mb-32 pt-5">
         <Navbar />
       </div>
-      <HeroImageSlider />
-      <h1 className="w-[90%] mx-auto text-2xl md:text-4xl text-center mb-5 md:mb-8">
+      <h1 className="w-[90%] mx-auto text-2xl md:text-4xl text-center mb-5 md:mb-8 text-white">
         Off-Plan Properties in Dubai: Your Guide to Future Real Estate
         Investments
       </h1>
@@ -105,7 +103,7 @@ const OffplanPropertyCard: React.FC = () => {
             <div
               key={index}
               onClick={() => handleCardClick(property.projectName)}
-              className="bg-white rounded-2xl border shadow-md w-full overflow-hidden flex flex-col cursor-pointer"
+              className="bg-black border border-gray-800  shadow-gray-700 rounded-2xl  shadow-md w-full overflow-hidden flex flex-col cursor-pointer"
             >
               <div className="h-52 w-full overflow-hidden">
                 <img
@@ -116,24 +114,24 @@ const OffplanPropertyCard: React.FC = () => {
               </div>
 
               <div className="p-4 flex flex-col flex-grow">
-                <h2 className="text-md font-semibold text-gray-900 mb-2">
+                <h2 className="text-md font-semibold text-white mb-2">
                   {property.projectName}
                 </h2>
                 <hr className="border-black w-20 mb-3" />
 
-                <div className="flex items-center justify-between text-sm text-gray-600 mb-3">
+                <div className="flex items-center justify-between text-sm text-gray-300 mb-3">
                   <div className="flex items-center gap-1">
-                    <GiHouse className="text-xl text-gray-500" />
+                    <GiHouse className="text-xl text-gray-300" />
                     <span>{property.developer}</span>
                   </div>
                   <div className="flex items-center gap-1 text-right">
-                    <HiOutlineLocationMarker className="text-xl text-gray-500" />
+                    <HiOutlineLocationMarker className="text-xl text-gray-300" />
                     <span>{property.location}</span>
                   </div>
                 </div>
 
                 <div className="flex items-center justify-between mt-auto">
-                  <span className="text-md font-bold text-black">
+                  <span className="text-md font-bold text-gray-300">
                     {property.price}
                   </span>
                   {whatsappNumber ? (
@@ -157,14 +155,14 @@ const OffplanPropertyCard: React.FC = () => {
         })}
       </div>
 
-      <div className="bg-gray-100 py-10 mt-10">
+      <div className="bg-black py-10 mt-10">
         <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Text */}
           <div className="text-center md:text-left">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-2">
+            <h2 className="text-2xl font-semibold text-white mb-2">
               Have a question?
             </h2>
-            <p className="text-gray-600">Our team is happy to assist you</p>
+            <p className="text-gray-300">Our team is happy to assist you</p>
           </div>
 
           {/* Contact Actions */}
@@ -172,7 +170,7 @@ const OffplanPropertyCard: React.FC = () => {
             <button className="bg-[var(--primary-color)] hover:opacity-70 text-white px-6 py-2 rounded-md transition">
               <a href="/contact">Contact Us</a>
             </button>
-            <span className="text-lg font-medium text-gray-800">
+            <span className="text-lg font-medium text-gray-300">
               📞 +1 (800) 123-4567
             </span>
           </div>

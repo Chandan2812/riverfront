@@ -53,8 +53,8 @@ export const AboutUs = () => {
   // ];
 
   return (
-    <div>
-      <div className="mb-32">
+    <div className="bg-black">
+      <div className="mb-32 md:mb-32 pt-3 md:pt-10">
         <Navbar />
       </div>
 
@@ -65,14 +65,14 @@ export const AboutUs = () => {
             Dubai’s Trusted Real Estate Partner for <br />
             25+ Years
           </h2>
-          <p className="text-gray-700 leading-relaxed">
+          <p className="text-gray-300 leading-relaxed">
             At Riverfront, we bring 25 years of expertise to Dubai’s dynamic
             real estate market. From luxury homes to investment properties, our
             seasoned team offers personalized guidance and unmatched local
             insight.
           </p>
           <br />
-          <p className="text-gray-700 leading-relaxed">
+          <p className="text-gray-300 leading-relaxed">
             We believe in more than just transactions — we craft seamless,
             stress-free experiences tailored to your goals. Whether you're
             buying, selling, or investing, Riverfront is here to help you make
@@ -80,7 +80,7 @@ export const AboutUs = () => {
           </p>
 
           {expanded && (
-            <p className="text-gray-700 leading-relaxed mt-4">
+            <p className="text-gray-300 leading-relaxed mt-4">
               Our success lies in listening, understanding, and delivering
               beyond expectations. Backed by innovation and a deep market
               understanding, we’re proud to be one of Dubai’s leading real
@@ -131,20 +131,20 @@ export const AboutUs = () => {
           <h2 className="text-3xl text-[var(--primary-color)] mb-4">
             Message from our CEO,
           </h2>
-          <p className="text-gray-700 leading-relaxed">
+          <p className="text-gray-300 leading-relaxed">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae
             suscipit impedit aliquid pariatur assumenda doloribus? Illo,
             assumenda voluptate? Maiores, necessitatibus?{" "}
           </p>
           <br />
-          <p className="text-gray-700 leading-relaxed">
+          <p className="text-gray-300 leading-relaxed">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
             dolorem delectus ratione qui nostrum debitis aperiam et ea magnam
             atque obcaecati nulla, maiores iure necessitatibus voluptates
             ducimus. Alias?{" "}
           </p>
           <br />
-          <p className="text-gray-700 leading-relaxed">
+          <p className="text-gray-300 leading-relaxed">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
             nobis iusto animi consequuntur eum optio doloribus quasi hic ea
             maxime unde vitae assumenda, a, cumque esse saepe similique. Harum,
@@ -153,13 +153,13 @@ export const AboutUs = () => {
             dolores possimus.{" "}
           </p>
           <br />
-          <p className="text-gray-700 leading-relaxed">
+          <p className="text-gray-300 leading-relaxed">
             Our aim is to be Dubai’s most trusted real estate partner, as we
             grow and introduce new divisions. We are committed to assisting both
             new and existing clients with their property needs in the future.
           </p>
           <br />
-          <p className="text-gray-700 leading-relaxed font-semibold">
+          <p className="text-gray-300 leading-relaxed font-semibold">
             It’s all about U.
           </p>
         </div>
@@ -172,7 +172,7 @@ export const AboutUs = () => {
           <h2 className="text-3xl text-[var(--primary-color)] mb-4">
             Message from the Partner,
           </h2>
-          <p className="text-gray-700 leading-relaxed">
+          <p className="text-gray-300 leading-relaxed">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
             obcaecati iusto odit. Itaque distinctio quam amet adipisci quos
             beatae laudantium ex maxime illo nesciunt! Consectetur deleniti
@@ -180,14 +180,14 @@ export const AboutUs = () => {
             quaerat, iusto recusandae delectus quia inventore.{" "}
           </p>
           <br />
-          <p className="text-gray-700 leading-relaxed">
+          <p className="text-gray-300 leading-relaxed">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
             reiciendis, dicta corrupti totam reprehenderit id aperiam quae
             corporis voluptatem repellendus, harum, minima soluta! Autem a
             nobis, fugiat reprehenderit repudiandae iure.{" "}
           </p>
           <br />
-          <p className="text-gray-700 leading-relaxed">
+          <p className="text-gray-300 leading-relaxed">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus
             ab officia optio veritatis facilis culpa labore tempora magni dolor
             natus praesentium quae, excepturi porro voluptate maxime qui illo
@@ -208,7 +208,7 @@ export const AboutUs = () => {
 
       <AwardsSection />
 
-      <section className="py-12 bg-gray-100 flex justify-center">
+      <section className="py-12 bg-black flex justify-center">
         <div className="w-4/5">
           {" "}
           {/* Whole Section is 75% of screen width */}
@@ -220,64 +220,64 @@ export const AboutUs = () => {
               </h2>
 
               {/* Head Office */}
-              <h2 className="text-xl mb-2 font-semibold text-gray-700">
+              <h2 className="text-xl mb-2 font-semibold text-gray-300">
                 Dubai Office's
               </h2>
-              <h2 className="text-sm mb-2 font-semibold text-gray-700">
+              <h2 className="text-sm mb-2 font-semibold text-gray-300">
                 Head Office:
               </h2>
-              <p className="mb-4 text-gray-700">
+              <p className="mb-4 text-gray-300">
                 1703, Damac XL tower, Marasi Drive, Business bay, Dubai, UAE.
               </p>
-              <h2 className="text-sm mb-2 font-semibold text-gray-700">
+              <h2 className="text-sm mb-2 font-semibold text-gray-300">
                 Branch Office:
               </h2>
-              <p className="mb-4 text-gray-700">
+              <p className="mb-4 text-gray-300">
                 1002, Tower A, Prime business center, JVC{" "}
               </p>
 
-              <h2 className="text-xl mb-2 font-semibold text-gray-700">
+              <h2 className="text-xl mb-2 font-semibold text-gray-300">
                 India Office's
               </h2>
-              <h2 className="text-sm mb-2 font-semibold text-gray-700">
+              <h2 className="text-sm mb-2 font-semibold text-gray-300">
                 Head Office:
               </h2>
-              <p className="text-gray-700">KPD Developers,</p>
-              <p className="mb-4 text-gray-700">
+              <p className="text-gray-300">KPD Developers,</p>
+              <p className="mb-4 text-gray-300">
                 Plot # 2, Sanjay Nagar, Gulabi Bagh, Delhi 110007, India
               </p>
-              <h2 className="text-sm mb-2 font-semibold text-gray-700">
+              <h2 className="text-sm mb-2 font-semibold text-gray-300">
                 Branch Office:
               </h2>
-              <p className="text-gray-700">KPD Developers,</p>
-              <p className="mb-4 text-gray-700">
+              <p className="text-gray-300">KPD Developers,</p>
+              <p className="mb-4 text-gray-300">
                 CASA LOTUS House # 4/213 A, Porba Vaddo, Calangute 403516, Goa
               </p>
-              <h2 className="text-sm mb-2 font-semibold text-gray-700">
+              <h2 className="text-sm mb-2 font-semibold text-gray-300">
                 Branch Office:
               </h2>
-              <p className="text-gray-700">KPD Developers,</p>
-              <p className="mb-4 text-gray-700">
+              <p className="text-gray-300">KPD Developers,</p>
+              <p className="mb-4 text-gray-300">
                 26 Jacranda Marg DLF Phase - , Gurugram, Haryana
               </p>
 
               {/* Operating Hours */}
-              <h3 className="text-lg text-gray-700 border-b border-gray-300 mb-2 font-semibold">
+              <h3 className="text-lg text-gray-300 border-b border-gray-300 mb-2 font-semibold">
                 Operating Hours
               </h3>
-              <p className="text-gray-600 mb-4">
+              <p className="text-gray-300 mb-4">
                 Monday to Friday: 9am - 6pm
                 <br />
                 Saturdays: 10am - 4pm
               </p>
 
               {/* Contact Details */}
-              <h3 className="text-lg text-gray-700 border-b border-gray-300 mb-2 font-semibold">
+              <h3 className="text-lg text-gray-300 border-b border-gray-300 mb-2 font-semibold">
                 Reach Us Now
               </h3>
-              <p className="text-gray-600 mb-2">UAE FREE PHONE: +97147702260</p>
-              <p className="text-gray-600 mb-2">TEL:(+971) 4770 2 260</p>
-              <p className="text-gray-600 mb-2">
+              <p className="text-gray-300 mb-2">UAE FREE PHONE: +97147702260</p>
+              <p className="text-gray-300 mb-2">TEL:(+971) 4770 2 260</p>
+              <p className="text-gray-300 mb-2">
                 EMAIL:{" "}
                 <a
                   href="mailto:info@uniqueproperties.ae"

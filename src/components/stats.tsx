@@ -91,18 +91,16 @@ const StatsSection: React.FC = () => {
   }, []);
 
   return (
-    <div ref={sectionRef} className="w-full md:py-10 bg-white dark:bg-gray-900">
+    <div ref={sectionRef} className="w-full md:py-10 bg-black">
       {/* Desktop View */}
       <div className="hidden md:flex max-w-6xl mx-auto px-4 justify-center text-center">
         {stats.map((stat, index) => (
           <div key={index} className="w-1/5 p-4 flex flex-col items-center">
-            <h2 className="text-3xl font-bold text-[var(--primary-color)] dark:text-white">
+            <h2 className="text-3xl font-bold text-[var(--primary-color)] ">
               {animatedValues[index]}
               {stat.suffix || "+"}
             </h2>
-            <p className="text-sm text-gray-600 dark:text-gray-400 uppercase mt-2">
-              {stat.label}
-            </p>
+            <p className="text-sm text-white uppercase mt-2">{stat.label}</p>
           </div>
         ))}
       </div>

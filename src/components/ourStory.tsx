@@ -1,11 +1,11 @@
 export default function OurStory() {
   return (
-    <div className="w-full bg-gray-100 py-16 px-6 md:px-16">
+    <div className="w-full bg-black py-16 px-6 md:px-16">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-2xl md:text-4xl text-gray-800 mb-6 text-center">
+        <h2 className="text-2xl md:text-4xl text-white mb-6 text-center">
           Our Story
         </h2>
-        <p className="mt-4 text-md text-gray-700 ">
+        <p className="mt-4 text-md text-white ">
           At Riverfront Properties, we're passionate about transforming the
           Dubai real estate landscape! In our quest to redefine excellence, we
           provide unparalleled services in the buying, selling, and renting of

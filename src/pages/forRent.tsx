@@ -7,7 +7,6 @@ import {
 } from "react-icons/fa";
 import rentData from "../data/rentsData.json";
 import Navbar from "../components/nav";
-import forRentImage from "../assets/forrent.jpg";
 import { useNavigate } from "react-router-dom";
 import Footer from "../components/footer";
 
@@ -46,23 +45,9 @@ const ForRent: React.FC = () => {
   }, [searchTerm, bedrooms, bathrooms, priceRange]);
 
   return (
-    <div>
-      <div className="mb-16 md:mb-24">
+    <div className="bg-black">
+      <div className="mb-16 md:mb-32 pt-5">
         <Navbar />
-      </div>
-
-      <div className="relative">
-        <div className="absolute inset-0 bg-black bg-opacity-50" />
-        <img
-          src={forRentImage}
-          alt=""
-          className="h-[300px] md:h-full w-full mb-8 object-cover"
-        />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-gray-400 text-3xl md:text-5xl drop-shadow-lg">
-            Properties for Rent
-          </h1>
-        </div>
       </div>
 
       {/* Filters */}
@@ -120,7 +105,7 @@ const ForRent: React.FC = () => {
         {filteredProperties.map((property, index) => (
           <div
             key={index}
-            className="bg-white rounded-xl shadow-md overflow-hidden cursor-pointer transition hover:scale-105"
+            className="bg-black border border-gray-800  shadow-gray-700 rounded-xl shadow-md overflow-hidden cursor-pointer transition hover:scale-105"
             onClick={() => handleCardClick(property)}
           >
             <img
@@ -129,20 +114,20 @@ const ForRent: React.FC = () => {
               className="w-full h-60 object-cover"
             />
             <div className="py-4 px-4 space-y-4">
-              <h2 className="text-lg">{property.title}</h2>
-              <div className="w-1/2 h-[1px] bg-black my-2" />
+              <h2 className="text-lg text-white">{property.title}</h2>
+              <div className="w-1/2 h-[1px] bg-white my-2" />
 
               <div className="flex justify-between text-sm text-gray-600 mb-2">
                 <span className="flex items-center gap-1">
-                  <FaBed className="text-gray-500" />
+                  <FaBed className="text-gray-300" />
                   BR {property.bedrooms}
                 </span>
                 <span className="flex items-center gap-1">
-                  <FaRulerCombined className="text-gray-500" />
+                  <FaRulerCombined className="text-gray-300" />
                   {property.areaSqft} SqFt
                 </span>
                 <span className="flex items-center gap-1">
-                  <FaMapMarkerAlt className="text-gray-500" />
+                  <FaMapMarkerAlt className="text-gray-300" />
                   {property.location}
                 </span>
               </div>
@@ -165,14 +150,14 @@ const ForRent: React.FC = () => {
         ))}
       </div>
 
-      <div className="bg-gray-100 py-10 mt-10">
+      <div className="bg-black py-10 mt-10">
         <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Text */}
           <div className="text-center md:text-left">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-2">
+            <h2 className="text-2xl font-semibold text-white mb-2">
               Have a question?
             </h2>
-            <p className="text-gray-600">Our team is happy to assist you</p>
+            <p className="text-gray-300">Our team is happy to assist you</p>
           </div>
 
           {/* Contact Actions */}
@@ -180,7 +165,7 @@ const ForRent: React.FC = () => {
             <button className="bg-[var(--primary-color)] hover:opacity-70 text-white px-6 py-2 rounded-md transition">
               <a href="/contact">Contact Us</a>
             </button>
-            <span className="text-lg font-medium text-gray-800">
+            <span className="text-lg font-medium text-gray-300">
               📞 +1 (800) 123-4567
             </span>
           </div>

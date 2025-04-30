@@ -26,7 +26,7 @@ export default function ServicesSection() {
   }, []);
 
   return (
-    <div className="w-full">
+    <div className="w-full bg-black px-5">
       <div className="mb-20 md:mb-32">
         <Navbar />
       </div>
@@ -46,11 +46,11 @@ export default function ServicesSection() {
               className="w-full md:w-1/2 rounded-xl shadow-lg"
             />
             <div className="w-full md:w-1/2 text-[var(--primary-color)] space-y-4">
-              <h2 className="text-2xl md:text-3xl font-bold">
+              <h2 className="text-2xl md:text-3xl font-bold ">
                 {service.title}
               </h2>
-              <p className="text-gray-600">{service.description}</p>
-              <ul className="list-disc list-inside space-y-1 text-gray-600">
+              <p className="text-gray-300">{service.description}</p>
+              <ul className="list-disc list-inside space-y-1 text-gray-300">
                 {service.bullet_points.map((point, i) => (
                   <li key={i}>{point}</li>
                 ))}
@@ -62,7 +62,7 @@ export default function ServicesSection() {
                 <div className="mt-4 flex flex-wrap items-center gap-6 text-gray-700">
                   <div className="flex items-center gap-2">
                     <Phone className="w-4 h-4 text-green-600" />
-                    <span>
+                    <span className="text-gray-300">
                       Call:{" "}
                       <a
                         href={`tel:${service.contact.call}`}
@@ -74,7 +74,7 @@ export default function ServicesSection() {
                   </div>
                   <div className="flex items-center gap-2">
                     <MessageCircle className="w-4 h-4 text-green-600" />
-                    <span>
+                    <span className="text-gray-300">
                       WhatsApp:{" "}
                       <a
                         href={`https://wa.me/${service.contact.whatsapp.replace(

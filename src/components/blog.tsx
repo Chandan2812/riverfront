@@ -3,7 +3,7 @@ import blogsData from "../data/blogsData.json";
 const Blog = () => {
   return (
     <div className="container mx-auto px-4 py-10">
-      <h1 className="text-2xl md:text-4xl text-gray-800 mb-6 text-center">
+      <h1 className="text-2xl md:text-4xl text-white mb-6 text-center">
         Our Latest Blogs
       </h1>
 
@@ -19,8 +19,10 @@ const Blog = () => {
               className="w-full h-60 object-cover"
             />
             <div className="p-6">
-              <h2 className="text-xl mb-2">{blog.title.slice(0, 38)}...</h2>
-              <p className="text-gray-500 text-sm mb-3">{blog.date}</p>
+              <h2 className="text-xl mb-2 text-white">
+                {blog.title.slice(0, 38)}...
+              </h2>
+              <p className="text-white text-sm mb-3">{blog.date}</p>
               <a
                 href={`/blog/${blog.id}`}
                 className="text-[var(--primary-color)]"

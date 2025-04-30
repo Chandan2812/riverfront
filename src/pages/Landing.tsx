@@ -13,7 +13,7 @@ import { Phone, MessageCircle } from "lucide-react";
 
 export const Landing = () => {
   return (
-    <div>
+    <div className="bg-black">
       <>
         <HeroSection />
         <StatsSection />

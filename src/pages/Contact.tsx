@@ -34,40 +34,52 @@ export default function Contact() {
     console.log("Submitting Form:", formData);
   };
   return (
-    <div>
-      <div className="mb-32 md:mb-40">
+    <div className="bg-black">
+      <div className="mb-32 md:mb-32 pt-3 md:pt-10">
         <Navbar />
       </div>
 
-      <section className=" w-full md:w-[90%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-4 pb-8 bg-white text-gray-800">
+      <section className=" w-full md:w-[90%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-4 pb-8  text-white">
         {/* Head Office */}
         <div>
           <h2 className="text-xl mb-2 font-semibold">Dubai Office's</h2>
-          <h2 className="text-sm mb-2 font-semibold">Head Office:</h2>
-          <p className="mb-4">
+          <h2 className="text-sm mb-2 font-semibold text-gray-300">
+            Head Office:
+          </h2>
+          <p className="mb-4 text-gray-300">
             1703, Damac XL tower, Marasi Drive, Business bay, Dubai, UAE.
           </p>
-          <h2 className="text-sm mb-2 font-semibold">Branch Office:</h2>
-          <p className="mb-4">1002, Tower A, Prime business center, JVC </p>
+          <h2 className="text-sm mb-2 font-semibold text-gray-300">
+            Branch Office:
+          </h2>
+          <p className="mb-4 text-gray-300">
+            1002, Tower A, Prime business center, JVC{" "}
+          </p>
 
           <h2 className="text-xl mb-2 font-semibold">India Office's</h2>
-          <h2 className="text-sm mb-2 font-semibold">Head Office:</h2>
+          <h2 className="text-sm mb-2 font-semibold text-gray-300">
+            Head Office:
+          </h2>
           <p>KPD Developers,</p>
-          <p className="mb-4">
+          <p className="mb-4 text-gray-300">
             Plot # 2, Sanjay Nagar, Gulabi Bagh, Delhi 110007, India
           </p>
-          <h2 className="text-sm mb-2 font-semibold">Branch Office:</h2>
+          <h2 className="text-sm mb-2 font-semibold text-gray-300">
+            Branch Office:
+          </h2>
           <p>KPD Developers,</p>
-          <p className="mb-4">
+          <p className="mb-4 text-gray-300">
             CASA LOTUS House # 4/213 A, Porba Vaddo, Calangute 403516, Goa
           </p>
-          <h2 className="text-sm mb-2 font-semibold">Branch Office:</h2>
+          <h2 className="text-sm mb-2 font-semibold text-gray-300">
+            Branch Office:
+          </h2>
           <p>KPD Developers,</p>
-          <p className="mb-4">
+          <p className="mb-4 text-gray-300">
             26 Jacranda Marg DLF Phase - , Gurugram, Haryana
           </p>
           <hr className="mb-4" />
-          <p className="text-gray-500">
+          <p className="text-gray-400">
             Our business operating hours are as follows:
           </p>
           <p className="mt-2">Monday to Friday: 9am - 6pm</p>
@@ -77,7 +89,7 @@ export default function Contact() {
         {/* Get in Touch */}
         <div>
           <h2 className="text-xl font-semibold mb-2 font-sans">Get in Touch</h2>
-          <p className="mb-4 text-gray-600 font-sans">
+          <p className="mb-4 text-gray-300 font-sans">
             Please contact us via phone or email below or visit us at our Head
             Office in Business Bay during operating hours.
           </p>
@@ -120,18 +132,18 @@ export default function Contact() {
                   
         </div>
       </section>
-      <h2 className="px-5 w-full md:w-[90%] mx-auto text-lg text-[var(--secondary-color)]">
+      <h2 className="px-5 w-full md:w-[90%] mx-auto text-lg text-gray-500">
         Need some advice, have some concerns or Interested in our services or
         properties?
       </h2>
-      <p className="px-5 w-full md:w-[90%] mx-auto text-md text-gray-400">
+      <p className="px-5 w-full md:w-[90%] mx-auto text-md text-gray-500">
         Simply contact us through email, phone call or alternatively fill the
         form below and your query will be promptly directed to the necessary
         RiverFront employee for a response within 24hrs.
       </p>
       <div className="flex flex-col md:flex-row justify-center items-start w-full md:w-[90%] mx-auto px-6 py-8 gap-10 mb-7">
         {/* FORM SECTION */}
-        <div className="w-full md:w-1/2 max-w-lg bg-white rounded-lg p-8 shadow text-center">
+        <div className="w-full md:w-1/2 max-w-lg bg-black rounded-lg p-8 shadow text-center">
           <form onSubmit={handleSubmit} className="space-y-4">
             <input
               type="text"
@@ -156,9 +168,9 @@ export default function Contact() {
                 placeholder="Enter phone number"
                 value={formData.phone}
                 onChange={handlePhoneChange}
-                defaultCountry="IN"
+                defaultCountry="AE"
                 international
-                className="border border-gray-300 px-4 py-3 text-[16px] rounded-lg w-full"
+                className="border border-gray-300 bg-white px-4 py-3 text-[16px] rounded-lg w-full"
               />
             </div>
             <textarea

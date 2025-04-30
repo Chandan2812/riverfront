@@ -83,24 +83,28 @@ export default function TestimonialSlider() {
   };
 
   return (
-    <section className="py-12 bg-white">
+    <section className="py-12 bg-black">
       <div className="max-w-6xl mx-auto px-6">
         {/* Heading & Rating */}
         <div className="flex flex-col md:flex-row items-center gap-6">
           <div className="md:w-1/3 text-center md:text-left">
-            <h2 className="text-2xl font-bold text-gray-900">
+            <h2 className="text-2xl font-bold text-white">
               CLIENT TESTIMONIALS
             </h2>
             <div className="flex items-center gap-2 mt-2 justify-center md:justify-start">
-              <div className="bg-gray-200 rounded-full p-2 text-black text-xl font-bold">
-                <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="" className="w-8"/>
+              <div className="  rounded-full p-2 text-white text-xl font-bold">
+                <img
+                  src="https://www.svgrepo.com/show/475656/google-color.svg"
+                  alt=""
+                  className="w-8"
+                />
               </div>
               <div>
-                <p className="font-bold text-lg">Rated 4.8/5</p>
-                <p className="text-gray-600 text-sm">250+ Google Reviews</p>
+                <p className="font-bold text-lg text-white">Rated 4.8/5</p>
+                <p className="text-gray-300 text-sm">250+ Google Reviews</p>
               </div>
             </div>
-            <p className="text-gray-700 mt-4">
+            <p className="text-gray-300 mt-4">
               Don't just take our word for it. Here's what our clients have to
               say about their Unique experience.
             </p>
@@ -111,17 +115,24 @@ export default function TestimonialSlider() {
             <Slider {...settings}>
               {testimonials.map((item, index) => (
                 <div key={index} className="p-4">
-                  <div className="bg-white shadow-lg rounded-lg p-6 h-72">
-                    <p className="text-gray-700 mb-4 ">{item.review.slice(0,110)}...</p>
+                  <div className="bg-gray-800 shadow-lg rounded-lg p-6 h-72">
+                    <p className="text-gray-300 mb-4 ">
+                      {item.review.slice(0, 110)}...
+                    </p>
                     <div className="flex items-center">
                       <div className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center">
                         <span className="text-gray-600 text-xl">👤</span>
                       </div>
                       <div className="ml-3">
-                        <p className="font-semibold">{item.name}</p>
+                        <p className="font-semibold text-white">{item.name}</p>
                         <div className="flex text-yellow-500">
                           {Array.from({ length: item.rating }).map((_, i) => (
-                            <Star key={i} size={16} fill="#d49325" stroke="none" />
+                            <Star
+                              key={i}
+                              size={16}
+                              fill="#d49325"
+                              stroke="none"
+                            />
                           ))}
                         </div>
                       </div>
