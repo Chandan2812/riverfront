@@ -53,7 +53,7 @@ const PropertyForm: React.FC<Props> = ({ onClose }) => {
         </button>
 
         <h2 className="text-2xl font-bold mb-6 text-[#0a1f44]">
-          Property Valuation
+          Property Details
         </h2>
         <form onSubmit={handleSubmit} className="space-y-4">
           <input

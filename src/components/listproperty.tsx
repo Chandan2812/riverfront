@@ -40,7 +40,7 @@ const ListProperty = () => {
             </p>
             <button
               onClick={() => setShowForm(true)}
-              className="bg-[#f59e0b] hover:bg-[#d97706] text-white font-light px-6 py-3 rounded shadow-md transition-all duration-200"
+              className="bg-[#f59e0b] hover:bg-[#d97706] text-white font-light px-6 py-3 rounded-full shadow-md transition-all duration-200"
             >
               List Your Property
             </button>
