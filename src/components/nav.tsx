@@ -62,7 +62,7 @@ const Navbar: React.FC<NavbarProps> = ({ transparent = false }) => {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${backgroundClass}`}
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 font-raleway font-light ${backgroundClass}`}
       >
         <div className="max-w-6xl mx-auto flex items-center justify-between px-4 py-2 md:py-0">
           {/* --- Desktop Layout --- */}
@@ -99,13 +99,13 @@ const Navbar: React.FC<NavbarProps> = ({ transparent = false }) => {
             <div className="flex gap-6 text-[var(--secondary-color)] text-md">
               <a
                 href="/contact"
-                className={`hover:text-[var(--primary-color)] rounded-full px-3 py-1 ${textColorClass}`}
+                className={`hover:text-[var(--primary-color)] hover:border-[var(--primary-color)] rounded-full px-3 py-1 ${textColorClass}`}
               >
                 Contact Us
               </a>
               <button
                 onClick={() => setIsFindPropertyOpen(true)}
-                className={`flex items-center gap-2 text-black ${textColorClass2}`}
+                className={`flex items-center gap-2 text-black hover:text-[var(--primary-color)] ${textColorClass2}`}
               >
                 <Search size={24} /> Find a Property
               </button>
@@ -162,53 +162,53 @@ const Navbar: React.FC<NavbarProps> = ({ transparent = false }) => {
                 <X className="w-6 h-6 text-white" />
               </button>
             </div>
-            <div className="flex flex-col px-6 py-4 space-y-3 text-base text-[var(--primary-color)]">
+            <div className="flex flex-col px-6 py-4 space-y-4 text-white font-raleway font-light">
               <a
                 href="/"
                 onClick={() => setMenuOpen(false)}
-                className="font-hanken flex items-center gap-2 hover:text-gray-200"
+                className="font-hanken flex items-center gap-2 hover:text-[var(--primary-color)]"
               >
                 <Home size={20} /> Home
               </a>
               <a
                 href="/forsale"
                 onClick={() => setMenuOpen(false)}
-                className="font-hanken flex items-center gap-2 hover:text-gray-200"
+                className="font-hanken flex items-center gap-2 hover:text-[var(--primary-color)]"
               >
                 <Building2 size={20} /> For Sale
               </a>
               <a
                 href="/forrent"
                 onClick={() => setMenuOpen(false)}
-                className="font-hanken flex items-center gap-2 hover:text-gray-200"
+                className="font-hanken flex items-center gap-2 hover:text-[var(--primary-color)]"
               >
                 <Building size={20} /> For Rent
               </a>
               <a
                 href="/OffplanPropertyCard"
                 onClick={() => setMenuOpen(false)}
-                className="font-hanken flex items-center gap-2 hover:text-gray-200"
+                className="font-hanken flex items-center gap-2 hover:text-[var(--primary-color)]"
               >
                 <Landmark size={20} /> Off-Plan
               </a>
               <a
                 href="/ServicesSection"
                 onClick={() => setMenuOpen(false)}
-                className="font-hanken flex items-center gap-2 hover:text-gray-200"
+                className="font-hanken flex items-center gap-2 hover:text-[var(--primary-color)]"
               >
                 <Wrench size={20} /> Services
               </a>
               <a
                 href="/viewblogs"
                 onClick={() => setMenuOpen(false)}
-                className="font-hanken flex items-center gap-2 hover:text-gray-200"
+                className="font-hanken flex items-center gap-2 hover:text-[var(--primary-color)]"
               >
                 <Newspaper size={20} /> Blog's
               </a>
               <a
                 href="/contact"
                 onClick={() => setMenuOpen(false)}
-                className="font-hanken flex items-center gap-2 hover:text-gray-200"
+                className="font-hanken flex items-center gap-2 hover:text-[var(--primary-color)]"
               >
                 <Phone size={20} /> Contact Us
               </a>
@@ -217,14 +217,14 @@ const Navbar: React.FC<NavbarProps> = ({ transparent = false }) => {
                   setIsBookMeetingOpen(true);
                   setMenuOpen(false);
                 }}
-                className="font-hanken flex items-center gap-2 text-left hover:text-gray-200"
+                className="font-hanken flex items-center gap-2 text-left hover:text-[var(--primary-color)]"
               >
                 <Calendar size={20} /> Book a Meeting
               </button>
               <a
                 href="/about"
                 onClick={() => setMenuOpen(false)}
-                className="font-hanken flex items-center gap-2 hover:text-gray-200"
+                className="font-hanken flex items-center gap-2 hover:text-[var(--primary-color)]"
               >
                 <Info size={20} /> About Us
               </a>
@@ -233,7 +233,7 @@ const Navbar: React.FC<NavbarProps> = ({ transparent = false }) => {
                   setIsFindPropertyOpen(true);
                   setMenuOpen(false);
                 }}
-                className="font-hanken flex items-center gap-2 text-left hover:text-gray-200"
+                className="font-hanken flex items-center gap-2 text-left hover:text-[var(--primary-color)]"
               >
                 <Search size={20} /> Find a Property
               </button>
