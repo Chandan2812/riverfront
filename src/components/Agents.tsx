@@ -2,30 +2,47 @@ import agents from "../data/agents.data.json";
 import Footer from "./footer";
 import Navbar from "./nav";
 import agentBanner from "../assets/agent-desktop.webp";
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
+import { Link } from "react-router-dom";
 
-type EnrichedAgent = Omit<(typeof agents)[0], "languages"> & {
-  languages: string[];
+type Agent = {
+  name: string;
+  position: string;
+  experience: string;
+  languages: string[]; // correct type
+  specialization: string;
+  language: string;
+  img: string;
 };
-const AgentCard = ({ agent }: { agent: EnrichedAgent }) => (
-  <div className="bg-black text-white rounded overflow-hidden shadow-md">
-    <img
-      src={agent.img}
-      alt={agent.name}
-      className="w-full h-80 object-cover"
-    />
-    <div className="p-4">
-      <h2 className="font-semibold text-lg">{agent.name}</h2>
-      <p className="text-sm text-gray-300">{agent.position}</p>
-      <p className="text-sm text-gray-400">Experience: {agent.experience}</p>
-      <p className="text-sm text-gray-400">Languages: {agent.languages}</p>
+
+const AgentCard = ({ agent }: { agent: Agent & { id: string } }) => (
+  <Link to={`/agents/${agent.id}`} className="block">
+    <div className="relative bg-black rounded overflow-hidden shadow-md h-[500px] hover:shadow-xl transition-shadow duration-300">
+      <img
+        src={agent.img}
+        alt={agent.name}
+        className="w-full h-full object-cover"
+      />
+      <div className="absolute bottom-0 w-full bg-black bg-opacity-60 text-white p-4 backdrop-blur-sm">
+        <h2 className="font-semibold text-lg">{agent.name}</h2>
+        <p className="text-sm text-gray-300">{agent.position}</p>
+        <p className="text-sm text-gray-400">Experience: {agent.experience}</p>
+        <p className="text-sm text-gray-400">
+          Languages: {agent.languages.join(", ")}
+        </p>
+      </div>
     </div>
-  </div>
+  </Link>
 );
 
 const AgentsSection = () => {
   const [specialization, setSpecialization] = useState("");
   const [language, setLanguage] = useState("");
+
+  // ✅ Scroll to top on component mount
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   // 🔍 Extract unique specialization and languages
   const { enrichedAgents, specializations, languages } = useMemo(() => {
@@ -63,7 +80,7 @@ const AgentsSection = () => {
   }, [enrichedAgents, specialization, language]);
 
   return (
-    <div className="bg-black text-white">
+    <div className="bg-black text-white font-raleway font-thin">
       {/* Navbar */}
       <div className="mb-27 md:mb-20 pt-20 md:pt-10">
         <Navbar />
@@ -77,7 +94,7 @@ const AgentsSection = () => {
         }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-20" />
-        <h1 className="text-4xl md:text-5xl font-semibold z-10">
+        <h1 className="text-4xl md:text-5xl  z-10">
           REAL ESTATE AGENTS IN DUBAI
         </h1>
         <p className="text-lg text-gray-300 mt-2 z-10">

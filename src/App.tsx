@@ -26,12 +26,14 @@ import BuyProperty from "./pages/buy/sell/BuyProperty";
 import Career from "./pages/Career";
 import AllBlogs from "./pages/AllBlogs";
 import AgentsSection from "./components/Agents";
+import AgentDetail from "./pages/AgentDetail";
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Landing />} />
+        <Route path="/agents/:id" element={<AgentDetail />} />
         <Route path="/awards" element={<AwardsPage />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/property/:slug" element={<PropertyDetails />} />

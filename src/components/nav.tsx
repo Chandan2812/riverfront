@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import logo from "../assets/logo-riverfront.png";
-import { X } from "lucide-react";
+import { User, X } from "lucide-react";
 import { useLocation, useNavigate } from "react-router-dom";
 import FindPropertyModal from "./FindPropertyModal";
 import BookMeetingModal from "./BookMeetingModal";
@@ -197,6 +197,13 @@ const Navbar: React.FC<NavbarProps> = ({ transparent = false }) => {
                 className="font-hanken flex items-center gap-2 hover:text-[var(--primary-color)]"
               >
                 <Wrench size={20} /> Services
+              </a>
+              <a
+                href="/AgentsSection"
+                onClick={() => setMenuOpen(false)}
+                className="font-hanken flex items-center gap-2 hover:text-[var(--primary-color)]"
+              >
+                <User size={20} /> Agents
               </a>
               <a
                 href="/viewblogs"
