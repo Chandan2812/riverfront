@@ -94,10 +94,10 @@ const AgentsSection = () => {
         }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-20" />
-        <h1 className="text-4xl md:text-5xl  z-10">
-          REAL ESTATE AGENTS IN DUBAI
+        <h1 className="text-3xl md:text-4xl  z-10 font-light">
+          REAL ESTATE PROPERTIES ADVISOR IN DUBAI
         </h1>
-        <p className="text-lg text-gray-300 mt-2 z-10">
+        <p className="text-lg text-gray-300 mt-2 z-10 font-light">
           Team of real estate experts
         </p>
       </div>

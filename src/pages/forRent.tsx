@@ -10,18 +10,15 @@ import Navbar from "../components/nav";
 import { useNavigate } from "react-router-dom";
 import Footer from "../components/footer";
 import HaveAQuestion from "../components/HaveAQuestion";
+import { Range } from "react-range";
 
 const ForRent: React.FC = () => {
   const navigate = useNavigate();
 
   const [searchTerm, setSearchTerm] = useState("");
   const [bedrooms, setBedrooms] = useState("");
-  const [bathrooms, setBathrooms] = useState("");
-  const [priceRange, setPriceRange] = useState([0, 1000000]);
-
-  const handleCardClick = (property: any) => {
-    navigate(`/forrentDetails/${encodeURIComponent(property.title)}`);
-  };
+  const [areaRange, setAreaRange] = useState([500, 3000]);
+  const [priceRange, setPriceRange] = useState([100000, 5000000]);
 
   const filteredProperties = useMemo(() => {
     return rentData.filter((property) => {
@@ -32,18 +29,17 @@ const ForRent: React.FC = () => {
       const matchesBedrooms = bedrooms
         ? property.bedrooms == Number(bedrooms)
         : true;
-      const matchesBathrooms = bathrooms
-        ? property.bathrooms == Number(bathrooms)
-        : true;
+
       const matchesPrice =
         property.priceAED >= priceRange[0] &&
         property.priceAED <= priceRange[1];
 
-      return (
-        matchesSearch && matchesBedrooms && matchesBathrooms && matchesPrice
-      );
+      const matchesArea =
+        property.areaSqft >= areaRange[0] && property.areaSqft <= areaRange[1];
+
+      return matchesSearch && matchesBedrooms && matchesPrice && matchesArea;
     });
-  }, [searchTerm, bedrooms, bathrooms, priceRange]);
+  }, [searchTerm, bedrooms, priceRange, areaRange]);
 
   return (
     <div className="bg-black">
@@ -52,66 +48,125 @@ const ForRent: React.FC = () => {
       </div>
 
       {/* Filters */}
-      <div className="w-full md:w-[90%] mx-auto grid grid-cols-1 md:grid-cols-4 gap-4 justify-between px-4 py-6">
-        {/* Location / Search */}
+      <div className="w-full md:w-[90%] mx-auto grid grid-cols-1 md:grid-cols-4 gap-4 px-4 py-6 text-white">
+        {/* Location */}
         <div className="flex flex-col w-full">
-          <label className="mb-1 text-white">Location</label>
+          <label className="mb-1 text-sm">Location</label>
           <input
             type="text"
             placeholder="Search by title or location..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="bg-transparent text-white placeholder:text-gray-500 border border-[var(--primary-color)] px-4 py-2 rounded-md"
+            className="bg-black border border-gray-600 px-4 py-2 rounded text-white placeholder:text-gray-400"
           />
         </div>
 
-        {/* Bedrooms */}
+        {/* Property Type */}
         <div className="flex flex-col w-full">
-          <label className="mb-1 text-white">Bedrooms</label>
+          <label className="mb-1 text-sm">Property Type</label>
           <select
             value={bedrooms}
             onChange={(e) => setBedrooms(e.target.value)}
-            className="bg-black text-white border border-[var(--primary-color)] px-4 py-2 rounded-md"
+            className="bg-black border border-gray-600 px-4 py-2 rounded text-white"
           >
-            <option value="">Select Bedrooms</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4+</option>
+            <option value="">Any</option>
+            <option value="1">Apartment</option>
+            <option value="2">Villa</option>
+            <option value="3">Townhouse</option>
+            {/* Add more types as needed */}
           </select>
         </div>
 
-        {/* Bathrooms */}
-        <div className="flex flex-col w-full">
-          <label className="mb-1 text-white">Bathrooms</label>
-          <select
-            value={bathrooms}
-            onChange={(e) => setBathrooms(e.target.value)}
-            className="bg-black text-white border border-[var(--primary-color)] px-4 py-2 rounded-md"
-          >
-            <option value="">Select Bathrooms</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4+</option>
-          </select>
+        {/* Area Range */}
+        <div className="flex flex-col w-full relative">
+          <label className="mb-1 text-sm">Area</label>
+          <div className="border border-gray-600 rounded px-4 pt-2 pb-2 bg-black">
+            <div className="flex justify-between text-xs mb-1 text-white">
+              <span>min {areaRange[0].toLocaleString()}</span>
+              <span>max {areaRange[1].toLocaleString()}</span>
+            </div>
+            <div className="absolute left-4 right-4 bottom-0">
+              {" "}
+              {/* Added relative positioning here */}
+              <Range
+                step={100}
+                min={500}
+                max={3000}
+                values={areaRange}
+                onChange={setAreaRange}
+                renderTrack={({ props, children }) => (
+                  <div
+                    {...props}
+                    className="h-1 bg-gray-700 rounded relative"
+                    style={{
+                      ...props.style,
+                      background: `linear-gradient(to right, #444 ${
+                        ((areaRange[0] - 500) / (3000 - 500)) * 100
+                      }%, var(--primary-color) ${
+                        ((areaRange[0] - 500) / (3000 - 500)) * 100
+                      }%, var(--primary-color) ${
+                        ((areaRange[1] - 500) / (3000 - 500)) * 100
+                      }%, #444 ${
+                        ((areaRange[1] - 500) / (3000 - 500)) * 100
+                      }%)`,
+                    }}
+                  >
+                    {children}
+                  </div>
+                )}
+                renderThumb={({ props }) => (
+                  <div
+                    {...props}
+                    className="w-4 h-4 bg-[var(--primary-color)] rounded-full shadow"
+                  />
+                )}
+              />
+            </div>
+          </div>
         </div>
 
         {/* Price Range */}
-        <div className="flex flex-col w-full">
-          <label className="mb-1 text-white">Max Price</label>
-          <input
-            type="range"
-            min={0}
-            max={46000000}
-            step={500000}
-            value={priceRange[1]}
-            onChange={(e) => setPriceRange([0, Number(e.target.value)])}
-            className="accent-[var(--primary-color)]"
-          />
-          <span className="text-sm text-gray-300 mt-1">
-            AED {priceRange[1].toLocaleString()}
-          </span>
+        <div className="flex flex-col w-full relative">
+          <label className="mb-1 text-sm">Price (AED)</label>
+          <div className="border border-gray-600 rounded px-4 pt-2 pb-2 bg-black">
+            <div className="flex justify-between text-xs mb-1 text-white">
+              <span>min {priceRange[0].toLocaleString()}</span>
+              <span>max {priceRange[1].toLocaleString()}</span>
+            </div>
+            <div className="absolute left-4 right-4 bottom-0">
+              <Range
+                step={100000}
+                min={100000}
+                max={5000000}
+                values={priceRange}
+                onChange={setPriceRange}
+                renderTrack={({ props, children }) => (
+                  <div
+                    {...props}
+                    className="h-1 bg-gray-700 rounded relative"
+                    style={{
+                      ...props.style,
+                      background: `linear-gradient(to right, #444 ${
+                        (priceRange[0] / 5000000) * 100
+                      }%, var(--primary-color) ${
+                        (priceRange[0] / 5000000) * 100
+                      }%, var(--primary-color) ${
+                        (priceRange[1] / 5000000) * 100
+                      }%, #444 ${(priceRange[1] / 5000000) * 100}%)`,
+                    }}
+                  >
+                    {children}
+                  </div>
+                )}
+                renderThumb={({ props }) => (
+                  <div
+                    {...props}
+                    className="w-4 h-4 bg-[var(--primary-color)] rounded-full shadow"
+                  />
+                )}
+              />
+            </div>
+          </div>
         </div>
       </div>
 
@@ -121,7 +176,9 @@ const ForRent: React.FC = () => {
           <div
             key={index}
             className="border border-gray-700 rounded-xl hover:shadow-[var(--primary-color)] shadow-md overflow-hidden cursor-pointer transition hover:scale-105"
-            onClick={() => handleCardClick(property)}
+            onClick={() =>
+              navigate(`/forrentDetails/${encodeURIComponent(property.title)}`)
+            }
           >
             <img
               src={property.images[0]}
@@ -133,7 +190,6 @@ const ForRent: React.FC = () => {
                 {property.title}
               </h2>
               <div className="w-1/2 h-[1px] bg-white my-2" />
-
               <div className="flex justify-between text-sm text-gray-200 mb-2 font-raleway font-thin">
                 <span className="flex items-center gap-1">
                   <FaBed className="text-gray-300" />
@@ -148,7 +204,6 @@ const ForRent: React.FC = () => {
                   {property.location}
                 </span>
               </div>
-
               <div className="flex gap-10 text-gray-200 justify-between mb-3">
                 AED {property.priceAED.toLocaleString()}
                 <a
@@ -167,7 +222,6 @@ const ForRent: React.FC = () => {
       </div>
 
       <HaveAQuestion />
-
       <Footer />
     </div>
   );

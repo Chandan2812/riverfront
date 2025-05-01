@@ -22,8 +22,9 @@ export const Landing = () => {
 
         <ForSaleComponent />
         <ForRentComponent />
-        <ListProperty />
+
         <PropertySlider />
+        <ListProperty />
         <OurStory />
         <Blog />
         <TestimonialSlider />

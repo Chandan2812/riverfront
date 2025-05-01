@@ -237,7 +237,7 @@ const Navbar: React.FC<NavbarProps> = ({ transparent = false }) => {
                 onClick={() => setMenuOpen(false)}
                 className="font-hanken flex items-center gap-2 hover:text-[var(--primary-color)]"
               >
-                <User size={20} /> Agents
+                <User size={20} /> Property Advisors
               </a>
               <a
                 href="/viewblogs"

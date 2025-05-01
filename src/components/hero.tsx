@@ -30,7 +30,7 @@ const HeroSection: React.FC = () => {
       />
 
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-60 z-10" />
+      <div className="absolute inset-0 bg-black bg-opacity-40 z-10" />
 
       {/* Navbar */}
       <div className="relative z-50">
@@ -46,7 +46,7 @@ const HeroSection: React.FC = () => {
           Buy | Sell | Rent | Collaborate
         </i>
 
-        <div className="mt-10 bg-[#121212]/90 p-4 md:p-6 rounded-xl shadow-xl w-[90%] md:w-[80%] lg:w-[60%] mx-auto text-black font-raleway">
+        <div className="mt-10 bg-black/40 p-4 md:p-6 rounded-xl shadow-xl w-[90%] md:w-[80%] lg:w-[60%] mx-auto text-black font-raleway">
           {/* Tabs */}
           <div className="flex space-x-4 justify-center mb-6">
             {tabs.map((tab) => (

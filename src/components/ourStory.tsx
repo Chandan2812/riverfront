@@ -3,7 +3,7 @@ export default function OurStory() {
     <div className="w-full bg-black py-16 px-6 md:px-16 font-raleway font-thin">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-3xl md:text-5xl text-white mb-6 text-center">
-          Our Story
+          Our Mission
         </h2>
         <p className="mt-4 text-lg text-white ">
           At Riverfront Properties, we're passionate about transforming the
