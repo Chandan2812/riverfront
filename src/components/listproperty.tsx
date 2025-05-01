@@ -23,8 +23,8 @@ const ListProperty = () => {
           </div>
 
           {/* Right Side: Content */}
-          <div className="w-full lg:w-1/2">
-            <h2 className="text-3xl lg:text-4xl font-bold text-[#e6e8ec] mb-6">
+          <div className="w-full lg:w-1/2 font-raleway font-thin">
+            <h2 className="text-3xl lg:text-4xl  text-[#e6e8ec] mb-6">
               List Your Property
             </h2>
             <p className="text-gray-300 mb-8 text-lg leading-relaxed">
@@ -40,7 +40,7 @@ const ListProperty = () => {
             </p>
             <button
               onClick={() => setShowForm(true)}
-              className="bg-[#f59e0b] hover:bg-[#d97706] text-white font-semibold px-6 py-3 rounded shadow-md transition-all duration-200"
+              className="bg-[#f59e0b] hover:bg-[#d97706] text-white font-light px-6 py-3 rounded shadow-md transition-all duration-200"
             >
               List Your Property
             </button>
