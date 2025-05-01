@@ -6,7 +6,7 @@ import { FaArrowRight } from "react-icons/fa";
 export default function ForSaleComponent() {
   return (
     <div className="max-w-6xl mx-auto p-2 mt-14 font-raleway">
-      <h2 className="text-3xl md:text-5xl text-white mb-6 text-center font-thin border-b w-fit mx-auto">
+      <h2 className="text-3xl md:text-5xl text-white mb-6 text-center font-thin">
         Properties for Sale
       </h2>
       <div className=" grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-3">

@@ -9,6 +9,7 @@ import salesData from "../data/salesData.json";
 import Navbar from "../components/nav";
 import { useNavigate } from "react-router-dom";
 import Footer from "../components/footer";
+import HaveAQuestion from "../components/HaveAQuestion";
 
 const ForSale: React.FC = () => {
   const navigate = useNavigate();
@@ -139,11 +140,11 @@ const ForSale: React.FC = () => {
                   BR {property.bedrooms}
                 </span>
                 <span className="flex items-center gap-1">
-                  <FaRulerCombined className="text-gray-300" />
+                  <FaRulerCombined className="text-gray-200" />
                   {property.areaSqft} SqFt
                 </span>
                 <span className="flex items-center gap-1">
-                  <FaMapMarkerAlt className="text-gray-300" />
+                  <FaMapMarkerAlt className="text-gray-200" />
                   {property.location}
                 </span>
               </div>
@@ -165,25 +166,7 @@ const ForSale: React.FC = () => {
         ))}
       </div>
 
-      <div className="bg-black py-10 mt-10 ">
-        <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6">
-          {/* Text */}
-          <div className="text-center md:text-left font-raleway font-thin">
-            <h2 className="text-3xl text-white mb-2">Have a question?</h2>
-            <p className="text-gray-200">Our team is happy to assist you</p>
-          </div>
-
-          {/* Contact Actions */}
-          <div className="flex flex-col sm:flex-row items-center gap-4">
-            <button className="bg-[var(--primary-color)] hover:opacity-70 text-white px-6 py-2 rounded-md transition font-raleway font-thin">
-              <a href="/contact">Contact Us</a>
-            </button>
-            <span className="text-lg font-medium text-gray-300">
-              📞 +97147702260
-            </span>
-          </div>
-        </div>
-      </div>
+      <HaveAQuestion />
 
       <Footer />
     </div>

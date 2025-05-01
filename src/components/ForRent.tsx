@@ -5,15 +5,15 @@ import { FaArrowRight } from "react-icons/fa";
 
 export default function ForRentComponent() {
   return (
-    <div className="max-w-6xl mx-auto p-2 mt-14">
-      <h2 className="text-2xl md:text-4xl text-white mb-6 text-center">
-        <i>Properties for Rent</i>
+    <div className="max-w-6xl mx-auto p-2 mt-14 font-raleway">
+      <h2 className="text-3xl md:text-5xl text-white mb-6 text-center font-thin">
+        Properties for Rent
       </h2>
       <div className=" grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-3">
         {propertiesData.slice(0, 8).map((property) => (
           <div
             key={property.title}
-            className="relative w-full h-[250px] sm:h-[300px] md:h-[250px] lg:h-[200px] overflow-hidden rounded-lg shadow-md"
+            className="relative w-full h-[250px] sm:h-[300px] font-light hover:shadow-md hover:shadow-[var(--primary-color)] md:h-[250px] lg:h-[200px] overflow-hidden rounded-lg shadow-md"
           >
             {/* Property Image */}
             <img
@@ -30,7 +30,7 @@ export default function ForRentComponent() {
             {/* Arrow Button (Bottom Right) */}
             <a
               href={`/forrentDetails/${property.title}`}
-              className="absolute bottom-2 right-2 border border-white rounded-lg text-white py-2 px-4 sm:px-5 sm:py-3 transition-transform inline-flex items-center justify-center"
+              className="absolute bottom-2 right-2 border border-white hover:border-[var(--primary-color)] hover:text-[var(--primary-color)] rounded-lg text-white py-2 px-4 sm:px-5 sm:py-3 transition-transform inline-flex items-center justify-center"
             >
               <FaArrowRight size={16} />
             </a>
@@ -41,7 +41,7 @@ export default function ForRentComponent() {
       <div className="flex items-center justify-center">
         <a
           href="/forrent"
-          className="inline-block px-8 py-2 text-lg text-white bg-[--primary-color] rounded-3xl hover:opacity-80 mt-6"
+          className="inline-block px-8 py-2 text-lg text-white bg-[var(--primary-color)] rounded-3xl hover:opacity-80 mt-6"
         >
           View All
         </a>

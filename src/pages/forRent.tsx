@@ -9,6 +9,7 @@ import rentData from "../data/rentsData.json";
 import Navbar from "../components/nav";
 import { useNavigate } from "react-router-dom";
 import Footer from "../components/footer";
+import HaveAQuestion from "../components/HaveAQuestion";
 
 const ForRent: React.FC = () => {
   const navigate = useNavigate();
@@ -51,51 +52,65 @@ const ForRent: React.FC = () => {
       </div>
 
       {/* Filters */}
-      <div className="w-full md:w-[90%] mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 justify-between px-4 py-6">
-        <input
-          type="text"
-          placeholder="Search by title or location..."
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          className="border border-[var(--primary-color)] px-4 py-2 rounded-md"
-        />
-
-        <select
-          value={bedrooms}
-          onChange={(e) => setBedrooms(e.target.value)}
-          className="border border-[var(--primary-color)] px-4 py-2 rounded-md"
-        >
-          <option value="">Bedrooms</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4+</option>
-        </select>
-
-        <select
-          value={bathrooms}
-          onChange={(e) => setBathrooms(e.target.value)}
-          className="border border-[var(--primary-color)] px-4 py-2 rounded-md"
-        >
-          <option value="">Bathrooms</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4+</option>
-        </select>
-
+      <div className="w-full md:w-[90%] mx-auto grid grid-cols-1 md:grid-cols-4 gap-4 justify-between px-4 py-6">
+        {/* Location / Search */}
         <div className="flex flex-col w-full">
+          <label className="mb-1 text-white">Location</label>
+          <input
+            type="text"
+            placeholder="Search by title or location..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="bg-transparent text-white placeholder:text-gray-500 border border-[var(--primary-color)] px-4 py-2 rounded-md"
+          />
+        </div>
+
+        {/* Bedrooms */}
+        <div className="flex flex-col w-full">
+          <label className="mb-1 text-white">Bedrooms</label>
+          <select
+            value={bedrooms}
+            onChange={(e) => setBedrooms(e.target.value)}
+            className="bg-black text-white border border-[var(--primary-color)] px-4 py-2 rounded-md"
+          >
+            <option value="">Select Bedrooms</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4+</option>
+          </select>
+        </div>
+
+        {/* Bathrooms */}
+        <div className="flex flex-col w-full">
+          <label className="mb-1 text-white">Bathrooms</label>
+          <select
+            value={bathrooms}
+            onChange={(e) => setBathrooms(e.target.value)}
+            className="bg-black text-white border border-[var(--primary-color)] px-4 py-2 rounded-md"
+          >
+            <option value="">Select Bathrooms</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4+</option>
+          </select>
+        </div>
+
+        {/* Price Range */}
+        <div className="flex flex-col w-full">
+          <label className="mb-1 text-white">Max Price</label>
           <input
             type="range"
             min={0}
-            max={1000000}
-            step={1000}
+            max={46000000}
+            step={500000}
             value={priceRange[1]}
             onChange={(e) => setPriceRange([0, Number(e.target.value)])}
-            className=" accent-[var(--primary-color)]"
+            className="accent-[var(--primary-color)]"
           />
-          <span className="text-sm text-gray-600">
-            Max Price: AED {priceRange[1].toLocaleString()}
+          <span className="text-sm text-gray-300 mt-1">
+            AED {priceRange[1].toLocaleString()}
           </span>
         </div>
       </div>
@@ -105,7 +120,7 @@ const ForRent: React.FC = () => {
         {filteredProperties.map((property, index) => (
           <div
             key={index}
-            className="bg-black border border-gray-800  shadow-gray-700 rounded-xl shadow-md overflow-hidden cursor-pointer transition hover:scale-105"
+            className="border border-gray-700 rounded-xl hover:shadow-[var(--primary-color)] shadow-md overflow-hidden cursor-pointer transition hover:scale-105"
             onClick={() => handleCardClick(property)}
           >
             <img
@@ -114,32 +129,34 @@ const ForRent: React.FC = () => {
               className="w-full h-60 object-cover"
             />
             <div className="py-4 px-4 space-y-4">
-              <h2 className="text-lg text-white">{property.title}</h2>
+              <h2 className="text-lg text-white font-raleway font-thin">
+                {property.title}
+              </h2>
               <div className="w-1/2 h-[1px] bg-white my-2" />
 
-              <div className="flex justify-between text-sm text-gray-600 mb-2">
+              <div className="flex justify-between text-sm text-gray-200 mb-2 font-raleway font-thin">
                 <span className="flex items-center gap-1">
                   <FaBed className="text-gray-300" />
                   BR {property.bedrooms}
                 </span>
                 <span className="flex items-center gap-1">
-                  <FaRulerCombined className="text-gray-300" />
+                  <FaRulerCombined className="text-gray-200" />
                   {property.areaSqft} SqFt
                 </span>
                 <span className="flex items-center gap-1">
-                  <FaMapMarkerAlt className="text-gray-300" />
+                  <FaMapMarkerAlt className="text-gray-200" />
                   {property.location}
                 </span>
               </div>
 
-              <div className="flex gap-10 text-black mb-3">
+              <div className="flex gap-10 text-gray-200 justify-between mb-3">
                 AED {property.priceAED.toLocaleString()}
                 <a
                   href={property.contact.link}
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={(e) => e.stopPropagation()}
-                  className="flex items-center text-green-600 hover:text-green-700 gap-2"
+                  className="flex items-center text-[var(--primary-color)] hover:opacity-80 gap-2"
                 >
                   <FaWhatsapp className="w-5 h-5" />
                   WhatsApp
@@ -150,27 +167,7 @@ const ForRent: React.FC = () => {
         ))}
       </div>
 
-      <div className="bg-black py-10 mt-10">
-        <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6">
-          {/* Text */}
-          <div className="text-center md:text-left">
-            <h2 className="text-2xl font-semibold text-white mb-2">
-              Have a question?
-            </h2>
-            <p className="text-gray-300">Our team is happy to assist you</p>
-          </div>
-
-          {/* Contact Actions */}
-          <div className="flex flex-col sm:flex-row items-center gap-4">
-            <button className="bg-[var(--primary-color)] hover:opacity-70 text-white px-6 py-2 rounded-md transition">
-              <a href="/contact">Contact Us</a>
-            </button>
-            <span className="text-lg font-medium text-gray-300">
-              📞 +1 (800) 123-4567
-            </span>
-          </div>
-        </div>
-      </div>
+      <HaveAQuestion />
 
       <Footer />
     </div>
