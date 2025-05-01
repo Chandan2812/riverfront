@@ -1,7 +1,6 @@
 import Footer from "../../components/footer";
 import Navbar from "../../components/nav";
-import SubmitDetailsModal from "../../components/EnquireNow";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import HaveAQuestion from "../../components/HaveAQuestion";
 
 function WhyInvest() {
@@ -9,10 +8,6 @@ function WhyInvest() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
 
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
   return (
     <div className="bg-black font-raleway font-light text-white">
       <div className="mb-16 md:mb-24">
@@ -41,12 +36,6 @@ function WhyInvest() {
           thriving investment destination offering security, flexibility, and
           extraordinary returns
         </p>
-        <button
-          onClick={openModal}
-          className="bg-[var(--primary-color)] hover:opacity-80 text-white px-8 py-2 rounded-full"
-        >
-          Enquire Now
-        </button>
       </section>
 
       {/* Do You Know Section */}
@@ -183,7 +172,6 @@ function WhyInvest() {
       <HaveAQuestion />
 
       <Footer />
-      <SubmitDetailsModal isOpen={isModalOpen} onClose={closeModal} />
     </div>
   );
 }

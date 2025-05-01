@@ -3,6 +3,7 @@ import Footer from "../components/footer";
 import Navbar from "../components/nav";
 import { Phone, MessageCircle } from "lucide-react"; // Optional: Icons
 import { useEffect } from "react";
+import HaveAQuestion from "../components/HaveAQuestion";
 
 export default function ServicesSection() {
   useEffect(() => {
@@ -26,7 +27,7 @@ export default function ServicesSection() {
   }, []);
 
   return (
-    <div className="w-full bg-black px-5">
+    <div className="w-full bg-black font-raleway font-light px-5">
       <div className="mb-20 md:mb-32">
         <Navbar />
       </div>
@@ -60,19 +61,19 @@ export default function ServicesSection() {
               {/* Contact Section - In Row */}
               {service.contact && (
                 <div className="mt-4 flex flex-wrap items-center gap-6 text-gray-700">
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-2 font-sans">
                     <Phone className="w-4 h-4 text-green-600" />
                     <span className="text-gray-300">
                       Call:{" "}
                       <a
                         href={`tel:${service.contact.call}`}
-                        className="text-blue-600 hover:underline"
+                        className=" hover:underline"
                       >
                         {service.contact.call}
                       </a>
                     </span>
                   </div>
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-2 font-sans">
                     <MessageCircle className="w-4 h-4 text-green-600" />
                     <span className="text-gray-300">
                       WhatsApp:{" "}
@@ -83,7 +84,7 @@ export default function ServicesSection() {
                         )}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-blue-600 hover:underline"
+                        className=" hover:underline"
                       >
                         {service.contact.whatsapp}
                       </a>
@@ -95,7 +96,7 @@ export default function ServicesSection() {
           </div>
         ))}
       </div>
-
+      <HaveAQuestion />
       <Footer />
     </div>
   );

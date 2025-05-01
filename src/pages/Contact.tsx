@@ -39,7 +39,7 @@ export default function Contact() {
         <Navbar />
       </div>
 
-      <section className=" w-full md:w-[90%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-4 pb-8  text-white">
+      <section className=" w-full md:w-[90%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-4 pb-8  text-white font-raleway font-light">
         {/* Head Office */}
         <div>
           <h2 className="text-xl mb-2 font-semibold">Dubai Office's</h2>
@@ -132,11 +132,11 @@ export default function Contact() {
                   
         </div>
       </section>
-      <h2 className="px-5 w-full md:w-[90%] mx-auto text-lg text-gray-500">
+      <h2 className="px-5 w-full md:w-[90%] mx-auto text-lg text-gray-300">
         Need some advice, have some concerns or Interested in our services or
         properties?
       </h2>
-      <p className="px-5 w-full md:w-[90%] mx-auto text-md text-gray-500">
+      <p className="px-5 w-full md:w-[90%] mx-auto text-md text-gray-300">
         Simply contact us through email, phone call or alternatively fill the
         form below and your query will be promptly directed to the necessary
         RiverFront employee for a response within 24hrs.
