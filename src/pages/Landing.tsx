@@ -10,6 +10,7 @@ import Blog from "../components/blog";
 import ForSaleComponent from "../components/ForSale";
 import ForRentComponent from "../components/ForRent";
 import { Phone, MessageCircle } from "lucide-react";
+import ListProperty from "../components/listproperty";
 
 export const Landing = () => {
   return (
@@ -21,6 +22,7 @@ export const Landing = () => {
 
         <ForSaleComponent />
         <ForRentComponent />
+        <ListProperty />
         <PropertySlider />
         <OurStory />
         <Blog />
