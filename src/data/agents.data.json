@@ -1,0 +1,110 @@
+[
+  {
+    "name": "Ben Thomas",
+    "position": "Head of Secondary",
+    "experience": "10 years",
+    "languages": "English, Spanish",
+    "specialization": "Leadership",
+    "language": "English",
+    "img": "https://axcapital.imgix.net/users/images/000/001/137/original/Ben-Thomas.jpg"
+  },
+  {
+    "name": "Dmitriy Zolotco",
+    "position": "Associate Director",
+    "experience": "15 years",
+    "languages": "English, Russian, Romanian",
+    "specialization": "Leadership",
+    "language": "English",
+    "img": "https://axcapital.imgix.net/users/images/000/000/812/original/Dmitriy-Zolotco.jpg"
+  },
+  {
+    "name": "Maksim Tuguchev",
+    "position": "Associate Director",
+    "experience": "15 years",
+    "languages": "English, Russian",
+    "specialization": "Leadership",
+    "language": "English",
+    "img": "https://axcapital.imgix.net/users/images/000/000/884/original/Maksim-Tugushev.jpg"
+  },
+  {
+    "name": "Shehryar Malik",
+    "position": "Senior Sales Manager",
+    "experience": "10 years",
+    "languages": "English, Urdu, Punjabi",
+    "specialization": "Sales",
+    "language": "English",
+    "img": "https://axcapital.imgix.net/users/images/000/000/942/original/Shehryar-Malik.jpg"
+  },
+  {
+    "name": "Olga Gojin",
+    "position": "Property Expert",
+    "experience": "15 years",
+    "languages": "English, Russian, Romanian",
+    "specialization": "Consulting",
+    "language": "English",
+    "img": "https://axcapital.imgix.net/users/images/000/001/010/original/Olga-Gojin.jpg"
+  },
+  {
+    "name": "Luiza Ribas Patane",
+    "position": "Senior Property Expert",
+    "experience": "4 years",
+    "languages": "English, Spanish, Portuguese",
+    "specialization": "Consulting",
+    "language": "English",
+    "img": "https://axcapital.imgix.net/users/images/000/001/005/original/Luiza-Ribas-Patane.jpg"
+  },
+  {
+    "name": "Azim Choudry",
+    "position": "Sales Manager",
+    "experience": "2 years",
+    "languages": "English, Hindi, Urdu, Punjabi",
+    "specialization": "Sales",
+    "language": "English",
+    "img": "https://axcapital.imgix.net/users/images/000/001/088/original/Azim-Choudhry.jpg"
+  },
+  {
+    "name": "Aram Grigorian",
+    "position": "Senior Property Expert",
+    "experience": "11 years",
+    "languages": "English, Russian, Armenian, German",
+    "specialization": "Consulting",
+    "language": "English",
+    "img": "https://axcapital.imgix.net/users/images/000/001/014/original/Aram-Grigorian.jpg"
+  },
+  {
+    "name": "Anastasia Jakovleva",
+    "position": "Senior Property Consultant",
+    "experience": "3 years",
+    "languages": "English, Russian, Lithuanian",
+    "specialization": "Consulting",
+    "language": "English",
+    "img": "https://axcapital.imgix.net/users/images/000/001/044/original/Anastasia-Jakovleva.jpg"
+  },
+  {
+    "name": "Armin Gharineiat",
+    "position": "Senior Sales Manager",
+    "experience": "8 years",
+    "languages": "English, Persian",
+    "specialization": "Sales",
+    "language": "English",
+    "img": "https://axcapital.imgix.net/users/images/000/001/077/original/Armin-Gharineiat.jpg"
+  },
+  {
+    "name": "Barbara Marques Barlavento",
+    "position": "Property Consultant",
+    "experience": "3 years",
+    "languages": "English, Portuguese",
+    "specialization": "Consulting",
+    "language": "English",
+    "img": "https://axcapital.imgix.net/users/images/000/001/134/original/Barbara-Marques-Barlavento.jpg"
+  },
+  {
+    "name": "Nadezhda Faskhieva",
+    "position": "Property Expert",
+    "experience": "6 years",
+    "languages": "English, Russian",
+    "specialization": "Consulting",
+    "language": "English",
+    "img": "https://axcapital.imgix.net/users/images/000/001/086/original/Nadezhda-Faskhieva.jpg"
+  }
+]
