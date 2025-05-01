@@ -77,7 +77,7 @@ const Footer = () => {
   ];
 
   return (
-    <div className="relative mb-14 md:mb-0">
+    <div className="relative mb-14 md:mb-0 font-raleway font-thin">
       <img src={skyline} alt="" className="-mb-1" />
       <footer className="bg-[#2b2b2b] text-white py-3  px-6">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -94,17 +94,17 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaFacebookF className="cursor-pointer" />
+                <FaFacebookF className="cursor-pointer w-7 h-7 hover:text-[var(--primary-color)]" />
               </a>
               <a
                 href="https://www.instagram.com/rfredubai?igsh=cm5xcXpjdXRpMW1y"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaInstagram className="cursor-pointer" />
+                <FaInstagram className="cursor-pointer w-7 h-7 hover:text-[var(--primary-color)]" />
               </a>
               <a href="" target="_blank" rel="noopener noreferrer">
-                <FaYoutube className="cursor-pointer" />
+                <FaYoutube className="cursor-pointer w-7 h-7 hover:text-[var(--primary-color)]" />
               </a>
             </div>
 

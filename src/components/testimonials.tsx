@@ -83,14 +83,12 @@ export default function TestimonialSlider() {
   };
 
   return (
-    <section className="py-12 bg-black">
+    <section className="py-12 bg-black font-raleway font-light">
       <div className="max-w-6xl mx-auto px-6">
         {/* Heading & Rating */}
         <div className="flex flex-col md:flex-row items-center gap-6">
           <div className="md:w-1/3 text-center md:text-left">
-            <h2 className="text-2xl font-bold text-white">
-              CLIENT TESTIMONIALS
-            </h2>
+            <h2 className="text-3xl text-white">CLIENT TESTIMONIALS</h2>
             <div className="flex items-center gap-2 mt-2 justify-center md:justify-start">
               <div className="  rounded-full p-2 text-white text-xl font-bold">
                 <img
@@ -100,8 +98,12 @@ export default function TestimonialSlider() {
                 />
               </div>
               <div>
-                <p className="font-bold text-lg text-white">Rated 4.8/5</p>
-                <p className="text-gray-300 text-sm">250+ Google Reviews</p>
+                <p className="font-bold text-lg text-white font-sans">
+                  Rated 4.8/5
+                </p>
+                <p className="text-gray-300 text-sm font-light">
+                  250+ Google Reviews
+                </p>
               </div>
             </div>
             <p className="text-gray-300 mt-4">
