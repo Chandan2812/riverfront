@@ -51,7 +51,7 @@ const AwardsSection = () => {
   return (
     <div className="w-full py-16 bg-black text-center cursor-pointer font-raleway font-thin">
       {/* Title */}
-      <h2 className="text-3xl md:text-5xl text-white mb-10 border-b w-fit mx-auto">
+      <h2 className="text-3xl md:text-5xl text-white mb-10 ">
         Awards & Recognitions
       </h2>
 
