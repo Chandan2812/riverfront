@@ -91,7 +91,10 @@ const StatsSection: React.FC = () => {
   }, []);
 
   return (
-    <div ref={sectionRef} className="w-full md:py-10 bg-black">
+    <div
+      ref={sectionRef}
+      className="w-full md:py-10 bg-black font-raleway font-light"
+    >
       {/* Desktop View */}
       <div className="hidden md:flex max-w-6xl mx-auto px-4 justify-center text-center">
         {stats.map((stat, index) => (
@@ -100,7 +103,9 @@ const StatsSection: React.FC = () => {
               {animatedValues[index]}
               {stat.suffix || "+"}
             </h2>
-            <p className="text-sm text-white uppercase mt-2">{stat.label}</p>
+            <p className="text-sm text-white uppercase mt-2  tracking-widest">
+              {stat.label}
+            </p>
           </div>
         ))}
       </div>
