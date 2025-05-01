@@ -1,28 +1,20 @@
-import { useEffect, useState } from "react";
-import SubmitDetailsModal from "../../components/EnquireNow";
+import { useEffect } from "react";
 import Footer from "../../components/footer";
 import Navbar from "../../components/nav";
+import HaveAQuestion from "../../components/HaveAQuestion";
 
 const BuyerGuide = () => {
-
-    useEffect(() => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      }, []);
-      
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
 
   return (
-    <div>
+    <div className="bg-black font-raleway font-light text-white">
       <div className="mb-24 md:mb-32">
         <Navbar />
       </div>
-      <section className="px-4 py-10 md:px-20 bg-white text-[#1e1e1e]">
-        <h2 className="text-3xl md:text-4xl mb-6">
-          Buyer's Guide
-        </h2>
+      <section className="px-4 py-10 md:px-20">
+        <h2 className="text-3xl md:text-4xl mb-6">Buyer's Guide</h2>
 
         <div className="flex flex-col md:flex-row gap-6 mb-2">
           {/* Image */}
@@ -56,7 +48,7 @@ const BuyerGuide = () => {
             </p>
           </div>
         </div>
-        <div className="space-y-4 text-justify">
+        <div className="space-y-4 text-justify mt-5">
           <p>
             Dubai offers properties in various price ranges, so it's essential
             to assess your financial capabilities and find a property that
@@ -117,24 +109,8 @@ const BuyerGuide = () => {
         </div>
       </section>
 
-      <section className="mx-auto w-full md:w-[90%] my-12 flex flex-col md:flex-row items-center gap-4 justify-between text-black px-6 py-8">
-        <h2 className="text-xl md:text-2xl text-center md:text-left font-semibold">
-          Have a question?
-          <br />
-          <span className="text-xl md:text-2xl text-center md:text-left font-semibold">
-            {" "}
-            Our team is happy to assist you
-          </span>
-        </h2>
-        <div>
-  <button onClick={openModal} className="bg-[var(--primary-color)] hover:opacity-80 text-white px-6 py-2 rounded-full font-medium">
-    Enquire Now
-  </button>
-  <span>  or Call: +97147702260</span>
-  </div>
-      </section>
+      <HaveAQuestion />
       <Footer />
-      <SubmitDetailsModal isOpen={isModalOpen} onClose={closeModal} />
     </div>
   );
 };
