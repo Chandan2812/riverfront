@@ -2,8 +2,8 @@ import blogsData from "../data/blogsData.json";
 
 const Blog = () => {
   return (
-    <div className="container mx-auto px-4 py-10">
-      <h1 className="text-2xl md:text-4xl text-white mb-6 text-center">
+    <div className="container mx-auto px-4 py-10 font-raleway font-thin">
+      <h1 className="text-3xl md:text-5xl text-white mb-6 text-center">
         Latest News & Insights
       </h1>
 
@@ -25,7 +25,7 @@ const Blog = () => {
               <p className="text-white text-sm mb-3">{blog.date}</p>
               <a
                 href={`/blog/${blog.id}`}
-                className="text-[var(--primary-color)]"
+                className="text-[var(--primary-color)] font-light"
               >
                 Read More &raquo;
               </a>

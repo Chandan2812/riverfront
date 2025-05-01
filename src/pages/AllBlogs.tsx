@@ -6,7 +6,7 @@ import Footer from "../components/footer";
 function AllBlogs() {
   const navigate = useNavigate();
   return (
-    <div className="bg-black px-5">
+    <div className="bg-black px-5 font-raleway font-thin">
       <div className="mb-32 md:mb-32 pt-3 md:pt-10">
         <Navbar />
       </div>
@@ -29,7 +29,7 @@ function AllBlogs() {
               <p className="text-gray-300 text-sm mb-3">{blog.date}</p>
               <button
                 onClick={() => navigate(`/blog/${blog.id}`)}
-                className=" text-[var(--primary-color)]"
+                className=" text-[var(--primary-color)] font-light"
               >
                 Read More &raquo;
               </button>
