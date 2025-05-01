@@ -17,9 +17,7 @@ export default function WhatsAppButton() {
             <PhoneCall className="text-white" size={24} />
             {showTooltip && (
               <div className="absolute bottom-full mb-2 bg-white text-black text-sm px-2 py-1 rounded shadow-md ">
-                <a href="tel:(+971)47702260">
-                  Contact Number: (+971) 47 70 2260
-                </a>
+                <a href="tel:+971509863828">Contact Number: +971509863828</a>
               </div>
             )}
           </div>

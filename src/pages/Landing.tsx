@@ -34,7 +34,7 @@ export const Landing = () => {
         </div>
         <div className="fixed bottom-0 left-0 w-full z-50 flex md:hidden">
           <a
-            href="tel:+97147702260"
+            href="tel:+971509863828"
             className="w-1/2 bg-[var(--secondary-color)] text-[var(--primary-color)] text-center py-4 font-semibold transition-all flex items-center justify-center gap-2"
           >
             <Phone size={20} />

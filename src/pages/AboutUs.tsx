@@ -258,7 +258,7 @@ export const AboutUs = () => {
                 UAE FREE PHONE: +97147702260
               </p>
               <p className="text-gray-300 mb-2 font-sans">
-                TEL:(+971) 4770 2 260
+                WhatsApp: +971 509863828
               </p>
               <p className="text-gray-300 mb-2">
                 EMAIL:{" "}

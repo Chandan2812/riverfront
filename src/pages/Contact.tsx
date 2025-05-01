@@ -108,7 +108,7 @@ export default function Contact() {
               className="bg-white rounded-md p-4 flex items-center gap-4 shadow-sm hover:bg-gray-200 transition font-sans"
             >
               <FaWhatsapp className="w-6 h-6 text-green-600" />
-              <span className="text-sm text-gray-700">‪+97147702260‬</span>
+              <span className="text-sm text-gray-700">‪+971 509863828</span>
             </a>
 
             {/* Email Button */}
@@ -126,7 +126,7 @@ export default function Contact() {
               className="bg-white rounded-md p-4 flex items-center gap-4 shadow-sm hover:bg-gray-200 transition font-sans"
             >
               <MessageSquareText className="w-6 h-6 text-gray-700" />
-              <span className="text-sm text-gray-700">‪+971502304888‬</span>
+              <span className="text-sm text-gray-700">‪+971 509863828</span>
             </a>
           </div>
                   
