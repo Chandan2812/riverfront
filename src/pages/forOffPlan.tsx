@@ -6,6 +6,7 @@ import propertyData from "../data/offPlanData.json";
 import Navbar from "../components/nav";
 import Footer from "../components/footer";
 import { useNavigate } from "react-router-dom";
+import HaveAQuestion from "../components/HaveAQuestion";
 
 const OffplanPropertyCard: React.FC = () => {
   const navigate = useNavigate();
@@ -47,39 +48,45 @@ const OffplanPropertyCard: React.FC = () => {
   }, [searchTerm, developerFilter, maxPrice]);
 
   return (
-    <div className="bg-black">
+    <div className="bg-black font-raleway">
       <div className="mb-16 md:mb-32 pt-5">
         <Navbar />
       </div>
-      <h1 className="w-[90%] mx-auto text-2xl md:text-4xl text-center mb-5 md:mb-8 text-white">
+      <h1 className="w-[90%] mx-auto text-2xl md:text-4xl text-center mb-5 md:mb-8 pt-6 text-white font-thin">
         Off-Plan Properties in Dubai: Your Guide to Future Real Estate
         Investments
       </h1>
 
       {/* Filters */}
       <div className="w-full md:w-[90%] mx-auto px-4 mb-6 grid grid-cols-1 md:grid-cols-3 gap-4 justify-between">
-        <input
-          type="text"
-          placeholder="Search by project or location..."
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          className="border border-[var(--primary-color)] px-4 py-2 rounded-md"
-        />
-
-        <select
-          value={developerFilter}
-          onChange={(e) => setDeveloperFilter(e.target.value)}
-          className="border border-[var(--primary-color)] px-4 py-2 rounded-md w-full"
-        >
-          <option value="">All Developers</option>
-          {allDevelopers.map((dev, idx) => (
-            <option key={idx} value={dev}>
-              {dev}
-            </option>
-          ))}
-        </select>
+        <div className="flex flex-col w-full">
+          <label className="mb-1 text-white">Location</label>
+          <input
+            type="text"
+            placeholder="Search by project or location..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="border border-[var(--primary-color)] px-4 py-2 rounded-md bg-transparent text-white"
+          />
+        </div>
+        <div className="flex flex-col w-full">
+          <label className="mb-1 text-white">Developers</label>
+          <select
+            value={developerFilter}
+            onChange={(e) => setDeveloperFilter(e.target.value)}
+            className="border border-[var(--primary-color)] px-4 py-2 rounded-md w-full bg-black text-white"
+          >
+            <option value="">All Developers</option>
+            {allDevelopers.map((dev, idx) => (
+              <option key={idx} value={dev}>
+                {dev}
+              </option>
+            ))}
+          </select>
+        </div>
 
         <div className="flex flex-col w-full">
+          <label className="mb-1 text-white">Max Price (AED)</label>
           <input
             type="range"
             min={0}
@@ -89,8 +96,8 @@ const OffplanPropertyCard: React.FC = () => {
             onChange={(e) => setMaxPrice(parseInt(e.target.value))}
             className="accent-[var(--primary-color)]"
           />
-          <span className="text-sm text-gray-600">
-            Max Price: AED {maxPrice.toLocaleString()}
+          <span className="text-sm text-gray-300 mt-1">
+            AED {maxPrice.toLocaleString()}
           </span>
         </div>
       </div>
@@ -103,7 +110,7 @@ const OffplanPropertyCard: React.FC = () => {
             <div
               key={index}
               onClick={() => handleCardClick(property.projectName)}
-              className="bg-black border border-gray-800  shadow-gray-700 rounded-2xl  shadow-md w-full overflow-hidden flex flex-col cursor-pointer"
+              className="border border-gray-700 rounded-xl hover:shadow-[var(--primary-color)] shadow-md overflow-hidden cursor-pointer transition hover:scale-105"
             >
               <div className="h-52 w-full overflow-hidden">
                 <img
@@ -114,24 +121,24 @@ const OffplanPropertyCard: React.FC = () => {
               </div>
 
               <div className="p-4 flex flex-col flex-grow">
-                <h2 className="text-md font-semibold text-white mb-2">
+                <h2 className="text-lg text-white mb-2 font-raleway font-thin">
                   {property.projectName}
                 </h2>
                 <hr className="border-black w-20 mb-3" />
 
-                <div className="flex items-center justify-between text-sm text-gray-300 mb-3">
+                <div className="flex items-center justify-between text-sm text-gray-200 mb-3 font-raleway font-thin">
                   <div className="flex items-center gap-1">
-                    <GiHouse className="text-xl text-gray-300" />
+                    <GiHouse className="text-xl" />
                     <span>{property.developer}</span>
                   </div>
                   <div className="flex items-center gap-1 text-right">
-                    <HiOutlineLocationMarker className="text-xl text-gray-300" />
+                    <HiOutlineLocationMarker className="text-xl" />
                     <span>{property.location}</span>
                   </div>
                 </div>
 
                 <div className="flex items-center justify-between mt-auto">
-                  <span className="text-md font-bold text-gray-300">
+                  <span className="text-lg text-gray-200">
                     {property.price}
                   </span>
                   {whatsappNumber ? (
@@ -140,10 +147,9 @@ const OffplanPropertyCard: React.FC = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={(e) => e.stopPropagation()}
-                      className="flex items-center text-green-600 font-medium text-sm"
+                      className="flex items-center text-[var(--primary-color)] font-medium text-sm"
                     >
-                      <FaWhatsapp className="mr-1" />
-                      WhatsApp
+                      <FaWhatsapp className="w-7 h-7" />
                     </a>
                   ) : (
                     <span className="text-sm text-gray-400">No WhatsApp</span>
@@ -155,27 +161,7 @@ const OffplanPropertyCard: React.FC = () => {
         })}
       </div>
 
-      <div className="bg-black py-10 mt-10">
-        <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6">
-          {/* Text */}
-          <div className="text-center md:text-left">
-            <h2 className="text-2xl font-semibold text-white mb-2">
-              Have a question?
-            </h2>
-            <p className="text-gray-300">Our team is happy to assist you</p>
-          </div>
-
-          {/* Contact Actions */}
-          <div className="flex flex-col sm:flex-row items-center gap-4">
-            <button className="bg-[var(--primary-color)] hover:opacity-70 text-white px-6 py-2 rounded-md transition">
-              <a href="/contact">Contact Us</a>
-            </button>
-            <span className="text-lg font-medium text-gray-300">
-              📞 +1 (800) 123-4567
-            </span>
-          </div>
-        </div>
-      </div>
+      <HaveAQuestion />
 
       <Footer />
     </div>
