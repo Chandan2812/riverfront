@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import propertyData from "../data/offPlanData.json";
 import Navbar from "../components/nav";
 import Footer from "../components/footer";
+import HaveAQuestion from "../components/HaveAQuestion";
 
 function OffPlanDetails() {
   const { projectName } = useParams();
@@ -15,7 +16,7 @@ function OffPlanDetails() {
   }
 
   return (
-    <div>
+    <div className="bg-black">
       <div className="mb-24">
         <Navbar />
       </div>
@@ -28,23 +29,23 @@ function OffPlanDetails() {
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
-          <h1 className="text-white text-3xl font-bold">
+          <h1 className="text-white text-5xl font-raleway font-thin">
             {property.projectName}
           </h1>
         </div>
       </div>
 
       {/* Project Details Section */}
-      <div className="max-w-6xl mx-auto px-4 py-10">
+      <div className="w-[90%] mx-auto px-4 py-10 font-raleway font-thin text-white">
         {/* Description + Price + Image */}
         <div className="flex flex-col md:flex-row items-start gap-6">
           <div className="flex-1 space-y-4">
-            <h2 className="text-2xl font-bold mb-2">
+            <h2 className="text-3xl mb-2">
               Project Details - {property.projectName}
             </h2>
             <hr className="border-t-2 border-black w-32 mb-6" />
-            <p className="text-lg text-gray-700">{property.description}</p>
-            <p className="text-xl font-semibold text-black">
+            <p className="text-lg text-gray-200">{property.description}</p>
+            <p className="text-xl font-thin text-white font-sans">
               Price: {property.price}
             </p>
           </div>
@@ -67,35 +68,15 @@ function OffPlanDetails() {
             />
           </div>
           <div className="flex-1">
-            <h3 className="text-xl font-bold mb-1">About Developers</h3>
-            <p className="text-md font-semibold mb-1">{property.developer}</p>
-            <hr className="border-gray-400 w-24 mb-4" />
-            <p className="text-gray-700">{property.aboutDeveloper}</p>
+            <h3 className="text-3xl mb-1">About Developers</h3>
+            <p className="text-lg font-thin mb-1">{property.developer}</p>
+            <hr className="border border-gray-300 w-24 mb-4" />
+            <p className="text-gray-200">{property.aboutDeveloper}</p>
           </div>
         </div>
       </div>
 
-      <div className="bg-gray-100 py-10 mt-10">
-        <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6">
-          {/* Text */}
-          <div className="text-center md:text-left">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-2">
-              Have a question?
-            </h2>
-            <p className="text-gray-600">Our team is happy to assist you</p>
-          </div>
-
-          {/* Contact Actions */}
-          <div className="flex flex-col sm:flex-row items-center gap-4">
-            <button className="bg-[var(--primary-color)] hover:opacity-70 text-white px-6 py-2 rounded-md transition">
-              <a href="/contact">Contact Us</a>
-            </button>
-            <span className="text-lg font-medium text-gray-800">
-              📞 +1 (800) 123-4567
-            </span>
-          </div>
-        </div>
-      </div>
+      <HaveAQuestion />
 
       <Footer />
     </div>
