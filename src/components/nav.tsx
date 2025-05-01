@@ -21,6 +21,13 @@ interface NavbarProps {
   transparent?: boolean;
 }
 
+declare global {
+  interface Window {
+    googleTranslateElementInit: () => void;
+    google: any;
+  }
+}
+
 const Navbar: React.FC<NavbarProps> = ({ transparent = false }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -59,6 +66,32 @@ const Navbar: React.FC<NavbarProps> = ({ transparent = false }) => {
     };
   }, [menuOpen]);
 
+  useEffect(() => {
+    const googleTranslateElementInit = () => {
+      // @ts-ignore
+      new window.google.translate.TranslateElement(
+        {
+          pageLanguage: "en",
+          autoDisplay: false,
+        },
+        "google_translate_element"
+      );
+    };
+    // Check if the script has already been added
+    const loadGoogleTranslateScript = () => {
+      if (!window.googleTranslateElementInit) {
+        const script = document.createElement("script");
+        script.src =
+          "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+        script.async = true;
+        document.body.appendChild(script);
+        window.googleTranslateElementInit = googleTranslateElementInit;
+      }
+    };
+
+    loadGoogleTranslateScript();
+  }, []);
+
   return (
     <>
       <nav
@@ -92,7 +125,7 @@ const Navbar: React.FC<NavbarProps> = ({ transparent = false }) => {
               src={logo}
               onClick={() => navigate("/")}
               alt="Logo"
-              className="h-20 md:h-28 md:ml-44 cursor-pointer"
+              className="h-20 md:h-28 md:ml-80 cursor-pointer"
             />
 
             {/* Right: Contact Us + Find a Property */}
@@ -109,6 +142,7 @@ const Navbar: React.FC<NavbarProps> = ({ transparent = false }) => {
               >
                 <Search size={24} /> Find a Property
               </button>
+              {/* <div id="google_translate_element"></div> */}
             </div>
           </div>
 
