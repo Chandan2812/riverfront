@@ -4,7 +4,7 @@ const Blog = () => {
   return (
     <div className="container mx-auto px-4 py-10">
       <h1 className="text-2xl md:text-4xl text-white mb-6 text-center">
-        Our Latest Blogs
+        Latest News & Insights
       </h1>
 
       <div className=" max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">

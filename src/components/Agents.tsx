@@ -80,7 +80,7 @@ const AgentsSection = () => {
   }, [enrichedAgents, specialization, language]);
 
   return (
-    <div className="bg-black text-white font-raleway font-thin">
+    <div className="bg-[#121212] text-white font-raleway font-thin">
       {/* Navbar */}
       <div className="mb-27 md:mb-20 pt-20 md:pt-10">
         <Navbar />
@@ -144,9 +144,9 @@ const AgentsSection = () => {
           ))}
         </div>
       </section>
+      <Footer />
 
       {/* Footer */}
-      <Footer />
     </div>
   );
 };
