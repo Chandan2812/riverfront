@@ -7,13 +7,14 @@ import Navbar from "../components/nav";
 import Footer from "../components/footer";
 import { useNavigate } from "react-router-dom";
 import HaveAQuestion from "../components/HaveAQuestion";
+import { Range } from "react-range";
 
 const OffplanPropertyCard: React.FC = () => {
   const navigate = useNavigate();
 
   const [searchTerm, setSearchTerm] = useState("");
   const [developerFilter, setDeveloperFilter] = useState("");
-  const [maxPrice, setMaxPrice] = useState(10000000);
+  const [priceRange, setPriceRange] = useState([0, 5000000]);
 
   const handleCardClick = (projectName: string) => {
     navigate(`/offplan/${encodeURIComponent(projectName)}`);
@@ -41,11 +42,13 @@ const OffplanPropertyCard: React.FC = () => {
         : true;
 
       const propertyPrice = parsePrice(property.price);
-      const matchesPrice = propertyPrice <= maxPrice;
+
+      const matchesPrice =
+        propertyPrice >= priceRange[0] && propertyPrice <= priceRange[1];
 
       return matchesSearch && matchesDeveloper && matchesPrice;
     });
-  }, [searchTerm, developerFilter, maxPrice]);
+  }, [searchTerm, developerFilter, priceRange]);
 
   return (
     <div className="bg-black font-raleway">
@@ -85,20 +88,47 @@ const OffplanPropertyCard: React.FC = () => {
           </select>
         </div>
 
-        <div className="flex flex-col w-full">
-          <label className="mb-1 text-white">Max Price (AED)</label>
-          <input
-            type="range"
-            min={0}
-            max={10000000}
-            step={100000}
-            value={maxPrice}
-            onChange={(e) => setMaxPrice(parseInt(e.target.value))}
-            className="accent-[var(--primary-color)]"
-          />
-          <span className="text-sm text-gray-300 mt-1">
-            AED {maxPrice.toLocaleString()}
-          </span>
+        <div className="flex flex-col w-full relative">
+          <label className="mb-1 text-sm text-white">Price (AED)</label>
+          <div className="border border-gray-600 rounded px-4 pt-2 pb-3 bg-black">
+            <div className="flex justify-between text-xs mb-1 text-white">
+              <span>min {priceRange[0].toLocaleString()}</span>
+              <span>max {priceRange[1].toLocaleString()}</span>
+            </div>
+            <div className="absolute left-4 right-4 bottom-0">
+              <Range
+                step={100000}
+                min={0}
+                max={5000000}
+                values={priceRange}
+                onChange={setPriceRange}
+                renderTrack={({ props, children }) => (
+                  <div
+                    {...props}
+                    className="h-1 bg-gray-700 rounded relative"
+                    style={{
+                      ...props.style,
+                      background: `linear-gradient(to right, #444 ${
+                        (priceRange[0] / 5000000) * 100
+                      }%, var(--primary-color) ${
+                        (priceRange[0] / 5000000) * 100
+                      }%, var(--primary-color) ${
+                        (priceRange[1] / 5000000) * 100
+                      }%, #444 ${(priceRange[1] / 5000000) * 100}%)`,
+                    }}
+                  >
+                    {children}
+                  </div>
+                )}
+                renderThumb={({ props }) => (
+                  <div
+                    {...props}
+                    className="w-4 h-4 bg-[var(--primary-color)] rounded-full shadow"
+                  />
+                )}
+              />
+            </div>
+          </div>
         </div>
       </div>
 

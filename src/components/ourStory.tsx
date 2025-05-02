@@ -19,7 +19,7 @@ export default function OurStory() {
           href="/about"
           className="inline-block px-6 py-2 text-lg font-light text-white bg-[--primary-color] rounded-3xl hover:opacity-80 mt-6"
         >
-          Read More About Us
+          About Us
         </a>
       </div>
     </div>

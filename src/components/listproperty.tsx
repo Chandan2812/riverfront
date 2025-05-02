@@ -38,12 +38,14 @@ const ListProperty = () => {
               you turn your property into a successful transaction. Start today,
               and let us guide you through every step of the process!
             </p>
-            <button
-              onClick={() => setShowForm(true)}
-              className="bg-[#f59e0b] hover:bg-[#d97706] text-white font-light px-6 py-3 rounded-full shadow-md transition-all duration-200"
-            >
-              List Your Property
-            </button>
+            <div className="flex justify-center md:justify-start">
+              <button
+                onClick={() => setShowForm(true)}
+                className="bg-[#f59e0b] hover:bg-[#d97706] text-white font-light px-6 py-3 rounded-full shadow-md transition-all duration-200"
+              >
+                List Your Property
+              </button>
+            </div>
           </div>
         </div>
       </section>
