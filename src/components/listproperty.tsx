@@ -41,7 +41,8 @@ const ListProperty = () => {
             <div className="flex justify-center md:justify-start">
               <button
                 onClick={() => setShowForm(true)}
-                className="bg-[#f59e0b] hover:bg-[#d97706] text-white font-light px-6 py-3 rounded-full shadow-md transition-all duration-200"
+                className=" hover:opacity-80 text-white font-light px-6 py-3 rounded-full shadow-md transition-all duration-200"
+                style={{ background: "var(--bg-primary-gradient)" }}
               >
                 List Your Property
               </button>

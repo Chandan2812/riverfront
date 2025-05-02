@@ -184,7 +184,8 @@ export default function Contact() {
             />
             <button
               type="submit"
-              className="bg-[var(--primary-color)] text-white py-3 px-6 rounded-lg w-full hover:bg-[#f2ae37] transition"
+              className=" text-white text-xl py-2 px-6 rounded-full w-full hover:bg-[#f2ae37] transition"
+              style={{ background: "var(--bg-primary-gradient)" }}
             >
               SUBMIT
             </button>

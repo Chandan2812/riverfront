@@ -116,7 +116,7 @@ const BookMeetingModal: React.FC<Props> = ({ isOpen, onClose }) => {
           disabled={!isFormValid}
           className={`w-full md:w-2/3 text-white py-2 rounded-full text-lg ${
             isFormValid
-              ? "bg-[var(--primary-color)] hover:bg-[#e6a330]"
+              ? "bg-gradient-to-r from-[#f9f295] via-[#e0aa3e] to-[#faf398] hover:opacity-80"
               : "bg-gray-500 cursor-not-allowed"
           }`}
         >

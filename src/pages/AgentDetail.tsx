@@ -62,7 +62,7 @@ const AgentDetail = () => {
           <h1 className="text-4xl font-semibold mb-2">{agent.name}</h1>
           <p className="text-xl text-gray-300 mb-4">{agent.position}</p>
 
-          <div className="text-gray-400 space-y-2 mb-8">
+          <div className="text-gray-300 space-y-2 mb-8">
             <p>
               <strong className="text-white">Experience:</strong>{" "}
               {agent.experience}
@@ -77,7 +77,7 @@ const AgentDetail = () => {
             </p>
           </div>
 
-          <div className="space-y-6 text-gray-300 leading-relaxed">
+          <div className="space-y-6 text-gray-200 leading-relaxed">
             <p>
               Olga was born in the Republic of Moldova. Before settling down in
               Dubai she had lived in London for a year and spent another year in
@@ -115,7 +115,7 @@ const AgentDetail = () => {
               believes that the most important thing is to give people kindness
               and help.
             </p>
-            <p className="italic text-orange-400 mt-2">
+            <p className="italic text-[var(--primary-color)] mt-2">
               "Believe in yourself, be positive and smile."
             </p>
           </div>

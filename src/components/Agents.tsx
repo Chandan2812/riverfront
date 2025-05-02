@@ -25,9 +25,9 @@ const AgentCard = ({ agent }: { agent: Agent & { id: string } }) => (
       />
       <div className="absolute bottom-0 w-full bg-black bg-opacity-60 text-white p-4 backdrop-blur-sm">
         <h2 className="font-semibold text-lg">{agent.name}</h2>
-        <p className="text-sm text-gray-300">{agent.position}</p>
-        <p className="text-sm text-gray-400">Experience: {agent.experience}</p>
-        <p className="text-sm text-gray-400">
+        <p className="text-sm text-gray-200">{agent.position}</p>
+        <p className="text-sm text-gray-200">Experience: {agent.experience}</p>
+        <p className="text-sm text-gray-200">
           Languages: {agent.languages.join(", ")}
         </p>
       </div>

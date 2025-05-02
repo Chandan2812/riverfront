@@ -87,7 +87,8 @@ const AwardsSection = () => {
       {/* View All Button */}
       <a
         href="/awards"
-        className="inline-block font-light px-8 py-2 text-lg text-white bg-[--primary-color] rounded-3xl hover:opacity-80 mt-10"
+        style={{ background: "var(--bg-primary-gradient)" }}
+        className="inline-block font-light px-8 py-2 text-lg text-white rounded-3xl hover:opacity-80 mt-10"
       >
         View All Awards
       </a>

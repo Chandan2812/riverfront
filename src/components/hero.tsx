@@ -55,9 +55,14 @@ const HeroSection: React.FC = () => {
                 onClick={() => setActiveTab(tab)}
                 className={`px-4 py-2 text-sm md:text-base rounded-full font-medium transition ${
                   activeTab === tab
-                    ? "bg-gradient-to-r from-[#AE8625] via-[#F7EF8A] to-[#D2AC47] text-white"
+                    ? "text-white"
                     : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                 }`}
+                style={
+                  activeTab === tab
+                    ? { background: "var(--bg-primary-gradient)" }
+                    : {}
+                }
               >
                 {tab}
               </button>
@@ -125,7 +130,10 @@ const HeroSection: React.FC = () => {
 
             {/* Search Button */}
             <div className="mt-2">
-              <button className="bg-gradient-to-r from-[#F9F295] via-[#E0AA3E] to-[#FAF398] hover:bg-[var(--primary-color)] hover:opacity-80 text-white px-6 py-2 rounded-md transition font-semibold w-full">
+              <button
+                style={{ background: "var(--bg-primary-gradient)" }}
+                className=" hover:bg-[var(--primary-color)] hover:opacity-80 text-white px-6 py-2 rounded-md transition  w-full"
+              >
                 Search
               </button>
             </div>

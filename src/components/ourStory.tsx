@@ -17,7 +17,8 @@ export default function OurStory() {
         </p>
         <a
           href="/about"
-          className="inline-block px-6 py-2 text-lg font-light text-white bg-[--primary-color] rounded-3xl hover:opacity-80 mt-6"
+          className="inline-block px-6 py-2 text-lg font-light text-white  rounded-3xl hover:opacity-80 mt-6"
+          style={{ background: "var(--bg-primary-gradient)" }}
         >
           About Us
         </a>
