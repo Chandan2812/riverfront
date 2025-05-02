@@ -156,6 +156,9 @@ const Navbar: React.FC<NavbarProps> = ({ transparent = false }) => {
               className="h-20 cursor-pointer"
             />
 
+            {/* Center: Language Selector */}
+            <div id="google_translate_element"></div>
+
             {/* Right: Hamburger */}
             <button
               onClick={() => setMenuOpen(true)}
