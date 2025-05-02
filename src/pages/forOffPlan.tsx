@@ -90,7 +90,7 @@ const OffplanPropertyCard: React.FC = () => {
 
         <div className="flex flex-col w-full relative">
           <label className="mb-1 text-sm text-white">Price (AED)</label>
-          <div className="border border-gray-600 rounded px-4 pt-2 pb-3 bg-black">
+          <div className="border border-[var(--primary-color)] rounded px-4 pt-2 pb-3 bg-black">
             <div className="flex justify-between text-xs mb-1 text-white">
               <span>min {priceRange[0].toLocaleString()}</span>
               <span>max {priceRange[1].toLocaleString()}</span>
