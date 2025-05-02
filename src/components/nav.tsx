@@ -97,7 +97,7 @@ const Navbar: React.FC<NavbarProps> = ({ transparent = false }) => {
       <nav
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 font-raleway font-light ${backgroundClass}`}
       >
-        <div className="max-w-6xl mx-auto flex items-center justify-between px-4 py-2 md:py-0">
+        <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-2 md:py-0">
           {/* --- Desktop Layout --- */}
           <div className="hidden md:flex w-full py-2 items-center justify-between">
             {/* Left: Hamburger */}
@@ -142,7 +142,7 @@ const Navbar: React.FC<NavbarProps> = ({ transparent = false }) => {
               >
                 <Search size={24} /> Find a Property
               </button>
-              {/* <div id="google_translate_element"></div> */}
+              <div id="google_translate_element"></div>
             </div>
           </div>
 
