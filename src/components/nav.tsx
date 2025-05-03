@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import logo from "../assets/logo-riverfront.png";
 import { User, X } from "lucide-react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import FindPropertyModal from "./FindPropertyModal";
 import BookMeetingModal from "./BookMeetingModal";
 import {
@@ -33,7 +33,6 @@ const Navbar: React.FC<NavbarProps> = ({ transparent = false }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isBookMeetingOpen, setIsBookMeetingOpen] = useState(false);
   const [isFindPropertyOpen, setIsFindPropertyOpen] = useState(false);
-  const navigate = useNavigate();
   const location = useLocation();
 
   const backgroundClass =
@@ -121,12 +120,13 @@ const Navbar: React.FC<NavbarProps> = ({ transparent = false }) => {
             </button>
 
             {/* Center: Logo */}
-            <img
-              src={logo}
-              onClick={() => navigate("/")}
-              alt="Logo"
-              className="h-20 md:h-28 md:ml-72 cursor-pointer"
-            />
+            <a href="/">
+              <img
+                src={logo}
+                alt="Logo"
+                className="h-20 md:h-28 md:ml-72 cursor-pointer"
+              />
+            </a>
 
             {/* Right: Contact Us + Find a Property */}
             <div className="flex gap-6 text-[var(--secondary-color)] text-md ">
@@ -148,12 +148,9 @@ const Navbar: React.FC<NavbarProps> = ({ transparent = false }) => {
           {/* --- Mobile Layout --- */}
           <div className="flex md:hidden w-full items-center justify-between">
             {/* Left: Logo */}
-            <img
-              src={logo}
-              onClick={() => navigate("/")}
-              alt="Logo"
-              className="h-20 cursor-pointer"
-            />
+            <a href="/">
+              <img src={logo} alt="Logo" className="h-20 cursor-pointer" />
+            </a>
 
             {/* Right: Hamburger */}
             <button
