@@ -97,7 +97,7 @@ const Navbar: React.FC<NavbarProps> = ({ transparent = false }) => {
       <nav
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 font-raleway font-light ${backgroundClass}`}
       >
-        <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-2 md:py-0">
+        <div className="md:w-full lg:max-w-6xl  mx-auto flex items-center justify-between px-4 py-2 md:py-0">
           {/* --- Desktop Layout --- */}
           <div className="hidden md:flex w-full py-2 items-center justify-between">
             {/* Left: Hamburger */}
@@ -125,11 +125,11 @@ const Navbar: React.FC<NavbarProps> = ({ transparent = false }) => {
               src={logo}
               onClick={() => navigate("/")}
               alt="Logo"
-              className="h-20 md:h-28 md:ml-80 cursor-pointer"
+              className="h-20 md:h-28 md:ml-72 cursor-pointer"
             />
 
             {/* Right: Contact Us + Find a Property */}
-            <div className="flex gap-6 text-[var(--secondary-color)] text-md">
+            <div className="flex gap-6 text-[var(--secondary-color)] text-md ">
               <a
                 href="/contact"
                 className={`hover:text-[var(--primary-color)] hover:border-[var(--primary-color)] rounded-full px-3 py-1 ${textColorClass}`}
@@ -138,11 +138,10 @@ const Navbar: React.FC<NavbarProps> = ({ transparent = false }) => {
               </a>
               <button
                 onClick={() => setIsFindPropertyOpen(true)}
-                className={`flex items-center gap-2 text-black hover:text-[var(--primary-color)] ${textColorClass2}`}
+                className={`flex items-center gap-2 text-black hover:text-[var(--primary-color)] md:hidden lg:flex ${textColorClass2}`}
               >
                 <Search size={24} /> Find a Property
               </button>
-              <div id="google_translate_element"></div>
             </div>
           </div>
 
@@ -155,9 +154,6 @@ const Navbar: React.FC<NavbarProps> = ({ transparent = false }) => {
               alt="Logo"
               className="h-20 cursor-pointer"
             />
-
-            {/* Center: Language Selector */}
-            <div id="google_translate_element"></div>
 
             {/* Right: Hamburger */}
             <button
@@ -182,9 +178,14 @@ const Navbar: React.FC<NavbarProps> = ({ transparent = false }) => {
         </div>
       </nav>
 
+      <div
+        id="google_translate_element"
+        className="fixed top-8 left-2/3 -translate-x-1/2 z-[9990] md:left-1/3 md:top-12 lg:top-12 lg:left-auto lg:right-10 lg:translate-x-0"
+      ></div>
+
       {/* Mobile Menu Drawer */}
       {menuOpen && (
-        <div className="fixed inset-0 z-50">
+        <div className="fixed inset-0 z-[9999]">
           {/* Background Blur */}
           <div
             className="absolute inset-0 bg-black bg-opacity-40 backdrop-blur-sm"
@@ -192,7 +193,7 @@ const Navbar: React.FC<NavbarProps> = ({ transparent = false }) => {
           />
 
           {/* Slide-in Menu */}
-          <div className="relative w-full bg-[var(--secondary-color)] md:w-1/5 h-full flex flex-col">
+          <div className="relative w-full bg-[var(--secondary-color)] md:w-2/5 lg:w-1/5 h-full flex flex-col">
             <div className="flex items-center justify-between px-4 py-4 border-b">
               <img src={logo} alt="Logo" className="h-24" />
               <button onClick={() => setMenuOpen(false)}>
