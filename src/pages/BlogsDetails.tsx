@@ -14,7 +14,7 @@ const BlogDetails = () => {
   }
 
   return (
-    <div className="bg-black font-raleway font-thin">
+    <div className="bg-white dark:bg-black font-raleway font-light dark:font-thin text-black dark:text-white">
       <div className="mb-32">
         <Navbar />
       </div>
@@ -24,9 +24,13 @@ const BlogDetails = () => {
           alt={blog.title}
           className="w-full h-[400px] object-cover rounded-lg mb-6"
         />
-        <p className="text-gray-300 font-light text-sm mb-2">{blog.date}</p>
-        <h1 className="text-4xl text-white mb-6">{blog.title}</h1>
-        <div className="text-gray-200 text-xl whitespace-pre-line leading-relaxed">
+        <p className="text-gray-600 dark:text-gray-400 font-light text-sm mb-2">
+          {blog.date}
+        </p>
+        <h1 className="text-4xl mb-6 text-black dark:text-white">
+          {blog.title}
+        </h1>
+        <div className="text-gray-800 dark:text-gray-200 text-xl whitespace-pre-line leading-relaxed">
           {blog.content}
         </div>
       </div>

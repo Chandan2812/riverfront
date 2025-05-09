@@ -20,7 +20,7 @@ const AgentDetail = () => {
   }, []);
 
   return (
-    <div className="bg-[#0F0F0F] text-white min-h-screen font-raleway font-thin">
+    <div className="bg-white dark:bg-black text-black dark:text-white min-h-screen font-raleway font-light dark:font-thin">
       <div className="mb-16 md:mb-20 pt-3 md:pt-5">
         <Navbar />
       </div>
@@ -36,13 +36,13 @@ const AgentDetail = () => {
           <div className="flex flex-col gap-3">
             <a
               href={`tel:${agent.call}`}
-              className="border border-white py-2 px-4 rounded hover:bg-white hover:text-black transition text-center"
+              className="border border-black dark:border-white py-2 px-4 rounded  transition text-center"
             >
               📞 Call
             </a>
             <a
               href={`mailto:${agent.email}`}
-              className="border border-white py-2 px-4 rounded hover:bg-white hover:text-black transition text-center"
+              className="border border-black dark:border-white py-2 px-4 rounded  transition text-center"
             >
               ✉️ Email
             </a>
@@ -50,7 +50,7 @@ const AgentDetail = () => {
               href={`https://wa.me/${agent.whatsapp.replace(/\D/g, "")}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="border border-white py-2 px-4 rounded hover:bg-white hover:text-black transition text-center"
+              className="border border-black dark:border-white py-2 px-4 rounded  transition text-center"
             >
               📱 WhatsApp
             </a>
@@ -60,24 +60,23 @@ const AgentDetail = () => {
         {/* Right Side: Details */}
         <div className="lg:w-2/3">
           <h1 className="text-4xl font-semibold mb-2">{agent.name}</h1>
-          <p className="text-xl text-gray-300 mb-4">{agent.position}</p>
+          <p className="text-xl text-gray-800 dark:text-gray-300 mb-4">
+            {agent.position}
+          </p>
 
-          <div className="text-gray-300 space-y-2 mb-8">
+          <div className="text-gray-800 dark:text-gray-300 space-y-2 mb-8">
             <p>
-              <strong className="text-white">Experience:</strong>{" "}
-              {agent.experience}
+              <strong>Experience:</strong> {agent.experience}
             </p>
             <p>
-              <strong className="text-white">Specialization:</strong>{" "}
-              {agent.specialization}
+              <strong>Specialization:</strong> {agent.specialization}
             </p>
             <p>
-              <strong className="text-white">Languages:</strong>{" "}
-              {languagesList.join(", ")}
+              <strong>Languages:</strong> {languagesList.join(", ")}
             </p>
           </div>
 
-          <div className="space-y-6 text-gray-200 leading-relaxed">
+          <div className="space-y-6 text-gray-800 dark:text-gray-300 leading-relaxed">
             <p>
               Olga was born in the Republic of Moldova. Before settling down in
               Dubai she had lived in London for a year and spent another year in
@@ -103,7 +102,7 @@ const AgentDetail = () => {
               the company’s top management.
             </p>
 
-            <h2 className="text-white text-xl mt-6">
+            <h2 className="text-black dark:text-white text-xl mt-6">
               A little about personal life
             </h2>
             <p>
