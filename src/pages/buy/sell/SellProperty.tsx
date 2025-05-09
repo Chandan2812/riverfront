@@ -33,11 +33,11 @@ const SellProperty = () => {
   ];
 
   return (
-    <div className="bg-black font-raleway font-light text-white">
-      <div className="mb-24 md:mb-32">
+    <div className="bg-white dark:bg-black text-black dark:text-white font-raleway font-light dark:font-thin">
+      <div className="mb-24 md:mb-28">
         <Navbar />
       </div>
-      <div className="px-4 py-10 md:py-16 max-w-6xl mx-auto">
+      <div className="px-4 py-10 md:py-16 w-full md:w-11/12 mx-auto">
         <h2 className="text-3xl md:text-4xl font-semibold text-center mb-10">
           Why Sell Your Property With Us?
         </h2>
@@ -48,9 +48,7 @@ const SellProperty = () => {
               <CheckCircle className="w-10 h-10 text-[var(--primary-color)] flex-shrink-0" />
               <div>
                 <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                <p className="text-gray-200 leading-relaxed">
-                  {item.description}
-                </p>
+                <p className="leading-relaxed">{item.description}</p>
               </div>
             </div>
           ))}

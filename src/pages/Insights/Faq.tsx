@@ -65,8 +65,8 @@ const FAQSection = () => {
   };
 
   return (
-    <div className="bg-black font-raleway font-light text-white">
-      <div className="mb-24 md:mb-32">
+    <div className="bg-white dark:bg-black text-black dark:text-white font-raleway font-light dark:font-thin">
+      <div className="mb-24 md:mb-28">
         <Navbar />
       </div>
       <section className=" py-12 px-6 md:px-20">

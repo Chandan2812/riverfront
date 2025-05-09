@@ -9,7 +9,7 @@ function WhyInvest() {
   }, []);
 
   return (
-    <div className="bg-black font-raleway font-light text-white">
+    <div className="bg-white dark:bg-black text-black dark:text-white font-raleway font-light dark:font-thin">
       <div className="mb-16 md:mb-24">
         <Navbar />
       </div>
@@ -42,42 +42,42 @@ function WhyInvest() {
       <section className="mx-auto md:w-[90%] w-full mb-12 md:mb-16  px-3">
         <h2 className="text-2xl md:text-3xl  mb-6">Do You Know</h2>
         <ul className="list-disc list-inside space-y-3 text-justify ">
-          <li className="font-thin">
+          <li>
             <strong>Record-Breaking October for Dubai Real Estate:</strong>{" "}
             October saw unprecedented achievements in transaction volume,
             mortgages, and off-plan sales, with expectations of a 30% year-end
             growth.
           </li>
-          <li className="font-thin">
+          <li>
             <strong>September’s Milestone Transactions:</strong> The sector
             recorded 18,038 deals, with 73% from off-plan properties, ranging in
             value from $34,000 to $75 million.
           </li>
-          <li className="font-thin">
+          <li>
             <strong>All-Time High Property Prices:</strong> Prices have
             surpassed 2014 levels, climbing 45% over three years, with 130,000
             transactions anticipated this year.
           </li>
-          <li className="font-thin">
+          <li>
             <strong>Continued Growth as 2025 Approaches:</strong> The real
             estate market shows sustained upward momentum alongside cautious
             optimism for the future.
           </li>
-          <li className="font-thin">
+          <li>
             <strong>October Price Appreciation:</strong> Property values
             increased 1.73% month-on-month, marking another milestone in a
             record-setting year.
           </li>
-          <li className="font-thin">
+          <li>
             <strong>Strong Year-End Trajectory:</strong> Sales transactions are
             on course for a 30% annual growth, supported by robust demand and
             new launches.
           </li>
-          <li className="font-thin">
+          <li>
             <strong>Off-Plan Market Boom:</strong> Over 100,000 new residential
             units have been launched so far this year.
           </li>
-          <li className="font-thin">
+          <li>
             <strong>Mortgage Record:</strong> A 3.2% increase in mortgage
             transactions brought the total to over 4,300 loans, achieving an
             all-time high.
@@ -155,7 +155,7 @@ function WhyInvest() {
         ].map((item, idx) => (
           <div
             key={idx}
-            className="bg-gray-700 rounded-lg shadow-md p-5 flex flex-col justify-start h-full"
+            className="bg-gray-200 dark:bg-neutral-900 rounded-lg shadow-md p-5 flex flex-col justify-start h-full"
           >
             <h3 className="text-lg md:text-xl font-semibold  mb-3">
               {item.title}

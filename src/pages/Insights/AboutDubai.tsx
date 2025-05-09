@@ -9,8 +9,8 @@ const AboutDubai = () => {
   }, []);
 
   return (
-    <div className="bg-black font-raleway font-light text-white">
-      <div className="mb-24 md:mb-32">
+    <div className="bg-white dark:bg-black text-black dark:text-white font-raleway font-light dark:font-thin">
+      <div className="mb-24 md:mb-28">
         <Navbar />
       </div>
       <section className="px-4 py-10 md:px-20 ">
@@ -48,7 +48,7 @@ const AboutDubai = () => {
             </p>
           </div>
         </div>
-        <div className="space-y-4 text-justify">
+        <div className="space-y-4 text-justify mt-5">
           <p>
             If you’re willing to get a new house in the UAE, then the first
             thing to decide is which emirate suits your needs, plan, and budget.
