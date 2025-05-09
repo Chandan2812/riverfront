@@ -72,23 +72,25 @@ export const AwardsPage = () => {
   }, []);
 
   return (
-    <div className="bg-black text-white font-raleway font-thin">
-      <div className="mb-32 md:mb-32">
+    <div className="bg-white dark:bg-black text-black dark:text-white font-raleway font-light dark:font-thin">
+      <div className="mb-28">
         <Navbar />
       </div>
 
       {/* Sidebar and Main Content */}
-      <div className="relative flex justify-center py-10 ">
+      <div className="relative flex justify-center py-10">
         {/* Sidebar (Sticky Year Navigation) */}
         <div
           ref={sidebarRef}
-          className="sticky top-36 left-0 h-fit w-20 md:w-28 py-4 bg-[#0D1B2A] text-white space-y-2"
+          className="sticky top-36 left-0 h-fit w-20 md:w-28 py-4 bg-gray-200 dark:bg-[#0D1B2A] text-black dark:text-white space-y-2"
         >
           {awardsData.map(({ year }) => (
             <button
               key={year}
-              className={`w-full py-2 rounded-md text-lg font-semibold ${
-                activeYear === year ? "bg-white text-black" : "bg-gray-700"
+              className={`w-full py-2 rounded-md text-lg font-semibold transition-colors ${
+                activeYear === year
+                  ? "bg-black dark:bg-white text-white dark:text-black"
+                  : "bg-gray-300 dark:bg-gray-700 text-black dark:text-white"
               }`}
               onClick={() => {
                 document
@@ -106,24 +108,26 @@ export const AwardsPage = () => {
           {awardsData.map(({ givenBy, awardName, year, awardImage, image }) => (
             <div key={year} id={`year-${year}`}>
               {/* Responsive Layout: Column on mobile, Grid on desktop */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6 items-center border border-[var(--primary-color)] px-2 py-2 md:px-8 md:py-4 rounded-xl">
-                {/* Award Image (Mobile: Above the main image) */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6 items-center border border-[var(--primary-color)] px-2 py-2 md:px-8 md:py-4 rounded-xl bg-gray-100 dark:bg-neutral-900">
+                {/* Award Image Info */}
                 <div className="flex flex-col items-center md:items-start">
                   <p className="text-lg md:text-2xl font-medium text-[var(--primary-color)]">
                     {givenBy}
                   </p>
-                  <h2 className="text-md md:text-xl font-light text-gray-200">
+                  <h2 className="text-md md:text-xl font-light text-gray-700 dark:text-gray-200">
                     {awardName}
                   </h2>
-                  <p className="text-sm md:text-lg text-gray-300">{year}</p>
+                  <p className="text-sm md:text-lg text-gray-600 dark:text-gray-400">
+                    {year}
+                  </p>
                   <img
                     src={awardImage}
                     alt={`Award for ${year}`}
-                    className="mt-2 md:mt-4 rounded-lg w-20 h-20 md:w-32 md:h-32 bg-gray-100 p-2 border border-gray-200"
+                    className="mt-2 md:mt-4 rounded-lg w-20 h-20 md:w-32 md:h-32 bg-gray-200 dark:bg-gray-800 p-2 border border-gray-300 dark:border-gray-600"
                   />
                 </div>
 
-                {/* Achievement Image (Appears below the award image on mobile) */}
+                {/* Achievement Image */}
                 <div className="flex justify-center">
                   <img
                     src={image}
@@ -137,7 +141,6 @@ export const AwardsPage = () => {
         </div>
       </div>
 
-      {/* Footer */}
       <Footer />
     </div>
   );

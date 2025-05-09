@@ -42,7 +42,7 @@ export default function Career() {
     console.log("Submitting Form:", formData);
   };
   return (
-    <div className="bg-black font-raleway font-thin text-white">
+    <div className="bg-white dark:bg-black text-black dark:text-white font-raleway font-light dark:font-thin">
       <div className="mb-28 md:mb-32 pt-10">
         <Navbar />
       </div>
@@ -99,10 +99,10 @@ export default function Career() {
         </div>
       </div>
 
-      <div className="flex justify-center items-center w-5/6 mx-auto px-6 py-8 text-center shadow-2xl rounded-lg mb-7">
-        <div className="w-full max-w-lg bg-gray-700 rounded-lg p-8 text-center">
+      <div className="flex justify-center items-center w-5/6 mx-auto px-6 py-8 text-center rounded-lg mb-7">
+        <div className="w-full max-w-lg bg-gray-100 dark:bg-neutral-900 rounded-lg p-8 text-center">
           <h1 className="text-3xl font-semibold mb-4">Share Your CV With Us</h1>
-          <p className="text-gray-300 mb-6">
+          <p className="text-gray-800 dark:text-gray-300 mb-6">
             If no suitable vacancy is available, share your CV for future
             opportunities.
           </p>
