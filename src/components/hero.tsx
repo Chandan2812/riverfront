@@ -34,7 +34,7 @@ const HeroSection: React.FC = () => {
 
       {/* Navbar */}
       <div className="relative z-50">
-        <Navbar transparent />
+        <Navbar />
       </div>
 
       {/* Text & Form Content */}

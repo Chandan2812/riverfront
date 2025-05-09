@@ -27,8 +27,8 @@ export default function ServicesSection() {
   }, []);
 
   return (
-    <div className="w-full bg-black font-raleway font-light px-5">
-      <div className="mb-20 md:mb-32">
+    <div className="w-full bg-black font-raleway font-light">
+      <div className="mb-20 md:mb-28">
         <Navbar />
       </div>
 

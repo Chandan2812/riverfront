@@ -49,9 +49,9 @@ const AwardsSection = () => {
   const scrollRef = useRef<HTMLDivElement | null>(null);
 
   return (
-    <div className="w-full py-16 bg-black text-center cursor-pointer font-raleway font-thin">
+    <div className="w-full py-16 bg-white dark:bg-black text-center cursor-pointer font-raleway font-thin">
       {/* Title */}
-      <h2 className="text-3xl md:text-5xl text-white mb-10 ">
+      <h2 className="text-3xl md:text-5xl text-black dark:text-white mb-10">
         Awards & Recognitions
       </h2>
 
@@ -76,9 +76,9 @@ const AwardsSection = () => {
                 alt={award.name}
                 className="w-32 h-32 object-contain mb-4"
               />
-              <p className="text-lg font-light text-gray-300">{award.name}</p>
-              {/* Underline */}
-              {/* <div className="w-48 h-[0.2px] bg-gray-300 mx-auto my-6"></div> */}
+              <p className="text-lg font-light text-gray-700 dark:text-gray-300">
+                {award.name}
+              </p>
             </div>
           ))}
         </div>
@@ -87,8 +87,7 @@ const AwardsSection = () => {
       {/* View All Button */}
       <a
         href="/awards"
-        style={{ background: "var(--bg-primary-gradient)" }}
-        className="inline-block font-light px-8 py-2 text-lg text-white rounded-3xl hover:opacity-80 mt-10"
+        className="inline-block font-light px-8 py-2 text-lg text-white rounded-3xl hover:opacity-80 mt-10 bg-gradient-to-r from-[#f9f295] via-[#e0aa3e] to-[#faf398]"
       >
         View All Awards
       </a>

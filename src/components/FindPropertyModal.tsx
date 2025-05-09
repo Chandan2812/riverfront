@@ -107,7 +107,7 @@ const FindPropertyModal: React.FC<Props> = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-[var(--secondary-color)] flex flex-col justify-center items-center z-50">
+    <div className="fixed inset-0 bg-[var(--secondary-color)] flex flex-col justify-center items-center z-[999]">
       <div className="w-full bg-gray-800 py-5 flex justify-center fixed top-0 left-0">
         <button
           onClick={handleClose}

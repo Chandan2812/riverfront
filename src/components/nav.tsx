@@ -1,25 +1,9 @@
-import React, { useState, useEffect } from "react";
-import logo from "../assets/logo-riverfront.png";
-import { User, X } from "lucide-react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { FiMenu, FiSun, FiMoon } from "react-icons/fi";
+import logo from "../assets/logo1.png";
 import FindPropertyModal from "./FindPropertyModal";
 import BookMeetingModal from "./BookMeetingModal";
-import {
-  Home,
-  Building2,
-  Building,
-  Landmark,
-  Wrench,
-  Newspaper,
-  Phone,
-  Calendar,
-  Info,
-  Search,
-} from "lucide-react";
-
-interface NavbarProps {
-  transparent?: boolean;
-}
+import { Search } from "lucide-react";
 
 declare global {
   interface Window {
@@ -28,43 +12,38 @@ declare global {
   }
 }
 
-const Navbar: React.FC<NavbarProps> = ({ transparent = false }) => {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
   const [isBookMeetingOpen, setIsBookMeetingOpen] = useState(false);
   const [isFindPropertyOpen, setIsFindPropertyOpen] = useState(false);
-  const navigate = useNavigate();
-  const location = useLocation();
+  const [activeItem, setActiveItem] = useState<string | null>(null);
 
-  const backgroundClass =
-    transparent && !isScrolled
-      ? "bg-transparent"
-      : "bg-[var(--secondary-color)] shadow-md";
-  const textColorClass =
-    transparent && !isScrolled
-      ? "text-white border border-white"
-      : "text-white border border-white";
-  const textColorClass2 =
-    transparent && !isScrolled ? "text-white" : "text-white";
+  const [darkMode, setDarkMode] = useState(() => {
+    return localStorage.getItem("theme")
+      ? localStorage.getItem("theme") === "dark"
+      : true; // default to dark
+  });
 
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 50);
-    handleScroll();
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [location]);
-
-  useEffect(() => {
-    if (menuOpen) {
-      document.body.classList.add("overflow-hidden");
+    if (darkMode) {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
     } else {
-      document.body.classList.remove("overflow-hidden");
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
     }
+  }, [darkMode]);
 
-    return () => {
-      document.body.classList.remove("overflow-hidden");
-    };
-  }, [menuOpen]);
+  const navItems = [
+    { label: "Sell", path: "/forsale" },
+    { label: "Rent", path: "/forrent" },
+    { label: "Off-Plan", path: "/OffplanPropertyCard" },
+    { label: "Services", path: "/ServicesSection" },
+    { label: "Property Advisors", path: "/AgentsSection" },
+    { label: "Blogs", path: "/viewblogs" },
+    { label: "About Us", path: "/about" },
+    { label: "Contact Us", path: "/contact" },
+  ];
 
   useEffect(() => {
     const googleTranslateElementInit = () => {
@@ -94,199 +73,148 @@ const Navbar: React.FC<NavbarProps> = ({ transparent = false }) => {
 
   return (
     <>
-      <nav
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 font-raleway font-light ${backgroundClass}`}
-      >
-        <div className="md:w-full lg:max-w-6xl  mx-auto flex items-center justify-between px-4 py-2 md:py-0">
-          {/* --- Desktop Layout --- */}
-          <div className="hidden md:flex w-full py-2 items-center justify-between">
-            {/* Left: Hamburger */}
-            <button
-              onClick={() => setMenuOpen(true)}
-              className={`${textColorClass2}`}
-            >
-              <svg
-                className="w-8 h-8"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            </button>
-
-            {/* Center: Logo */}
-            <img
-              src={logo}
-              onClick={() => navigate("/")}
-              alt="Logo"
-              className="h-20 md:h-28 md:ml-72 cursor-pointer"
-            />
-
-            {/* Right: Contact Us + Find a Property */}
-            <div className="flex gap-6 text-[var(--secondary-color)] text-md ">
-              <a
-                href="/contact"
-                className={`hover:text-[var(--primary-color)] hover:border-[var(--primary-color)] rounded-full px-3 py-1 ${textColorClass}`}
-              >
-                Contact Us
+      <nav className="bg-white dark:bg-black text-black dark:text-white font-raleway font-light dark:font-thin w-full fixed top-0 z-50 border-b border-gray-200 dark:border-gray-800 transition-colors">
+        <div className="w-full mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between h-28 items-center">
+            {/* Mobile View */}
+            <div className="flex items-center w-full justify-between md:hidden py-10">
+              <a href="/">
+                <img src={logo} alt=" Logo" className="w-1/4" />
               </a>
-              <button
-                onClick={() => setIsFindPropertyOpen(true)}
-                className={`flex items-center gap-2 text-black hover:text-[var(--primary-color)] md:hidden lg:flex ${textColorClass2}`}
-              >
-                <Search size={24} /> Find a Property
-              </button>
+              <div className="flex gap-4">
+                <button
+                  onClick={() => setDarkMode(!darkMode)}
+                  className="text-xl text-inherit"
+                  title="Toggle Theme"
+                >
+                  {darkMode ? <FiSun /> : <FiMoon />}
+                </button>
+                <button
+                  onClick={() => setIsOpen(!isOpen)}
+                  className="text-inherit text-2xl"
+                >
+                  <FiMenu />
+                </button>
+              </div>
             </div>
-          </div>
 
-          {/* --- Mobile Layout --- */}
-          <div className="flex md:hidden w-full items-center justify-between">
-            {/* Left: Logo */}
-            <img
-              src={logo}
-              onClick={() => navigate("/")}
-              alt="Logo"
-              className="h-20 cursor-pointer"
-            />
+            {/* Desktop View */}
+            <div className="hidden md:flex w-full justify-between items-center">
+              {/* Left logo and menu */}
+              <div className="flex items-center space-x-4">
+                <div className="h-20 flex items-center">
+                  <a href="/">
+                    <img src={logo} alt=" Logo" className="w-28 py-2" />
+                  </a>
+                </div>
+                <div className="border-l self-stretch border-gray-400"></div>
+                <div className="flex items-center gap-8">
+                  {navItems.map((item, index) => (
+                    <a
+                      key={index}
+                      href={item.path}
+                      onClick={() => setActiveItem(item.label)}
+                      className={`relative pb-2 text-sm text-inherit transition-colors hover:text-[var(--primary-color)] ${
+                        activeItem === item.label ? "font-light text-md" : ""
+                      }`}
+                    >
+                      {item.label}
+                    </a>
+                  ))}
+                </div>
+              </div>
 
-            {/* Right: Hamburger */}
-            <button
-              onClick={() => setMenuOpen(true)}
-              className="text-[var(--primary-color)]"
-            >
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            </button>
+              {/* Right section */}
+              <div className="flex items-center space-x-6">
+                <button
+                  onClick={() => setDarkMode(!darkMode)}
+                  className="text-xl text-inherit transition-colors"
+                  title="Toggle Theme"
+                >
+                  {darkMode ? <FiSun /> : <FiMoon />}
+                </button>
+                <button
+                  onClick={() => setIsBookMeetingOpen(true)}
+                  className="text-sm text-[var(--primary-color)] hover:underline font-light"
+                >
+                  Book a Meeting
+                </button>
+                <button
+                  onClick={() => setIsFindPropertyOpen(true)}
+                  className="flex items-center gap-1 text-sm text-[var(--primary-color)] hover:underline font-light"
+                >
+                  <Search size={18} />
+                  <span>Find a Property</span>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
-      </nav>
 
-      <div
-        id="google_translate_element"
-        className="fixed top-8 left-2/3 -translate-x-1/2 z-[9990] md:left-1/3 md:top-12 lg:top-12 lg:left-auto lg:right-10 lg:translate-x-0"
-      ></div>
-
-      {/* Mobile Menu Drawer */}
-      {menuOpen && (
-        <div className="fixed inset-0 z-[9999]">
-          {/* Background Blur */}
-          <div
-            className="absolute inset-0 bg-black bg-opacity-40 backdrop-blur-sm"
-            onClick={() => setMenuOpen(false)}
-          />
-
-          {/* Slide-in Menu */}
-          <div className="relative w-full bg-[var(--secondary-color)] md:w-2/5 lg:w-1/5 h-full flex flex-col">
-            <div className="flex items-center justify-between px-4 py-4 border-b">
-              <img src={logo} alt="Logo" className="h-24" />
-              <button onClick={() => setMenuOpen(false)}>
-                <X className="w-6 h-6 text-white" />
+        {/* Mobile dropdown menu */}
+        {isOpen && (
+          <div className="md:hidden fixed inset-0 z-[9999] bg-white dark:bg-black flex flex-col pl-2 pr-5 pb-4">
+            {/* Header with logo and close */}
+            <div className="flex justify-between items-center">
+              <img src={logo} alt=" Logo" className="w-28 pt-5" />
+              <button
+                onClick={() => setIsOpen(false)}
+                className="text-2xl text-inherit"
+                title="Close"
+              >
+                ✕
               </button>
             </div>
-            <div className="flex flex-col px-6 py-4 space-y-4 text-white font-raleway font-light">
-              <a
-                href="/"
-                onClick={() => setMenuOpen(false)}
-                className="font-hanken flex items-center gap-2 hover:text-[var(--primary-color)]"
-              >
-                <Home size={20} /> Home
-              </a>
-              <a
-                href="/forsale"
-                onClick={() => setMenuOpen(false)}
-                className="font-hanken flex items-center gap-2 hover:text-[var(--primary-color)]"
-              >
-                <Building2 size={20} /> For Sale
-              </a>
-              <a
-                href="/forrent"
-                onClick={() => setMenuOpen(false)}
-                className="font-hanken flex items-center gap-2 hover:text-[var(--primary-color)]"
-              >
-                <Building size={20} /> For Rent
-              </a>
-              <a
-                href="/OffplanPropertyCard"
-                onClick={() => setMenuOpen(false)}
-                className="font-hanken flex items-center gap-2 hover:text-[var(--primary-color)]"
-              >
-                <Landmark size={20} /> Off-Plan
-              </a>
-              <a
-                href="/ServicesSection"
-                onClick={() => setMenuOpen(false)}
-                className="font-hanken flex items-center gap-2 hover:text-[var(--primary-color)]"
-              >
-                <Wrench size={20} /> Services
-              </a>
-              <a
-                href="/AgentsSection"
-                onClick={() => setMenuOpen(false)}
-                className="font-hanken flex items-center gap-2 hover:text-[var(--primary-color)]"
-              >
-                <User size={20} /> Property Advisors
-              </a>
-              <a
-                href="/viewblogs"
-                onClick={() => setMenuOpen(false)}
-                className="font-hanken flex items-center gap-2 hover:text-[var(--primary-color)]"
-              >
-                <Newspaper size={20} /> Blog's
-              </a>
-              <a
-                href="/contact"
-                onClick={() => setMenuOpen(false)}
-                className="font-hanken flex items-center gap-2 hover:text-[var(--primary-color)]"
-              >
-                <Phone size={20} /> Contact Us
-              </a>
+
+            {/* Navigation items */}
+            <div className="flex flex-col space-y-4 px-5 py-8">
+              {navItems.map((item, index) => (
+                <a
+                  key={index}
+                  href={item.path}
+                  onClick={() => {
+                    setActiveItem(item.label);
+                    setIsOpen(false);
+                  }}
+                  className="text-lg text-inherit hover:text-[var(--primary-color)] transition-colors"
+                >
+                  {item.label}
+                </a>
+              ))}
+            </div>
+
+            {/* Bottom row with icons */}
+            {/* Bottom action box with 2 buttons side by side */}
+            <div className="flex mt-6 border border-[var(--primary-color)] rounded-md overflow-hidden text-center">
               <button
                 onClick={() => {
                   setIsBookMeetingOpen(true);
-                  setMenuOpen(false);
+                  setIsOpen(false);
                 }}
-                className="font-hanken flex items-center gap-2 text-left hover:text-[var(--primary-color)]"
+                className="w-1/2 py-3 text-sm text-[var(--primary-color)] hover:underline font-light border-r border-[var(--primary-color)]"
               >
-                <Calendar size={20} /> Book a Meeting
+                Book a Meeting
               </button>
-              <a
-                href="/about"
-                onClick={() => setMenuOpen(false)}
-                className="font-hanken flex items-center gap-2 hover:text-[var(--primary-color)]"
-              >
-                <Info size={20} /> About Us
-              </a>
               <button
                 onClick={() => {
                   setIsFindPropertyOpen(true);
-                  setMenuOpen(false);
+                  setIsOpen(false);
                 }}
-                className="font-hanken flex items-center gap-2 text-left hover:text-[var(--primary-color)]"
+                className="w-1/2 py-3 flex items-center justify-center gap-1 text-sm text-[var(--primary-color)] hover:underline font-light"
               >
-                <Search size={20} /> Find a Property
+                <Search size={18} />
+                <span>Find a Property</span>
               </button>
             </div>
           </div>
-        </div>
+        )}
+      </nav>
+      {!isOpen && (
+        <div
+          id="google_translate_element"
+          className="fixed z-[99] right-[90px] top-10 translate-x-0 md:right-[280px] md:top-[40px] md:-translate-x-1/2"
+        />
       )}
-
       <FindPropertyModal
         isOpen={isFindPropertyOpen}
         onClose={() => setIsFindPropertyOpen(false)}

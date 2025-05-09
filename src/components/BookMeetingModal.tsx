@@ -40,7 +40,7 @@ const BookMeetingModal: React.FC<Props> = ({ isOpen, onClose }) => {
     dateTime.trim() !== "";
 
   return (
-    <div className="fixed inset-0 bg-[var(--secondary-color)] flex flex-col justify-center items-center z-50">
+    <div className="fixed inset-0 bg-[var(--secondary-color)] flex flex-col justify-center items-center z-[999]">
       <div className="w-full bg-gray-800 py-5 flex justify-center fixed top-0 left-0">
         <button
           onClick={onClose}

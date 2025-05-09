@@ -93,7 +93,7 @@ const StatsSection: React.FC = () => {
   return (
     <div
       ref={sectionRef}
-      className="w-full md:py-10 bg-black font-raleway font-light"
+      className="w-full md:py-10 bg-white dark:bg-black font-raleway font-light"
     >
       {/* Desktop View */}
       <div className="hidden md:flex max-w-6xl mx-auto px-4 justify-center text-center">
@@ -103,7 +103,7 @@ const StatsSection: React.FC = () => {
               {animatedValues[index]}
               {stat.suffix || "+"}
             </h2>
-            <p className="text-sm text-white uppercase mt-2  tracking-widest">
+            <p className="text-sm uppercase mt-2 tracking-widest text-black dark:text-white">
               {stat.label}
             </p>
           </div>
@@ -111,7 +111,7 @@ const StatsSection: React.FC = () => {
       </div>
 
       {/* Mobile View - Carousel */}
-      <div className="md:hidden flex justify-center items-center relative overflow-hidden w-full h-32 bg-[#0e1c2c]">
+      <div className="md:hidden flex justify-center items-center relative overflow-hidden w-full h-32 bg-gray-100 dark:bg-[#0e1c2c]">
         <div
           className="flex transition-transform ease-in-out duration-500"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -119,13 +119,15 @@ const StatsSection: React.FC = () => {
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="min-w-full flex flex-col items-center text-center p-4 text-gray-600"
+              className="min-w-full flex flex-col items-center text-center p-4 text-black dark:text-gray-300"
             >
               {stat.icon}
-              <h2 className="text-2xl font-semibold text-white">
+              <h2 className="text-2xl font-semibold text-black dark:text-white">
                 {stat.value}
               </h2>
-              <p className="text-sm text-white uppercase mt-2">{stat.label}</p>
+              <p className="text-sm uppercase mt-2 text-black dark:text-white">
+                {stat.label}
+              </p>
             </div>
           ))}
         </div>
