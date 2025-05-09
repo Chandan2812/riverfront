@@ -2,15 +2,26 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import propertiesData from "../data/offPlanData.json";
 import { FaArrowRight } from "react-icons/fa";
+import { useEffect, useState } from "react";
 
 export default function PropertySlider() {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   return (
     <div className=" bg-white dark:bg-black py-10 font-raleway">
       <h2 className="text-3xl md:text-5xl text-black dark:text-white mb-6 text-center font-thin">
         Off-Plan Properties
       </h2>
       <div className="w-full md:w-11/12 mx-auto px-4 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {propertiesData.slice(0, 8).map((property) => (
+        {(isMobile
+          ? propertiesData.slice(0, 4)
+          : propertiesData.slice(0, 8)
+        ).map((property) => (
           <div
             key={property.projectName}
             className="relative w-full h-[250px] sm:h-[300px] font-light hover:shadow-md hover:shadow-[var(--primary-color)] md:h-[250px] lg:h-[200px] overflow-hidden rounded-lg shadow-md"
