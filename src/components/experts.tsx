@@ -52,7 +52,7 @@ const RealEstateExperts: React.FC = () => {
             to them.
           </p>
           <p className="text-gray-600 dark:text-gray-400 mb-6">
-            We have implemented all these in MONDUS PROPERTIES
+            We have implemented all these in Riverfront
           </p>
           <a href="/contact">
             <button
