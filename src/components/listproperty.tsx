@@ -9,8 +9,8 @@ const ListProperty = () => {
 
   return (
     <>
-      <section className="bg-black py-16 max-w-6xl mx-auto">
-        <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center gap-10">
+      <section className="bg-white dark:bg-black text-black dark:text-white py-10  ">
+        <div className="max-w-6xl mx-auto container px-4 flex flex-col lg:flex-row items-center gap-10">
           {/* Left Side: Image */}
           <div className="w-full lg:w-1/2">
             <img
@@ -24,10 +24,8 @@ const ListProperty = () => {
 
           {/* Right Side: Content */}
           <div className="w-full lg:w-1/2 font-raleway font-thin">
-            <h2 className="text-3xl lg:text-4xl  text-[#e6e8ec] mb-6">
-              List Your Property
-            </h2>
-            <p className="text-gray-300 mb-8 text-lg leading-relaxed">
+            <h2 className="text-3xl lg:text-4xl   mb-6">List Your Property</h2>
+            <p className="text-gray-800 font-light dark:font-thin dark:text-gray-200 mb-8 text-lg leading-relaxed">
               Ready to sell or rent your property? Listing with us is quick,
               easy, and designed to get your property in front of the right
               buyers or tenants. Our platform gives you the tools and exposure

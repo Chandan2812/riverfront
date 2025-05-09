@@ -16,7 +16,7 @@ function ForRentDetails() {
   }
 
   return (
-    <div className="bg-black text-white min-h-screen font-raleway font-thin">
+    <div className="bg-white text-black dark:bg-black dark:text-white min-h-screen font-raleway font-light dark:font-thin">
       <div className="mb-24">
         <Navbar />
       </div>
@@ -28,7 +28,7 @@ function ForRentDetails() {
           alt=""
           className="h-[400px] w-full object-cover"
         />
-        <div className="  absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center p-8">
+        <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center p-8">
           <div className="text-white text-center">
             <h1 className="text-4xl">{property.title}</h1>
             <p className="text-xl mt-2">{property.location}</p>
@@ -43,59 +43,61 @@ function ForRentDetails() {
             key={idx}
             src={img}
             alt={`property-${idx}`}
-            className="  rounded-xl h-60 object-cover w-full"
+            className="rounded-xl h-60 object-cover w-full"
           />
         ))}
       </div>
+
       {/* Property Overview */}
-      {/* Property Overview */}
-      <div className="w-[90%] mx-auto my-10 grid grid-cols-1 sm:grid-cols-2 gap-4 text-white">
-        {/* Property Type */}
+      <div className="w-[90%] mx-auto my-10 grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div className="flex items-center gap-3">
-          <FaThLarge className="text-xl text-gray-300" />
-          <span className="text-gray-100">Property Type:</span>
-          <span className=" text-white ml-2">{property.propertyType}</span>
+          <FaThLarge className="text-xl text-gray-500 dark:text-gray-300" />
+          <span className="text-gray-600 dark:text-gray-100">
+            Property Type:
+          </span>
+          <span className="ml-2">{property.propertyType}</span>
         </div>
 
-        {/* Property Size */}
         <div className="flex items-center gap-3">
-          <FaRulerCombined className="text-xl text-gray-300" />
-          <span className="text-gray-100">Property Size:</span>
-          <span className=" text-white ml-2">{property.areaSqft} Sq Ft</span>
+          <FaRulerCombined className="text-xl text-gray-500 dark:text-gray-300" />
+          <span className="text-gray-600 dark:text-gray-100">
+            Property Size:
+          </span>
+          <span className="ml-2">{property.areaSqft} Sq Ft</span>
         </div>
 
-        {/* Bedrooms */}
         <div className="flex items-center gap-3">
-          <FaBed className="text-xl text-gray-300" />
-          <span className="text-gray-100">Bedrooms:</span>
-          <span className=" text-white ml-2">{property.bedrooms} Bed</span>
+          <FaBed className="text-xl text-gray-500 dark:text-gray-300" />
+          <span className="text-gray-600 dark:text-gray-100">Bedrooms:</span>
+          <span className="ml-2">{property.bedrooms} Bed</span>
         </div>
 
-        {/* Bathrooms */}
         <div className="flex items-center gap-3">
-          <FaBath className="text-xl text-gray-300" />
-          <span className="text-gray-100">Bathrooms:</span>
-          <span className=" text-white ml-2">{property.bathrooms} Baths</span>
+          <FaBath className="text-xl text-gray-500 dark:text-gray-300" />
+          <span className="text-gray-600 dark:text-gray-100">Bathrooms:</span>
+          <span className="ml-2">{property.bathrooms} Baths</span>
         </div>
       </div>
 
-      {/* Description + Sales Manager Side-by-Side */}
+      {/* Description and Sales Manager */}
       <div className="w-[90%] mx-auto my-10 flex flex-col lg:flex-row gap-8">
-        {/* Left: Description */}
+        {/* Description */}
         <div className="lg:w-2/3">
-          <h2 className="text-2xl  mb-2">Description</h2>
-          <p className="text-gray-200 mb-6">{property.description.short}</p>
+          <h2 className="text-2xl mb-2">Description</h2>
+          <p className="text-gray-700 dark:text-gray-200 mb-6">
+            {property.description.short}
+          </p>
 
           <h3 className="text-2xl mb-2">Features</h3>
-          <ul className="list-disc pl-6 text-gray-200 space-y-2">
+          <ul className="list-disc pl-6 text-gray-700 dark:text-gray-200 space-y-2">
             {property.description.features.map((feature, idx) => (
               <li key={idx}>{feature}</li>
             ))}
           </ul>
         </div>
 
-        {/* Right: Sales Manager */}
-        <div className="lg:w-1/3 bg-gray-700 p-6 rounded-xl shadow-md text-white">
+        {/* Sales Manager */}
+        <div className="lg:w-1/3 bg-gray-100 dark:bg-gray-700 p-6 rounded-xl shadow-md">
           <div className="flex flex-col items-center text-center">
             <img
               src="https://i.pravatar.cc/150?img=32"
@@ -103,7 +105,9 @@ function ForRentDetails() {
               className="w-24 h-24 rounded-full mb-4"
             />
             <h4 className="text-xl">{property.salesManager}</h4>
-            <p className="text-sm text-gray-200 mb-4">{property.agency}</p>
+            <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
+              {property.agency}
+            </p>
             <a
               href={property.contact.link}
               target="_blank"
@@ -118,7 +122,6 @@ function ForRentDetails() {
 
       {/* Contact Banner */}
       <HaveAQuestion />
-
       <Footer />
     </div>
   );

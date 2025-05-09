@@ -42,13 +42,13 @@ const ForRent: React.FC = () => {
   }, [searchTerm, bedrooms, priceRange, areaRange]);
 
   return (
-    <div className="bg-black">
+    <div className="bg-white dark:bg-black text-black dark:text-white">
       <div className="mb-16 md:mb-32 pt-5">
         <Navbar />
       </div>
 
       {/* Filters */}
-      <div className="w-full md:w-[90%] mx-auto grid grid-cols-1 md:grid-cols-4 gap-4 px-4 py-6 text-white">
+      <div className="w-full md:w-[90%] mx-auto grid grid-cols-1 md:grid-cols-4 gap-4 px-4 py-6">
         {/* Location */}
         <div className="flex flex-col w-full">
           <label className="mb-1 text-sm">Location</label>
@@ -57,7 +57,7 @@ const ForRent: React.FC = () => {
             placeholder="Search by title or location..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="bg-black border border-gray-600 px-4 py-2 rounded text-white placeholder:text-gray-400"
+            className="bg-white dark:bg-black border border-gray-400 dark:border-gray-600 px-4 py-2 rounded text-black dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400"
           />
         </div>
 
@@ -67,27 +67,24 @@ const ForRent: React.FC = () => {
           <select
             value={bedrooms}
             onChange={(e) => setBedrooms(e.target.value)}
-            className="bg-black border border-gray-600 px-4 py-2 rounded text-white"
+            className="bg-white dark:bg-black border border-gray-400 dark:border-gray-600 px-4 py-2 rounded text-black dark:text-white"
           >
             <option value="">Any</option>
             <option value="1">Apartment</option>
             <option value="2">Villa</option>
             <option value="3">Townhouse</option>
-            {/* Add more types as needed */}
           </select>
         </div>
 
         {/* Area Range */}
         <div className="flex flex-col w-full relative">
           <label className="mb-1 text-sm">Area</label>
-          <div className="border border-gray-600 rounded px-4 pt-2 pb-2 bg-black">
-            <div className="flex justify-between text-xs mb-1 text-white">
-              <span>min {areaRange[0].toLocaleString()}</span>
-              <span>max {areaRange[1].toLocaleString()}</span>
+          <div className="border border-gray-400 dark:border-gray-600 rounded px-4 pt-2 pb-2 bg-white dark:bg-black">
+            <div className="flex justify-between text-xs mb-1">
+              <span>{`min ${areaRange[0].toLocaleString()}`}</span>
+              <span>{`max ${areaRange[1].toLocaleString()}`}</span>
             </div>
             <div className="absolute left-4 right-4 bottom-0">
-              {" "}
-              {/* Added relative positioning here */}
               <Range
                 step={100}
                 min={500}
@@ -97,16 +94,16 @@ const ForRent: React.FC = () => {
                 renderTrack={({ props, children }) => (
                   <div
                     {...props}
-                    className="h-1 bg-gray-700 rounded relative"
+                    className="h-1 rounded relative bg-gray-300 dark:bg-gray-700"
                     style={{
                       ...props.style,
-                      background: `linear-gradient(to right, #444 ${
+                      background: `linear-gradient(to right, #ccc ${
                         ((areaRange[0] - 500) / (3000 - 500)) * 100
                       }%, var(--primary-color) ${
                         ((areaRange[0] - 500) / (3000 - 500)) * 100
                       }%, var(--primary-color) ${
                         ((areaRange[1] - 500) / (3000 - 500)) * 100
-                      }%, #444 ${
+                      }%, #ccc ${
                         ((areaRange[1] - 500) / (3000 - 500)) * 100
                       }%)`,
                     }}
@@ -128,10 +125,10 @@ const ForRent: React.FC = () => {
         {/* Price Range */}
         <div className="flex flex-col w-full relative">
           <label className="mb-1 text-sm">Price (AED)</label>
-          <div className="border border-gray-600 rounded px-4 pt-2 pb-2 bg-black">
-            <div className="flex justify-between text-xs mb-1 text-white">
-              <span>min {priceRange[0].toLocaleString()}</span>
-              <span>max {priceRange[1].toLocaleString()}</span>
+          <div className="border border-gray-400 dark:border-gray-600 rounded px-4 pt-2 pb-2 bg-white dark:bg-black">
+            <div className="flex justify-between text-xs mb-1">
+              <span>{`min ${priceRange[0].toLocaleString()}`}</span>
+              <span>{`max ${priceRange[1].toLocaleString()}`}</span>
             </div>
             <div className="absolute left-4 right-4 bottom-0">
               <Range
@@ -143,16 +140,16 @@ const ForRent: React.FC = () => {
                 renderTrack={({ props, children }) => (
                   <div
                     {...props}
-                    className="h-1 bg-gray-700 rounded relative"
+                    className="h-1 rounded relative bg-gray-300 dark:bg-gray-700"
                     style={{
                       ...props.style,
-                      background: `linear-gradient(to right, #444 ${
+                      background: `linear-gradient(to right, #ccc ${
                         (priceRange[0] / 5000000) * 100
                       }%, var(--primary-color) ${
                         (priceRange[0] / 5000000) * 100
                       }%, var(--primary-color) ${
                         (priceRange[1] / 5000000) * 100
-                      }%, #444 ${(priceRange[1] / 5000000) * 100}%)`,
+                      }%, #ccc ${(priceRange[1] / 5000000) * 100}%)`,
                     }}
                   >
                     {children}
@@ -175,9 +172,9 @@ const ForRent: React.FC = () => {
         {filteredProperties.map((property, index) => (
           <div
             key={index}
-            className="border border-gray-700 rounded-xl hover:shadow-[var(--primary-color)] shadow-md overflow-hidden cursor-pointer transition hover:scale-105"
+            className="border border-gray-300 dark:border-gray-700 rounded-xl hover:shadow-[var(--primary-color)] shadow-md overflow-hidden cursor-pointer transition hover:scale-105 bg-white dark:bg-neutral-900"
             onClick={() =>
-              navigate(`/forrentDetails/${encodeURIComponent(property.title)}`)
+              navigate(`/forSaleDetails/${encodeURIComponent(property.title)}`)
             }
           >
             <img
@@ -186,25 +183,25 @@ const ForRent: React.FC = () => {
               className="w-full h-60 object-cover"
             />
             <div className="py-4 px-4 space-y-4">
-              <h2 className="text-lg text-white font-raleway font-thin">
+              <h2 className="text-lg font-raleway font-light dark:font-thin">
                 {property.title}
               </h2>
-              <div className="w-1/2 h-[1px] bg-white my-2" />
-              <div className="flex justify-between text-sm text-gray-200 mb-2 font-raleway font-thin">
+              <div className="w-1/2 h-[1px] bg-black dark:bg-white my-2" />
+              <div className="flex justify-between text-sm text-gray-700 dark:text-gray-200 mb-2 font-raleway font-light dark:font-thin">
                 <span className="flex items-center gap-1">
-                  <FaBed className="text-gray-300" />
+                  <FaBed />
                   BR {property.bedrooms}
                 </span>
                 <span className="flex items-center gap-1">
-                  <FaRulerCombined className="text-gray-200" />
+                  <FaRulerCombined />
                   {property.areaSqft} SqFt
                 </span>
                 <span className="flex items-center gap-1">
-                  <FaMapMarkerAlt className="text-gray-200" />
+                  <FaMapMarkerAlt />
                   {property.location}
                 </span>
               </div>
-              <div className="flex gap-10 text-gray-200 justify-between mb-3">
+              <div className="flex gap-10 justify-between text-black dark:text-gray-200 mb-3">
                 AED {property.priceAED.toLocaleString()}
                 <a
                   href={property.contact.link}

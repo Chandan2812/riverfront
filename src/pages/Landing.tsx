@@ -15,7 +15,7 @@ import FindYourPartner from "../components/FindYourPartner";
 
 export const Landing = () => {
   return (
-    <div className="bg-black">
+    <div>
       <>
         <HeroSection />
         <StatsSection />
