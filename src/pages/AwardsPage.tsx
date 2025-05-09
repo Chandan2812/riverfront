@@ -82,7 +82,7 @@ export const AwardsPage = () => {
         {/* Sidebar (Sticky Year Navigation) */}
         <div
           ref={sidebarRef}
-          className="sticky top-36 left-0 h-fit w-20 md:w-28 py-4 bg-gray-200 dark:bg-[#0D1B2A] text-black dark:text-white space-y-2"
+          className="sticky top-36 left-0 h-fit w-20 md:w-32 rounded bg-gray-200 dark:bg-neutral-900 p-4 text-black dark:text-white space-y-2"
         >
           {awardsData.map(({ year }) => (
             <button
