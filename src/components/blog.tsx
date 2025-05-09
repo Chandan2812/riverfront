@@ -97,13 +97,26 @@ const RealStateInsights = () => {
   }, [index]);
 
   return (
-    <div className="container mx-auto px-4 py-10 font-raleway font-thin">
-      <h1 className="text-3xl md:text-5xl text-white mb-6 text-center">
-        Latest News & Insights
-      </h1>
+    <div className="px-4 py-10 bg-white dark:bg-black text-black dark:text-white font-raleway font-light dark:font-thin">
+      <h2 className="text-center text-3xl font-thin">
+        EXPERT REAL ESTATE INSIGHTS
+      </h2>
+      <p className="text-center text-gray-700 dark:text-gray-300 max-w-2xl mx-auto mt-2">
+        Discover the insider knowledge of Dubai real estate from our agents:
+        expert analysis and in-depth information on the city and its property
+        market.
+      </p>
 
-      <div className=" max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
-        {blogsData.map((blog) => (
+      {/* Carousel */}
+      <div
+        ref={carouselRef}
+        className="max-w-6xl mx-auto mt-8 flex gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide"
+        onMouseDown={handleMouseDown}
+        onMouseLeave={handleMouseLeave}
+        onMouseUp={handleMouseUp}
+        onMouseMove={handleMouseMove}
+      >
+        {data.map((item, i) => (
           <div
             id={`slide-${i}`}
             key={i}
@@ -114,11 +127,11 @@ const RealStateInsights = () => {
               className="w-full lg:w-1/2 object-cover"
               alt={item.title}
             />
-            <div className="p-6">
-              <h2 className="text-xl mb-2 text-white">
-                {blog.title.slice(0, 38)}...
-              </h2>
-              <p className="text-white text-sm mb-3">{blog.date}</p>
+            <div className="p-8 bg-white dark:bg-black flex flex-col justify-center">
+              <h3 className="text-2xl font-thin">{item.title}</h3>
+              <p className="mt-4 text-gray-700 dark:text-gray-300">
+                {item.desc}
+              </p>
               <a
                 href="/viewblogs"
                 className="mt-6 border border-[var(--primary-color)] text-[var(--primary-color)] px-6 py-2 uppercase tracking-wide hover:bg-gradient-to-r from-[#C29579] via-[#e3c5b5] to-[#C29579] hover:text-black hover:font-light transition w-fit inline-block"
