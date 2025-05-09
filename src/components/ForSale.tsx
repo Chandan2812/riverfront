@@ -5,7 +5,7 @@ import { FaArrowRight } from "react-icons/fa";
 
 export default function ForSaleComponent() {
   return (
-    <div className=" font-raleway bg-white dark:bg-black py-10">
+    <div className=" font-raleway bg-white dark:bg-black py-10 gradient-top relative">
       {/* Title */}
       <h2 className="text-3xl md:text-5xl text-black dark:text-white mb-6 text-center font-thin">
         Properties for Sale

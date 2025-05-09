@@ -49,7 +49,7 @@ const AwardsSection = () => {
   const scrollRef = useRef<HTMLDivElement | null>(null);
 
   return (
-    <div className="w-full py-16 bg-white dark:bg-black text-center cursor-pointer font-raleway font-thin">
+    <div className="w-full py-16 bg-white dark:bg-black text-center cursor-pointer font-raleway font-thin gradient-top relative">
       {/* Title */}
       <h2 className="text-3xl md:text-5xl text-black dark:text-white mb-10">
         Awards & Recognitions
