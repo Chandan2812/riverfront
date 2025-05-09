@@ -3,6 +3,7 @@ import propertyData from "../data/offPlanData.json";
 import Navbar from "../components/nav";
 import Footer from "../components/footer";
 import HaveAQuestion from "../components/HaveAQuestion";
+import { useEffect } from "react";
 
 function OffPlanDetails() {
   const { projectName } = useParams();
@@ -14,9 +15,12 @@ function OffPlanDetails() {
   if (!property) {
     return <div className="p-10 text-center text-xl">Property not found</div>;
   }
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
 
   return (
-    <div className="bg-black">
+    <div className="bg-white dark:bg-black text-black dark:text-white">
       <div className="mb-24">
         <Navbar />
       </div>
@@ -29,23 +33,25 @@ function OffPlanDetails() {
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
-          <h1 className="text-white text-5xl font-raleway font-thin">
+          <h1 className="text-white text-5xl font-raleway font-light dark:font-thin">
             {property.projectName}
           </h1>
         </div>
       </div>
 
       {/* Project Details Section */}
-      <div className="w-[90%] mx-auto px-4 py-10 font-raleway font-thin text-white">
+      <div className="w-[90%] mx-auto px-4 py-10 font-raleway font-light dark:font-thin">
         {/* Description + Price + Image */}
         <div className="flex flex-col md:flex-row items-start gap-6">
           <div className="flex-1 space-y-4">
             <h2 className="text-3xl mb-2">
               Project Details - {property.projectName}
             </h2>
-            <hr className="border-t-2 border-black w-32 mb-6" />
-            <p className="text-lg text-gray-200">{property.description}</p>
-            <p className="text-xl font-thin text-white font-sans">
+            <hr className="border-t-2 border-black dark:border-white w-32 mb-6" />
+            <p className="text-lg text-gray-700 dark:text-gray-200">
+              {property.description}
+            </p>
+            <p className="text-xl font-light dark:font-thin font-sans text-black dark:text-white">
               Price: {property.price}
             </p>
           </div>
@@ -69,15 +75,18 @@ function OffPlanDetails() {
           </div>
           <div className="flex-1">
             <h3 className="text-3xl mb-1">About Developers</h3>
-            <p className="text-lg font-thin mb-1">{property.developer}</p>
-            <hr className="border border-gray-300 w-24 mb-4" />
-            <p className="text-gray-200">{property.aboutDeveloper}</p>
+            <p className="text-lg font-light dark:font-thin mb-1">
+              {property.developer}
+            </p>
+            <hr className="border border-gray-300 dark:border-gray-600 w-24 mb-4" />
+            <p className="text-gray-700 dark:text-gray-200">
+              {property.aboutDeveloper}
+            </p>
           </div>
         </div>
       </div>
 
       <HaveAQuestion />
-
       <Footer />
     </div>
   );

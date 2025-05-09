@@ -51,11 +51,12 @@ const OffplanPropertyCard: React.FC = () => {
   }, [searchTerm, developerFilter, priceRange]);
 
   return (
-    <div className="bg-black font-raleway">
+    <div className="bg-white dark:bg-black text-black dark:text-white font-raleway">
       <div className="mb-16 md:mb-32 pt-5">
         <Navbar />
       </div>
-      <h1 className="w-[90%] mx-auto text-2xl md:text-4xl text-center mb-5 md:mb-8 pt-6 text-white font-thin">
+
+      <h1 className="w-[90%] mx-auto text-2xl md:text-4xl text-center mb-5 md:mb-8 pt-6 font-thin">
         Off-Plan Properties in Dubai: Your Guide to Future Real Estate
         Investments
       </h1>
@@ -63,21 +64,21 @@ const OffplanPropertyCard: React.FC = () => {
       {/* Filters */}
       <div className="w-full md:w-[90%] mx-auto px-4 mb-6 grid grid-cols-1 md:grid-cols-3 gap-4 justify-between">
         <div className="flex flex-col w-full">
-          <label className="mb-1 text-white">Location</label>
+          <label className="mb-1">Location</label>
           <input
             type="text"
             placeholder="Search by project or location..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="border border-[var(--primary-color)] px-4 py-2 rounded-md bg-transparent text-white"
+            className="border border-[var(--primary-color)] px-4 py-2 rounded-md bg-transparent text-black dark:text-white placeholder:text-gray-400"
           />
         </div>
         <div className="flex flex-col w-full">
-          <label className="mb-1 text-white">Developers</label>
+          <label className="mb-1">Developers</label>
           <select
             value={developerFilter}
             onChange={(e) => setDeveloperFilter(e.target.value)}
-            className="border border-[var(--primary-color)] px-4 py-2 rounded-md w-full bg-black text-white"
+            className="border border-[var(--primary-color)] px-4 py-2 rounded-md w-full bg-white dark:bg-black text-black dark:text-white"
           >
             <option value="">All Developers</option>
             {allDevelopers.map((dev, idx) => (
@@ -89,11 +90,11 @@ const OffplanPropertyCard: React.FC = () => {
         </div>
 
         <div className="flex flex-col w-full relative">
-          <label className="mb-1 text-sm text-white">Price (AED)</label>
-          <div className="border border-[var(--primary-color)] rounded px-4 pt-2 pb-3 bg-black">
-            <div className="flex justify-between text-xs mb-1 text-white">
-              <span>min {priceRange[0].toLocaleString()}</span>
-              <span>max {priceRange[1].toLocaleString()}</span>
+          <label className="mb-1 text-sm">Price (AED)</label>
+          <div className="border border-[var(--primary-color)] rounded px-4 pt-2 pb-3 bg-white dark:bg-black">
+            <div className="flex justify-between text-xs mb-1">
+              <span>{`min ${priceRange[0].toLocaleString()}`}</span>
+              <span>{`max ${priceRange[1].toLocaleString()}`}</span>
             </div>
             <div className="absolute left-4 right-4 bottom-0">
               <Range
@@ -105,16 +106,16 @@ const OffplanPropertyCard: React.FC = () => {
                 renderTrack={({ props, children }) => (
                   <div
                     {...props}
-                    className="h-1 bg-gray-700 rounded relative"
+                    className="h-1 bg-gray-300 dark:bg-gray-700 rounded relative"
                     style={{
                       ...props.style,
-                      background: `linear-gradient(to right, #444 ${
+                      background: `linear-gradient(to right, #ccc ${
                         (priceRange[0] / 5000000) * 100
                       }%, var(--primary-color) ${
                         (priceRange[0] / 5000000) * 100
                       }%, var(--primary-color) ${
                         (priceRange[1] / 5000000) * 100
-                      }%, #444 ${(priceRange[1] / 5000000) * 100}%)`,
+                      }%, #ccc ${(priceRange[1] / 5000000) * 100}%)`,
                     }}
                   >
                     {children}
@@ -132,6 +133,7 @@ const OffplanPropertyCard: React.FC = () => {
         </div>
       </div>
 
+      {/* Property Cards */}
       <div className="w-full md:w-[90%] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-3">
         {filteredProperties.map((property, index) => {
           const whatsappNumber = property.contact?.number?.replace(/\D/g, "");
@@ -140,7 +142,7 @@ const OffplanPropertyCard: React.FC = () => {
             <div
               key={index}
               onClick={() => handleCardClick(property.projectName)}
-              className="border border-gray-700 rounded-xl hover:shadow-[var(--primary-color)] shadow-md overflow-hidden cursor-pointer transition hover:scale-105"
+              className="border border-gray-300 dark:border-gray-700 rounded-xl hover:shadow-[var(--primary-color)] shadow-md overflow-hidden cursor-pointer transition hover:scale-105 bg-white dark:bg-black"
             >
               <div className="h-52 w-full overflow-hidden">
                 <img
@@ -151,12 +153,12 @@ const OffplanPropertyCard: React.FC = () => {
               </div>
 
               <div className="p-4 flex flex-col flex-grow">
-                <h2 className="text-lg text-white mb-2 font-raleway font-thin">
+                <h2 className="text-lg mb-2 font-raleway font-light dark:font-thin">
                   {property.projectName}
                 </h2>
-                <hr className="border-black w-20 mb-3" />
+                <hr className="border-black dark:border-white w-20 mb-3" />
 
-                <div className="flex items-center justify-between text-sm text-gray-200 mb-3 font-raleway font-thin">
+                <div className="flex items-center justify-between text-sm mb-3 font-raleway font-light dark:font-thin text-gray-700 dark:text-gray-200">
                   <div className="flex items-center gap-1">
                     <GiHouse className="text-xl" />
                     <span>{property.developer}</span>
@@ -167,10 +169,8 @@ const OffplanPropertyCard: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="flex items-center justify-between mt-auto">
-                  <span className="text-lg text-gray-200">
-                    {property.price}
-                  </span>
+                <div className="flex items-center justify-between mt-auto text-gray-700 dark:text-gray-200">
+                  <span className="text-lg">{property.price}</span>
                   {whatsappNumber ? (
                     <a
                       href={`https://wa.me/${whatsappNumber}`}
@@ -182,7 +182,9 @@ const OffplanPropertyCard: React.FC = () => {
                       <FaWhatsapp className="w-7 h-7" />
                     </a>
                   ) : (
-                    <span className="text-sm text-gray-400">No WhatsApp</span>
+                    <span className="text-sm text-gray-400 dark:text-gray-500">
+                      No WhatsApp
+                    </span>
                   )}
                 </div>
               </div>
@@ -192,7 +194,6 @@ const OffplanPropertyCard: React.FC = () => {
       </div>
 
       <HaveAQuestion />
-
       <Footer />
     </div>
   );
