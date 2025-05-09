@@ -97,6 +97,7 @@ export default function TestimonialSlider() {
                   src="https://www.svgrepo.com/show/475656/google-color.svg"
                   alt="Google"
                   className="w-8"
+                  draggable={false}
                 />
               </div>
               <div>

@@ -79,7 +79,12 @@ const Footer = () => {
   return (
     <div className="relative mb-14 md:mb-0 font-raleway font-thin">
       <div className="bg-white dark:bg-black">
-        <img src={skyline} alt="" className="-mb-1 invert dark:invert-0" />
+        <img
+          src={skyline}
+          alt=""
+          className="-mb-1 invert dark:invert-0"
+          draggable={false}
+        />
       </div>
 
       <footer className="bg-[#D4D4D4] dark:bg-[#2b2b2b] text-black font-light dark:font-thin dark:text-white py-3  px-6">
@@ -90,6 +95,7 @@ const Footer = () => {
               src={logo}
               alt=""
               className=" w-40 py-2 rounded-xl mx-auto md:mx-0"
+              draggable={false}
             />
             <div className="flex justify-center md:justify-start gap-4 mt-4 text-lg">
               <a
@@ -335,6 +341,7 @@ const Footer = () => {
               src={bigwigLogo}
               alt="Designed and marketed by Bigwig Digital"
               className="mx-auto w-44 "
+              draggable={false}
             />
           </a>{" "}
           <p className="mx-auto">
@@ -362,6 +369,7 @@ const Footer = () => {
               src={bigwigLogo}
               alt="Designed and marketed by Bigwig Digital"
               className="mx-auto w-36 "
+              draggable={false}
             />
           </a>
           <p className="mx-auto">

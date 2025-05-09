@@ -155,6 +155,7 @@ export default function OffPlanProperties() {
               src={property.image}
               alt={property.name}
               className="w-full h-60 md:h-60 object-cover"
+              draggable={false}
             />
             <div className="p-3">
               <h3 className="font-bold text-lg">{property.name}</h3>

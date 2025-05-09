@@ -20,11 +20,16 @@ const HeroImageSlider: React.FC = () => {
         viewBox="0 0 24 24"
         stroke="currentColor"
       >
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M15 19l-7-7 7-7"
+        />
       </svg>
     </button>
   );
-  
+
   const CustomNextArrow = ({ onClick }: { onClick?: () => void }) => (
     <button
       onClick={onClick}
@@ -37,11 +42,15 @@ const HeroImageSlider: React.FC = () => {
         viewBox="0 0 24 24"
         stroke="currentColor"
       >
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M9 5l7 7-7 7"
+        />
       </svg>
     </button>
   );
-  
 
   const settings = {
     dots: false,
@@ -59,12 +68,13 @@ const HeroImageSlider: React.FC = () => {
   return (
     <div className="w-full overflow-hidden mb-8 md:mb-10">
       <Slider {...settings}>
-        {propertyData.slice(0,7).map((property, idx) => (
+        {propertyData.slice(0, 7).map((property, idx) => (
           <div key={idx} className="relative w-full h-[40vh] md:h-[70vh]">
             <img
               src={property.images.primary}
               alt={property.projectName}
               className="w-full h-full object-cover"
+              draggable={false}
             />
 
             <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center text-center px-4">
@@ -75,7 +85,11 @@ const HeroImageSlider: React.FC = () => {
                 by {property.developer}
               </p>
               <button
-                onClick={() => navigate(`/offplan/${encodeURIComponent(property.projectName)}`)}
+                onClick={() =>
+                  navigate(
+                    `/offplan/${encodeURIComponent(property.projectName)}`
+                  )
+                }
                 className="bg-[var(--secondary-color)] text-white font-semibold px-6 py-2 rounded-md hover:bg-gray-200 hover:text-[var(--secondary-color)] transition"
               >
                 Discover More Details

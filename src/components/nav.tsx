@@ -79,7 +79,12 @@ const Navbar = () => {
             {/* Mobile View */}
             <div className="flex items-center w-full justify-between md:hidden py-10">
               <a href="/">
-                <img src={logo} alt=" Logo" className="w-1/4" />
+                <img
+                  src={logo}
+                  alt=" Logo"
+                  className="w-1/4"
+                  draggable={false}
+                />
               </a>
               <div className="flex gap-4">
                 <button
@@ -104,7 +109,12 @@ const Navbar = () => {
               <div className="flex items-center space-x-4">
                 <div className="h-20 flex items-center">
                   <a href="/">
-                    <img src={logo} alt=" Logo" className="w-28 py-2" />
+                    <img
+                      src={logo}
+                      alt=" Logo"
+                      className="w-28 py-2"
+                      draggable={false}
+                    />
                   </a>
                 </div>
                 <div className="border-l self-stretch border-gray-400"></div>
@@ -156,7 +166,12 @@ const Navbar = () => {
           <div className="md:hidden fixed inset-0 z-[9999] bg-white dark:bg-black flex flex-col pl-2 pr-5 pb-4">
             {/* Header with logo and close */}
             <div className="flex justify-between items-center">
-              <img src={logo} alt=" Logo" className="w-28 pt-5" />
+              <img
+                src={logo}
+                alt=" Logo"
+                className="w-28 pt-5"
+                draggable={false}
+              />
               <button
                 onClick={() => setIsOpen(false)}
                 className="text-2xl text-inherit"

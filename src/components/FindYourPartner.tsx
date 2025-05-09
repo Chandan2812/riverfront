@@ -150,6 +150,7 @@ const FindYourPartner: React.FC = () => {
                     src={member.image}
                     alt={member.name}
                     className="w-full h-full object-cover"
+                    draggable={false}
                   />
                   <div className="absolute bottom-0 bg-black bg-opacity-80 p-4 w-full text-left dark:bg-gray-900 dark:bg-opacity-80">
                     <h3 className="text-lg font-semibold text-white dark:text-gray-100">
