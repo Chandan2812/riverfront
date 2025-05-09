@@ -31,6 +31,7 @@ export default function PropertySlider() {
               src={property.images.primary}
               alt={property.projectName}
               className="w-full h-full object-cover"
+              draggable={false}
             />
             <div className="absolute inset-0 bg-black bg-opacity-40" />{" "}
             {/* Transparent Black Overlay */}

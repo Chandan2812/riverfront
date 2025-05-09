@@ -10,6 +10,7 @@ const RealEstateExperts: React.FC = () => {
             src="https://www.axcapital.ae/_ipx/_/img/real-estate-experts.webp"
             alt="Real Estate Experts"
             className="w-full" // Adjust image width for desktop
+            draggable={false}
           />
 
           {/* Mobile stats overlay */}

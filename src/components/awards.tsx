@@ -75,6 +75,7 @@ const AwardsSection = () => {
                 src={award.image}
                 alt={award.name}
                 className="w-32 h-32 object-contain mb-4"
+                draggable={false}
               />
               <p className="text-lg font-light text-gray-700 dark:text-gray-300">
                 {award.name}

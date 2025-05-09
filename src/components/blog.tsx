@@ -110,6 +110,7 @@ const RealStateInsights = () => {
               src={item.image}
               className="w-full lg:w-1/2 object-cover"
               alt={item.title}
+              draggable={false}
             />
             <div className="p-8 bg-white dark:bg-black flex flex-col justify-center">
               <h3 className="text-2xl font-thin">{item.title}</h3>

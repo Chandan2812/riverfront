@@ -81,6 +81,7 @@ export default function BuyRentSection() {
             src={images[activeTab]}
             alt={activeTab}
             className="w-full h-full object-cover"
+            draggable={false}
           />
         </div>
       </div>

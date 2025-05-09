@@ -18,6 +18,7 @@ const ListProperty = () => {
               alt="List Property"
               width={800}
               height={600}
+              draggable={false}
               className="rounded-lg object-cover w-full h-full transition-transform duration-500 ease-in-out transform hover:scale-105"
             />
           </div>
