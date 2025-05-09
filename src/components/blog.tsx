@@ -2,8 +2,8 @@ import blogsData from "../data/blogsData.json";
 
 const Blog = () => {
   return (
-    <div className="container mx-auto px-4 py-10 font-raleway font-thin">
-      <h1 className="text-3xl md:text-5xl text-white mb-6 text-center">
+    <div className="bg-white dark:bg-black container mx-auto px-4 py-10 font-raleway font-thin">
+      <h1 className="text-3xl md:text-5xl text-black dark:text-white mb-6 text-center">
         Latest News & Insights
       </h1>
 
@@ -19,10 +19,12 @@ const Blog = () => {
               className="w-full h-60 object-cover"
             />
             <div className="p-6">
-              <h2 className="text-xl mb-2 text-white">
+              <h2 className="text-xl mb-2 text-black dark:text-white font-light dark:font-thin">
                 {blog.title.slice(0, 38)}...
               </h2>
-              <p className="text-white text-sm mb-3">{blog.date}</p>
+              <p className="text-black dark:text-white font-sans text-sm mb-3">
+                {blog.date}
+              </p>
               <a
                 href={`/blog/${blog.id}`}
                 className="text-[var(--primary-color)] font-light"

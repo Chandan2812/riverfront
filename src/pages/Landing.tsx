@@ -14,7 +14,7 @@ import ListProperty from "../components/listproperty";
 
 export const Landing = () => {
   return (
-    <div className="bg-black">
+    <div>
       <>
         <HeroSection />
         <StatsSection />

@@ -78,8 +78,11 @@ const Footer = () => {
 
   return (
     <div className="relative mb-14 md:mb-0 font-raleway font-thin">
-      <img src={skyline} alt="" className="-mb-1" />
-      <footer className="bg-[#2b2b2b] text-white py-3  px-6">
+      <div className="bg-white dark:bg-black">
+        <img src={skyline} alt="" className="-mb-1 invert dark:invert-0" />
+      </div>
+
+      <footer className="bg-[#D4D4D4] dark:bg-[#2b2b2b] text-black font-light dark:font-thin dark:text-white py-3  px-6">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo and Social Icons */}
           <div className="text-center md:text-left ">
