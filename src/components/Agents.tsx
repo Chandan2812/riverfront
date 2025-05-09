@@ -80,7 +80,7 @@ const AgentsSection = () => {
   }, [enrichedAgents, specialization, language]);
 
   return (
-    <div className="bg-[#121212] text-white font-raleway font-thin">
+    <div className="bg-white dark:bg-black text-black dark:text-white font-raleway font-light dark:font-thin">
       {/* Navbar */}
       <div className="mb-27 md:mb-20 pt-20 md:pt-10">
         <Navbar />
@@ -94,7 +94,7 @@ const AgentsSection = () => {
         }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-20" />
-        <h1 className="text-3xl md:text-4xl  z-10 font-light">
+        <h1 className="text-3xl md:text-4xl  z-10 font-light text-white">
           REAL ESTATE PROPERTIES ADVISOR IN DUBAI
         </h1>
         <p className="text-lg text-gray-300 mt-2 z-10 font-light">
@@ -103,7 +103,7 @@ const AgentsSection = () => {
       </div>
 
       {/* Filters */}
-      <section className="bg-[#121212] text-white py-8 px-4 md:px-12">
+      <section className=" py-8 px-4 md:px-12">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
           <h2 className="text-3xl font-light">FIND YOUR PARTNER</h2>
           <div className="flex gap-4">
@@ -111,7 +111,7 @@ const AgentsSection = () => {
             <select
               value={specialization}
               onChange={(e) => setSpecialization(e.target.value)}
-              className="bg-gray-800 text-white px-4 py-2 rounded-md"
+              className="bg-gray-200 dark:bg-gray-800 text-black dark:text-white px-4 py-2 rounded-md"
             >
               <option value="">All Specializations</option>
               {specializations.map((spec, index) => (
@@ -125,7 +125,7 @@ const AgentsSection = () => {
             <select
               value={language}
               onChange={(e) => setLanguage(e.target.value)}
-              className="bg-gray-800 text-white px-4 py-2 rounded-md"
+              className="bg-gray-200 dark:bg-gray-800 text-black dark:text-white px-4 py-2 rounded-md"
             >
               <option value="">All Languages</option>
               {languages.map((lang, index) => (

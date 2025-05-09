@@ -27,12 +27,12 @@ export default function ServicesSection() {
   }, []);
 
   return (
-    <div className="w-full bg-black font-raleway font-light">
+    <div className="w-full bg-white dark:bg-black text-black dark:text-white font-raleway font-light dark:font-thin">
       <div className="mb-20 md:mb-28">
         <Navbar />
       </div>
 
-      <div className="px-4 md:px-20 py-10 space-y-16">
+      <div className="w-full md:w-11/12 mx-auto px-6 py-10 space-y-16">
         {services.map((service, index) => (
           <div
             id={service.slug}
@@ -50,8 +50,10 @@ export default function ServicesSection() {
               <h2 className="text-2xl md:text-3xl font-bold ">
                 {service.title}
               </h2>
-              <p className="text-gray-300">{service.description}</p>
-              <ul className="list-disc list-inside space-y-1 text-gray-300">
+              <p className="text-gray-800 dark:text-gray-300">
+                {service.description}
+              </p>
+              <ul className="list-disc list-inside space-y-1 text-gray-800 dark:text-gray-300">
                 {service.bullet_points.map((point, i) => (
                   <li key={i}>{point}</li>
                 ))}
@@ -60,10 +62,10 @@ export default function ServicesSection() {
               {/* Contact Section */}
               {/* Contact Section - In Row */}
               {service.contact && (
-                <div className="mt-4 flex flex-wrap items-center gap-6 text-gray-700">
+                <div className="mt-4 flex flex-wrap items-center gap-6 ">
                   <div className="flex items-center gap-2 font-sans">
                     <Phone className="w-4 h-4 text-green-600" />
-                    <span className="text-gray-300">
+                    <span className="text-gray-800 dark:text-gray-300">
                       Call:{" "}
                       <a
                         href={`tel:${service.contact.call}`}
@@ -75,7 +77,7 @@ export default function ServicesSection() {
                   </div>
                   <div className="flex items-center gap-2 font-sans">
                     <MessageCircle className="w-4 h-4 text-green-600" />
-                    <span className="text-gray-300">
+                    <span className="text-gray-800 dark:text-gray-300">
                       WhatsApp:{" "}
                       <a
                         href={`https://wa.me/${service.contact.whatsapp.replace(
