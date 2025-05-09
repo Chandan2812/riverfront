@@ -11,13 +11,13 @@ const RealStateInsights = () => {
     {
       title: "MONDUS TALK",
       desc: "Listen to podcasts from our real estate agents and stay up to date on the Dubai property market: latest news, expert advice, and more.",
-      button: "ALL PODCASTS",
+      button: "ALL Blogs",
       img: podcast1,
     },
     {
       title: "MONDUS BLOG",
       desc: "Stay up to date on the latest trends and developments in the Dubai real estate market with our informative articles. With insights and advice from industry experts, our blog is a valuable resource for anyone interested in the Dubai property market.",
-      button: "ALL ARTICLES",
+      button: "ALL Blogs",
       img: podcast2,
     },
   ];
@@ -134,7 +134,7 @@ const RealStateInsights = () => {
               </p>
               <a
                 href="/viewblogs"
-                className="mt-6 border border-[var(--primary-color)] text-[var(--primary-color)] px-6 py-2 uppercase tracking-wide hover:bg-gradient-to-r from-[#C29579] via-[#e3c5b5] to-[#C29579] hover:text-black hover:font-light transition w-fit inline-block"
+                className="mt-6 rounded-full border border-[var(--primary-color)] text-[var(--primary-color)] px-6 py-2 uppercase tracking-wide hover:bg-gradient-to-r from-[#f9f295] via-[#e0aa3e] to-[#faf398] hover:text-black hover:font-light transition w-fit inline-block"
               >
                 {item.button}
               </a>
