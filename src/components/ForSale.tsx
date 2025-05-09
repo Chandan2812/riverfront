@@ -5,7 +5,7 @@ import { FaArrowRight } from "react-icons/fa";
 
 export default function ForSaleComponent() {
   return (
-    <div className="max-w-6xl mx-auto p-2 mt-14 font-raleway">
+    <div className="max-w-6xl mx-auto p-2 mt-14 py-10 font-raleway custom-gradient-lines relative">
       <h2 className="text-3xl md:text-5xl text-white mb-6 text-center font-thin">
         Properties for Sale
       </h2>

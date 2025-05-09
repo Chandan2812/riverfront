@@ -1,6 +1,6 @@
 export default function OurStory() {
   return (
-    <div className="w-full bg-black py-16 px-6 md:px-16 font-raleway font-thin">
+    <div className="w-full bg-black py-16 px-6 md:px-16 font-raleway font-thin custom-gradient-lines relative">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-3xl md:text-5xl text-white mb-6 text-center">
           Our Mission

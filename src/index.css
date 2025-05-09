@@ -19,3 +19,60 @@
   background-color: white;
   color: black;
 }
+.custom-gradient-lines::before,
+.custom-gradient-lines::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-image: linear-gradient(90deg, transparent, #d3a188, transparent);
+  z-index: 10;
+}
+
+.custom-gradient-lines::before {
+  top: 0;
+}
+
+.custom-gradient-lines::after {
+  bottom: 0;
+}
+
+/* Base: for relative positioning */
+.gradient-line-wrapper {
+  position: relative;
+}
+
+/* Top gradient line */
+.gradient-top::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-image: linear-gradient(90deg, transparent, #d3a188, transparent);
+  z-index: 10;
+}
+
+/* Bottom gradient line */
+.gradient-bottom::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-image: linear-gradient(90deg, transparent, #d3a188, transparent);
+  z-index: 10;
+}
+
+/* Add this to your index.css or global CSS */
+.scrollbar-hide {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}

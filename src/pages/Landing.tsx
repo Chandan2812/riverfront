@@ -11,6 +11,7 @@ import ForSaleComponent from "../components/ForSale";
 import ForRentComponent from "../components/ForRent";
 import { Phone, MessageCircle } from "lucide-react";
 import ListProperty from "../components/listproperty";
+import FindYourPartner from "../components/FindYourPartner";
 
 export const Landing = () => {
   return (
@@ -24,6 +25,7 @@ export const Landing = () => {
         <ForRentComponent />
 
         <PropertySlider />
+        <FindYourPartner />
         <ListProperty />
         <OurStory />
         <Blog />
