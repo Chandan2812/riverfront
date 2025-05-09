@@ -1,7 +1,7 @@
 function HaveAQuestion() {
   return (
-    <div className="bg-white dark:bg-black py-10 mt-10">
-      <div className="w-[90%] mx-auto flex flex-col md:flex-row items-center justify-between gap-6 border border-gray-300 dark:border-gray-700 rounded px-10 py-10 bg-gray-100 dark:bg-neutral-900">
+    <div className="bg-white dark:bg-black py-10 mt-10 px-6">
+      <div className="w-11/12  mx-auto flex flex-col md:flex-row items-center justify-between gap-6 border border-gray-300 dark:border-gray-700 rounded px-10 py-10 bg-gray-100 dark:bg-neutral-900">
         {/* Text */}
         <div className="text-center md:text-left font-raleway font-thin">
           <h2 className="text-3xl text-black dark:text-white mb-2">

@@ -56,7 +56,7 @@ const AwardsSection = () => {
       </h2>
 
       {/* Awards List - Scrollable */}
-      <div className="max-w-6xl mx-auto overflow-hidden relative">
+      <div className="w-11/12 mx-auto overflow-hidden relative">
         <div
           ref={scrollRef}
           className="flex flex-nowrap overflow-x-auto scrollbar-hide scroll-smooth snap-x snap-mandatory"

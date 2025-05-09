@@ -3,7 +3,7 @@ import React from "react";
 const RealEstateExperts: React.FC = () => {
   return (
     <div className="bg-white text-black dark:bg-black dark:text-white  transition-colors font-raleway">
-      <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-4 md:gap-8 items-center p-4 py-10">
+      <div className="w-full md:w-11/12 mx-auto grid md:grid-cols-3 gap-4 md:gap-8 items-center p-4 py-10">
         {/* Image section (1/3 for desktop) */}
         <div className="relative w-full md:col-span-1 flex justify-center">
           <img
@@ -53,10 +53,14 @@ const RealEstateExperts: React.FC = () => {
           <p className="text-gray-600 dark:text-gray-400 mb-6">
             We have implemented all these in MONDUS PROPERTIES
           </p>
-
-          <button className="border px-6 py-3 transition mb-8 border-[var(--primary-color)] text-[var(--primary-color)] btn-gradient-hover">
-            Enquire now
-          </button>
+          <a href="/contact">
+            <button
+              className="border px-6 py-3 transition mb-8 border-[var(--primary-color)] text-white rounded-full hover:opacity-70 "
+              style={{ background: "var(--bg-primary-gradient)" }}
+            >
+              Enquire now
+            </button>
+          </a>
 
           {/* Desktop stats */}
           <div className="hidden md:grid grid-cols-3 text-center gap-6 border-t border-gray-300 dark:border-gray-800 pt-8">

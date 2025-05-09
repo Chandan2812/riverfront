@@ -11,7 +11,7 @@ export default function ForSaleComponent() {
         Properties for Sale
       </h2>
       {/* Property Grid */}
-      <div className="md:max-w-6xl mx-auto px-4 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div className="w-full md:w-11/12 mx-auto px-4 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {propertiesData.slice(0, 8).map((property) => (
           <div
             key={property.title}

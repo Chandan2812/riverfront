@@ -99,36 +99,27 @@ const FindYourPartner: React.FC = () => {
 
   return (
     <section className="relative custom-gradient-lines">
-      <div className="py-12 px-4 md:px-16 relative bg-white dark:bg-black text-black dark:text-white font-raleway">
-        <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-10 items-start">
+      <div className="py-12 px-4  relative bg-white dark:bg-black text-black dark:text-white font-raleway">
+        <div className="w-full md:w-11/12 mx-auto grid lg:grid-cols-2 gap-10 items-start">
           {/* Left Text */}
           <div>
             <h2 className="text-3xl md:text-4xl font-light mb-6 text-black dark:text-gray-100">
-              FIND YOUR PARTNER
+              FIND YOUR RIVERFRONT SPECIALIST
             </h2>
-            <p className="text-gray-600 mb-6 max-w-md dark:text-gray-400">
-              Our team is highly experienced and knowledgeable across all
-              aspects of the real estate industry. We are ready to answer your
-              questions in over 30 languages. Find the perfect match for your
-              needs and embark on your real estate journey with MONDUS
-              professionals.
+            <p className="text-gray-600 mb-4 dark:text-gray-400">
+              Riverfront properties offer a rare blend of natural beauty and
+              modern luxury. Whether you're drawn by the serene waterfront
+              views, the proximity to vibrant city life, or the investment
+              potential of a high-demand location, choosing the right riverfront
+              property requires expert guidance.
             </p>
-
-            <div className="flex flex-wrap gap-4 mb-6">
-              <select className="bg-white border border-gray-600 px-4 py-2 w-[160px] dark:bg-gray-800 dark:border-gray-700 dark:text-white">
-                <option>Specialization</option>
-              </select>
-              <select className="bg-white border border-gray-600 px-4 py-2 w-[160px] dark:bg-gray-800 dark:border-gray-700 dark:text-white">
-                <option>Language</option>
-              </select>
-              <button className="border border-gray-600 px-4 py-2 text-lg dark:border-gray-500 dark:text-white">
-                &#8635;
-              </button>
-            </div>
-
-            <button className="border border-[var(--primary-color)] text-[var(--primary-color)]  px-6 py-3 hover:opacity-70 hover:text-black transition dark:border-[var(--primary-color)] dark:text-[primary-color] hover:bg-gradient-to-r from-[#C29579] via-[#e3c5b5] to-[#C29579] dark:hover:text-black">
-              SHOW ALL
-            </button>
+            <p className="text-gray-600  dark:text-gray-400">
+              Our specialists are deeply familiar with riverfront developments
+              and understand what sets these properties apart. From exclusive
+              residential enclaves to mixed-use communities along the water,
+              we're here to help you navigate options and find the perfect space
+              that aligns with your lifestyle and long-term goals.
+            </p>
           </div>
 
           {/* Right Slider Section */}

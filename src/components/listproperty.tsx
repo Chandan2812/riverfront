@@ -10,7 +10,7 @@ const ListProperty = () => {
   return (
     <>
       <section className="bg-white dark:bg-black text-black dark:text-white py-10  ">
-        <div className="max-w-6xl mx-auto container px-4 flex flex-col lg:flex-row items-center gap-10">
+        <div className="w-full md:w-11/12 mx-auto container px-4 flex flex-col lg:flex-row items-center gap-10">
           {/* Left Side: Image */}
           <div className="w-full lg:w-1/2">
             <img

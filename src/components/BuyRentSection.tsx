@@ -10,7 +10,7 @@ export default function BuyRentSection() {
 
   return (
     <div className="bg-white dark:bg-black text-black dark:text-white py-16 px-6 md:px-12">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 items-stretch">
+      <div className="w-full md:w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2 items-stretch">
         {/* Left Text Block */}
         <div className="border-t border-b border-l border-gray-700 h-[300px] my-auto p-6 md:p-12 flex items-center">
           <div className="space-y-4 w-full">

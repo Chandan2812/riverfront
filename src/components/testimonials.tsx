@@ -84,7 +84,7 @@ export default function TestimonialSlider() {
 
   return (
     <section className="py-12 bg-white dark:bg-black font-raleway font-light">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="w-full md:w-11/12 mx-auto px-6">
         {/* Heading & Rating */}
         <div className="flex flex-col md:flex-row items-center gap-6">
           <div className="md:w-1/3 text-center md:text-left">

@@ -83,7 +83,7 @@ const Footer = () => {
       </div>
 
       <footer className="bg-[#D4D4D4] dark:bg-[#2b2b2b] text-black font-light dark:font-thin dark:text-white py-3  px-6">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="w-full md:w-11/12 mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo and Social Icons */}
           <div className="text-center md:text-left ">
             <img

@@ -96,7 +96,7 @@ const StatsSection: React.FC = () => {
       className="w-full md:py-10 bg-white dark:bg-black font-raleway font-light"
     >
       {/* Desktop View */}
-      <div className="hidden md:flex max-w-6xl mx-auto px-4 justify-center text-center">
+      <div className="hidden md:flex w-11/12 mx-auto px-4 justify-center text-center">
         {stats.map((stat, index) => (
           <div key={index} className="w-1/5 p-4 flex flex-col items-center">
             <h2 className="text-3xl font-bold bg-gradient-to-r from-[#f9f295] via-[#e0aa3e] to-[#faf398] bg-clip-text text-transparent">

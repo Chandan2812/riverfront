@@ -110,7 +110,7 @@ const RealStateInsights = () => {
       {/* Carousel */}
       <div
         ref={carouselRef}
-        className="max-w-6xl mx-auto mt-8 flex gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide"
+        className="w-full md:w-11/12 px-4 mx-auto mt-8 flex gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide"
         onMouseDown={handleMouseDown}
         onMouseLeave={handleMouseLeave}
         onMouseUp={handleMouseUp}
@@ -134,7 +134,7 @@ const RealStateInsights = () => {
               </p>
               <a
                 href="/viewblogs"
-                className="mt-6 rounded-full border border-[var(--primary-color)] text-[var(--primary-color)] px-6 py-2 uppercase tracking-wide hover:bg-gradient-to-r from-[#f9f295] via-[#e0aa3e] to-[#faf398] hover:text-black hover:font-light transition w-fit inline-block"
+                className="mt-6 rounded-full bg-gradient-to-r from-[#f9f295] via-[#e0aa3e] to-[#faf398]  text-white font-light hover:opacity-70 px-6 py-2 uppercase tracking-wide   hover:font-light transition w-fit inline-block"
               >
                 {item.button}
               </a>
