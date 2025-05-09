@@ -15,7 +15,7 @@ const BlogDetails = () => {
 
   return (
     <div className="bg-white dark:bg-black font-raleway font-light dark:font-thin text-black dark:text-white">
-      <div className="mb-32">
+      <div className="mb-28">
         <Navbar />
       </div>
       <div className="w-full md:w-[90%] container mx-auto px-4 py-10">

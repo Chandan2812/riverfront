@@ -1,26 +1,10 @@
 import { useEffect, useRef, useState } from "react";
-import podcast1 from "../assets/podcast1.webp";
-import podcast2 from "../assets/podcast2.webp";
+import blogsData from "../data/blogsData.json";
 import "../index.css";
 
 const RealStateInsights = () => {
   const [index, setIndex] = useState(0);
   const carouselRef = useRef<HTMLDivElement>(null);
-
-  const data = [
-    {
-      title: "MONDUS TALK",
-      desc: "Listen to podcasts from our real estate agents and stay up to date on the Dubai property market: latest news, expert advice, and more.",
-      button: "ALL Blogs",
-      img: podcast1,
-    },
-    {
-      title: "MONDUS BLOG",
-      desc: "Stay up to date on the latest trends and developments in the Dubai real estate market with our informative articles. With insights and advice from industry experts, our blog is a valuable resource for anyone interested in the Dubai property market.",
-      button: "ALL Blogs",
-      img: podcast2,
-    },
-  ];
 
   // Scroll to specific slide when clicking dots
   const scrollToSlide = (i: number) => {
@@ -70,7 +54,7 @@ const RealStateInsights = () => {
     let closestIndex = 0;
     let closestOffset = Infinity;
 
-    data.forEach((_, i) => {
+    blogsData.forEach((_, i) => {
       const slide = document.getElementById(`slide-${i}`);
       if (!slide) return;
 
@@ -116,27 +100,27 @@ const RealStateInsights = () => {
         onMouseUp={handleMouseUp}
         onMouseMove={handleMouseMove}
       >
-        {data.map((item, i) => (
+        {blogsData.slice(0, 2).map((item, i) => (
           <div
             id={`slide-${i}`}
             key={i}
             className="min-w-full lg:min-w-[100%] border border-gray-300 dark:border-gray-600 flex flex-col lg:flex-row snap-center"
           >
             <img
-              src={item.img}
+              src={item.image}
               className="w-full lg:w-1/2 object-cover"
               alt={item.title}
             />
             <div className="p-8 bg-white dark:bg-black flex flex-col justify-center">
               <h3 className="text-2xl font-thin">{item.title}</h3>
               <p className="mt-4 text-gray-700 dark:text-gray-300">
-                {item.desc}
+                {item.date}
               </p>
               <a
                 href="/viewblogs"
                 className="mt-6 rounded-full bg-gradient-to-r from-[#f9f295] via-[#e0aa3e] to-[#faf398]  text-white font-light hover:opacity-70 px-6 py-2 uppercase tracking-wide   hover:font-light transition w-fit inline-block"
               >
-                {item.button}
+                All Blogs
               </a>
             </div>
           </div>
@@ -145,7 +129,7 @@ const RealStateInsights = () => {
 
       {/* Navigation Dots */}
       <div className="flex justify-center mt-4 gap-2">
-        {data.map((_, i) => (
+        {blogsData.slice(0, 2).map((_, i) => (
           <button
             key={i}
             type="button"
