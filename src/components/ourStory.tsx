@@ -1,6 +1,6 @@
 export default function OurStory() {
   return (
-    <div className="w-full bg-black py-16 px-6 md:px-16 font-raleway font-thin">
+    <div className="w-full bg-white dark:bg-black py-10 px-6 md:px-16 font-raleway font-thin">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-3xl md:text-5xl text-black dark:text-white mb-6 text-center">
           Our Mission
@@ -23,6 +23,7 @@ export default function OurStory() {
           About Us
         </a>
       </div>
+         
     </div>
   );
 }

@@ -5,11 +5,11 @@ import { FaArrowRight } from "react-icons/fa";
 
 export default function ForSaleComponent() {
   return (
-    <div className="max-w-6xl mx-auto p-2 mt-14 font-raleway">
-      <h2 className="text-3xl md:text-5xl text-white mb-6 text-center font-thin">
+    <div className=" font-raleway bg-white dark:bg-black py-10">
+      {/* Title */}
+      <h2 className="text-3xl md:text-5xl text-black dark:text-white mb-6 text-center font-thin">
         Properties for Rent
       </h2>
-
       {/* Property Grid */}
       <div className="md:max-w-6xl mx-auto px-4 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {propertiesData.slice(0, 8).map((property) => (
@@ -33,7 +33,7 @@ export default function ForSaleComponent() {
 
             {/* Arrow Button */}
             <a
-              href={`/forsaleDetails/${property.title}`}
+              href={`/forrentDetails/${property.title}`}
               className="absolute bottom-2 right-2 hover:border-[var(--primary-color)] hover:text-[var(--primary-color)] border border-white rounded-lg text-white py-2 px-4 sm:px-5 sm:py-3 transition-transform inline-flex items-center justify-center"
             >
               <FaArrowRight size={16} />
@@ -41,16 +41,16 @@ export default function ForSaleComponent() {
           </div>
         ))}
       </div>
-
       {/* View All Button */}
       <div className="flex items-center justify-center font-light">
         <a
-          href="/forsale"
+          href="/forrent"
           className="inline-block px-8 py-2 text-lg text-white font-light rounded-3xl hover:opacity-80 mt-6 bg-gradient-to-r from-[#f9f295] via-[#e0aa3e] to-[#faf398]"
         >
           View All
         </a>
       </div>
+         
     </div>
   );
 }

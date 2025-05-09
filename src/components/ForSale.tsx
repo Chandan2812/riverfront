@@ -5,11 +5,11 @@ import { FaArrowRight } from "react-icons/fa";
 
 export default function ForSaleComponent() {
   return (
-    <div className="max-w-6xl mx-auto p-2 mt-14 font-raleway">
-      <h2 className="text-3xl md:text-5xl text-white mb-6 text-center font-thin">
+    <div className=" font-raleway bg-white dark:bg-black py-10">
+      {/* Title */}
+      <h2 className="text-3xl md:text-5xl text-black dark:text-white mb-6 text-center font-thin">
         Properties for Sale
       </h2>
-
       {/* Property Grid */}
       <div className="md:max-w-6xl mx-auto px-4 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {propertiesData.slice(0, 8).map((property) => (
@@ -41,7 +41,6 @@ export default function ForSaleComponent() {
           </div>
         ))}
       </div>
-
       {/* View All Button */}
       <div className="flex items-center justify-center font-light">
         <a
@@ -51,6 +50,7 @@ export default function ForSaleComponent() {
           View All
         </a>
       </div>
+         
     </div>
   );
 }
