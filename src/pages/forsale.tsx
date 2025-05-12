@@ -12,7 +12,7 @@ import Footer from "../components/footer";
 import HaveAQuestion from "../components/HaveAQuestion";
 import { Range } from "react-range";
 
-const ForRent: React.FC = () => {
+const ForSale: React.FC = () => {
   const navigate = useNavigate();
 
   const [searchTerm, setSearchTerm] = useState("");
@@ -224,4 +224,4 @@ const ForRent: React.FC = () => {
   );
 };
 
-export default ForRent;
+export default ForSale;

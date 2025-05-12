@@ -6,9 +6,9 @@ import { ChevronDown } from "lucide-react";
 
 const HeroSection: React.FC = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [activeTab, setActiveTab] = useState("Buy");
+  const [activeTab, setActiveTab] = useState("Sell");
 
-  const tabs = ["Buy", "Rent", "Off Plan"];
+  const tabs = ["Sell", "Rent", "Off Plan"];
 
   useEffect(() => {
     if (videoRef.current) {
