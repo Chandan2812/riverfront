@@ -26,17 +26,19 @@ export const Landing = () => {
         <Navbar />
         <HeroSection />
         <StatsSection />
-        <AwardsSection />
+
         <BuyRentSection />
         <ForBuy />
         <ForSaleComponent />
         <PropertySlider />
         <RealEstateExperts />
-        <FindYourPartner />
+
         <Exclusives />
         <ListProperty />
         <LifeStyleSection />
         <OurStory />
+        <FindYourPartner />
+        <AwardsSection />
         <TestimonialSlider />
         <Blog />
 

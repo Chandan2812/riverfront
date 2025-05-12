@@ -83,7 +83,7 @@ export default function TestimonialSlider() {
   };
 
   return (
-    <section className="py-12 bg-white dark:bg-black font-raleway font-light">
+    <section className="py-12 bg-white dark:bg-black font-raleway font-light relative gradient-top">
       <div className="w-full md:w-11/12 mx-auto px-6">
         {/* Heading & Rating */}
         <div className="flex flex-col md:flex-row items-center gap-6">
