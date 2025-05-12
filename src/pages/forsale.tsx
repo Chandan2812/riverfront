@@ -168,7 +168,7 @@ const ForSale: React.FC = () => {
       </div>
 
       {/* Property Grid */}
-      <div className="w-full md:w-[90%] mx-auto p-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 min-h-screen">
+      <div className="w-full md:w-[90%] mx-auto p-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {filteredProperties.map((property, index) => (
           <div
             key={index}
