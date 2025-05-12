@@ -1,5 +1,5 @@
 import { useState } from "react";
-import hero from "../assets/frame_img.svg";
+import hero from "../assets/frame_img.png";
 
 export default function Hero() {
   const [selectedCurrency, setSelectedCurrency] = useState<
