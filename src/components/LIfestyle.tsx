@@ -60,9 +60,6 @@ const LifeStyleSection = () => {
                 />
                 <div className="bg-white bg-opacity-70 dark:bg-black dark:bg-opacity-70 text-center py-2">
                   <h3 className="text-lg mb-1">{item.title}</h3>
-                  <button className="text-sm border-t pt-1 border-gray-300 dark:border-gray-600 w-full hover:text-gray-600 dark:hover:text-gray-300">
-                    EXPLORE
-                  </button>
                 </div>
               </div>
             ))}

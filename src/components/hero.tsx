@@ -3,24 +3,25 @@ import hero from "../assets/frame_img.svg";
 
 export default function Hero() {
   const [selectedCurrency, setSelectedCurrency] = useState<
-    "GBP" | "CNY" | "EUR" | "AED" | "USD"
+    "GBP" | "CNY" | "EUR" | "AED" | "USD" | "INR"
   >("AED");
   const [_minPrice, setMinPrice] = useState(40000);
   const [_maxPrice, setMaxPrice] = useState(5000000);
 
   // Currency conversion rates for demo purposes
   const conversionRates: {
-    [key in "GBP" | "CNY" | "EUR" | "AED" | "USD"]: number;
+    [key in "GBP" | "CNY" | "EUR" | "AED" | "USD" | "INR"]: number;
   } = {
     GBP: 0.22,
     CNY: 1.56,
     EUR: 0.92,
     AED: 1,
     USD: 0.27,
+    INR: 22.5,
   };
 
   const handleCurrencyChange = (
-    currency: "GBP" | "CNY" | "EUR" | "AED" | "USD"
+    currency: "GBP" | "CNY" | "EUR" | "AED" | "USD" | "INR"
   ) => {
     setSelectedCurrency(currency);
     const conversionRate = conversionRates[currency];
@@ -135,6 +136,16 @@ export default function Hero() {
               onClick={() => handleCurrencyChange("USD")}
             >
               USD
+            </span>
+            <span
+              className={
+                selectedCurrency === "INR"
+                  ? "text-[var(--primary-color)] font-semibold"
+                  : ""
+              }
+              onClick={() => handleCurrencyChange("INR")}
+            >
+              INR
             </span>
           </div>
         </div>
