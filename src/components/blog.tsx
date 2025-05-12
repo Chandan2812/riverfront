@@ -94,7 +94,7 @@ const RealStateInsights = () => {
       {/* Carousel */}
       <div
         ref={carouselRef}
-        className="w-full md:w-11/12 px-4 mx-auto mt-8 flex gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide"
+        className="w-full md:w-11/12 mx-auto mt-8 flex gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide"
         onMouseDown={handleMouseDown}
         onMouseLeave={handleMouseLeave}
         onMouseUp={handleMouseUp}

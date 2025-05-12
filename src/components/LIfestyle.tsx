@@ -37,7 +37,7 @@ const LifeStyleSection = () => {
 
   return (
     <div className="bg-white dark:bg-black text-black dark:text-white py-10 gradient-top relative">
-      <div className="w-11/12 mx-auto px-6 overflow-hidden">
+      <div className="md:w-11/12 mx-auto px-6 overflow-hidden">
         <h2 className="text-center text-3xl font-light mb-2">LIFESTYLE</h2>
         <p className="text-center text-gray-700 dark:text-gray-300 mb-8">
           Wide range options for any lifestyle. Make your choice with us

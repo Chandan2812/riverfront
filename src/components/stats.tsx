@@ -111,7 +111,7 @@ const StatsSection: React.FC = () => {
       </div>
 
       {/* Mobile View - Carousel */}
-      <div className="md:hidden flex justify-center items-center relative overflow-hidden w-full h-32 bg-gray-100 dark:bg-[#0e1c2c]">
+      <div className="md:hidden flex justify-center items-center relative overflow-hidden w-full h-32 bg-gray-100 dark:bg-black">
         <div
           className="flex transition-transform ease-in-out duration-500"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}

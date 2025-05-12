@@ -71,12 +71,12 @@ const Exclusives = () => {
   const offset = index * 100; // one full card per scroll
 
   return (
-    <section className="bg-white dark:bg-black text-black dark:text-white py-10 px-5 font-raleway font-thin custom-gradient-lines relative">
+    <section className="bg-white dark:bg-black text-black dark:text-white py-10 px-4 font-raleway font-thin custom-gradient-lines relative">
       <div className="mb-8">
-        <h2 className="text-3xl md:text-4xl font-light mb-6 text-black dark:text-gray-100 md:text-center pl-6">
+        <h2 className="text-3xl md:text-4xl font-light mb-6 text-black dark:text-gray-100 md:text-center">
           EXCLUSIVES
         </h2>
-        <p className="text-sm md:text-base pl-6 font-light dark:font-thin md:text-center">
+        <p className="text-sm md:text-base font-light dark:font-thin md:text-center">
           Discover the outstanding range of Dubai properties only with{" "}
           <span className="text-[var(--primary-color)] font-light">
             MONDUS PROPERTIES
@@ -84,13 +84,13 @@ const Exclusives = () => {
         </p>
       </div>
 
-      <div className="w-11/12 mx-auto relative overflow-hidden">
+      <div className="md:w-11/12 mx-auto relative overflow-hidden">
         <div
           className="flex transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${offset}%)` }}
         >
           {properties.map((property, idx) => (
-            <div key={idx} className="flex-shrink-0 w-full px-4">
+            <div key={idx} className="flex-shrink-0 w-full md:px-4">
               <div className="flex flex-col md:flex-row bg-gray-50 dark:bg-[#1A1A1A] rounded-lg overflow-hidden">
                 {/* Image section */}
                 <div className="w-full md:w-1/2">

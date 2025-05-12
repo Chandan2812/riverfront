@@ -5,7 +5,7 @@ export default function OurStory() {
         <h2 className="text-3xl md:text-5xl text-black dark:text-white mb-6 text-center">
           Our Mission
         </h2>
-        <p className="mt-4 px-5 text-lg text-gray-800 dark:text-gray-300 font-light dark:font-thin">
+        <p className="mt-4 md:px-5 text-lg text-gray-800 dark:text-gray-300 font-light dark:font-thin text-justify">
           At Riverfront Properties, we're passionate about transforming the
           Dubai real estate landscape! In our quest to redefine excellence, we
           provide unparalleled services in the buying, selling, and renting of
