@@ -27,6 +27,7 @@ import Career from "./pages/Career";
 import AllBlogs from "./pages/AllBlogs";
 import AgentsSection from "./components/Agents";
 import AgentDetail from "./pages/AgentDetail";
+import ForBuy from "./pages/ForBuy";
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
         <Route path="/ServicesSection" element={<ServicesSection />} />
         <Route path="/blog/:id" element={<BlogDetails />} />
         <Route path="/viewblogs" element={<AllBlogs />} />
+        <Route path="/buy" element={<ForBuy />} />
         <Route path="/forsale" element={<ForSale />} />
         <Route path="/forsaleDetails/:title" element={<ForSaleDetails />} />
         <Route path="/forrent" element={<ForRent />} />

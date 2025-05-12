@@ -35,6 +35,7 @@ const Navbar = () => {
   }, [darkMode]);
 
   const navItems = [
+    { label: "Buy", path: "/buy" },
     { label: "Sell", path: "/forsale" },
     { label: "Rent", path: "/forrent" },
     { label: "Off-Plan", path: "/OffplanPropertyCard" },

@@ -5,33 +5,35 @@ import AwardsSection from "../components/awards";
 import OurStory from "../components/ourStory";
 import TestimonialSlider from "../components/testimonials";
 import WhatsAppButton from "../components/floatingBtn";
-import PropertySlider from "../components/offPlan";
 import Blog from "../components/blog";
-import ForSaleComponent from "../components/ForSale";
-import ForRentComponent from "../components/ForRent";
+
 import { Phone, MessageCircle } from "lucide-react";
 import ListProperty from "../components/listproperty";
 import FindYourPartner from "../components/FindYourPartner";
 import BuyRentSection from "../components/BuyRentSection";
 import RealEstateExperts from "../components/experts";
+import Navbar from "../components/nav";
+import Exclusives from "../components/Exclusive";
+import LifeStyleSection from "../components/LIfestyle";
 
 export const Landing = () => {
   return (
     <div>
       <>
+        <Navbar />
         <HeroSection />
         <StatsSection />
         <AwardsSection />
         <BuyRentSection />
-        <ForSaleComponent />
-        <ForRentComponent />
-        <PropertySlider />
         <RealEstateExperts />
         <FindYourPartner />
+        <Exclusives />
         <ListProperty />
+        <LifeStyleSection />
         <OurStory />
-        <Blog />
         <TestimonialSlider />
+        <Blog />
+
         <Footer />
         <div className="hidden md:block">
           <WhatsAppButton />
