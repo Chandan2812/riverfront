@@ -5,8 +5,8 @@ export default function Hero() {
   const [selectedCurrency, setSelectedCurrency] = useState<
     "GBP" | "CNY" | "EUR" | "AED" | "USD"
   >("AED");
-  const [minPrice, setMinPrice] = useState(40000);
-  const [maxPrice, setMaxPrice] = useState(150000000);
+  const [_minPrice, setMinPrice] = useState(40000);
+  const [_maxPrice, setMaxPrice] = useState(5000000);
 
   // Currency conversion rates for demo purposes
   const conversionRates: {
@@ -25,7 +25,7 @@ export default function Hero() {
     setSelectedCurrency(currency);
     const conversionRate = conversionRates[currency];
     setMinPrice(40000 * conversionRate);
-    setMaxPrice(150000000 * conversionRate);
+    setMaxPrice(5000000 * conversionRate);
   };
 
   return (
@@ -140,13 +140,36 @@ export default function Hero() {
         </div>
 
         {/* Price Range */}
-        <div className="flex justify-between mb-6">
-          <div className="bg-[#1f1f1f] p-3 w-[48%] dark:bg-[#1f1f1f]">
-            Min {minPrice.toLocaleString()} {selectedCurrency}
-          </div>
-          <div className="bg-[#1f1f1f] p-3 w-[48%] text-right dark:bg-[#1f1f1f]">
-            Max {maxPrice.toLocaleString()} {selectedCurrency}
-          </div>
+        <div className="mb-4">
+          <label className="text-sm mb-1 block">Price</label>
+          <select
+            className="w-full bg-[#1f1f1f] text-white p-3 rounded dark:bg-[#1f1f1f]"
+            onChange={(e) => {
+              const [min, max] = e.target.value.split("-").map(Number);
+              setMinPrice(min);
+              setMaxPrice(max);
+            }}
+          >
+            {[
+              [100000, 500000],
+              [500001, 1000000],
+              [1000001, 2000000],
+              [2000001, 5000000],
+            ].map(([min, max]) => {
+              const rate = conversionRates[selectedCurrency];
+              const convertedMin = Math.round(min * rate);
+              const convertedMax = Math.round(max * rate);
+              return (
+                <option
+                  key={`${min}-${max}`}
+                  value={`${convertedMin}-${convertedMax}`}
+                >
+                  {convertedMin.toLocaleString()} –{" "}
+                  {convertedMax.toLocaleString()} {selectedCurrency}
+                </option>
+              );
+            })}
+          </select>
         </div>
 
         {/* Buttons */}
