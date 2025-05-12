@@ -15,6 +15,9 @@ import RealEstateExperts from "../components/experts";
 import Navbar from "../components/nav";
 import Exclusives from "../components/Exclusive";
 import LifeStyleSection from "../components/LIfestyle";
+import ForSaleComponent from "../components/ForSale";
+import PropertySlider from "../components/offPlan";
+import ForBuy from "../components/ForBuy";
 
 export const Landing = () => {
   return (
@@ -25,6 +28,9 @@ export const Landing = () => {
         <StatsSection />
         <AwardsSection />
         <BuyRentSection />
+        <ForBuy />
+        <ForSaleComponent />
+        <PropertySlider />
         <RealEstateExperts />
         <FindYourPartner />
         <Exclusives />
