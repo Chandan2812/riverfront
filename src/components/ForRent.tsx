@@ -51,7 +51,7 @@ export default function ForSaleComponent() {
       <div className="flex items-center justify-center font-light">
         <a
           href="/forrent"
-          className="inline-block px-8 py-2 text-lg text-white font-light rounded-3xl hover:opacity-80 mt-6 bg-gradient-to-r from-[#f9f295] via-[#e0aa3e] to-[#faf398]"
+          className="inline-block px-8 py-2 text-lg text-white font-light rounded-3xl hover:opacity-80 mt-6 bg-[var(--primary-color)] "
         >
           View All
         </a>

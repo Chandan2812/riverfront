@@ -14,10 +14,7 @@ function HaveAQuestion() {
 
         {/* Contact Actions */}
         <div className="flex flex-col sm:flex-row items-center gap-4">
-          <button
-            className="font-light hover:opacity-70 text-white px-6 py-2 rounded-md transition font-raleway"
-            style={{ background: "var(--bg-primary-gradient)" }}
-          >
+          <button className="font-light hover:opacity-70 text-white px-6 py-2 rounded-md transition font-raleway bg-[var(--primary-color)]">
             <a href="/contact">Contact Us</a>
           </button>
           <span className="text-lg font-sans font-thin text-gray-800 dark:text-gray-300">

@@ -50,11 +50,11 @@ export default function Hero() {
           We bring <span className="font-semibold">Due Diligence</span> at Your
           service
         </p>
-        <a href="/contact">
+        {/* <a href="/contact">
           <button className="border border-[var(--primary-color)] bg-gradient-to-r from-[#f9f295] via-[#e0aa3e] to-[#faf398] rounded-full font-light text-white px-6 py-3 hover:opacity-75 transition ">
             Contact Us
           </button>
-        </a>
+        </a> */}
       </div>
 
       {/* Right Form */}
@@ -184,9 +184,11 @@ export default function Hero() {
         </div>
 
         {/* Buttons */}
-        <button className="w-full bg-gradient-to-r from-[#f9f295] via-[#e0aa3e] to-[#faf398] text-white py-3 mb-4 hover:opacity-75 transition font-light text-xl rounded-full">
-          Search
-        </button>
+        <div className="flex justify-center items-center">
+          <button className="w-fit bg-[var(--primary-color)]  text-white py-2 mb-4 hover:opacity-75 transition font-light dark:font-thin text-lg px-10 rounded-full">
+            Search
+          </button>
+        </div>
       </div>
     </div>
   );

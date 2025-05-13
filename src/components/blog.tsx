@@ -119,7 +119,7 @@ const RealStateInsights = () => {
               </p>
               <a
                 href="/viewblogs"
-                className="mt-6 rounded-full bg-gradient-to-r from-[#f9f295] via-[#e0aa3e] to-[#faf398]  text-white font-light hover:opacity-70 px-6 py-2 uppercase tracking-wide   hover:font-light transition w-fit inline-block"
+                className="mt-6 rounded-full bg-[var(--primary-color)]  text-white font-light hover:opacity-70 px-6 py-2 uppercase tracking-wide   hover:font-light transition w-fit inline-block"
               >
                 All Blogs
               </a>

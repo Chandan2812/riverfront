@@ -99,7 +99,7 @@ const StatsSection: React.FC = () => {
       <div className="hidden md:flex w-11/12 mx-auto px-4 justify-center text-center">
         {stats.map((stat, index) => (
           <div key={index} className="w-1/5 p-4 flex flex-col items-center">
-            <h2 className="text-3xl font-bold bg-gradient-to-r from-[#f9f295] via-[#e0aa3e] to-[#faf398] bg-clip-text text-transparent">
+            <h2 className="text-3xl font-bold bg-[var(--primary-color)] bg-clip-text text-transparent">
               {animatedValues[index]}
               {stat.suffix || "+"}
             </h2>
