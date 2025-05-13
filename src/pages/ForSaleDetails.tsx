@@ -41,15 +41,31 @@ function ForSaleDetails() {
       </div>
 
       {/* Image Grid */}
-      <div className="w-[90%] mx-auto my-8 grid grid-cols-2 md:grid-cols-5 gap-4">
-        {property.images.map((img, idx) => (
-          <img
-            key={idx}
-            src={img}
-            alt={`property-${idx}`}
-            className="rounded-xl h-60 object-cover w-full"
-          />
-        ))}
+      {/* Responsive Image Layout: Horizontal scroll on mobile, grid on desktop */}
+      <div className="w-[90%] mx-auto my-8">
+        {/* Mobile: Horizontal Scroll */}
+        <div className="flex gap-4 overflow-x-auto md:hidden">
+          {property.images.map((img, idx) => (
+            <img
+              key={idx}
+              src={img}
+              alt={`property-${idx}`}
+              className="rounded-xl h-60 object-cover w-[250px] min-w-[250px] flex-shrink-0"
+            />
+          ))}
+        </div>
+
+        {/* Desktop: Grid */}
+        <div className="hidden md:grid grid-cols-5 gap-4">
+          {property.images.map((img, idx) => (
+            <img
+              key={idx}
+              src={img}
+              alt={`property-${idx}`}
+              className="rounded-xl h-60 object-cover w-full"
+            />
+          ))}
+        </div>
       </div>
 
       {/* Property Overview */}
