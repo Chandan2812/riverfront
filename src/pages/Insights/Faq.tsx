@@ -89,7 +89,7 @@ const FAQSection = () => {
                 </span>
               </button>
               {openIndex === index && (
-                <div className="px-6 pb-4 text-gray-600 whitespace-pre-line">
+                <div className="px-6 pb-4 text-gray-600 whitespace-pre-line font-light">
                   {faq.answer}
                 </div>
               )}

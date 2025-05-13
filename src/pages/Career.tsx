@@ -166,7 +166,7 @@ export default function Career() {
             {/* Submit Button */}
             <button
               type="submit"
-              className="bg-[var(--primary-color)] text-white py-3 px-6 rounded-lg w-full hover:bg-[#f2ae37] transition"
+              className="bg-[var(--primary-color)] text-white py-2 px-10 w-fit hover:opacity-80 rounded-full transition"
             >
               SUBMIT
             </button>

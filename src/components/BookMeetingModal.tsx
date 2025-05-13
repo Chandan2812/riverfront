@@ -59,7 +59,7 @@ const BookMeetingModal: React.FC<Props> = ({ isOpen, onClose }) => {
           placeholder="Your Name"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className="w-full md:w-2/3 p-3 rounded-full bg-white text-black mb-2 border border-white"
+          className="w-full md:w-2/3 p-3 rounded-md bg-white text-black mb-2 border border-white"
         />
 
         {/* Email */}
@@ -71,7 +71,7 @@ const BookMeetingModal: React.FC<Props> = ({ isOpen, onClose }) => {
             setEmail(e.target.value);
             if (!emailTouched) setEmailTouched(true);
           }}
-          className={`w-full md:w-2/3 p-3 rounded-full mb-2 border ${
+          className={`w-full md:w-2/3 p-3 rounded-md mb-2 border ${
             !emailTouched || isEmailValid(email)
               ? "bg-white text-black border-white"
               : " border-red-400"
@@ -91,7 +91,7 @@ const BookMeetingModal: React.FC<Props> = ({ isOpen, onClose }) => {
             onChange={setPhone}
             defaultCountry="AE"
             onBlur={() => setPhoneTouched(true)}
-            className={`w-full rounded-full p-3 mb-2 border ${
+            className={`w-full rounded-md p-3 mb-2 border ${
               !phoneTouched || phone
                 ? "bg-white text-black border-white"
                 : " border-red-400"
@@ -107,16 +107,16 @@ const BookMeetingModal: React.FC<Props> = ({ isOpen, onClose }) => {
           type="datetime-local"
           value={dateTime}
           onChange={(e) => setDateTime(e.target.value)}
-          className="w-full md:w-2/3 p-3 rounded-full bg-white text-black mb-4 border border-white"
+          className="w-full md:w-2/3 p-3 rounded-md bg-white text-black mb-4 border border-white"
         />
 
         {/* Submit Button */}
         <button
           onClick={handleSubmit}
           disabled={!isFormValid}
-          className={`w-full md:w-2/3 text-white py-2 rounded-full text-lg ${
+          className={`px-10 py-2 text-white rounded-full text-lg mx-auto block ${
             isFormValid
-              ? "bg-gradient-to-r from-[#f9f295] via-[#e0aa3e] to-[#faf398] hover:opacity-80"
+              ? "bg-[var(--primary-color)] hover:opacity-80"
               : "bg-gray-500 cursor-not-allowed"
           }`}
         >
