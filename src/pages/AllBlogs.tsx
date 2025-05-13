@@ -6,12 +6,12 @@ import Footer from "../components/footer";
 function AllBlogs() {
   const navigate = useNavigate();
   return (
-    <div className="bg-white dark:bg-black px-5 font-raleway font-thin text-black dark:text-white">
-      <div className="mb-32 md:mb-32 pt-3 md:pt-10">
+    <div className="bg-white dark:bg-black font-raleway font-thin text-black dark:text-white">
+      <div className="mb-24 md:mb-28 pt-3 md:pt-10">
         <Navbar />
       </div>
 
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+      <div className="max-w-7xl px-3 mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
         {blogsData.map((blog) => (
           <div
             key={blog.id}
