@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { FiMenu, FiSun, FiMoon } from "react-icons/fi";
-import logo from "../assets/logo1.png";
+import logo from "../assets/Logo for riverfront .png";
 import FindPropertyModal from "./FindPropertyModal";
 import BookMeetingModal from "./BookMeetingModal";
 import { Search } from "lucide-react";
@@ -83,7 +83,7 @@ const Navbar = () => {
                 <img
                   src={logo}
                   alt=" Logo"
-                  className="w-1/4"
+                  className="w-32"
                   draggable={false}
                 />
               </a>
@@ -113,7 +113,7 @@ const Navbar = () => {
                     <img
                       src={logo}
                       alt=" Logo"
-                      className="w-28 py-2"
+                      className="w-44 py-2"
                       draggable={false}
                     />
                   </a>

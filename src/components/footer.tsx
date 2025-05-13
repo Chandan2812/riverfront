@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 import { MdExpandMore, MdExpandLess } from "react-icons/md";
-import logo from "../assets/logo-riverfront.png";
+import logo from "../assets/Logo for riverfront .png";
 import { Link } from "react-router-dom";
 import bigwigLogo from "../assets/Bigwig_White.png";
 import skyline from "../assets/skyline_footer.svg";
@@ -94,7 +94,7 @@ const Footer = () => {
             <img
               src={logo}
               alt=""
-              className=" w-40 py-2 rounded-xl mx-auto md:mx-0"
+              className=" w-56 py-2 rounded-xl mx-auto md:mx-0"
               draggable={false}
             />
             <div className="flex justify-center md:justify-start gap-4 mt-4 text-lg">
