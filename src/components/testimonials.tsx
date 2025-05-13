@@ -120,7 +120,7 @@ export default function TestimonialSlider() {
             <Slider {...settings}>
               {testimonials.map((item, index) => (
                 <div key={index} className="p-4">
-                  <div className="bg-gray-100 dark:bg-neutral-900 shadow-lg rounded-lg p-6 h-72">
+                  <div className="bg-gray-100 dark:bg-neutral-950 border border-neutral-700  shadow-lg rounded-lg p-6 h-72">
                     <p className="text-gray-800 dark:text-gray-300 mb-4">
                       {item.review.slice(0, 110)}...
                     </p>

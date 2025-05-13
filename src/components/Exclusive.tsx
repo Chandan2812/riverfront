@@ -91,7 +91,7 @@ const Exclusives = () => {
         >
           {properties.map((property, idx) => (
             <div key={idx} className="flex-shrink-0 w-full md:px-4">
-              <div className="flex flex-col md:flex-row bg-gray-50 dark:bg-[#1A1A1A] rounded-lg overflow-hidden">
+              <div className="flex flex-col md:flex-row bg-gray-50 dark:bg-neutral-950 border border-neutral-700 rounded-lg overflow-hidden">
                 {/* Image section */}
                 <div className="w-full md:w-1/2">
                   <img
