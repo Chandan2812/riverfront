@@ -114,7 +114,7 @@ const BookMeetingModal: React.FC<Props> = ({ isOpen, onClose }) => {
         <button
           onClick={handleSubmit}
           disabled={!isFormValid}
-          className={`px-10 py-2 text-white rounded-full text-lg mx-auto block ${
+          className={`px-10 py-2 text-black font-light font-raleway rounded-full text-lg mx-auto block ${
             isFormValid
               ? "bg-[var(--primary-color)] hover:opacity-80"
               : "bg-gray-500 cursor-not-allowed"
