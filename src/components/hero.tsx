@@ -185,7 +185,7 @@ export default function Hero() {
 
         {/* Buttons */}
         <div className="flex justify-center items-center">
-          <button className="w-fit bg-[var(--primary-color)]  text-white py-2 mb-4 hover:opacity-75 transition font-light dark:font-thin text-lg px-10 rounded-full">
+          <button className="w-fit bg-[var(--primary-color)]  text-black py-2 mb-4 hover:opacity-75 transition font-light dark:font-thin text-lg px-10 rounded-full">
             Search
           </button>
         </div>

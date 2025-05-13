@@ -88,9 +88,9 @@ const AwardsSection = () => {
       {/* View All Button */}
       <a
         href="/awards"
-        className="inline-block font-light px-8 py-2 text-lg text-white rounded-3xl hover:opacity-80 mt-10 bg-[var(--primary-color)]"
+        className="inline-block font-light px-8 py-2 text-lg text-black rounded-3xl hover:opacity-80 mt-10 bg-[var(--primary-color)]"
       >
-        View All Awards
+        View All
       </a>
     </div>
   );

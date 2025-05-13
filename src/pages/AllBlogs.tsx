@@ -15,7 +15,7 @@ function AllBlogs() {
         {blogsData.map((blog) => (
           <div
             key={blog.id}
-            className="border border-gray-200 dark:border-neutral-700 rounded-lg shadow-lg overflow-hidden bg-gray-50 dark:bg-neutral-900"
+            className="border border-gray-200 dark:border-neutral-700 rounded-lg shadow-lg overflow-hidden bg-gray-50 dark:bg-neutral-950"
           >
             <img
               src={blog.image}

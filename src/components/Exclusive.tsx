@@ -162,7 +162,7 @@ const Exclusives = () => {
                   </p>
                   <div className="mt-4 flex gap-4">
                     <a href="/contact">
-                      <button className="bg-[var(--primary-color)] rounded-full  text-white font-light hover:opacity-75 px-6 py-2">
+                      <button className="bg-[var(--primary-color)] rounded-full  text-black hover:opacity-75 px-6 py-2 text-lg font-light">
                         Enquire now
                       </button>
                     </a>

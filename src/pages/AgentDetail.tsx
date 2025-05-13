@@ -36,13 +36,13 @@ const AgentDetail = () => {
           <div className="flex flex-col gap-3">
             <a
               href={`tel:${agent.call}`}
-              className="border border-black dark:border-white py-2 px-4 rounded  transition text-center"
+              className="border border-neutral-700 py-2 px-4 rounded  transition text-center"
             >
               📞 Call
             </a>
             <a
               href={`mailto:${agent.email}`}
-              className="border border-black dark:border-white py-2 px-4 rounded  transition text-center"
+              className="border border-neutral-700 py-2 px-4 rounded  transition text-center"
             >
               ✉️ Email
             </a>
@@ -50,7 +50,7 @@ const AgentDetail = () => {
               href={`https://wa.me/${agent.whatsapp.replace(/\D/g, "")}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="border border-black dark:border-white py-2 px-4 rounded  transition text-center"
+              className="border border-neutral-700 py-2 px-4 rounded  transition text-center"
             >
               📱 WhatsApp
             </a>

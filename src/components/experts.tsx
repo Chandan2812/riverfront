@@ -55,7 +55,7 @@ const RealEstateExperts: React.FC = () => {
             We have implemented all these in Riverfront
           </p>
           <a href="/contact">
-            <button className="border px-6 py-3 transition mb-8 border-[var(--primary-color)] text-white rounded-full hover:opacity-70 bg-[var(--primary-color)]">
+            <button className="border text-lg px-6 py-2 font-light transition mb-8 border-[var(--primary-color)] text-black rounded-full hover:opacity-70 bg-[var(--primary-color)]">
               Enquire now
             </button>
           </a>
