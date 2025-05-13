@@ -109,7 +109,7 @@ const Navbar = () => {
                     <img
                       src={logo}
                       alt=" Logo"
-                      className="w-44 py-2"
+                      className="w-52 py-2"
                       draggable={false}
                     />
                   </a>
