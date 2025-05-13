@@ -100,7 +100,7 @@ export default function Career() {
       </div>
 
       <div className="flex justify-center items-center w-5/6 mx-auto px-6 py-8 text-center rounded-lg mb-7">
-        <div className="w-full max-w-lg bg-gray-100 dark:bg-neutral-900 rounded-lg p-8 text-center">
+        <div className="w-full max-w-lg bg-gray-100 dark:bg-neutral-950 border border-neutral-700 rounded-lg p-8 text-center">
           <h1 className="text-3xl font-semibold mb-4">Share Your CV With Us</h1>
           <p className="text-gray-800 dark:text-gray-300 mb-6">
             If no suitable vacancy is available, share your CV for future
