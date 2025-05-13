@@ -3,7 +3,7 @@ import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 import { MdExpandMore, MdExpandLess } from "react-icons/md";
 import logo from "../assets/Logo for riverfront .png";
 import { Link } from "react-router-dom";
-import bigwigLogo from "../assets/Bigwig_White.png";
+import bigwigLogo from "../assets/bigwig digital logo (11).png";
 import skyline from "../assets/skyline_footer.svg";
 
 const Footer = () => {
