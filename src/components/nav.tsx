@@ -18,11 +18,7 @@ const Navbar = () => {
   const [isFindPropertyOpen, setIsFindPropertyOpen] = useState(false);
   const [activeItem, setActiveItem] = useState<string | null>(null);
 
-  const [darkMode, setDarkMode] = useState(() => {
-    return localStorage.getItem("theme")
-      ? localStorage.getItem("theme") === "dark"
-      : true; // default to dark
-  });
+  const [darkMode, setDarkMode] = useState(true);
 
   useEffect(() => {
     if (darkMode) {
