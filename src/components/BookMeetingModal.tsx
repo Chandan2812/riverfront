@@ -40,7 +40,7 @@ const BookMeetingModal: React.FC<Props> = ({ isOpen, onClose }) => {
     dateTime.trim() !== "";
 
   return (
-    <div className="fixed inset-0 bg-[var(--secondary-color)] flex flex-col justify-center items-center z-[999]">
+    <div className="fixed inset-0 bg-[var(--secondary-color)] flex flex-col justify-center items-center z-[999] font-sans">
       <div className="w-full bg-gray-800 py-5 flex justify-center fixed top-0 left-0">
         <button
           onClick={onClose}
@@ -50,7 +50,7 @@ const BookMeetingModal: React.FC<Props> = ({ isOpen, onClose }) => {
         </button>
       </div>
 
-      <div className="bg-[#0D1B2A] w-[90%] md:w-[50%] p-8 rounded-lg text-center mt-20">
+      <div className="bg-[#0D1B2A] w-[90%] md:w-[50%] md:p-8 rounded-lg text-center mt-20">
         <h2 className="text-white text-3xl font-bold mb-6">BOOK A MEETING</h2>
 
         {/* Name */}
