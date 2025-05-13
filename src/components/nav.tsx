@@ -36,10 +36,9 @@ const Navbar = () => {
     { label: "Rent", path: "/forrent" },
     { label: "Off-Plan", path: "/OffplanPropertyCard" },
     { label: "Services", path: "/ServicesSection" },
-    { label: "Property Advisors", path: "/AgentsSection" },
-    { label: "Blogs", path: "/viewblogs" },
+    { label: "Advisors", path: "/AgentsSection" },
     { label: "About Us", path: "/about" },
-    { label: "Contact Us", path: "/contact" },
+    { label: "Contact", path: "/contact" },
   ];
 
   useEffect(() => {
