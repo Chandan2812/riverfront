@@ -15,10 +15,10 @@ import RealEstateExperts from "../components/experts";
 import Navbar from "../components/nav";
 import Exclusives from "../components/Exclusive";
 import LifeStyleSection from "../components/LIfestyle";
-import ForSaleComponent from "../components/ForSale";
 import PropertySlider from "../components/offPlan";
 import ForBuy from "../components/ForBuy";
 import ScrollToTopButton from "../components/ScrollToTopButton";
+import ForRentComponent from "../components/ForRent";
 
 export const Landing = () => {
   return (
@@ -29,7 +29,7 @@ export const Landing = () => {
 
         <BuyRentSection />
         <ForBuy />
-        <ForSaleComponent />
+        <ForRentComponent />
         <PropertySlider />
         <RealEstateExperts />
         <FindYourPartner />

@@ -4,7 +4,7 @@ import propertiesData from "../data/rentsData.json";
 import { FaArrowRight } from "react-icons/fa";
 import { useEffect, useState } from "react";
 
-export default function ForSaleComponent() {
+export default function ForRentComponent() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   useEffect(() => {
