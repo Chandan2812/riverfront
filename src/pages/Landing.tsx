@@ -18,6 +18,7 @@ import LifeStyleSection from "../components/LIfestyle";
 import ForSaleComponent from "../components/ForSale";
 import PropertySlider from "../components/offPlan";
 import ForBuy from "../components/ForBuy";
+import ScrollToTopButton from "../components/ScrollToTopButton";
 
 export const Landing = () => {
   return (
@@ -63,6 +64,7 @@ export const Landing = () => {
           </a>
         </div>
       </>
+      <ScrollToTopButton />
     </div>
   );
 };
