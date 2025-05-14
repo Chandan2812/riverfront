@@ -332,7 +332,7 @@ const Footer = () => {
             are regulated by the Real Estate Regulatory Agency.
           </p>
           <a
-            href="https://bigwigmedia.in"
+            href="https://bigwigdigital.in"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block mt-2"
@@ -360,7 +360,7 @@ const Footer = () => {
           </a>
           <p className="text-sm mt-2">Copyright © RIVERFront</p>
           <a
-            href="https://bigwigmedia.in"
+            href="https://bigwigdigital.in"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block mt-2"
