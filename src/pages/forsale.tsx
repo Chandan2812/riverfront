@@ -21,7 +21,7 @@ const Sell = () => {
             Entire process is on us, from evaluation to a deal
           </p>
           <button className="border border-[var(--primary-color)] text-[var(--primary-color)] px-4 py-2 mt-2">
-            <a href="/contact">CONTACT AN AGENT</a>
+            <a href="/contact">CONTACT US</a>
           </button>
         </div>
       </section>
